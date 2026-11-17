@@ -1,0 +1,31 @@
+{
+  "generated_utc": "2026-11-17T19:24:08.033710+00:00",
+  "certificate_sha256": "5427566a22c6eae051373a45faa68a82e166334ec2f52088e2f4062ce286b2f3",
+  "source_hashes_match": true,
+  "replayed_points": 23969,
+  "replayed_nodes": 46655,
+  "leaf_rectangles": 23328,
+  "full_square_covered": true,
+  "all_point_enclosures_recomputed": true,
+  "all_points_cross_checked_with_expm": true,
+  "max_point_enclosure_width": 2.695852564510042e-07,
+  "global_lower": "90509899976873235338089/1208925819614629174706176",
+  "global_upper": "22950155606315582264065704445/306132658523553702023320829952",
+  "global_gap": "15302582435951749553720621/153066329261776851011660414976",
+  "boundary_upper": "1157740582942275233949539/15867151382442007918018560",
+  "strictly_interior_optimum": true,
+  "attaining_lower_bound_design": [
+    "529/1024",
+    "63/256"
+  ],
+  "reachable_spectral_enclosure": [
+    "-2115294255464259/2789811465748480",
+    "-3407083249358017/4493521357504512"
+  ],
+  "conditional_allocation_at_certified_design": {
+    "assembled": 1.9772686890292042,
+    "remaining_fuel": 1.250969619841036,
+    "net_repairs": 0.7717616911297598
+  },
+  "verification_scope": "Replay of every arithmetic enclosure and tree partition. This is an additional local implementation, with mathematical proof obligations stated in the study."
+}

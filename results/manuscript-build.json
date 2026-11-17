@@ -1,8 +1,13 @@
 {
-  "generated_utc": "2026-11-17T14:37:32.514752+00:00",
+  "generated_utc": "2026-11-17T19:26:15.397371+00:00",
   "compiler": "tectonic",
   "return_code": 0,
   "figures": [
+    "assembly-formation.png",
+    "assembly-frontier.png",
+    "assembly-network.png",
+    "assembly-resources.png",
+    "assembly-trajectories.png",
     "autonomous-decay.png",
     "autonomous-reactions.png",
     "autonomous-survival.png",
@@ -12,5 +17,5 @@
     "closed-loop-witness.png"
   ],
   "warnings": [],
-  "pdf_sha256": "15ea033bf812e0d555776cd038d308bb0f644d16a8693393611d74cb184642e9"
+  "pdf_sha256": "0f9187acab3fc53dedc1aba7937a6d227854c140dc77d85aa59b84ad11034ab1"
 }

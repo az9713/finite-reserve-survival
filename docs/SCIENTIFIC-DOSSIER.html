@@ -1,8 +1,8 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scientific dossier — information, energy, and survival</title><style>
 :root{color-scheme:dark;--bg:#0d141d;--panel:#152233;--ink:#e6edf7;--muted:#adc0d6;--line:#2b4159;--accent:#72dbc1}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 'Segoe UI',Arial,sans-serif}a{color:var(--accent);text-underline-offset:3px}nav{padding:18px 5vw;border-bottom:1px solid var(--line);display:flex;gap:24px;flex-wrap:wrap}main{max-width:1000px;margin:auto;padding:45px 30px 100px}h1{font:500 clamp(35px,5vw,65px)/1.12 Georgia,serif;letter-spacing:-.025em;margin:20px 0 30px}h2{font:500 32px/1.25 Georgia,serif;margin:65px 0 20px;padding-top:20px;border-top:1px solid var(--line)}h3{font-size:21px;margin:35px 0 12px}p{margin:16px 0}li{margin:9px 0}img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;margin:20px 0}pre{padding:20px;background:var(--panel);overflow:auto;border-radius:8px;font-size:14px}code{font-family:Consolas,monospace}table{width:100%;border-collapse:collapse;margin:25px 0;font-size:15px}td,th{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--panel)}blockquote{margin:25px 0;padding:15px 25px;border-left:3px solid var(--accent);background:var(--panel)}.meta{color:var(--muted);font-size:14px;letter-spacing:.04em}.toc{background:var(--panel);padding:22px 30px;border-radius:9px}.toc ul{columns:2;column-gap:35px;padding-left:20px}.toc li{break-inside:avoid;font-size:14px}.toc ul ul{display:none}.math.display{overflow-x:auto;padding:12px 0}.katex{font-size:1.08em}.receipt{background:var(--panel);padding:16px 22px;border-left:3px solid var(--accent)}button{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:6px 14px;cursor:pointer}footer{border-top:1px solid var(--line);padding:25px 5vw;color:var(--muted)}@media(max-width:700px){main{padding:25px 18px 60px}body{font-size:16px}h2{font-size:27px}.toc ul{columns:1}table{display:block;overflow-x:auto}nav{gap:13px}.katex{font-size:.95em}}@media print{:root{--bg:white;--ink:#151515;--panel:#f1f3f5;--muted:#444;--line:#bbb;--accent:#165663;color-scheme:light}nav,button,.toc{display:none}main{max-width:none;padding:0}body{font-size:10pt;line-height:1.5}h1{font-size:28pt}h2{font-size:19pt;break-after:avoid}h3{break-after:avoid}img,table,pre{break-inside:avoid}a{color:inherit}footer{font-size:8pt}.katex{font-size:1em}}
-.katex{position:relative}.math.display{display:block;max-width:100%}.math:not(.display){display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}.math{scrollbar-width:none}.math::-webkit-scrollbar{display:none}.katex-display{margin:0;text-align:left}td{overflow-wrap:anywhere}.contents{margin:30px 0}.contents summary{cursor:pointer;color:var(--accent)}</style><link rel="stylesheet" href="assets/katex/katex.min.css"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p><h1 id="information-energy-and-the-survival-of-designed-systems">Information, energy, and the survival of designed systems</h1>
-<p>This dossier makes four small mathematical models inspectable by researchers unfamiliar with the project. It assumes graduate mathematics and physics, and introduces the chemical and biological vocabulary explicitly. The motivating question comes from the closing minutes of Tsimerman's Golden Gate Institute talk: could stronger mathematical reasoning make explanations travel across physics, chemistry, biology, and eventually questions of value? The user selected the physical cost of persistent purposeful behavior as a tractable starting point. <a href="https://www.youtube.com/watch?v=kbzIVh405r8&amp;t=545s">Talk at 9:05</a> · <a href="DEVELOPMENT-JOURNEY.html">Development journey</a></p>
+.katex{position:relative}.math.display{display:block;max-width:100%}.math:not(.display){display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}.math{scrollbar-width:none}.math::-webkit-scrollbar{display:none}.katex-display{margin:0;text-align:left}td{overflow-wrap:anywhere}.contents{margin:30px 0}.contents summary{cursor:pointer;color:var(--accent)}</style><link rel="stylesheet" href="assets/katex/katex.min.css"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p><h1 id="information-energy-and-the-survival-of-designed-systems">Information, energy, and the survival of designed systems</h1>
+<p>This dossier makes five small mathematical models inspectable by researchers unfamiliar with the project. It assumes graduate mathematics and physics, and introduces the chemical and biological vocabulary explicitly. The motivating question comes from the closing minutes of Tsimerman's Golden Gate Institute talk: could stronger mathematical reasoning make explanations travel across physics, chemistry, biology, and eventually questions of value? The user selected the physical cost of persistent purposeful behavior as a tractable starting point. <a href="https://www.youtube.com/watch?v=kbzIVh405r8&amp;t=545s">Talk at 9:05</a> · <a href="DEVELOPMENT-JOURNEY.html">Development journey</a></p>
 <details class="contents"><summary>Contents and navigation</summary><div class="toc">
 <ul>
 <li><a href="#abstract">Abstract</a></li>
@@ -14,6 +14,8 @@
 <li><a href="#study-02-finite-reserve-and-paid-repair">Study 02 — Finite reserve and paid repair</a></li>
 <li><a href="#study-03-a-common-reserve-for-sensing-actuation-and-repair">Study 03 — A common reserve for sensing, actuation, and repair</a></li>
 <li><a href="#study-04-autonomous-reactions-and-continuous-time-failure">Study 04 — Autonomous reactions and continuous-time failure</a></li>
+<li><a href="#study-05-self-assembly-and-cooperative-maintenance">Study 05 — Self-assembly and cooperative maintenance</a></li>
+<li><a href="#certified-numerical-conclusions">Certified numerical conclusions</a></li>
 <li><a href="#evidence-and-reproduction-receipts">Evidence and reproduction receipts</a></li>
 <li><a href="#literature-comparison-and-novelty-assessment">Literature comparison and novelty assessment</a></li>
 <li><a href="#publication-readiness-and-limitations">Publication readiness and limitations</a></li>
@@ -21,13 +23,13 @@
 </ul>
 </div>
 </details><h2 id="abstract">Abstract</h2>
-<p>We investigate how temporal error structure, finite reserves, and control architecture determine survival in finite-state stochastic models. A thermal binary sensor yields an exact architecture-specific accuracy–power frontier and a reversal of survival ranking across effective damage laws. A reversible paid-repair model yields an attainable reserve frontier. A shared-reserve checkpoint device admits exact optimal survival, an adaptive sensing advantage, an accuracy threshold, and an explicit long-run rate gap from all fixed sensing schedules. A continuous-time autonomous network admits a certified finite-time advantage over constant sensing intensity, while its best binary asymptotic circuit leaves sensing off. The results quantify conditional advantages of information in designed physical systems. Molecular realization and self-assembly remain outside the demonstrated scope.</p>
+<p>We investigate how temporal error structure, finite reserves, and control architecture determine survival in finite-state stochastic models. A thermal binary sensor yields an exact architecture-specific accuracy–power frontier and a reversal of survival ranking across effective damage laws. A reversible paid-repair model yields an attainable reserve frontier. A shared-reserve checkpoint device admits exact optimal survival, an adaptive sensing advantage, an accuracy threshold, and an explicit long-run rate gap from all fixed sensing schedules. A continuous-time autonomous network admits a certified finite-time advantage over constant sensing intensity, while its best binary asymptotic circuit leaves sensing off. A closed six-species network then forms active repair catalysts from monomers and finite fuel. It yields a sharp resource bound, an analytic single-complex optimum, and a certified interior optimum for cooperative assembly and maintenance. The results quantify architecture-dependent conditions for persistence. Molecular realization and biological validation remain open.</p>
 <h2 id="how-to-read-and-assess-this-dossier">How to read and assess this dossier</h2>
 <p>Each study below contains its assumptions, mathematical derivation, construction or counterexample, figure, executable source, and numerical receipt. The proofs from the research notes are included in full. The final sections identify which ingredients are established in prior work, which exact results remain candidates for novelty, and what would be required before publication. Figures compare probabilities within the same study. Different studies use different dynamics and incompatible time units, so their percentages should not be compared as a common benchmark.</p>
 <h2 id="chemical-and-biological-vocabulary">Chemical and biological vocabulary</h2>
-<p><strong>Chemical potential</strong> is the free-energy change per additional particle of a species. A reservoir maintaining a chemical-potential difference can drive a reaction cycle away from equilibrium. A <strong>chemostat</strong> maintains concentrations externally. Our final model uses an ideal fuel reservoir in this sense; its finite battery is an internal storage constraint, while the environment continues to supply fuel.</p>
+<p><strong>Chemical potential</strong> is the free-energy change per additional particle of a species. A reservoir maintaining a chemical-potential difference can drive a reaction cycle away from equilibrium. A <strong>chemostat</strong> maintains concentrations externally. Study 04 uses a maintained fuel reservoir, with an internal battery limiting storage. Study 05 includes every fuel and waste molecule inside a closed chemical compartment, coupled to a heat bath.</p>
 <p><strong>Local detailed balance</strong> specifies the log ratio of forward and reverse rates from the entropy transferred to the environment. It constrains ratios, leaving kinetic barriers and absolute rates to be specified. Multiplying both directions of a reaction by the same catalyst or gate factor preserves that ratio. Our reaction networks stipulate those gates. A particular molecule, catalytic pathway, or mass-action construction implementing them has yet to be supplied.</p>
-<p><strong>Repair</strong> means a transition from a designated damaged state to a designated operational state. <strong>Survival</strong> is the probability of avoiding a specified failure set up to a time or round count. <strong>Homeostasis</strong> in biology refers to regulation of internal conditions. <strong>Self-assembly</strong> would require components to form the functional organization through their own dynamics. In these studies the organization is specified at initialization or fabrication. This distinction is essential when interpreting a link to biology.</p>
+<p><strong>Repair</strong> means a transition from a designated damaged state to a designated operational state. <strong>Survival</strong> is the probability of avoiding a specified failure set up to a time or round count. <strong>Homeostasis</strong> in biology refers to regulation of internal conditions. <strong>Self-assembly</strong> would require components to form the functional organization through their own dynamics. Studies 01–04 supply the functional organization at initialization or fabrication. Study 05 starts with monomers and forms its active repair catalysts through the declared reactions. This distinction is essential when interpreting a link to biology.</p>
 <h2 id="what-crosses-a-boundary">What crosses a boundary?</h2>
 <table>
 <thead>
@@ -56,12 +58,12 @@
 <tr>
 <td>Physics to chemistry</td>
 <td>Reversible reaction-like channels satisfy an explicit energy ledger</td>
-<td>Chemical species, stoichiometry, kinetic realizability, and experiments remain open</td>
+<td>Study 05 specifies species and stoichiometry. Kinetic realization and experiments remain open</td>
 </tr>
 <tr>
 <td>Chemistry to biology</td>
-<td>A model of operational maintenance offers a precise preliminary question</td>
-<td>Self-construction, metabolism as a molecular network, replication, and evolution are absent</td>
+<td>A reaction network forms and maintains its own repair catalysts in Study 05</td>
+<td>Study 05 adds finite-inventory assembly and cooperative repair. Replication, membranes, and evolution remain open</td>
 </tr>
 <tr>
 <td>Science to philosophy</td>
@@ -94,7 +96,9 @@ r_{\rm fixed}=\frac12\max\left\{\sqrt2,\frac{1+\sqrt{1+4\kappa}}2\right\}.
 </span></p>
 <p>This is a certified gap of at least about 2.75 percentage points. Its proof combines nonnegative uniformization, outward integer rounding, and a rigorous interpolation remainder. The finite binary optimum is sharp within its declared class; the continuum upper bound need not be attained.</p>
 <p><strong>Theorem E (the large-time objective selects differently).</strong> Among the same binary autonomous circuits, the best reachable spectral decay exponent is attained with sensing off. The exponent is about <span class="math" data-display="false">0.24252027</span>, smaller than the best exponent with any sensing enabled. Exact positive-vector ratio bounds certify the ordering. This does not optimize all analogue circuits at infinite time.</p>
-<p>The scientific lesson is that information's survival value depends jointly on temporal error structure, resource state, fuel access, damage dynamics, and the horizon. A finite-time advantage and an exponential-rate advantage are different statements. The golden ratio here is the eigenvalue of a two-state surviving reserve process, not evidence of a universal biological constant. Detailed definitions and proofs follow.</p>
+<p><strong>Theorem F (formation of the maintenance machinery).</strong> In the closed six-species network of Study 05, the net assembly and repair counts obey <span class="math" data-display="false">J_A=h+d</span> and <span class="math" data-display="false">J_A+J_R=N-b</span> on every path. Reaching <span class="math" data-display="false">k</span> complexes after <span class="math" data-display="false">r</span> net fuel-consuming repairs therefore requires <span class="math" data-display="false">N\ge k+r</span>. For <span class="math" data-display="false">2\le k\le M</span>, an explicit assembly and damage–repair sequence attains the count. An exact first-assembly/persistence formula and a single-complex calculus theorem give additional sharp bounds and attaining static designs.</p>
+<p><strong>Theorem G (a certified interior chemical design optimum).</strong> For two pairs and four fuel molecules, formation by time one followed by four units of persistence has globally optimal probability in <span class="math" data-display="false">[0.07486803450,0.07496800805]</span>. Every boundary design has probability at most <span class="math" data-display="false">0.07296461445</span>. A rational design attains a lower bound within <span class="math" data-display="false">10^{-4}</span> of the continuum maximum. The complete parameter cover and its replay establish an interior optimum in the stated static kinetic family. Exact symbolic maximizing parameters and uniqueness remain open.</p>
+<p>Information's survival value depends jointly on temporal error structure, resource state, fuel access, damage dynamics, and the horizon. In Study 05, the availability of assembled catalysts also determines whether cooperative maintenance can occur. The golden-ratio factor above comes from a two-state surviving reserve process. Detailed definitions and proofs follow.</p>
 <h2 id="study-01-thermal-sensing-temporal-errors-and-effective-survival">Study 01 — Thermal sensing, temporal errors, and effective survival</h2>
 <p><em>Model boundary note: the derivation below retains the assumptions of this study. Statements about later extensions are historical and should be read alongside the subsequent studies.</em></p>
 <p>Reference labels L1, L2, and L5 in this derivation refer to the <a href="../research/literature.md">original literature audit</a>.</p>
@@ -1055,6 +1059,247 @@ its information-channel comparison, and its loss at large time are
 candidate contributions in this architecture. Literature priority is
 unestablished. <a href="https://arxiv.org/abs/2209.10644">Autonomous energy and information flows</a>
 · <a href="https://web.stanford.edu/~glynn/papers/1988/FG88.html">Rigorous Poisson truncation</a></p>
+<h2 id="study-05-self-assembly-and-cooperative-maintenance">Study 05 — Self-assembly and cooperative maintenance</h2>
+<p><em>Model boundary note: the derivation below retains the assumptions of this study. Statements about later extensions are historical and should be read alongside the subsequent studies.</em></p>
+<p>This study starts with complementary monomers, fuel, and no functional complex. A reversible assembly reaction produces an active complex. Two assembled complexes can cooperate in repair: an active one catalyses restoration of a damaged one while consuming fuel. All chemical species stay inside a fixed-volume compartment coupled to a heat bath. The functional population, its maintenance capacity, and the remaining fuel evolve together.</p>
+<p>The mathematical model is an ideal stochastic reaction network. Species identities, standard-state energies, and effective mass-action channels are stipulated. An experimental molecular realization remains a separate task. The system has transient self-maintenance. Replication, heredity, a membrane, evolution, and manufacture of its monomers are further biological requirements.</p>
+<p><img alt="Reaction network and finite inventories" src="../results/figures/assembly-network.png" /></p>
+<h3 id="chemical-vocabulary-and-physical-assumptions">Chemical vocabulary and physical assumptions</h3>
+<p>A <strong>monomer</strong> is a building block. Two complementary monomers <span class="math" data-display="false">P,Q</span> can associate into a complex. <span class="math" data-display="false">H</span> denotes its functional conformation and <span class="math" data-display="false">D</span> its damaged conformation. <strong>Catalysis</strong> means that an existing <span class="math" data-display="false">H</span> enables a reaction and is recovered at the end of that reaction. The second <span class="math" data-display="false">H</span> in the repair product is the restored damaged complex. A <strong>propensity</strong> is the instantaneous jump rate given the current molecule counts. Stochastic mass action multiplies a rate constant by the number of available reactant combinations.</p>
+<p>Initially there are <span class="math" data-display="false">M</span> copies of each monomer and <span class="math" data-display="false">N</span> fuel molecules <span class="math" data-display="false">F</span>. Waste <span class="math" data-display="false">W</span> starts absent. The conserved inventories are</p>
+<p><span class="math display" data-display="true">
+P+H+D=Q+H+D=M,\qquad F+W=N.
+</span></p>
+<p>Write the state as <span class="math" data-display="false">s=(h,d,b)</span>, where <span class="math" data-display="false">b=F</span>, <span class="math" data-display="false">w=N-b</span>, and <span class="math" data-display="false">m=M-h-d=P=Q</span>. The state space is finite. All energies are in units of <span class="math" data-display="false">k_BT</span>, and the reference volume is one. Assign monomers and waste zero standard energy, fuel energy <span class="math" data-display="false">\epsilon=\log 8</span>, and complex energies <span class="math" data-display="false">-\theta</span> and <span class="math" data-display="false">-\theta-\delta</span>, with <span class="math" data-display="false">\delta=\log2</span>. Thus</p>
+<p><span class="math display" data-display="true">
+E(h,d,b)=-\theta(h+d)-\delta d+\epsilon b.
+</span></p>
+<p>The binding parameter is <span class="math" data-display="false">z=e^{-\theta}\in(0,1]</span>. Its endpoint <span class="math" data-display="false">z=0</span> is an infinite-binding limit used in the compactified optimization. Every reported attaining physical design has <span class="math" data-display="false">z&gt;0</span>.</p>
+<p>The device family has a static assembly-capacity fraction <span class="math" data-display="false">\alpha\in[0,1]</span>. With reference rates <span class="math" data-display="false">A,R,\eta&gt;0</span>, define</p>
+<p><span class="math display" data-display="true">
+a=A\alpha,\qquad r=R(1-\alpha)z.
+</span></p>
+<p>This is an explicit kinetic design assumption. Increasing binding stabilizes the complex against disassembly and slows the conformational access needed for repair. The factor <span class="math" data-display="false">1-\alpha</span> describes shared fabrication capacity for the two pathways. It does not represent a fractional initial fuel allotment. Actual fuel spending is counted molecule by molecule. Local detailed balance constrains rate ratios and leaves this kinetic dependence to the model designer.</p>
+<table>
+<thead>
+<tr>
+<th>Reaction</th>
+<th>Forward propensity</th>
+<th>Reverse propensity evaluated at the current state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="math" data-display="false">P+Q+F\rightleftharpoons H+W</span></td>
+<td><span class="math" data-display="false">a m^2b</span></td>
+<td><span class="math" data-display="false">azhw/8</span></td>
+</tr>
+<tr>
+<td><span class="math" data-display="false">H\rightleftharpoons D</span></td>
+<td><span class="math" data-display="false">\eta h</span></td>
+<td><span class="math" data-display="false">\eta d/2</span></td>
+</tr>
+<tr>
+<td><span class="math" data-display="false">H+D+F\rightleftharpoons2H+W</span></td>
+<td><span class="math" data-display="false">r hdb</span></td>
+<td><span class="math" data-display="false">r h(h-1)w/4</span></td>
+</tr>
+</tbody>
+</table>
+<p>The <span class="math" data-display="false">h(h-1)</span> factor counts an ordered catalyst/product pair. It is part of the rate convention. With this convention the forward and reverse factorials match exactly. These effective reactions include three-reactant channels. Their kinetic realization through actual intermediates has yet to be specified.</p>
+<p>Thermal restoration <span class="math" data-display="false">D\to H</span> absorbs energy from the bath. Fuel-coupled catalytic repair supplies an additional pathway. Retaining both reverses is necessary for the declared thermodynamics. Fuel can regenerate on reverse jumps, so the number of forward repairs can exceed the number of net fuel-consuming repairs.</p>
+<h3 id="theorem-1-exact-thermodynamic-consistency">Theorem 1 — Exact thermodynamic consistency</h3>
+<p>For <span class="math" data-display="false">0&lt;\alpha&lt;1</span> and <span class="math" data-display="false">z&gt;0</span>, define the unnormalized weight</p>
+<p><span class="math display" data-display="true">
+\omega(h,d,b)=\frac{z^{-(h+d)}2^d8^{-b}}
+{(m!)^2h!d!b!w!}.
+</span></p>
+<p>Every enabled reaction edge satisfies</p>
+<p><span class="math display" data-display="true">
+\omega(s)q(s,t)=\omega(t)q(t,s).
+</span></p>
+<p><strong>Proof.</strong> For assembly, the ratio of target and source weights is</p>
+<p><span class="math display" data-display="true">
+\frac{\omega(h+1,d,b-1)}{\omega(h,d,b)}
+=\frac{8m^2b}{z(h+1)(w+1)},
+</span></p>
+<p>which equals the corresponding propensity ratio. Damage gives <span class="math" data-display="false">2h/(d+1)</span>. Repair gives</p>
+<p><span class="math display" data-display="true">
+\frac{\omega(h+1,d-1,b-1)}{\omega(h,d,b)}
+=\frac{4db}{(h+1)(w+1)}.
+</span></p>
+<p>Its propensity ratio is the same, since the catalytic factor <span class="math" data-display="false">h</span> cancels. This proves detailed balance edge by edge. At <span class="math" data-display="false">\alpha=0</span> or <span class="math" data-display="false">1</span>, a disabled pathway loses both directions and the remaining edges retain detailed balance.</p>
+<p>The count-state free energy is</p>
+<p><span class="math display" data-display="true">
+\mathcal G(s)=E(s)+\log[(m!)^2h!d!b!w!].
+</span></p>
+<p>Consequently <span class="math" data-display="false">\log[q(s,t)/q(t,s)]=-\Delta\mathcal G</span>. The factorial term accounts for the mixing and counting entropy. A normalized version <span class="math" data-display="false">\pi</span> of <span class="math" data-display="false">\omega</span> is stationary, including when the full graph has more than one communicating class. For any full-ensemble distribution <span class="math" data-display="false">p_t</span>,</p>
+<p><span class="math display" data-display="true">
+\frac{d}{dt}D(p_t\Vert\pi)
+=-\frac12\sum_{s,t}(p_sq_{st}-p_tq_{ts})
+\log\frac{p_sq_{st}}{p_tq_{ts}}\le0.
+</span></p>
+<p>The inequality follows from <span class="math" data-display="false">(x-y)\log(x/y)\ge0</span>. Conditional survivor distributions use a killed process and need not obey this full-ensemble formula. No chemical reservoir is replenished during a run. Preparation of monomers, fuel, and reaction barriers precedes the experiment.</p>
+<p><strong>Evidence.</strong> Exact rational checks verify every forward/reverse weight identity and each conserved inventory. A separately constructed floating-point full generator has stationary weight <span class="math" data-display="false">\pi</span> and decreasing relative entropy in the tested cases. <a href="../tests/test_assembly.py">Thermodynamic tests</a></p>
+<h3 id="theorem-2-a-sharp-resourceorganization-bound">Theorem 2 — A sharp resource–organization bound</h3>
+<p>Let <span class="math" data-display="false">J_A</span> count forward assembly minus disassembly jumps, and <span class="math" data-display="false">J_R</span> forward catalytic repair minus its reverse. On every trajectory from the unassembled launch,</p>
+<p><span class="math display" data-display="true">
+J_A=h+d,\qquad J_A+J_R=N-b.
+</span></p>
+<p>Therefore reaching <span class="math" data-display="false">k</span> assembled complexes after at least <span class="math" data-display="false">r\ge0</span> net catalytic repairs requires</p>
+<p><span class="math display" data-display="true">
+N\ge k+r.
+</span></p>
+<p>For <span class="math" data-display="false">2\le k\le M</span>, this count bound is sharp. With <span class="math" data-display="false">N=k+r</span>, first assemble <span class="math" data-display="false">k</span> active complexes. Then repeat <span class="math" data-display="false">r</span> times a damage jump followed by a fuel-consuming repair catalysed by another surviving complex. Every cycle restores <span class="math" data-display="false">h=k</span>, uses one fuel molecule, and retains at least one active catalyst. The final state has <span class="math" data-display="false">h=k,d=0,b=0</span>. For interior parameters the finite reaction sequence has positive probability in every positive time interval. Thus the lower resource requirement has a matching physical reaction path. This is a feasibility statement. A high target probability requires the separate kinetic frontier below.</p>
+<p><strong>Proof of the ledger.</strong> Assembly increments both complex count and fuel expenditure by one. Repair changes fuel expenditure and <span class="math" data-display="false">J_R</span> by one while preserving complex count. Damage preserves both quantities. Reverse jumps reverse the same increments. Induction over jumps proves both identities.</p>
+<p>For the ideal species-energy assignment, the bath-energy ledger also telescopes:</p>
+<p><span class="math display" data-display="true">
+Q_{\rm bath}(t)=E(s_0)-E(s_t)
+=\epsilon(N-b)+\theta(h+d)+\delta d.
+</span></p>
+<p>The initial fuel energy <span class="math" data-display="false">N\epsilon</span> is only one source of the available energy drop. Binding and damage change the species energy too. The full physical graph obeys the finite bound</p>
+<p><span class="math display" data-display="true">
+Q_{\rm bath}(t)\le N\epsilon+M(\theta+\delta).
+</span></p>
+<p>For <span class="math" data-display="false">M\ge2,N\ge M</span>, assemble all <span class="math" data-display="false">M</span>, spend the remaining fuel in damage–repair cycles, and damage all complexes to attain the endpoint energy. Stopping at the first loss of all active complexes restricts this construction to its final collapse event. Count-state entropy production includes the factorial entropy as well as this species-energy bookkeeping.</p>
+<p><strong>Evidence.</strong> The independent event-driven simulator checks the two count identities after every jump. It also accumulates the jump energy changes and compares their sum with the endpoint energy. <a href="../results/assembly-evidence.json">Simulation and ledger receipt</a></p>
+<h3 id="theorem-3-assembly-time-and-persistence-have-exact-laws">Theorem 3 — Assembly time and persistence have exact laws</h3>
+<p>Let <span class="math" data-display="false">\tau_A</span> be the first appearance of <span class="math" data-display="false">H</span>. Before <span class="math" data-display="false">\tau_A</span>, only assembly can occur, at rate</p>
+<p><span class="math display" data-display="true">
+\lambda=aM^2N.
+</span></p>
+<p>Hence <span class="math" data-display="false">\tau_A\sim\operatorname{Exp}(\lambda)</span> when <span class="math" data-display="false">\lambda&gt;0</span>, with density <span class="math" data-display="false">\lambda e^{-\lambda t}</span>, distribution <span class="math" data-display="false">1-e^{-\lambda t}</span>, mean <span class="math" data-display="false">1/\lambda</span>, and quantile <span class="math" data-display="false">-\log(1-p)/\lambda</span>. If <span class="math" data-display="false">M=0</span>, <span class="math" data-display="false">N=0</span>, or <span class="math" data-display="false">a=0</span>, assembly never occurs. The launch reaction consumes one fuel molecule and starts the maintenance process at <span class="math" data-display="false">s_*=(1,0,N-1)</span>.</p>
+<p>After launch define functional collapse as the first time <span class="math" data-display="false">h=0</span>. The physical network retains its reverse reactions beyond collapse. The first-passage experiment stops there. Form the row subgenerator <span class="math" data-display="false">Q</span> on states with <span class="math" data-display="false">h&gt;0</span>, retaining all outgoing rates on the diagonal, including rates into collapse. Then</p>
+<p><span class="math display" data-display="true">
+S(t)=e_{s_*}^{\mathsf T}e^{tQ}\mathbf1.
+</span></p>
+<p>For assembly deadline <span class="math" data-display="false">D</span> and required lifetime <span class="math" data-display="false">L</span> after first assembly, the exact success probability is</p>
+<p><span class="math display" data-display="true">
+V(D,L;\alpha,z)=(1-e^{-\lambda D})S(L).
+</span></p>
+<p><strong>Proof.</strong> The waiting-time statement follows from the single enabled launch channel. The first post-launch state is deterministic. The strong Markov property makes its subsequent trajectory independent of the waiting time. The killed forward equation yields <span class="math" data-display="false">S</span>, and multiplying the two independent event probabilities yields <span class="math" data-display="false">V</span>.</p>
+<p>If the question instead asks whether the device has assembled and remains functional at a common absolute time <span class="math" data-display="false">T</span>, the exact probability is</p>
+<p><span class="math display" data-display="true">
+J(T)=\int_0^T\lambda e^{-\lambda u}S(T-u)\,du.
+</span></p>
+<p>It is evaluated with a history-labelled launch state and the post-launch killed generator. A physical return to the initial counts after launch enters failure. Treating it as a new launch would count a different event. Optimizing <span class="math" data-display="false">J(T)</span> can reward very late assembly. The benchmark uses <span class="math" data-display="false">V</span>, which requires every successful device to function for the full lifetime <span class="math" data-display="false">L</span>.</p>
+<p>With a single initial fuel molecule, after first assembly further association and catalytic repair are inaccessible before collapse. Thus <span class="math" data-display="false">S(t)=e^{-\nu t}</span>, where <span class="math" data-display="false">\nu=\eta+az/8</span>, and</p>
+<p><span class="math display" data-display="true">
+J(T)=\lambda\frac{e^{-\nu T}-e^{-\lambda T}}{\lambda-\nu}.
+</span></p>
+<p>At <span class="math" data-display="false">\lambda=\nu</span>, the continuous limit is <span class="math" data-display="false">\lambda T e^{-\lambda T}</span>. This holds for arbitrary <span class="math" data-display="false">M</span> with <span class="math" data-display="false">N=1</span>.</p>
+<p><strong>Evidence.</strong> Tests compare this closed form against the generator, including the equal-rate limit. Numerical integration of the convolution independently agrees with the history-labelled block matrix exponential. <a href="../tests/test_assembly.py">First-passage tests</a></p>
+<p><img alt="First-assembly law and the effect of the event definition" src="../results/figures/assembly-formation.png" /></p>
+<h3 id="theorem-4-an-analytic-sharp-bound-and-its-attaining-design">Theorem 4 — An analytic sharp bound and its attaining design</h3>
+<p>For one monomer pair <span class="math" data-display="false">M=1</span> and <span class="math" data-display="false">N\ge1</span>, the active complex has no partner with which to perform cooperative repair. Its post-launch loss rate remains <span class="math" data-display="false">\eta+A\alpha z/8</span>. For fixed <span class="math" data-display="false">z&gt;0,D&gt;0,L&gt;0</span>,</p>
+<p><span class="math display" data-display="true">
+V=(1-e^{-c\alpha})e^{-\eta L-d\alpha},\quad
+c=AND,\quad d=AzL/8.
+</span></p>
+<p>The sharp upper bound over <span class="math" data-display="false">\alpha\in[0,1]</span> is the value of this expression at</p>
+<p><span class="math display" data-display="true">
+\alpha_* = \min\left\{1,\frac{\log(1+c/d)}{c}\right\}.
+</span></p>
+<p>Installing that static design attains equality. For <span class="math" data-display="false">z=0</span>, the maximizing value is <span class="math" data-display="false">\alpha_*=1</span>. If either duration is zero the corresponding limiting expression applies.</p>
+<p><strong>Proof.</strong> For <span class="math" data-display="false">\alpha&gt;0</span>,</p>
+<p><span class="math display" data-display="true">
+\frac{d}{d\alpha}\log V=\frac{c}{e^{c\alpha}-1}-d,
+\qquad
+\frac{d^2}{d\alpha^2}\log V
+=-\frac{c^2e^{c\alpha}}{(e^{c\alpha}-1)^2}&lt;0.
+</span></p>
+<p>There is a unique unconstrained maximum, followed by clipping to the allowed interval. At fixed <span class="math" data-display="false">\alpha&gt;0</span>, <span class="math" data-display="false">V</span> decreases strictly with <span class="math" data-display="false">z</span> when <span class="math" data-display="false">L&gt;0</span>. Thus stronger binding always helps in this single-complex family. The intermediate-binding result in the next section requires additional organization and the specified repair kinetics.</p>
+<h3 id="two-complex-benchmark-and-a-global-certificate">Two-complex benchmark and a global certificate</h3>
+<p>Use <span class="math" data-display="false">M=2,N=4,A=1,R=4,\eta=1,D=1,L=4</span>. The free design parameters are the static constants <span class="math" data-display="false">(\alpha,z)\in[0,1]^2</span>. No clock changes their values during a trajectory. The exact sharp design frontier is</p>
+<p><span class="math display" data-display="true">
+V^*=\max_{(\alpha,z)\in[0,1]^2}V(1,4;\alpha,z).
+</span></p>
+<p>The matrix entries are polynomial in <span class="math" data-display="false">\alpha,z</span>, so <span class="math" data-display="false">V</span> extends continuously to the compact square and attains its maximum. The computational certificate encloses this continuum maximum to the tolerance recorded in its receipt. Its rational construction supplies a corresponding lower bound and an implementable design. The exact maximizing real parameters are characterized by this variational expression. The rational construction attains the lower bound within the certified optimization gap.</p>
+<p><img alt="Finite-reserve design surface and binding tradeoff" src="../results/figures/assembly-frontier.png" /></p>
+<h4 id="rational-evaluation-at-a-design-point">Rational evaluation at a design point</h4>
+<p>For rational parameters, <span class="math" data-display="false">Q=K/d_0</span> has an integer matrix <span class="math" data-display="false">K</span>. Choose <span class="math" data-display="false">\Lambda</span> at least as large as its largest exit rate and write <span class="math" data-display="false">P=I+Q/\Lambda</span>. Nonnegative uniformization gives</p>
+<p><span class="math display" data-display="true">
+S(L)=e^{-x}\sum_{j\ge0}\frac{x^j}{j!}e_{s_*}^{\mathsf T}P^j\mathbf1,
+\qquad x=\Lambda L.
+</span></p>
+<p>The existing integer enclosure code propagates powers using floor and ceiling division and bounds the Poisson tail with a rational geometric series. The same Poisson-weight bounds enclose <span class="math" data-display="false">e^{-\lambda D}</span>, giving an outward-rounded product for <span class="math" data-display="false">V</span>. The code checks integer overflow bounds. The launch state in <span class="math" data-display="false">J</span> has terminal reward zero. Its successful post-launch states have terminal reward one.</p>
+<h4 id="bounding-every-point-between-evaluated-designs">Bounding every point between evaluated designs</h4>
+<p>For a parameter rectangle with widths <span class="math" data-display="false">h_\alpha,h_z</span>, suppose <span class="math" data-display="false">|V_{\alpha\alpha}|\le C_\alpha</span> and <span class="math" data-display="false">|V_{zz}|\le C_z</span>. Successive one-dimensional interpolation gives</p>
+<p><span class="math display" data-display="true">
+V(\alpha,z)\le\max_{\text{four corners}}V
++\frac{C_\alpha h_\alpha^2+C_z h_z^2}{8}.
+</span></p>
+<p>No mixed derivative bound is needed: interpolate in one coordinate and then the other, applying a convex combination to the first error.</p>
+<p>Two independent derivative bounds are available. The semigroup norm bound uses the induced infinity norm and contracts every stochastic or killed propagator. For the two stages its pure second derivatives are bounded by</p>
+<p><span class="math display" data-display="true">
+C_\alpha\le(2DA M^2N+L\|Q_\alpha\|_\infty)^2,
+\qquad C_z\le L^2\|Q_z\|_\infty^2.
+</span></p>
+<p>The suprema of these derivative matrix norms occur at endpoints of the other coordinate because each derivative is affine in that coordinate and a norm is convex.</p>
+<p>An interior rectangle admits a tighter labelled-path bound. For a scalar parameter <span class="math" data-display="false">p</span>, with each channel intensity <span class="math" data-display="false">q_e(p)</span> affine in <span class="math" data-display="false">p</span>, let <span class="math" data-display="false">Z=\partial_p\log\mathcal L</span> be the path score and</p>
+<p><span class="math display" data-display="true">
+B=\sum_{\text{jumps }e}(q&#x27;_e/q_e)^2.
+</span></p>
+<p>Differentiating the path likelihood twice yields <span class="math" data-display="false">\mathcal L&#x27;&#x27;/\mathcal L=Z^2-B</span>. The compensator identity gives</p>
+<p><span class="math display" data-display="true">
+\mathbb EZ^2=\mathbb EB
+=\mathbb E\int\sum_e\frac{(q&#x27;_e)^2}{q_e}\,dt=I.
+</span></p>
+<p>For any parameter-independent success event with indicator <span class="math" data-display="false">f</span>,
+<span class="math" data-display="false">V&#x27;&#x27;=\mathbb E[f(Z^2-B)]</span>. Both positive and negative parts of <span class="math" data-display="false">Z^2-B</span> have expectation at most <span class="math" data-display="false">I</span>, since each is bounded by <span class="math" data-display="false">Z^2</span> or <span class="math" data-display="false">B</span>. Therefore</p>
+<p><span class="math display" data-display="true">
+|V&#x27;&#x27;|\le I\le\sum_{\text{stages}}t_{\text{stage}}
+\max_s\sum_e(q&#x27;_e)^2/q_e.
+</span></p>
+<p>The two stages can be represented as independent path segments whose indicators multiply. Channel labels retain separate assembly, repair, and damage events even when they share endpoints. For <span class="math" data-display="false">\alpha</span>, the assembly and repair contributions scale as <span class="math" data-display="false">1/\alpha</span> and <span class="math" data-display="false">1/(1-\alpha)</span>. For <span class="math" data-display="false">z</span>, the disassembly and both repair directions scale as <span class="math" data-display="false">1/z</span>. These give explicit rational bounds on each interior rectangle. Boundary rectangles use the nonsingular semigroup bound. All rate-zero endpoints are covered through continuity.</p>
+<p>A priority queue subdivides the rectangle with the largest current upper bound. Every split replaces its parent with two children whose union is exactly the parent. Every evaluated point has rational probability enclosures. The largest current leaf upper bound is therefore a global upper bound. Subdivision stops only when that bound is within the specified tolerance of an attained lower bound. A saved tree, corner enclosures, and a separate replay checker make the coverage and inequalities inspectable.</p>
+<p><strong>Evidence.</strong> <a href="../results/assembly.json">Optimization tree and exact intervals</a> · <a href="../scripts/run_assembly.py">Reproduction script</a> · <a href="../results/assembly-certificate-check.json">Certificate replay</a></p>
+<h3 id="what-resource-allocation-looks-like-on-surviving-paths">What resource allocation looks like on surviving paths</h3>
+<p>At the rational design <span class="math" data-display="false">\alpha=33/64,z=1/4</span>, the exact success probability is about <span class="math" data-display="false">0.074867</span>. Its initial assembly rate is <span class="math" data-display="false">8.25</span>, so formation by time one has probability about <span class="math" data-display="false">0.999739</span>. Most losses occur during maintenance.</p>
+<p>Conditioning the endpoint distribution on persistence gives approximately 1.97685 assembled complexes and 1.24699 remaining fuel molecules. The ledger then gives 0.77616 net catalytic repairs. These are conditional means across successful paths. They sum to the four-molecule inventory, with fuel spending on assembly and repair generated by the dynamics. The evidence file retains independently simulated forward repair counts as a separate quantity.</p>
+<p><img alt="A successful repair trajectory and independent persistence calculation" src="../results/figures/assembly-trajectories.png" /></p>
+<p>The independent simulation uses six directly implemented mass-action channels and seed 1731. Of 30,000 initial attempts, 29,991 assembled by the deadline and 2,229 met the full maintenance requirement. Its estimate is 0.0743 with a 95% Wilson interval approximately <span class="math" data-display="false">[0.07139,0.07732]</span>. Successful paths collectively performed 3,621 forward catalytic repairs. The maximum energy-ledger residual was about <span class="math" data-display="false">1.8\times10^{-15}</span>. These are stochastic implementation checks. The rational certificate establishes the optimization inequalities.</p>
+<p><img alt="Finite resources and the single-complex counterexample" src="../results/figures/assembly-resources.png" /></p>
+<h3 id="eventual-loss-and-the-meaning-of-self-maintenance">Eventual loss and the meaning of self-maintenance</h3>
+<p>Finite-time persistence can improve through cooperative repair. For every fixed finite-rate design with <span class="math" data-display="false">\eta&gt;0</span>, eventual first loss of all active complexes has probability one. To prove it, bound the total rate of all channels other than forward damage by <span class="math" data-display="false">K</span> over the finite state space. During an interval of length <span class="math" data-display="false">t_0&gt;0</span>, require no such channel and require every initially healthy complex to damage. A dominating Poisson clock for the other channels and independent damage clocks give a probability at least</p>
+<p><span class="math display" data-display="true">
+p=e^{-Kt_0}(1-e^{-\eta t_0})^M&gt;0
+</span></p>
+<p>of collapse, uniformly over all live states. Iterated conditioning gives</p>
+<p><span class="math display" data-display="true">
+S(t)\le(1-p)^{\lfloor t/t_0\rfloor}\longrightarrow0.
+</span></p>
+<p>This bound is generally loose. The exact exponential decay rate for a fixed design follows from the spectral abscissa of the live component reachable from <span class="math" data-display="false">s_*</span>. Every internal edge has its reverse, so this component is connected and its killed generator is irreducible. Perron–Frobenius theory then gives the sharp logarithmic limit. Positive integer vector ratios supply a rational enclosure for that exponent in the verification receipt.</p>
+<h3 id="evidence-limitations-and-relation-to-tsimermans-question">Evidence, limitations, and relation to Tsimerman's question</h3>
+<p>This model advances the project from a preinstalled machine to an explicit species-count network in which the repair catalysts must first assemble. Finite reactant inventories, thermal reverses, mixing entropy, and fuel use are included. The organization closes a specific functional dependency: active complexes restore other damaged complexes.</p>
+<p>The reaction rules and kinetic access barriers are supplied by the model. The model contains no sensor, actuator, fuel-harvesting environment, membrane, or hereditary mechanism. Those features from other studies have not been silently inherited. This is a distinct assembly-and-maintenance architecture. Its relevance to the chemistry-to-biology question is the quantified dependence of persistence on the construction of functional components. Its chemical and biological scope remains assessable from the declared species and reactions.</p>
+<p>Intermediate binding optima, fuel-driven assembly, and chemical self-maintenance have substantial precedents. The most focused candidate result here is the certified interior optimum for this closed finite-inventory first-passage problem, together with its exact resource ledger and analytic single-complex comparison. The generic ideas and methods are established. <a href="../research/assembly-literature.md">Study-specific literature comparison</a></p>
+<p>Run the study, evidence generator, and certificate replay from the repository root:</p>
+<pre><code class="language-powershell">python -B scripts/run_assembly.py
+python -B scripts/assembly_evidence.py
+python -B scripts/check_assembly_certificate.py
+$env:PYTHONPATH = 'src'
+python -B -m unittest discover -s tests -v
+</code></pre>
+<p>The full probability surface is illustrative sampling. The complete rectangle cover and its outward inequalities establish the claimed continuum bound. <a href="../src/purposeful/assembly.py">Source implementation</a> · <a href="../tests/test_assembly.py">Independent tests</a> · <a href="../results/assembly-evidence.json">Simulation and figure data</a></p>
+<h2 id="certified-numerical-conclusions">Certified numerical conclusions</h2>
+<p>For the two-pair, four-fuel benchmark with formation deadline one and required post-assembly lifetime four,</p>
+<p><span class="math display" data-display="true">
+0.07486803450\le V^*\le0.07496800805.
+</span></p>
+<p>The decimal endpoints above are rounded outward. The full rational endpoints are retained in the certificate. The absolute optimization gap is below <span class="math" data-display="false">10^{-4}</span>, or 0.01 percentage points. The design</p>
+<p><span class="math display" data-display="true">
+\alpha=529/1024,\qquad z=63/256,\qquad
+\theta=\log(256/63)
+</span></p>
+<p>attains the certified lower bound to its probability-enclosure precision. Every boundary point of the compact square has</p>
+<p><span class="math display" data-display="true">
+V\le0.07296461445&lt;0.07486803450.
+</span></p>
+<p>Thus <strong>every global maximizer is strictly interior</strong>. It uses positive assembly and maintenance capacity and a finite, positive binding strength in this declared family. The result holds for every real parameter pair in the square, including the limiting infinite-binding boundary. It certifies existence of an interior optimum without asserting a unique maximizer or an exact symbolic value for it.</p>
+<p>The cover has 46,655 tree nodes, 23,328 leaf rectangles, and 23,969 evaluated rational points. The replay script recomputes the point intervals, verifies every partition and interpolation bound, and compares all points with an independent matrix-exponential evaluation. Its output also supplies an exact positive-vector enclosure for the reachable spectral exponent at the certified design and the conditional resource allocation.</p>
+<p>The first run rebuilt parameter-independent curvature coefficients for every rectangle and took about 468 seconds. Caching those exact coefficients reduced the repeat optimization to about 141 seconds and reproduced the same rational bounds and construction. The optimization is over the specified two-parameter static family. Arbitrary reaction mechanisms and time-varying controllers require different comparisons.</p>
+<p><a href="../results/assembly.json">Full rational certificate</a> · <a href="../results/assembly-certificate-check.json">Complete certificate replay receipt</a> · <a href="../results/assembly-evidence.json">Independent stochastic evidence</a></p>
 <h2 id="evidence-and-reproduction-receipts">Evidence and reproduction receipts</h2>
 <p>The dossier build reran the existing test suite. The machine-readable receipt records the full output, UTC execution time, and SHA-256 hashes of source, tests, and mathematical notes. Passing tests supports implementation agreement within the tested cases. The proofs and certificates carry the mathematical claims. <a href="../results/dossier-verification.json">Fresh verification receipt</a></p>
 <table>
@@ -1091,9 +1336,15 @@ unestablished. <a href="https://arxiv.org/abs/2209.10644">Autonomous energy and 
 <td><a href="../scripts/run_autonomous.py">run_autonomous.py</a></td>
 <td><a href="../results/autonomous.json">integer and rational enclosures</a></td>
 </tr>
+<tr>
+<td>05</td>
+<td><a href="../src/purposeful/assembly.py">assembly.py</a></td>
+<td><a href="../scripts/run_assembly.py">run_assembly.py</a></td>
+<td><a href="../results/assembly.json">certificate</a>, <a href="../results/assembly-certificate-check.json">full replay</a>, <a href="../results/assembly-evidence.json">simulation</a></td>
+</tr>
 </tbody>
 </table>
-<p>The earlier run-manifest contains historical hashes and package versions for Study 01. Two hashes were already stale on first inspection. The present receipt identifies the exact sources used for this dossier's fresh test run. The 30 tests are a local reproducibility check. Independent scientific review remains pending.</p>
+<p>The earlier run-manifest contains historical hashes and package versions for Study 01. Two hashes were already stale on first inspection. The present receipt identifies the exact sources used for this dossier's fresh test run. The 38 tests are a local reproducibility check. Independent scientific review remains pending.</p>
 <h2 id="literature-comparison-and-novelty-assessment">Literature comparison and novelty assessment</h2>
 <p>The targeted search on 17 November 2026 used combinations of “survival”, “adaptive sensing”, “finite reserve”, “paid repair”, “golden ratio”, “spectral radius”, and autonomous information thermodynamics. Exact-expression searches for the two-thirds sensing threshold and the characteristic rate constants returned substantial unrelated material. A missing search hit supplies limited evidence. The search is not a proof that the formulas have never appeared in another notation or field.</p>
 <table>
@@ -1173,7 +1424,7 @@ unestablished. <a href="https://arxiv.org/abs/2209.10644">Autonomous energy and 
 <p>The accompanying manuscript is a candidate research draft with full mathematical definitions, proofs, references, and computational supplements. It carries no claim of established priority, peer review, or arXiv acceptance. Its author line identifies an AI-assisted workspace draft so that a human author can take responsibility before submission.</p>
 <p>The sharp checkpoint bounds are within stated policy classes. The continuous-time sharp optimum is over binary circuit gates with restricted control tables; its uniform-intensity comparator permits a continuum only in the sensing multiplier. Arbitrary analogue reserve-dependent sensing, arbitrary reaction architectures, and every possible controller are outside that optimization. The finite-time autonomous benchmark was selected through exploratory search. The certificate verifies the exact chosen rates; it supplies no frequency estimate for how often such advantages occur in physical devices.</p>
 <p>The direct-sensor-disconnection comparison changes its channel structure and may retain indirect information through the reserve. It demonstrates the performance difference for that intervention. It does not isolate a universal number of useful bits or a general thermodynamic price of meaning. Operating energy omits apparatus preparation and fabrication. The checkpoint model relies on supplied clocks and registers, while the autonomous model relies on a maintained fuel reservoir and designed barriers.</p>
-<p>Before submission, a human reviewer should check the optimal-policy inequalities, the matrix-product proof for all fixed words, and the implementation of interval rounding. Priority review should extend to partially observed control, intermittent toxic exposure, occupation-time reliability, joint spectral radii, and autonomous molecular networks. An explicit mass-action realization would strengthen the chemical interpretation. A self-assembly model would address a new question about where the architecture comes from.</p>
+<p>Before submission, a human reviewer should check the optimal-policy inequalities, the matrix-product proof for all fixed words, and the implementation of interval rounding. Priority review should extend to partially observed control, intermittent toxic exposure, occupation-time reliability, joint spectral radii, and autonomous molecular networks. An explicit mass-action realization would strengthen the chemical interpretation. Study 05 adds a self-assembly model with finite inventories. A molecular implementation remains open.</p>
 <h2 id="references">References</h2>
 <ol>
 <li>U. Seifert. <em>Stochastic thermodynamics, fluctuation theorems and molecular machines</em>. Reports on Progress in Physics 75, 126001 (2012). <a href="https://arxiv.org/abs/1205.4176">arXiv:1205.4176</a>.</li>
@@ -1190,5 +1441,16 @@ unestablished. <a href="https://arxiv.org/abs/2209.10644">Autonomous energy and 
 <li>B. L. Fox, P. W. Glynn. <em>Computing Poisson Probabilities</em>. Communications of the ACM 31, 440–445 (1988). <a href="https://web.stanford.edu/~glynn/papers/1988/FG88.html">Author page</a>.</li>
 <li>W. Chen, M. Chen, Y.-H. Ma. <em>Finite-Time Thermodynamics of an Autonomous Information Machine</em> (2026). <a href="https://arxiv.org/abs/2604.15953">arXiv:2604.15953</a>.</li>
 <li>J. Liu, H. Darabi. <em>Reconfiguration of Discrete Event System Controllers with Dynamic Sensing Set</em>. IFAC World Congress (2005). <a href="https://skoge.folk.ntnu.no/prost/proceedings/ifac2005/Fullpapers/03504.pdf">Proceedings PDF</a>.</li>
-<li>N. Hasidi, M. Kalech. <em>Anticipatory Troubleshooting</em>. Applied Sciences 11(3), 995 (2021). <a href="https://doi.org/10.3390/app11030995">doi:10.3390/app11030995</a>.</li>
+<li>
+<p>N. Hasidi, M. Kalech. <em>Anticipatory Troubleshooting</em>. Applied Sciences 11(3), 995 (2021). <a href="https://doi.org/10.3390/app11030995">doi:10.3390/app11030995</a>.</p>
+</li>
+<li>
+<p>M. F. Hagan, O. M. Elrad, R. L. Jack. <em>Mechanisms of kinetic trapping in self-assembly and phase transformation</em>. Journal of Chemical Physics 135, 104115 (2011). <a href="https://doi.org/10.1063/1.3635775">doi:10.1063/1.3635775</a>.</p>
+</li>
+<li>R. Yvinec, M. R. D'Orsogna, T. Chou. <em>First passage times in homogeneous nucleation and self-assembly</em>. Journal of Chemical Physics 137, 244107 (2012). <a href="https://doi.org/10.1063/1.4772598">doi:10.1063/1.4772598</a>.</li>
+<li>M. Nguyen, S. Vaikuntanathan. <em>Design principles for nonequilibrium self-assembly</em>. Proceedings of the National Academy of Sciences 113, 14231–14236 (2016). <a href="https://doi.org/10.1073/pnas.1609983113">doi:10.1073/pnas.1609983113</a>.</li>
+<li>R. Rao, M. Esposito. <em>Conservation laws and work fluctuation relations in chemical reaction networks</em>. Journal of Chemical Physics 149, 245101 (2018). <a href="https://doi.org/10.1063/1.5042253">doi:10.1063/1.5042253</a>.</li>
+<li>M. Tena-Solsona, C. Wanzke, B. Riess, A. R. Bausch, J. Boekhoven. <em>Self-selection of dissipative assemblies driven by primitive chemical reaction networks</em>. Nature Communications 9, 2044 (2018). <a href="https://doi.org/10.1038/s41467-018-04488-y">doi:10.1038/s41467-018-04488-y</a>.</li>
+<li>S. M. Morrow, I. Colomer, S. P. Fletcher. <em>A chemically fuelled self-replicator</em>. Nature Communications 10, 1011 (2019). <a href="https://doi.org/10.1038/s41467-019-08885-9">doi:10.1038/s41467-019-08885-9</a>.</li>
+<li>Y. Pantazis, M. A. Katsoulakis, D. G. Vlachos. <em>Parametric sensitivity analysis for biochemical reaction networks based on pathwise information theory</em>. BMC Bioinformatics 14, 311 (2013). <a href="https://doi.org/10.1186/1471-2105-14-311">doi:10.1186/1471-2105-14-311</a>.</li>
 </ol></main><footer>Equations and figures are local. Sources link to the research package and primary literature.</footer><script src="assets/katex/katex.min.js"></script><script>document.querySelectorAll('.math').forEach(el=>{try{katex.render(el.textContent,el,{displayMode:el.dataset.display==='true',throwOnError:true,strict:'ignore'})}catch(e){el.dataset.error=e.message;console.error(e.message)}});document.getElementById('print').onclick=()=>window.print();</script></body></html>

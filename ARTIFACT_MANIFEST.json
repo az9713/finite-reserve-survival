@@ -10,6 +10,16 @@
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
   },
   {
+    "path": "docs/assembly-journey.md",
+    "bytes": 3746,
+    "sha256": "bf8e292f6086654ca6926999ffcd72f8f2fb001b42c777b4b4338d7978622081"
+  },
+  {
+    "path": "docs/assembly-results.md",
+    "bytes": 2081,
+    "sha256": "c8edb9af54d65685791381c5534010aa28010f64e88cdde365f58b2d2e841dfd"
+  },
+  {
     "path": "docs/assets/katex/fonts/KaTeX_AMS-Regular.woff2",
     "bytes": 28076,
     "sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308"
@@ -141,8 +151,8 @@
   },
   {
     "path": "docs/DEVELOPMENT-JOURNEY.html",
-    "bytes": 22366,
-    "sha256": "05fe702192e0d217e656fe50ac5bae45087ff5e92e45247c47edb41223463ed9"
+    "bytes": 26973,
+    "sha256": "322a7673b2990a2aded865dc4061a9b14743beda9858ec4b53bb6356271630d5"
   },
   {
     "path": "docs/finite-reserve-repair.md",
@@ -151,8 +161,8 @@
   },
   {
     "path": "docs/math-results-guide.md",
-    "bytes": 3833,
-    "sha256": "a4dbc2e841a090881d70e8ccd4c2ec05e662089df227dccd2b01a0980073ceae"
+    "bytes": 4858,
+    "sha256": "3160be3a3918685808eeb34fc1327540e57eaa05df82e96b4c4d1bf5a354b845"
   },
   {
     "path": "docs/model.md",
@@ -171,28 +181,38 @@
   },
   {
     "path": "docs/RESEARCH-MANUSCRIPT.html",
-    "bytes": 83450,
-    "sha256": "fcd729a284225001629a504eff073e1caeb60c162ebe054cbc93b34dec5896e3"
+    "bytes": 121665,
+    "sha256": "87ca41be0ffd4086df7f32d1fed6d6d7638332d4414ff3cd9ce9595169fdc18d"
   },
   {
     "path": "docs/research-manuscript.md",
-    "bytes": 56696,
-    "sha256": "f465b32f5fcb320a84b722db642fc0f7a38355207affc698eb5b58f295e61fcc"
+    "bytes": 84116,
+    "sha256": "85f46f868f1b05d5ff24c781df44e33506b2c23f313093a325b699255e39456f"
   },
   {
     "path": "docs/research-manuscript.tex",
-    "bytes": 71063,
-    "sha256": "2cdd4ab27bc9a671d5f55921a2b7fb04ad5e5329bc1ccc87bc628e7617e6ef2c"
+    "bytes": 101939,
+    "sha256": "bf9f3e075e19a7836094cf5a18671e6090a406f0f53841e5f169fc49386de6c6"
   },
   {
     "path": "docs/research-roadmap.md",
-    "bytes": 1625,
-    "sha256": "84ecb89066697de130cb7dde74f791d9ff891eb836c585b39fdb8a3bb09bb542"
+    "bytes": 2447,
+    "sha256": "2d16c3c23e0db7b8839e74795bd268e94349770c815a12fe82862e4ee5868afa"
   },
   {
     "path": "docs/SCIENTIFIC-DOSSIER.html",
-    "bytes": 107645,
-    "sha256": "719b8b703e5a195b980f6be63a3ed3521ed7e776a2117596e82eab167bdfca9e"
+    "bytes": 145674,
+    "sha256": "e7ba49c31e7f93e9e62c32d5640116a55ce96a730ca75a4dd17b240d2c715f6d"
+  },
+  {
+    "path": "docs/SELF-ASSEMBLY.html",
+    "bytes": 44161,
+    "sha256": "9d2c11fdb2a305a095e7245ad6592b10fcbadf4ce340834152fb6d990aec903c"
+  },
+  {
+    "path": "docs/self-assembly.md",
+    "bytes": 21300,
+    "sha256": "53c42c5b2a1bb03eba225cc4010fa68070139926fc55206dd6a5fa4caa4c5408"
   },
   {
     "path": "index.html",
@@ -206,13 +226,23 @@
   },
   {
     "path": "README.md",
-    "bytes": 5302,
-    "sha256": "0b589fcb3591098c864e009c1a56a0e4c85dcc373f78437c23d75e1f47dc1bf6"
+    "bytes": 7718,
+    "sha256": "25baec39e0b8a8563691a5c11950eb4269b44c81f15ba4f4f9dadb4579134647"
+  },
+  {
+    "path": "research/assembly-literature.md",
+    "bytes": 6701,
+    "sha256": "c2b0898ba66b42bab676a608a38e03df75165f62cc5717f2ca4d5c8b764e7e98"
+  },
+  {
+    "path": "research/assembly-references.md",
+    "bytes": 1638,
+    "sha256": "5a5908fa6df1c03ec777f5a7a65c9577df4334ddda3c95ea865d651ae7d55e48"
   },
   {
     "path": "research/claims.json",
-    "bytes": 1898,
-    "sha256": "02dccec40f83b37f701e3435199048e7a2a50b7ed967af09a2ee75b2308bfe02"
+    "bytes": 3573,
+    "sha256": "00aa1b465e97ef720cf01f19173547562de16c13e722c98e5cd6f8f35e741929"
   },
   {
     "path": "research/literature.md",
@@ -233,6 +263,21 @@
     "path": "research/talk-closing-excerpt.md",
     "bytes": 1740,
     "sha256": "6cdc1ea94cdecd466c01231dcd38d9c4e1883b98dbe484a8f89a1bb9b590e10a"
+  },
+  {
+    "path": "results/assembly-certificate-check.json",
+    "bytes": 1362,
+    "sha256": "4cb3e0d9753114ea5684c3a7595a6560787dfe7ba681eed83800eb7089a9306e"
+  },
+  {
+    "path": "results/assembly-evidence.json",
+    "bytes": 202737,
+    "sha256": "9b04699f8dcb590b758d62769871b1f3f84d6e2adaa6ce2c78f6e770f5892168"
+  },
+  {
+    "path": "results/assembly.json",
+    "bytes": 16897120,
+    "sha256": "5427566a22c6eae051373a45faa68a82e166334ec2f52088e2f4062ce286b2f3"
   },
   {
     "path": "results/atlas-data.json",
@@ -270,19 +315,29 @@
     "sha256": "7408eb1f2bd44f6277c0e06148a3f37b8989d5af82511d62054f5a5de5915df0"
   },
   {
+    "path": "results/document-previews/assembly-certificate-page.png",
+    "bytes": 136713,
+    "sha256": "1036f0203b7b43ed506e90b1e57629c73e48911a3d5bff354ad8402bd50de64e"
+  },
+  {
+    "path": "results/document-previews/assembly-proof-page.png",
+    "bytes": 111127,
+    "sha256": "7fe717d38107b16c9b1dc685a60acec7a4291610f98052c3dc4717fa74a5eb50"
+  },
+  {
     "path": "results/document-previews/development-journey-1440.png",
-    "bytes": 100985,
-    "sha256": "455d1caae0b23264b3a18aabebba73b0097b8b100617cc72970314527b6998e3"
+    "bytes": 102232,
+    "sha256": "3f9dc00953ae1f61eaedffb880402a8aa39624a3edf577644742239ca2ae4e46"
   },
   {
     "path": "results/document-previews/development-journey-390.png",
-    "bytes": 58046,
-    "sha256": "f303f7ff535def2a00f2ec131bceb98cbfafa6fb7569c88a4f507abd4d7b8267"
+    "bytes": 57035,
+    "sha256": "2da338dc2fa2818632356c91fa181cb477bfbc2f4f299d3225319809a7c1de6b"
   },
   {
     "path": "results/document-previews/manuscript-page-1.png",
-    "bytes": 145662,
-    "sha256": "55ff6a54ef3b72062e3aff4e3a3847484fdd5cfa756390bab09ca3b62611a0bc"
+    "bytes": 148193,
+    "sha256": "094b8ce1013b375faa983a2208d67e3e41872363d308e0906f0ea5e754ea1329"
   },
   {
     "path": "results/document-previews/manuscript-page-19.png",
@@ -295,34 +350,49 @@
     "sha256": "2910b7ff2bd4d0cbefca17c27c50c200355ea9ddfeb8639f2806b1d4fc25543a"
   },
   {
+    "path": "results/document-previews/manuscript-page-32.png",
+    "bytes": 46139,
+    "sha256": "7a68b8ebdc3589456556cf1dc78088447b6da80647c23f783b3631156c233b6b"
+  },
+  {
     "path": "results/document-previews/manuscript-page-4.png",
-    "bytes": 177497,
-    "sha256": "95ce5671f787950f6709da50c60c7ae005918c2c1be5aeb9624d79552ad581a8"
+    "bytes": 182905,
+    "sha256": "819209788b33200b07324d4a900996de336f9bca7a2cf5620c96e2cef6688a43"
   },
   {
     "path": "results/document-previews/research-manuscript-1440.png",
-    "bytes": 106760,
-    "sha256": "a53d76b0f650a4aff6a2a17d3cd82193350bdfb48eb0ee8c958bd7e0131e6699"
+    "bytes": 100401,
+    "sha256": "fbc600e62bc8382c1a48b48b3585e103407dbc82398eebb36f437e8253a2f6af"
   },
   {
     "path": "results/document-previews/research-manuscript-390.png",
-    "bytes": 56208,
-    "sha256": "1d5aa1dbe602a79fcec381d080aca68b5a1b0715ec6c481a55afaa45c54f3095"
+    "bytes": 54418,
+    "sha256": "9214b0ed748e6b25deb67ed67c146b53e238c7157115988b581afafb9e14bc4c"
   },
   {
     "path": "results/document-previews/scientific-dossier-1440.png",
-    "bytes": 105473,
-    "sha256": "ab4425ba73491ce2b4b290e2e1dd6ed8d5ffbe514e92539b8f9ae615e4d01138"
+    "bytes": 112808,
+    "sha256": "f445262219bc9bb8ef559b632967a24fbc42a9c0d8c2e64a44de6be5d11ef594"
   },
   {
     "path": "results/document-previews/scientific-dossier-390.png",
-    "bytes": 54758,
-    "sha256": "ca07ab6203118876d6ec98147d4822bbd49d21f9781f042af61d8a545948fc03"
+    "bytes": 53957,
+    "sha256": "34cf9a108bde4812b95e2a33501b3f40f16e8acc51df3bb21aad2eddf48df007"
   },
   {
     "path": "results/document-previews/scientific-theorems.png",
-    "bytes": 105292,
-    "sha256": "28f903bd5bda642edc2f70ec0b3f4548b5a5610e42b48ef2be1f6049923063cd"
+    "bytes": 106156,
+    "sha256": "cc123652512e78d8f81d4fe17ec67ae06eb5a2d9acac2730a1fb40cd9c57a611"
+  },
+  {
+    "path": "results/document-previews/self-assembly-1440.png",
+    "bytes": 118026,
+    "sha256": "dcef7cbfda98bd35b1472564cb355774e318de33dc385151c75b61d8486a5141"
+  },
+  {
+    "path": "results/document-previews/self-assembly-390.png",
+    "bytes": 57523,
+    "sha256": "bfb99f25868535153b37ec514318e7afc54becb0e946c8110339a389bfb775cc"
   },
   {
     "path": "results/dossier-execution-receipt.json",
@@ -331,13 +401,63 @@
   },
   {
     "path": "results/dossier-ui-validation.json",
-    "bytes": 2467,
-    "sha256": "9f618e25d3ebcb3af03e75f58fb88bc202c414504d9654231fe2186f000be493"
+    "bytes": 3176,
+    "sha256": "b0ece2468c9cf4ebc74ffb14673db9713dd3718d4c997c37ee486c2326612d78"
   },
   {
     "path": "results/dossier-verification.json",
-    "bytes": 6577,
-    "sha256": "25d4dcf09bea0fc954d9eb12c8f800b4698136dd6d0bbb97c923f994d45747be"
+    "bytes": 8897,
+    "sha256": "c70bd457ad6a59f25a3fcb229cb24fc350442b0b44569de14fd13f56c2d3d485"
+  },
+  {
+    "path": "results/figures/assembly-formation.pdf",
+    "bytes": 21151,
+    "sha256": "2f09dc6834b9658f46f6c3dbef5673d9063d4319d160f9566c03ede8b0df20fc"
+  },
+  {
+    "path": "results/figures/assembly-formation.png",
+    "bytes": 155649,
+    "sha256": "e3068510a4b8a93edc71dbe810c3291a98e8aea4591da7874abc694c010a6a59"
+  },
+  {
+    "path": "results/figures/assembly-frontier.pdf",
+    "bytes": 28990,
+    "sha256": "736264cb216f4fab5ffda289946f045c410de9827966ae40150e0d5e18a51343"
+  },
+  {
+    "path": "results/figures/assembly-frontier.png",
+    "bytes": 188811,
+    "sha256": "4799660d68638db8cf88a985052177135a31bc96cf15b61cc779da67e513fb29"
+  },
+  {
+    "path": "results/figures/assembly-network.pdf",
+    "bytes": 20108,
+    "sha256": "3ea088129eaff031068073a9587087e827925aa956d80d75152200275e6aaf99"
+  },
+  {
+    "path": "results/figures/assembly-network.png",
+    "bytes": 113038,
+    "sha256": "434d4248c310c5e71e4df64fd0ee9ad6908c75ebb35d7df19db9955ebdd3eed5"
+  },
+  {
+    "path": "results/figures/assembly-resources.pdf",
+    "bytes": 21133,
+    "sha256": "d953bd8a741124974cdd74bf0ceacea51206adf8ab5aa16290bc2d9c7934c0e4"
+  },
+  {
+    "path": "results/figures/assembly-resources.png",
+    "bytes": 137450,
+    "sha256": "13f39f3f412cd3647879a586742991cac73ed83825a01b41d231f0ee125a9c64"
+  },
+  {
+    "path": "results/figures/assembly-trajectories.pdf",
+    "bytes": 18514,
+    "sha256": "33f170f5bc26437319377720316b3b3bd6b39abe582d3d6b79b21c80242fdb12"
+  },
+  {
+    "path": "results/figures/assembly-trajectories.png",
+    "bytes": 125929,
+    "sha256": "02b2f84259a9019422b72677f5779863e1f914ae425cefb83da5738ef9c13f0b"
   },
   {
     "path": "results/figures/autonomous-decay.png",
@@ -411,13 +531,13 @@
   },
   {
     "path": "results/manuscript-build.json",
-    "bytes": 464,
-    "sha256": "ed0ac055a117f828c74fcaf5035756bb508cc10625ff2c091bef1c7dfa87a103"
+    "bytes": 619,
+    "sha256": "5e6a1bf54192ee864bdd23bd7fb5640264936be44ab10a7e261b2e1b14104862"
   },
   {
     "path": "results/manuscript-build.log",
-    "bytes": 356,
-    "sha256": "4ab0d73bfa1be0fad19bf69f995638e5d8e4c7ab5623804039729711b53acf2c"
+    "bytes": 354,
+    "sha256": "455c7e40a08448ebfa518c000aa58609f5d88584947dc080e4fdad5cdfea15d8"
   },
   {
     "path": "results/pdf-first-page.png",
@@ -426,13 +546,13 @@
   },
   {
     "path": "results/research-manuscript-source.zip",
-    "bytes": 691224,
-    "sha256": "985e00ddc6e8e994b8092141b26866764938f3fad04873a553ef47748d15801a"
+    "bytes": 1357200,
+    "sha256": "8a55836e67147da12ee7a27a512d885cd86b6864fc7127a285637e684b41da3e"
   },
   {
     "path": "results/research-manuscript.pdf",
-    "bytes": 793075,
-    "sha256": "15ea033bf812e0d555776cd038d308bb0f644d16a8693393611d74cb184642e9"
+    "bytes": 1472250,
+    "sha256": "0f9187acab3fc53dedc1aba7937a6d227854c140dc77d85aa59b84ad11034ab1"
   },
   {
     "path": "results/research-note.pdf",
@@ -465,24 +585,34 @@
     "sha256": "3d1ab242c372be4ab5f46c94154b891453c550321f0a6a8e24fb9ae2469c2033"
   },
   {
+    "path": "scripts/assembly_evidence.py",
+    "bytes": 11730,
+    "sha256": "a90deb76d8516718742b0fd8cfec10c0c0d417699d592cb0c27606cfd4f87197"
+  },
+  {
     "path": "scripts/build_artifacts.py",
     "bytes": 8346,
     "sha256": "16a2671bc0a6bf6dd803f26086d60f3b098401822f7b5bdfcbd21839761a3685"
   },
   {
     "path": "scripts/build_manuscript.py",
-    "bytes": 4859,
-    "sha256": "9069cff0ac045930908c4f876210533787e393af796a632f871af2b7b1ce5466"
+    "bytes": 5049,
+    "sha256": "106f2c7367b843bfc62120132aed9312c195cd57fc3bdad9e10cff147b1a4674"
   },
   {
     "path": "scripts/build_research_docs.py",
-    "bytes": 41365,
-    "sha256": "24d66a08d2c9032ebe8da5808a90add8389fc98a7f465673eb52d4bd01063435"
+    "bytes": 43445,
+    "sha256": "2f99398f2c584bba9a73bf6970e084c5ab75c10737c29283007d0195b50446c4"
   },
   {
     "path": "scripts/build_reserve_figure.py",
     "bytes": 2761,
     "sha256": "679178e6c7e9b11b7e8a2c7521ab7256d92d09fd2690b913794a11c4e68eda4e"
+  },
+  {
+    "path": "scripts/check_assembly_certificate.py",
+    "bytes": 5563,
+    "sha256": "d45da4c44fc4c1801be69f1e582b6c20f3300093abec01f81dd6d8621ad88081"
   },
   {
     "path": "scripts/check_atlas.py",
@@ -493,6 +623,11 @@
     "path": "scripts/package_research_docs.py",
     "bytes": 2446,
     "sha256": "61cc7b8e313f58edde7bed3e7a70fe5f1b7b6fbbe823655a8eaf7296c5f10263"
+  },
+  {
+    "path": "scripts/run_assembly.py",
+    "bytes": 4695,
+    "sha256": "bba0244829f00cabd375c0a3681c43a7ccbb8b3f822336b55e31d267835181cb"
   },
   {
     "path": "scripts/run_autonomous.py",
@@ -516,13 +651,18 @@
   },
   {
     "path": "scripts/verify_research_docs.py",
-    "bytes": 5064,
-    "sha256": "3a1982102f52cb33d0154d51ec2b41da8dac4f8b2008ccd252cd02e139561186"
+    "bytes": 5086,
+    "sha256": "0ab1f0bd15698ef9ac795725c159483974756051c1101e9643619870c12d5f38"
   },
   {
     "path": "src/purposeful/__init__.py",
     "bytes": 76,
     "sha256": "1d10a0f1a0a3c65eae0385bdc2802812404370a09e3f04ca0e57ca5a20e0f15d"
+  },
+  {
+    "path": "src/purposeful/assembly.py",
+    "bytes": 12412,
+    "sha256": "e7d887fed1a7c8b7f0b667521fe27ac40fcc01e3f492a50e9eb682d678a0c70e"
   },
   {
     "path": "src/purposeful/autonomous.py",
@@ -543,6 +683,11 @@
     "path": "src/purposeful/reserve.py",
     "bytes": 4793,
     "sha256": "feb8c1ffc3d4219b613f2a77c5322a408b69600a03791697a79dcf1e3adc2700"
+  },
+  {
+    "path": "tests/test_assembly.py",
+    "bytes": 6623,
+    "sha256": "771b348081fec72db6a1216198f5aa52b2a207696153fd0ab4e248ecaf9ba603"
   },
   {
     "path": "tests/test_autonomous.py",

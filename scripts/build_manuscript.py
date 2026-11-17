@@ -47,6 +47,8 @@ def main():
         # Portable source archive places all figures beside the manuscript.
         tex = tex.replace('\r', '').replace('../results/figures/', 'figures/')
         tex = tex.replace(r'\real{0.1429}', r'\real{0.1428}')
+        tex = re.sub(r'\\href\{(https://doi\.org/[^}]+)\}\{doi:([^}]+)\}',
+                     lambda match: r'\href{' + match.group(1) + r'}{\nolinkurl{doi:' + match.group(2) + '}}', tex)
         # Path strings in tables must allow line breaks at punctuation.
         tex = re.sub(r'\\texttt\{([^{}]*[/][^{}]*)\}',
                      lambda m: r'\path{' + m.group(1).replace(r'\_', '_') + '}', tex)
