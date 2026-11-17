@@ -239,6 +239,7 @@ def page(filename, source, title):
     content = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title><style>{STYLE}{extra_css}</style><link rel="stylesheet" href="assets/katex/katex.min.css"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p>{body}</main><footer>Equations and figures are local. Sources link to the research package and primary literature.</footer><script src="assets/katex/katex.min.js"></script><script>{js}</script></body></html>'''
     content = content.replace('<a href="SELF-ASSEMBLY.html">Self-assembly study</a>',
                               '<a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="SPATIAL-REPAIR.html">Spatial repair</a>')
+    content = content.replace('</head>', '<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"></head>')
     (DOCS / filename).write_text(content, encoding='utf-8')
 
 def study(name, label):

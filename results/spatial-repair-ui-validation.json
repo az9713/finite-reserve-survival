@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-17T21:04:53.680003+00:00",
+  "generated_utc": "2026-11-17T21:09:33.435959+00:00",
   "status": "PASS",
   "broken_local_links": [],
   "browser_checks": [
@@ -25,7 +25,7 @@
   "source_and_artifact_sha256": {
     "results/spatial-repair.json": "3f21e5e23bf1e70fa957a26f8fbd3b5e5d1d186d0644eea8989fc67797ac90fc",
     "results/spatial-repair-verification.json": "91c3cdf665936987ce403e5e0cc712a9cc61013cc711d675163b5f5c35b8d017",
-    "docs/SPATIAL-REPAIR.html": "91f785190512ef42b6e0a4bc8eb6fc838d70519042296755466f42a75bf5e2cd",
+    "docs/SPATIAL-REPAIR.html": "82b6389d59bf28f5882add56a4a4f0f8b1d6d99ffd98e54fc98ba59fc0ecff9e",
     "docs/spatial-repair.md": "3434605389253bd94f09d89b919eb515f31ce607c9cd3b159969e45b86f23792",
     "scripts/build_spatial_repair_docs.py": "20dde3dc3f6e3800d7691448946671b5a5c5c45ea041c2384817d9f1edc71779",
     "results/figures/spatial-repair-independent.pdf": "899b4dad527a14a83ada658316c3cef6dea6ae3b40294b98e1d49f4a37c5952f",

@@ -50,7 +50,7 @@ def main():
         for pattern in ['src/purposeful/*.py','tests/test_*.py','scripts/*spatial*',
                         'docs/*spatial*','research/spatial-repair*','results/spatial-repair*',
                         'results/figures/spatial-repair*','results/document-previews/spatial-repair*',
-                        'docs/assets/katex/**/*','scripts/*stochastic*','docs/*stochastic*',
+                        'docs/assets/katex/**/*','docs/assets/favicon.svg','scripts/*stochastic*','docs/*stochastic*',
                         'docs/STOCHASTIC-CALCULUS-PLAN.html','research/stochastic*',
                         'results/encounter*','results/stochastic*','results/figures/encounter*',
                         'results/document-previews/stochastic*']:

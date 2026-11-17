@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-17T21:06:23.701407+00:00",
+  "generated_utc": "2026-11-17T21:10:00.514036+00:00",
   "scope": "Spatial repair delivery, scientific source dependencies and offline equation assets.",
   "exclusions": [
     "Project-private MEMORY.md",
@@ -7,6 +7,11 @@
     "caches"
   ],
   "artifacts": [
+    {
+      "path": "docs/assets/favicon.svg",
+      "bytes": 255,
+      "sha256": "f68c4265b6a32c3e60a5d0a786d61fcb016f244ab23a44b95dfde5c2567f36a0"
+    },
     {
       "path": "docs/assets/katex/fonts/KaTeX_AMS-Regular.woff2",
       "bytes": 28076,
@@ -134,8 +139,8 @@
     },
     {
       "path": "docs/SPATIAL-REPAIR.html",
-      "bytes": 37672,
-      "sha256": "91f785190512ef42b6e0a4bc8eb6fc838d70519042296755466f42a75bf5e2cd"
+      "bytes": 37736,
+      "sha256": "82b6389d59bf28f5882add56a4a4f0f8b1d6d99ffd98e54fc98ba59fc0ecff9e"
     },
     {
       "path": "docs/spatial-repair.md",
@@ -144,8 +149,8 @@
     },
     {
       "path": "docs/STOCHASTIC-CALCULUS-PLAN.html",
-      "bytes": 35471,
-      "sha256": "bb4a76aafbfcc3a17a47c324152e78eb6992c5c7c029bb992b17e2706f8abd72"
+      "bytes": 35535,
+      "sha256": "32259c65c6ac813c852049570bb317382c5453fb0f419ecf089cd1a7fb304bd1"
     },
     {
       "path": "docs/stochastic-calculus-plan.md",
@@ -215,17 +220,17 @@
     {
       "path": "results/encounter-feasibility.json",
       "bytes": 17533,
-      "sha256": "f32d9ae1912c8502c559162861b024858308fbd122b877d05af3aeaa3fc58550"
+      "sha256": "d444601969e4ebf25d25e70caf71e0faf9dcefc4f10df646e88d2a2ca53973c1"
     },
     {
       "path": "results/encounter-verification.json",
       "bytes": 6606,
-      "sha256": "44c825650467a5e068e097b3566459f7217c886b560645e9d39eeb444729bf4c"
+      "sha256": "275caab44cd49d00d552d7c76e22df0629de71154fd3c957aa51423213103cfc"
     },
     {
       "path": "results/figures/encounter-feasibility.pdf",
       "bytes": 22720,
-      "sha256": "88f1ff679d27415d297e6796ed57b76e4b6dd34cbad78c2b0dbf0bb163db23a5"
+      "sha256": "93a2f15319f018796f39c640b602f7ca8ac44eac66087baf6162345e093e33f5"
     },
     {
       "path": "results/figures/encounter-feasibility.png",
@@ -235,7 +240,7 @@
     {
       "path": "results/figures/encounter-timescales.pdf",
       "bytes": 105053,
-      "sha256": "703e202722c2a5597de21936f38c1ae688c313f33cb0cc49071cc57d1ef07443"
+      "sha256": "f212b8fb4677b3fc5c10e66c16b7e82d3696ca96375534c9f7f99457aed6cb27"
     },
     {
       "path": "results/figures/encounter-timescales.png",
@@ -280,7 +285,7 @@
     {
       "path": "results/spatial-repair-ui-validation.json",
       "bytes": 1825,
-      "sha256": "ebd1a135c0106d97ea37ac4f8faa44ac106fcc8569672c65ecea6b57991cbf7d"
+      "sha256": "524ae4579ed2542b6d6873961f665f830ab4075cf3c7fdda39618cdd92935e25"
     },
     {
       "path": "results/spatial-repair-verification.json",
@@ -295,12 +300,12 @@
     {
       "path": "results/stochastic-plan-ui-validation.json",
       "bytes": 751,
-      "sha256": "401076279aeae68fcad015c75f4032aa8c392a097cf1f2733a4ee608244709ed"
+      "sha256": "effa5911b70b802e9bfe5be0e1067dd83c56e0955c3fd0b3a1fe909f95cbf422"
     },
     {
       "path": "scripts/build_research_docs.py",
-      "bytes": 44674,
-      "sha256": "5a480fb369b7a47917c3a889497ee5d700fca1428d08b273f904dffc300c9c67"
+      "bytes": 44790,
+      "sha256": "d3e73f6915b9542f875a9e6416beffe298785f7c93887014d99dd685d48762c0"
     },
     {
       "path": "scripts/build_spatial_repair_docs.py",
@@ -314,8 +319,8 @@
     },
     {
       "path": "scripts/check_spatial_repair_receipts.py",
-      "bytes": 4186,
-      "sha256": "91cc6b7e6b1a4cd2c4389d24d8fad70ed0f87b5bdbd0586a21025c540af16eeb"
+      "bytes": 4212,
+      "sha256": "2f2a164897035bfa7830ccaf1c95b859ffc885451911273f33f31d421d4b7be3"
     },
     {
       "path": "scripts/run_spatial_repair.py",
