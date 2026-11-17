@@ -4,6 +4,8 @@
 
 **[Stochastic calculus analysis: SDEs, Itô formula, martingales and survival proofs](https://az9713.github.io/finite-reserve-survival/docs/STOCHASTIC-CALCULUS.html)**
 
+**[Paid autonomous spatial organization: shared fuel, best constant intensity and certificates](https://az9713.github.io/finite-reserve-survival/docs/PAID-ORGANIZATION.html)**
+
 [![Scientific dossier preview](results/document-previews/scientific-dossier-1440.png)](https://az9713.github.io/finite-reserve-survival/)
 
 Five stochastic models track how sensing, action, and repair affect the chance that a physical device keeps functioning. The strongest results are exact survival bounds with attaining policies and a certified example in which the value of sensing changes with the time horizon.
@@ -39,6 +41,20 @@ The assembly-and-maintenance result uses two copies of each complementary monome
 
 Intermediate binding optima and fuel-driven chemical persistence have earlier theoretical and experimental precedents. The candidate contribution is the particular finite-inventory reliability model, its constructive resource bound, and the replayable continuum certificate. Priority remains open.
 
+## Paid autonomous organization: small finite-grid advantage
+
+The new model starts uniformly dispersed and can activate an attractive interaction mode through reversible passive and fuel-paid reactions. Organization and repair share the same four-molecule fuel/waste inventory. The candidate uses spectator-fuel catalysis; the comparator covers **every constant paid-channel intensity alpha in [0,1]**, with the same other parameters, initial preparation and kinetic ceilings. This is not a comparison against every fixed material or architecture.
+
+At the preregistered time two, an independent interval calculation on the **48³ lattice** encloses the candidate's gap to the best constant arm between **0.01460412 and 0.01471414 percentage points**. The 64³ numerical survival estimates are **23.36998%** for the candidate and **23.35528%** for the fixed attaining sample. The best constant supremum is enclosed, rather than assumed from a grid search. The effect is small and has no rigorous Brownian-continuum error enclosure.
+
+[![Paid organization survival and spatial refinements](results/figures/organization-survival.png)](https://az9713.github.io/finite-reserve-survival/docs/PAID-ORGANIZATION.html)
+
+Verification includes **57 passing tests**, six certified finite grids, 60,000 independent exact lattice paths, 180,000 separate finite-step continuum SDE paths, stopped fuel/energy ledgers and optimizer controls. The path precision cannot resolve the tiny gap; its sign is certified for the stated finite models. The coarsest lattice reverses the comparison. Removing the attractive well makes the candidate lose on the tested grid; a specified open-bath limit exactly matches a fixed-family member. These controls and all limitations are retained.
+
+[Originality audit](research/organization-originality-audit.md) · [Preregistration](research/organization-preregistration.md) · [Global finite-grid certificate](results/organization-verification.json) · [Continuum check](results/organization-continuum-check.json) · [Independent review](results/organization-review.json) · [Proofs and visuals](https://az9713.github.io/finite-reserve-survival/docs/PAID-ORGANIZATION.html)
+
+The audit records 29 queries and 26 sources. No new general concept or established publication priority is claimed. The model does not establish an elementary molecular implementation or account for unverified real fabrication costs. It is a constrained benchmark of when paid organization can improve survival.
+
 ## Implemented spatial repair benchmark
 
 [What we learned, what is not novel, and the next research claim](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-LESSONS.html)
@@ -53,7 +69,7 @@ For the exploratory four-fuel case starting with one healthy and one damaged com
 
 Evidence includes four spatial refinements (32, 48, 64 and 96 points per axis), independent continuous-space Brownian paths, detailed-balance and energy-ledger checks, and independently assembled dense and spherical references. The report separates exact mathematical statements, numerical truncation bounds, observed spatial convergence and sampling confidence. It does not claim a rigorous continuum error enclosure.
 
-All **51 tests pass**. The formal 200,000-path verification gives a **99% simultaneous lower bound of 22.24 percentage points** on the localized HD survival gap from the fixed finest-grid-calibrated count comparator. Another 200,000 fresh-seed paths are retained in a [separate review receipt](results/spatial-repair-review-check.json). [Browser validation](results/spatial-repair-ui-validation.json), [delivery manifest](results/spatial-repair-delivery-manifest.json) and [integrity replay](results/spatial-repair-integrity.json) preserve the evidence. The existing manuscript/PDF covers Studies 01–05; the spatial report is a separate extension.
+The spatial-study receipt records **51 passing tests**; the later organization release has 57. The formal 200,000-path verification gives a **99% simultaneous lower bound of 22.24 percentage points** on the localized HD survival gap from the fixed finest-grid-calibrated count comparator. Another 200,000 fresh-seed paths are retained in a [separate review receipt](results/spatial-repair-review-check.json). [Browser validation](results/spatial-repair-ui-validation.json), [delivery manifest](results/spatial-repair-delivery-manifest.json) and [integrity replay](results/spatial-repair-integrity.json) preserve the evidence. The existing manuscript/PDF covers Studies 01–05; the spatial reports are separate extensions.
 
 **Novelty status:** the audit identifies direct precedents for spatial detailed balance, diffusion-calibrated rates and rebinding effects. This finite-inventory first-collapse benchmark is a targeted numerical extension; no new general concept is established. Self-assembly, a molecular realization and an adaptive spatial controller remain outside this maintenance-only model.
 

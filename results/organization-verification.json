@@ -1,0 +1,331 @@
+{
+  "model": {
+    "fuel": 4,
+    "eta": 1.0,
+    "diffusivity": 0.025,
+    "length": 1.0,
+    "radius": 0.32,
+    "activity": 16.0,
+    "local_width": 0.075,
+    "passive": 1.0,
+    "paid": 4.0,
+    "offset": 2.0,
+    "depth": 6.0
+  },
+  "design": "alpha in [0,1] with common hardware and launch",
+  "arithmetic": "directed Decimal rate and tail intervals plus padded nonnegative binary64 sums",
+  "continuum_discretization_error_enclosed": false,
+  "source_sha256": {
+    "src/purposeful/organization.py": "963406709c30234f467533793541baa050d0657bf6b9c64119aeac1416d75327",
+    "src/purposeful/spatial_repair.py": "c8d77bfae448c189a920e7f91d6546088aaef3d95844997f0c1f67d023537d36",
+    "tests/test_organization.py": "c584a1e44a577aa994961c99ba3cda49b31f3115bed92ea44f81070c98e1fca1",
+    "scripts/verify_organization.py": "84d4cc0a21e02f601c24929112a99f0740a1e3ab0b3ffa2395efa6a987275059"
+  },
+  "certificates": [
+    {
+      "n": 4,
+      "horizon": 2.0,
+      "states": 200,
+      "uniformization_rates": {
+        "base": 69,
+        "paid": 16,
+        "spectator": 85
+      },
+      "fixed": {
+        "lower": 0.22666300227596417,
+        "upper": 0.22666334816483616,
+        "attaining_sample_alpha": 0.0,
+        "sample_points": 263,
+        "cover_intervals": 7,
+        "absolute_second_derivative_upper": 0.03242168895124565,
+        "maximum_paid_count_tail_upper": 7.365438456633995e-34,
+        "narrowest_cover_interval": 0.03125
+      },
+      "spectator_interval": [
+        0.2265067099679203,
+        0.22650670997451391
+      ],
+      "chebyshev_spectator": 0.22650670997122097,
+      "chebyshev_fixed_at_attaining_sample": 0.2266630022784527,
+      "base_poisson_tail_upper": 2.9631938228788368e-33,
+      "spectator_poisson_tail_upper": 4.477693546623219e-33,
+      "max_paid_coefficient_interval_width": 8.516853888806963e-12,
+      "spectator_minus_best_fixed_interval": [
+        -0.00015663819691585926,
+        -0.00015629230145025594
+      ]
+    },
+    {
+      "n": 8,
+      "horizon": 2.0,
+      "states": 700,
+      "uniformization_rates": {
+        "base": 77,
+        "paid": 16,
+        "spectator": 93
+      },
+      "fixed": {
+        "lower": 0.23175360343375942,
+        "upper": 0.231754897038511,
+        "attaining_sample_alpha": 1.0,
+        "sample_points": 19,
+        "cover_intervals": 7,
+        "absolute_second_derivative_upper": 0.010680530684282987,
+        "maximum_paid_count_tail_upper": 7.365438456633995e-34,
+        "narrowest_cover_interval": 0.03125
+      },
+      "spectator_interval": [
+        0.23191175510644507,
+        0.23191175511510248
+      ],
+      "chebyshev_spectator": 0.23191175511077566,
+      "chebyshev_fixed_at_attaining_sample": 0.23175360343770932,
+      "base_poisson_tail_upper": 2.9447236216948006e-33,
+      "spectator_poisson_tail_upper": 2.576462228484736e-33,
+      "max_paid_coefficient_interval_width": 1.1160294910439461e-11,
+      "spectator_minus_best_fixed_interval": [
+        0.00015685806793408472,
+        0.0001581516813430606
+      ]
+    },
+    {
+      "n": 16,
+      "horizon": 2.0,
+      "states": 3300,
+      "uniformization_rates": {
+        "base": 105,
+        "paid": 16,
+        "spectator": 121
+      },
+      "fixed": {
+        "lower": 0.23331426760976978,
+        "upper": 0.23331541482862686,
+        "attaining_sample_alpha": 1.0,
+        "sample_points": 17,
+        "cover_intervals": 6,
+        "absolute_second_derivative_upper": 0.009436246827903007,
+        "maximum_paid_count_tail_upper": 7.365438456633995e-34,
+        "narrowest_cover_interval": 0.03125
+      },
+      "spectator_interval": [
+        0.23346416947779736,
+        0.23346416949023677
+      ],
+      "chebyshev_spectator": 0.23346416948401388,
+      "chebyshev_fixed_at_attaining_sample": 0.23331426761550975,
+      "base_poisson_tail_upper": 3.110774812510154e-33,
+      "spectator_poisson_tail_upper": 2.7625940772445293e-33,
+      "max_paid_coefficient_interval_width": 1.512906466771824e-11,
+      "spectator_minus_best_fixed_interval": [
+        0.00014875464917049605,
+        0.00014990188046698497
+      ]
+    },
+    {
+      "n": 24,
+      "horizon": 2.0,
+      "states": 9100,
+      "uniformization_rates": {
+        "base": 153,
+        "paid": 16,
+        "spectator": 169
+      },
+      "fixed": {
+        "lower": 0.2334528231896246,
+        "upper": 0.23345393974112533,
+        "attaining_sample_alpha": 1.0,
+        "sample_points": 17,
+        "cover_intervals": 6,
+        "absolute_second_derivative_upper": 0.009177842914226632,
+        "maximum_paid_count_tail_upper": 7.365438456633995e-34,
+        "narrowest_cover_interval": 0.03125
+      },
+      "spectator_interval": [
+        0.2336011618020217,
+        0.23360116182000476
+      ],
+      "chebyshev_spectator": 0.23360116181101565,
+      "chebyshev_fixed_at_attaining_sample": 0.23345282319798594,
+      "base_poisson_tail_upper": 3.2603741591831475e-33,
+      "spectator_poisson_tail_upper": 4.7909103515196916e-33,
+      "max_paid_coefficient_interval_width": 2.041192215251897e-11,
+      "spectator_minus_best_fixed_interval": [
+        0.00014722206089637366,
+        0.00014833863038016262
+      ]
+    },
+    {
+      "n": 32,
+      "horizon": 2.0,
+      "states": 19380,
+      "uniformization_rates": {
+        "base": 221,
+        "paid": 16,
+        "spectator": 237
+      },
+      "fixed": {
+        "lower": 0.23350317686966804,
+        "upper": 0.23350428396316214,
+        "attaining_sample_alpha": 1.0,
+        "sample_points": 17,
+        "cover_intervals": 6,
+        "absolute_second_derivative_upper": 0.009096095333489986,
+        "maximum_paid_count_tail_upper": 7.365438456633995e-34,
+        "narrowest_cover_interval": 0.03125
+      },
+      "spectator_interval": [
+        0.23365084206817807,
+        0.23365084209433443
+      ],
+      "chebyshev_spectator": 0.2336508420812583,
+      "chebyshev_fixed_at_attaining_sample": 0.23350317688188538,
+      "base_poisson_tail_upper": 3.8985076713360906e-33,
+      "spectator_poisson_tail_upper": 3.8161674884583e-33,
+      "max_paid_coefficient_interval_width": 2.8198610113605582e-11,
+      "spectator_minus_best_fixed_interval": [
+        0.00014655810501593145,
+        0.0001476652246663879
+      ]
+    },
+    {
+      "n": 48,
+      "horizon": 2.0,
+      "states": 58500,
+      "uniformization_rates": {
+        "base": 413,
+        "paid": 16,
+        "spectator": 429
+      },
+      "fixed": {
+        "lower": 0.23354057856813948,
+        "upper": 0.23354167862359299,
+        "attaining_sample_alpha": 1.0,
+        "sample_points": 17,
+        "cover_intervals": 6,
+        "absolute_second_derivative_upper": 0.009035080711470302,
+        "maximum_paid_count_tail_upper": 7.365438456633995e-34,
+        "narrowest_cover_interval": 0.03125
+      },
+      "spectator_interval": [
+        0.23368771987219003,
+        0.2336877199230209
+      ],
+      "chebyshev_spectator": 0.23368771989759488,
+      "chebyshev_fixed_at_attaining_sample": 0.23354057859205446,
+      "base_poisson_tail_upper": 3.0544852254999044e-33,
+      "spectator_poisson_tail_upper": 3.80645481102967e-33,
+      "max_paid_coefficient_interval_width": 5.1785464805220727e-11,
+      "spectator_minus_best_fixed_interval": [
+        0.00014604124859704523,
+        0.00014714135488141936
+      ]
+    }
+  ],
+  "paths": {
+    "n": 32,
+    "observations": 201,
+    "dkw_familywise_confidence": 0.99,
+    "dkw_probability_half_width": 0.012646076125834594,
+    "checks": [
+      {
+        "policy": 0.0,
+        "maximum_grid_difference": 0.005896651306667722,
+        "endpoint_path_survival": 0.23109999999999997,
+        "endpoint_solver_survival": 0.23308091221791852,
+        "passed_dkw_band": true,
+        "seed": 19891101,
+        "paths": 20000,
+        "channel_counts_by_signed_event": [
+          0,
+          21,
+          3499,
+          7736,
+          3082474,
+          25078,
+          6995,
+          292,
+          0
+        ],
+        "signed_event_order": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "paths_with_collapse": 15378,
+        "max_energy_ledger_error": 1.7763568394002505e-15
+      },
+      {
+        "policy": 1.0,
+        "maximum_grid_difference": 0.006020854135939335,
+        "endpoint_path_survival": 0.23514999999999997,
+        "endpoint_solver_survival": 0.23350317688188557,
+        "passed_dkw_band": true,
+        "seed": 19892830,
+        "paths": 20000,
+        "channel_counts_by_signed_event": [
+          76,
+          77,
+          10269,
+          7733,
+          3103630,
+          24933,
+          13790,
+          160,
+          1633
+        ],
+        "signed_event_order": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "paths_with_collapse": 15297,
+        "max_energy_ledger_error": 1.7763568394002505e-15
+      },
+      {
+        "policy": "spectator",
+        "maximum_grid_difference": 0.006373404833831198,
+        "endpoint_path_survival": 0.23234999999999995,
+        "endpoint_solver_survival": 0.23365084208125841,
+        "passed_dkw_band": true,
+        "seed": 19894559,
+        "paths": 20000,
+        "channel_counts_by_signed_event": [
+          41,
+          68,
+          9124,
+          7650,
+          3078597,
+          24843,
+          12601,
+          145,
+          1419
+        ],
+        "signed_event_order": [
+          -4,
+          -3,
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "paths_with_collapse": 15353,
+        "max_energy_ledger_error": 1.7763568394002505e-15
+      }
+    ]
+  }
+}

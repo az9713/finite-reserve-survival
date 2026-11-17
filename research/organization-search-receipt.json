@@ -1,0 +1,374 @@
+{
+  "schema_version": 1,
+  "as_of_local_date": "2026-11-17",
+  "purpose": "Claim-level originality audit for reversible fuel-paid spatial organization and shared-budget maintenance",
+  "gate_classification": "targeted_model_specific_comparison",
+  "search_method": "Scholarly literature and web index search, citation/link following, and inspection of selected equations, figures, and methods in accessible primary full texts.",
+  "search_batches": [
+    {
+      "batch": 1,
+      "engine": "scholarly literature index",
+      "queries": [
+        {
+          "id": "Q01",
+          "query": "dissipative self-assembly finite fuel closed system lifetime autonomous chemical fuel active binding transient passive kinetic model"
+        },
+        {
+          "id": "Q02",
+          "query": "active self-assembly feedback mechanical kinetic proofreading spatial adaptive bond switching lifetime energy comparison passive equilibrium assembly"
+        },
+        {
+          "id": "Q03",
+          "query": "energy dependent error correction dynamic self-assembly passive optimum time yield finite fuel reversible bonds physical self-healing transient assembly"
+        },
+        {
+          "id": "Q04",
+          "query": "active matter self repair assembly finite chemical energy maintenance mean first passage failure active passive network repair resource constraints"
+        }
+      ]
+    },
+    {
+      "batch": 2,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q05",
+          "query": "Boekhoven dissipative self-assembly lifetimes chemical fuel finite batch hydrogels Science 2015 kinetic control Wang Job Boekhoven finite fuel"
+        },
+        {
+          "id": "Q06",
+          "query": "Ragazzon Prins energy consumption chemical fuel dissipative self assembly transient structures fuel batch ligand transient colloidal assemblies Walther passive control"
+        },
+        {
+          "id": "Q07",
+          "query": "Michael Hagan nonequilibrium self assembly time dependent interactions optimized dynamic protocols equilibrium best static kinetic traps optimal assembly Whitelam Perlmutter"
+        },
+        {
+          "id": "Q08",
+          "query": "dissipative assembly chemically fueled colloidal particles colloidal self assembly autonomous reversible binding depletion fuel self healing Wolde van der Gucht Auer"
+        }
+      ]
+    },
+    {
+      "batch": 3,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q09",
+          "query": "self assembly feedback control optimized policy wait feedback fixed interaction strengths colloidal cluster Markov decision process Grunwald Jack Fullerton autonomous risk lifetime fuel"
+        },
+        {
+          "id": "Q10",
+          "query": "finite energy autonomous feedback control stochastic thermodynamics non autonomous optimal clock finite resource physical controller chemical network local detailed balance"
+        },
+        {
+          "id": "Q11",
+          "query": "van Ravensteijn Hendriksen 2017 fueled colloid assembly transient supracolloidal autonomous nanoparticle kinetic network primary open PDF"
+        },
+        {
+          "id": "Q12",
+          "query": "fuel driven self assembly structure lifetime competition passive self repair damage healing lifetime finite chemical fuel kinetic traps Kriebisch Boekhoven"
+        }
+      ]
+    },
+    {
+      "batch": 4,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q13",
+          "query": "\"Transient co-assemblies of micron-scale colloids\" PMC full text d3sc04017h"
+        },
+        {
+          "id": "Q14",
+          "query": "Boekhoven Hendriksen aac6103 Science author pdf transient assembly active materials self-regeneration damage fuel Delft"
+        },
+        {
+          "id": "Q15",
+          "query": "Klotsa Jack controlling crystal self assembly using a real time feedback arxiv full text"
+        },
+        {
+          "id": "Q16",
+          "query": "finite budget maintenance allocation structural reliability repair restorative reward survival redundancy repair costs optimal stochastic control first passage finite resource"
+        }
+      ]
+    },
+    {
+      "batch": 5,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q17",
+          "query": "chemical fuel mechanical adaptive self-healing survival function first passage assembly optimum passive active materials resource budget repair"
+        },
+        {
+          "id": "Q18",
+          "query": "transient supramolecular material finite fuel self-regeneration damage autonomous fuel gel equilibrium control Boekhoven Figure 4 full"
+        }
+      ]
+    },
+    {
+      "batch": 6,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q19",
+          "query": "Boekhoven Brizard Kowlgi Koper Eelkema van Esch 2010 dissipative self assembly temporal control self healing Figure fuel hydrogel repository pdf doi"
+        },
+        {
+          "id": "Q20",
+          "query": "Boekhoven aac6103 pdf Science papers pdf self-regeneration fuel microrheology figures"
+        }
+      ]
+    },
+    {
+      "batch": 7,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q21",
+          "query": "\"Dissipative adaptation in driven self-assembly\" Perunov England colloidal external drive full text"
+        },
+        {
+          "id": "Q22",
+          "query": "passive active self healing comparison matched energy fuel synthetic autonomous structural first failure time optimization"
+        },
+        {
+          "id": "Q23",
+          "query": "finite fuel autonomous stochastic thermodynamics feedback Bellman optimal chemical control resource matched open loop closed system finite chemical reservoir"
+        }
+      ]
+    },
+    {
+      "batch": 8,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q24",
+          "query": "fuel is both reactant and catalyst fuel concentration dependent autocatalytic activation \"fuel\" dissipative self-assembly catalysis excess fuel requirement mass action"
+        },
+        {
+          "id": "Q25",
+          "query": "fuel activated assembly \"substrate inhibition\" fuel concentration-dependent allosteric regulation self assembly energy allocation preference reaction competitive dual use fuel physical material"
+        },
+        {
+          "id": "Q26",
+          "query": "finite fuel stochastic self assembly \"repair\" autonomous \"first passage\" chemical fuel reversible dynamical repair control research"
+        },
+        {
+          "id": "Q27",
+          "query": "fuel concentration chemical kinetics finite adaptive feedback chemical work uses same fuel catalytic gated assembly competing repair depletion energy reserve"
+        }
+      ]
+    },
+    {
+      "batch": 9,
+      "engine": "web index",
+      "queries": [
+        {
+          "id": "Q28",
+          "query": "On the use of catalysis to bias reaction pathways in out-of-equilibrium systems van der Helm full pdf journal DOI"
+        },
+        {
+          "id": "Q29",
+          "query": "Transient transition from Stable to Dissipative Assemblies in Response to the Spatiotemporal Availability of a Chemical Fuel full PDF primary supplement 10.1002/anie.202414495"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S01",
+      "title": "Van Ravensteijn et al. (2017), Fuel-Mediated Transient Clustering of Colloidal Building Blocks",
+      "url": "https://dbc.library.uu.nl/bitstream/handle/1874/355626/4.pdf?isAllowed=y&sequence=1",
+      "access_depth": "Primary full-text university repository PDF, selected passages",
+      "inspected": "Scheme 1 and Figs. 1–3; fuel-induced change in surface interactions drives assembly; depletion restores repulsion."
+    },
+    {
+      "id": "S02",
+      "title": "Sharma, Sarkar and Walther (2023), Transient Co-Assemblies of Micron-Scale Colloids Regulated by ATP-Fueled Reaction Networks",
+      "url": "https://pubs.rsc.org/en/content/articlepdf/2023/sc/d3sc04017h",
+      "access_depth": "Primary publisher-hosted full accepted manuscript, selected passages",
+      "inspected": "Figs. 2, 4 and 5; no-fuel control, variable fuel dose and pathway control; Fig. 4 fluorescence lifetime increases about 6 to 10 h for the tested 40 to 60 µM doses. RSC HTML returned HTTP 403; corresponding indexed PMC record is https://pmc.ncbi.nlm.nih.gov/articles/PMC10631234/."
+    },
+    {
+      "id": "S03",
+      "title": "Sharma (2023), Designing Chemical Reaction Networks for Self-Assembly of Colloids",
+      "url": "https://openscience.ub.uni-mainz.de/server/api/core/bitstreams/b43819cd-6996-4d31-84d3-28a97380bfc2/content",
+      "access_depth": "University repository full dissertation PDF, selected Chapter 5 and supplements",
+      "inspected": "Fig. 5-8: static versus transient soluble complexation. Static arm omits BsaI, with fuel-induced ligation still present."
+    },
+    {
+      "id": "S04",
+      "title": "Boekhoven et al. (2015), Transient assembly of active materials fueled by a chemical reaction",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26339025/",
+      "access_depth": "Primary article abstract and metadata only",
+      "inspected": "DOI 10.1126/science.aac6103. Abstract reports fuel-dependent lifetime, stiffness and self-regeneration. Publisher article through authors' publication list returned HTTP 403."
+    },
+    {
+      "id": "S05",
+      "title": "Koper et al. (2013), Dissipative Self-Assembly: A Novel Self-Healing Mechanism for Functional Materials",
+      "url": "https://repository.tudelft.nl/file/File_0265c0b0-37a1-4968-9f71-00914acbb0b4",
+      "access_depth": "Primary full conference paper PDF, selected passages",
+      "inspected": "Fig. 3b–d and discussion compare monomer concentration and storage modulus with relative recovery after mechanical perturbation. Recovery is strongest in the more active early phase of the batch."
+    },
+    {
+      "id": "S06",
+      "title": "Kriebisch et al. (2023), Kinetic Traps in Chemically Fueled Self-Assembly and How to Overcome Them",
+      "url": "https://mediatum.ub.tum.de/doc/1707450/1707450.pdf",
+      "access_depth": "Primary full text from publisher PDF copy in university repository, selected passages",
+      "inspected": "Scheme 1, Fig. 1: chemical deactivation may leave the assembly kinetically trapped; activated monomers can be regenerated within it."
+    },
+    {
+      "id": "S07",
+      "title": "Fullerton and Jack (2016), Optimising self-assembly through time-dependent interactions",
+      "url": "https://arxiv.org/html/1609.05008",
+      "access_depth": "Primary arXiv full HTML, selected passages",
+      "inspected": "Sections II–IV and Fig. 5. Fixed switch protocol ε(t)=ε1 before t_step, ε2 after; constant diagonal ε1=ε2; terminal N_Q and N_G for the tested arms."
+    },
+    {
+      "id": "S08",
+      "title": "Trubiano and Hagan (2022), Optimization of Non-Equilibrium Self-Assembly Protocols Using Markov State Models",
+      "url": "https://arxiv.org/html/2210.05749",
+      "access_depth": "Primary arXiv full HTML and PDF, selected theory and results",
+      "inspected": "Eq. (2) maximizes terminal P_B^N penalized by squared finite differences of design variables; Eq. (7) is terminal payoff conditioned on intermediate state; Fig. 7 compares fixed and time-varying. PMC direct open presented a CAPTCHA."
+    },
+    {
+      "id": "S09",
+      "title": "Klotsa and Jack (2013), Controlling crystal self-assembly using a real-time feedback scheme",
+      "url": "https://arxiv.org/html/1210.2636",
+      "access_depth": "Primary arXiv full HTML, selected methods and results",
+      "inspected": "Eq. (4), Fig. 2: sampled reversibility of bonds controls externally updated bond strength; compared with no-feedback runs."
+    },
+    {
+      "id": "S10",
+      "title": "Whitelam and Schmit (2022), Low-dissipation self-assembly protocols of active sticky particles",
+      "url": "https://escholarship.org/content/qt1gz9m64b/qt1gz9m64b_noSplash_934003c7fe9c7c1f3055b53ff2aeb7de.pdf",
+      "access_depth": "Primary full manuscript PDF, selected methods and results",
+      "inspected": "Eqs. (10)–(13) and Figs. 5–7: final fraction of solid-like particles with a trajectory entropy cost; time-driven protocols vary propulsion and attraction. PMC direct open presented a CAPTCHA."
+    },
+    {
+      "id": "S11",
+      "title": "Synthetic paracrine signaling of colloids drives self-assembly limit cycles (2026)",
+      "url": "https://arxiv.org/html/2608.03718v1",
+      "access_depth": "Primary arXiv preprint full HTML, selected introduction and model",
+      "inspected": "Eq. (2) evolves bond strengths via exponential decay and a sum of sign-coded nearby sources. The physical sketch invokes fuel; simulation evolves effective signals and does not close a finite fuel inventory."
+    },
+    {
+      "id": "S12",
+      "title": "Extended Onsager’s variational principle for nonlinear chemical reaction kinetics in active matter (2026)",
+      "url": "https://arxiv.org/html/2611.01131v1",
+      "access_depth": "Primary arXiv preprint full HTML, selected §III.1",
+      "inspected": "Eqs. (43)–(46), (50)–(53): parallel passive and fuel-conversion channels in a closed ideal reactor, with mass-action dynamics and a conservation law. No first-failure optimization."
+    },
+    {
+      "id": "S13",
+      "title": "Goyal et al. (2025), On repairable systems with time redundancy and operational constraints",
+      "url": "https://pure.strath.ac.uk/ws/portalfiles/portal/250685629/Goyal-etal-2024-On-repairable-systems-with-time-redundancy-and-operational-constraints.pdf",
+      "access_depth": "Primary full-text publisher PDF in university repository, selected §4",
+      "inspected": "Proposition 4.1 and Box I: Laplace transform of first-failure time with a gross cap on repairs."
+    },
+    {
+      "id": "S14",
+      "title": "Vora et al., Solving Truly Massive Budgeted Monotonic POMDPs with Oracle-Guided Meta-Reinforcement Learning",
+      "url": "https://arxiv.org/html/2408.07192",
+      "access_depth": "Primary arXiv preprint full HTML, selected introduction, framework and results",
+      "inspected": "Shared finite intervention budget; weak coupling across components; value concavity and explicit optimization. No assembly dynamics or detailed-balance reverses."
+    },
+    {
+      "id": "S15",
+      "title": "Zhang and Isaacson, Detailed Balance for Particle Models of Reversible Reactions in Bounded Domains",
+      "url": "https://arxiv.org/html/2201.04099v3",
+      "access_depth": "Primary arXiv full HTML, selected detailed-balance construction building on prior workspace audit",
+      "inspected": "Sec. III and Theorem III.1; probability fluxes on paired reversible reaction kernels at equilibrium."
+    },
+    {
+      "id": "S16",
+      "title": "Mean-field models for the chemical fueling of transient soft matter states",
+      "url": "https://arxiv.org/html/2306.05504",
+      "access_depth": "Primary arXiv full HTML, selected §II and discussion",
+      "inspected": "Eqs. (2), (6)–(8): finite initial concentration of fuel creates a transient interaction partner, which shifts a bistable mechanical landscape. Quasistatic and Smoluchowski treatments; no shared repair channel."
+    },
+    {
+      "id": "S17",
+      "title": "England (2015), Dissipative adaptation in driven self-assembly",
+      "url": "https://www.cs.princeton.edu/courses/archive/fall24/cos597C/bib2/englandNature.pdf",
+      "access_depth": "Original perspective full PDF, selected argument and scope",
+      "inspected": "External driving and work-conditioned transition probabilities; limits of inference from dissipation alone. No finite-reserve reliability comparison."
+    },
+    {
+      "id": "S18",
+      "title": "A material system with integrated fault diagnosis and feedback controlled self-healing",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/acs.3449",
+      "access_depth": "Publisher index excerpt only; direct full open timed out",
+      "inspected": "Nearby use of external energy and structural fault diagnosis. No full-text novelty inference drawn."
+    },
+    {
+      "id": "S19",
+      "title": "Ragazzon and Prins (2018), Energy consumption in chemical fuel-driven self-assembly",
+      "url": "https://arts.units.it/retrieve/e2913fdf-27c5-f688-e053-3705fe0a67e0/2941121_2018_Ragazzon_NatNano-PostPrint.pdf",
+      "access_depth": "Perspective postprint indexed excerpts used for terminology and source finding",
+      "inspected": "Distinguishes supplying fuel to an implementation from coupling assembled states to energy transduction."
+    },
+    {
+      "id": "S20",
+      "title": "Boekhoven et al. (2010), Dissipative Self-Assembly of a Molecular Gelator by Using a Chemical Fuel",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.201001511",
+      "access_depth": "Primary publisher metadata and graphical abstract",
+      "inspected": "Early fuel-driven gelation followed by relaxation after depletion. Fig. 3 recovery details taken from the separate full 2013 report."
+    },
+    {
+      "id": "S21",
+      "title": "Programmable supramolecular chirality in non-equilibrium systems affording a multistate chiroptical switch",
+      "url": "https://www.nature.com/articles/s41467-023-40698-9",
+      "access_depth": "Publisher index and indexed PMC excerpt; direct publisher open failed via inaccessible identity-provider redirect",
+      "inspected": "Search lead on pathway-dependent kinetic trapping only."
+    },
+    {
+      "id": "S22",
+      "title": "Chemically fueled materials with a self-immolative mechanism: transient materials with a fast on/off response",
+      "url": "https://pubs.rsc.org/en/content/articlepdf/2021/sc/d1sc02561a",
+      "access_depth": "Publisher PDF indexed excerpt; full HTML 403",
+      "inspected": "Search lead on finite fuel and autonomous decay only."
+    },
+    {
+      "id": "S23",
+      "title": "Kar et al. (2025 issue, 2024 online), Transient transition from Stable to Dissipative Assemblies in Response to the Spatiotemporal Availability of a Chemical Fuel",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/anie.202414495",
+      "access_depth": "Primary publisher full HTML and university repository copy of full publisher PDF, selected passages and figures",
+      "inspected": "Figs. 1–3: thermal assemblies coexist with transients produced by local fuel pulses and diffusion. Fixed dose and different template levels; no shared repair reserve or failure-time optimum."
+    },
+    {
+      "id": "S24",
+      "title": "Van der Helm, de Beun and Eelkema (2021), On the use of catalysis to bias reaction pathways in out-of-equilibrium systems",
+      "url": "https://pubs.rsc.org/en/content/articlepdf/2021/sc/d0sc06406h",
+      "access_depth": "Primary full publisher PDF with TU Delft cover, selected schemes and results",
+      "inspected": "Scheme 1 and Figs. 1–2: batch ODEs with catalytic and uncatalyzed routes and a scan of product half-lives; Scheme 2 and Fig. 6: state-dependent negative feedback versus fixed catalyst in open flow."
+    },
+    {
+      "id": "S25",
+      "title": "Transiently amplified fluctuations assemble dissipative materials (2026)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13012035/",
+      "access_depth": "Primary full-text PMC HTML, selected results and methods",
+      "inspected": "Fig. 1 and Eqs. (25)–(30), (47): external reservoirs drive transient assembly amplification at fixed microscopic rate constants. No closed matched budget or first-failure test."
+    },
+    {
+      "id": "S26",
+      "title": "Grötsch et al. (2019), Pathway Dependence in the Fuel-Driven Dissipative Self-Assembly of Nanoparticles",
+      "url": "https://pubs.acs.org/doi/10.1021/jacs.9b02004",
+      "access_depth": "Primary publisher abstract; authors' thesis copy surfaced as a lead",
+      "inspected": "Same total quantity of fuel added as one dose or multiple doses yields different morphologies and trapping behavior. Source lead only."
+    }
+  ],
+  "local_project_context": [
+    "MEMORY.md",
+    "docs/self-assembly.md",
+    "docs/spatial-repair.md",
+    "research/assembly-literature.md",
+    "research/spatial-repair-originality-audit.md",
+    "research/spatial-repair-search-receipt.json",
+    "research/organization-preregistration.md",
+    "research/organization-verification-design.md"
+  ],
+  "scope_limit": "Targeted search without a systematic claim of completeness. Selected full-text passages were read, and abstract/index-only access is identified. No external contact was made."
+}

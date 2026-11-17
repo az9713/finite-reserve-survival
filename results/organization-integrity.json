@@ -1,0 +1,18 @@
+{
+  "generated_utc": "2026-11-17T21:47:40.545382+00:00",
+  "status": "PASS",
+  "hashes_replayed": 72,
+  "receipts": [
+    "organization.json",
+    "organization-verification.json",
+    "organization-continuum-check.json",
+    "organization-force-ablation.json",
+    "organization-certificate-controls.json",
+    "organization-review.json",
+    "organization-doc-verification.json"
+  ],
+  "tests_passed": 57,
+  "certificate_grid": 48,
+  "continuum_error_enclosed": false,
+  "scope": "Source/artifact integrity and retained acceptance replay, not a new scientific proof review."
+}

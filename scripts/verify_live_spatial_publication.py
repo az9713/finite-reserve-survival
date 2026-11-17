@@ -19,6 +19,7 @@ BASE='https://az9713.github.io/finite-reserve-survival/'
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--commit',required=True)
+    parser.add_argument('--include-organization',action='store_true')
     args=parser.parse_args()
     paths=['index.html','README.md','docs/SCIENTIFIC-DOSSIER.html',
            'docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html',
@@ -30,6 +31,13 @@ def main():
            'results/figures/spatial-repair-survival.png',
            'results/figures/spatial-repair-refinement.png',
            'results/figures/spatial-repair-independent.png']
+    if args.include_organization:
+        paths += ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html','docs/SPATIAL-LESSONS.html',
+            'src/purposeful/organization.py','research/organization-originality-audit.md',
+            *['results/'+name+'.json' for name in ['organization','organization-verification',
+                'organization-continuum-check','organization-force-ablation','organization-review',
+                'organization-doc-verification','organization-integrity','organization-certificate-controls']],
+            *['results/figures/organization-'+name+'.png' for name in ['survival','resources','fixed-certificate']]]
     files=[]
     for relative in paths:
         request=Request(BASE+relative+'?publication='+args.commit,headers={'User-Agent':'Research-publication-verifier'})
@@ -42,7 +50,9 @@ def main():
     pages=[]
     with sync_playwright() as p:
         browser=p.chromium.launch(channel='chrome',headless=True)
-        for relative in ['','docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html']:
+        documents=['','docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html']
+        if args.include_organization:documents+=['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html']
+        for relative in documents:
             for width in [1440,390]:
                 page=browser.new_page(viewport={'width':width,'height':1000})
                 errors=[]
@@ -59,7 +69,9 @@ def main():
                     width:innerWidth,scrollWidth:document.documentElement.scrollWidth})''')
                 state['console_errors']=errors
                 assert not errors and not state['mathErrors'] and not state['brokenImages'],state
-                assert state['equations']==state['rendered'] and state['hasSpatialResults'],state
+                assert state['equations']==state['rendered'],state
+                if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html']:
+                    assert state['hasSpatialResults'],state
                 assert state['scrollWidth']<=width,state
                 pages.append(state);page.close()
         browser.close()

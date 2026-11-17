@@ -1,0 +1,48 @@
+{
+  "scope": "Exploratory removal of the attractive well: depth=0 changes mechanical force AND conformation free-energy differences. This is not a pure-force causal isolation.",
+  "model": {
+    "fuel": 4,
+    "eta": 1.0,
+    "diffusivity": 0.025,
+    "length": 1.0,
+    "radius": 0.32,
+    "activity": 16.0,
+    "local_width": 0.075,
+    "passive": 1.0,
+    "paid": 4.0,
+    "offset": 2.0,
+    "depth": 0.0
+  },
+  "n": 16,
+  "horizon": 2,
+  "fixed": {
+    "lower": 0.23180540029337177,
+    "upper": 0.23180540030351876,
+    "attaining_sample_alpha": 0.0,
+    "sample_points": 15,
+    "cover_intervals": 3,
+    "absolute_second_derivative_upper": 0.0008029286743782561,
+    "maximum_paid_count_tail_upper": 1.6176731336067025e-37,
+    "narrowest_cover_interval": 0.25,
+    "certified_attaining_alpha": 0.0,
+    "derivative_cover_intervals": 8,
+    "minimum_signed_derivative_lower": 0.0007037895735348048
+  },
+  "spectator_interval": [
+    0.23106693456875324,
+    0.23106693457973645
+  ],
+  "gap_interval": [
+    -0.00073846573476552,
+    -0.0007384657136353111
+  ],
+  "base_poisson_tail_upper": 3.110774812510154e-33,
+  "spectator_poisson_tail_upper": 4.7776916219145986e-33,
+  "seconds": 2.7173423999993247,
+  "source_sha256": {
+    "src/purposeful/organization.py": "963406709c30234f467533793541baa050d0657bf6b9c64119aeac1416d75327",
+    "scripts/verify_organization.py": "84d4cc0a21e02f601c24929112a99f0740a1e3ab0b3ffa2395efa6a987275059",
+    "tests/test_organization.py": "c584a1e44a577aa994961c99ba3cda49b31f3115bed92ea44f81070c98e1fca1",
+    "scripts/run_organization_ablation.py": "30ed8284bcb330be5a36a8ab9906f97fa4852356e84507ac4d5f964e4ac49176"
+  }
+}

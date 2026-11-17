@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "scope": "Analytic Poisson-series optimizer controls; no additional physical-model result.",
+  "cases": [
+    {
+      "name": "interior",
+      "known_optimum_alpha": 0.5,
+      "exact_optimum_interval": [
+        "0.367879441171442321595523770161460867445811130",
+        "0.367879441171442321595523770161460867445811132"
+      ],
+      "certificate": {
+        "lower": 0.3678794411714423,
+        "upper": 0.3678794415888433,
+        "attaining_sample_alpha": 0.5,
+        "sample_points": 117,
+        "cover_intervals": 58,
+        "absolute_second_derivative_upper": 8.000000000000002,
+        "maximum_paid_count_tail_upper": 5.7856453547725347e-98,
+        "narrowest_cover_interval": 1.52587890625e-05
+      },
+      "passed": true
+    },
+    {
+      "name": "left_endpoint",
+      "known_optimum_alpha": 0.0,
+      "exact_optimum_interval": [
+        "1",
+        "1"
+      ],
+      "certificate": {
+        "lower": 1.0,
+        "upper": 1.0,
+        "attaining_sample_alpha": 0.0,
+        "sample_points": 27,
+        "cover_intervals": 10,
+        "absolute_second_derivative_upper": 1.0000000000000002,
+        "maximum_paid_count_tail_upper": 5.7856453547725347e-98,
+        "narrowest_cover_interval": 0.001953125,
+        "certified_attaining_alpha": 0.0,
+        "derivative_cover_intervals": 8,
+        "minimum_signed_derivative_lower": 0.329105626676799
+      },
+      "passed": true
+    },
+    {
+      "name": "right_endpoint",
+      "known_optimum_alpha": 1.0,
+      "exact_optimum_interval": [
+        "0.6321205588285576784044762298",
+        "0.6321205588285576784044762298"
+      ],
+      "certificate": {
+        "lower": 0.6321205588285577,
+        "upper": 0.6321205588285578,
+        "attaining_sample_alpha": 1.0,
+        "sample_points": 37,
+        "cover_intervals": 15,
+        "absolute_second_derivative_upper": 1.0000000000000002,
+        "maximum_paid_count_tail_upper": 5.7856453547725347e-98,
+        "narrowest_cover_interval": 6.103515625e-05,
+        "certified_attaining_alpha": 1.0,
+        "derivative_cover_intervals": 8,
+        "minimum_signed_derivative_lower": 0.329105626676799
+      },
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "scripts/check_organization_certificate_controls.py": "3ebba0b99b029d3fc9b20cf975963ab5c09a75e065ff1a2e85a1f79a08e28b08",
+    "scripts/verify_organization.py": "84d4cc0a21e02f601c24929112a99f0740a1e3ab0b3ffa2395efa6a987275059",
+    "tests/test_organization.py": "c584a1e44a577aa994961c99ba3cda49b31f3115bed92ea44f81070c98e1fca1"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "local_date": "2026-11-17",
+  "scope": "Independent scientific and numerical review of the paid tethering benchmark. Checked the fixed-family certificate and its public interpretation. Review covers the declared finite-grid claim.",
+  "examined": [
+    "docs/paid-organization.md",
+    "research/organization-preregistration.md",
+    "research/organization-model-design.md",
+    "research/organization-verification-design.md",
+    "src/purposeful/organization.py",
+    "tests/test_organization.py",
+    "scripts/run_organization.py",
+    "scripts/verify_organization.py",
+    "scripts/run_organization_ablation.py",
+    "scripts/organization_continuum_check.py",
+    "scripts/build_organization_docs.py",
+    "results/organization.json",
+    "results/organization-verification.json",
+    "results/organization-force-ablation.json",
+    "results/organization-continuum-check.json"
+  ],
+  "scientific_conclusion": "The checked finite-lattice result supports a small positive gap to the best constant paid-channel prefactor at T=2 on the n=48 grid. It establishes neither a continuum advantage nor superiority to all constant or passive physical architectures.",
+  "checked_invariants": [
+    "Paid and passive tether transitions retain their paired reverse and matching position-dependent equilibrium flux, including zero propensity for both directions of the last spectator edge.",
+    "Both designs have the same Gibbs reference, initial law and fuel/waste energy scale. The spectator assumption changes permitted kinetics. Actual fabrication and recognition costs have no calibration.",
+    "Spatial neighbor fluxes satisfy the common Gibbs law. Lumping the even periodic cubic lattice by whole-coordinate reflections and permutations preserves rates and launch multiplicities.",
+    "The killed generator retains the thermal damage exit rate in HD. The stopped fuel and tether moments account for values at absorption.",
+    "The certified constant generator is affine in alpha. Conditional Poisson interleaving, first and second differences, bounded discarded weights and Taylor box splitting furnish a global enclosure. The interval logic preserved positivity, discarded-tail scope and derivative signs in the tested cases."
+  ],
+  "findings": [
+    {
+      "severity": "medium",
+      "location": "docs/paid-organization.md, Short-time controls",
+      "finding": "A fourth strongly applied continuum generator requires a domain argument because Metropolis acceptance has a kink.",
+      "resolution": "Verified source now explicitly scopes the Taylor identities to the finite lattices."
+    },
+    {
+      "severity": "medium",
+      "location": "scripts/build_organization_docs.py, generated overview",
+      "finding": "An upper endpoint for the gap to the best fixed design does not bound the gap to every weaker fixed design.",
+      "resolution": "Verified source now refers to the optimum over the fixed interval."
+    },
+    {
+      "severity": "low",
+      "location": "scripts/build_organization_docs.py and scripts/run_organization_ablation.py",
+      "finding": "Nearest-rounded display intervals and unpadded subtraction of binary64 endpoints can round inward.",
+      "resolution": "Verified source now rounds display endpoints outward and pads the no-well gap subtraction with nextafter."
+    },
+    {
+      "severity": "information",
+      "location": "results/organization-verification.json and scripts/run_organization.py",
+      "finding": "Alpha=1 is the sampled fixed comparator at the finest certified grid. The global certificate encloses the best fixed value without identifying its exact optimizer.",
+      "resolution": "Report alpha=1 as the common plotted fixed sample and the main gap relative to the certified optimum."
+    },
+    {
+      "severity": "information",
+      "location": "results/organization-continuum-check.json and results/organization-force-ablation.json",
+      "finding": "The Euler-SDE check has insufficient precision to discriminate the policy gap. The no-well ablation changes conformation energetics along with force.",
+      "resolution": "Both scope limits appear in the reviewed manuscript."
+    }
+  ],
+  "directly_replayed": {
+    "commands": [
+      "With PYTHONPATH=src, python -B -m pytest -q tests/test_organization.py",
+      "With PYTHONPATH=src;tests;scripts, apply the small-grid production killed generator 3 and 4 times to the live payoff at n=4 and n=8. Independently calculate the analytic weighted contact expressions; compare at alpha=0, 0.37 and 1 and at the spectator policy.",
+      "With the same module search path, recompute interval uniformization and the Taylor cover at n=4, T=2 and tolerance 2e-6. Compare against dense scipy.linalg.expm values from test_organization.dense_reference at alpha=0, 0.37, 1 and at the spectator policy."
+    ],
+    "test_count": 6,
+    "new_random_paths": 0,
+    "taylor_checks": [
+      {
+        "n": 4,
+        "cubic_slope_analytic": -4.004291693579144,
+        "cubic_slope_operator": -4.004291693579152,
+        "quartic_gap_analytic": 32.000791426247694,
+        "quartic_gap_operator": 32.00079142624327
+      },
+      {
+        "n": 8,
+        "cubic_slope_analytic": -1.647892407199926,
+        "cubic_slope_operator": -1.6478924072006709,
+        "quartic_gap_analytic": 7.915347497567874,
+        "quartic_gap_operator": 7.915347497568064
+      }
+    ],
+    "n4_interval_replay": {
+      "spectator": [
+        0.2265067099679203,
+        0.22650670997451391
+      ],
+      "fixed_optimum": [
+        0.22666300227596417,
+        0.22666334816483616
+      ],
+      "dense_values": {
+        "alpha=0": 0.2266630022784551,
+        "alpha=0.37": 0.2261922842544059,
+        "alpha=1": 0.22640117497108259,
+        "spectator": 0.226506709971219
+      }
+    }
+  },
+  "large_run_records_checked": {
+    "certified_grids": [
+      4,
+      8,
+      16,
+      24,
+      32,
+      48
+    ],
+    "finest_grid": 48,
+    "finest_gap_probability": [
+      0.00014604124859704523,
+      0.00014714135488141936
+    ],
+    "finest_fixed_attaining_sample_alpha": 1,
+    "finest_exact_fixed_argmax_certified": false,
+    "lattice_path_seeds": [
+      19891101,
+      19892830,
+      19894559
+    ],
+    "lattice_paths_per_seed": 20000,
+    "lattice_path_n": 32,
+    "continuum_step_caps": [
+      0.01,
+      0.005,
+      0.0025
+    ],
+    "continuum_path_seeds": [
+      2026111700,
+      2026111701,
+      2026111702,
+      2026111703,
+      2026111704,
+      2026111705,
+      2026111706,
+      2026111707,
+      2026111708
+    ],
+    "continuum_paths_per_seed": 20000,
+    "continuum_familywise_dkw_half_width": 0.013688993702866052,
+    "continuum_max_observation_grid_gap_to_lattice": 0.007826572123632802,
+    "ablation_grid": 16,
+    "ablation_gap_probability": [
+      -0.00073846573476552,
+      -0.0007384657136353111
+    ],
+    "ablation_sample_alpha": 0
+  },
+  "source_sha256": {
+    "src/purposeful/organization.py": "963406709c30234f467533793541baa050d0657bf6b9c64119aeac1416d75327",
+    "scripts/verify_organization.py": "84d4cc0a21e02f601c24929112a99f0740a1e3ab0b3ffa2395efa6a987275059",
+    "tests/test_organization.py": "c584a1e44a577aa994961c99ba3cda49b31f3115bed92ea44f81070c98e1fca1",
+    "results/organization-verification.json": "c5d6e3f64bdd11e7c90615bc07f2b68e95ecc19cc73ff42268529dd3cb22eaa4",
+    "results/organization-continuum-check.json": "baacf51f331e403d8f20cc7d820aece3b1426cdafccdfa850bbe0599c8c03fa4"
+  }
+}

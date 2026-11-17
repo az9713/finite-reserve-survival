@@ -156,8 +156,8 @@
   },
   {
     "path": "docs/DEVELOPMENT-JOURNEY.html",
-    "bytes": 32450,
-    "sha256": "faa15861e500c511e3c2b61c07fa591be00f1d77cf6eb0536c04c7e4735a2698"
+    "bytes": 36414,
+    "sha256": "5993f09ec6a23bcb1fd3356c3d792dc8cef2c1686652f3a4d1676c8140e5a6b6"
   },
   {
     "path": "docs/finite-reserve-repair.md",
@@ -173,6 +173,26 @@
     "path": "docs/model.md",
     "bytes": 10198,
     "sha256": "a6af775cf48a33ef9c1a504f8f62fd80ab0e83f1ea62795fe95b4b6007686226"
+  },
+  {
+    "path": "docs/organization-journey.md",
+    "bytes": 3535,
+    "sha256": "694abb20a791b3395080e333819ed447a7b7441fbe95dc073f62c5d7de75bf3c"
+  },
+  {
+    "path": "docs/organization-overview.md",
+    "bytes": 2018,
+    "sha256": "b792ff2f7d42923df8fe315ac75e3fdf0c901df02336998fc5d5a09e9579ca3a"
+  },
+  {
+    "path": "docs/PAID-ORGANIZATION.html",
+    "bytes": 35838,
+    "sha256": "014bc818c0f0afc24cbf0da64d6ad824d7322cef05fa274bc73fb259f112afc5"
+  },
+  {
+    "path": "docs/paid-organization.md",
+    "bytes": 16835,
+    "sha256": "02c424ac9afb07e01682c6b075006dc5e4e9fe3ea6be5ddf35549737335c594e"
   },
   {
     "path": "docs/paper.md",
@@ -206,13 +226,13 @@
   },
   {
     "path": "docs/SCIENTIFIC-DOSSIER.html",
-    "bytes": 151172,
-    "sha256": "11871b9a4551df514b8fabdb8b30a4c3b714baec6165234bd838a1ae7890ae0c"
+    "bytes": 153663,
+    "sha256": "7c0afb4ffc3f71ad379eaf01aac678032eb2a339885339f0eee1e33fd00127d1"
   },
   {
     "path": "docs/SELF-ASSEMBLY.html",
-    "bytes": 44273,
-    "sha256": "dfb92238777fc8b01d034047c8113489dc425b10c91ffa8b382de30f0b97c51c"
+    "bytes": 44327,
+    "sha256": "273ebefcf6c16f0ed8ea1410877acfd8834681548e774d4e5d5872696232f22e"
   },
   {
     "path": "docs/self-assembly.md",
@@ -221,8 +241,8 @@
   },
   {
     "path": "docs/SPATIAL-LESSONS.html",
-    "bytes": 11740,
-    "sha256": "61b4d0139ea7fe8cec35943efd617025a465f993955250067b8da1daa7db5742"
+    "bytes": 11794,
+    "sha256": "e37f7a8d35f444596d3fda96f3804c418d30882b20034a6fa4dc508aaacc0b8f"
   },
   {
     "path": "docs/spatial-lessons.md",
@@ -241,8 +261,8 @@
   },
   {
     "path": "docs/SPATIAL-REPAIR.html",
-    "bytes": 37736,
-    "sha256": "82b6389d59bf28f5882add56a4a4f0f8b1d6d99ffd98e54fc98ba59fc0ecff9e"
+    "bytes": 37790,
+    "sha256": "4fec90b5ceb2e6852144c85562deba3375eaf3f5bc065f617019b77aa9bd85b0"
   },
   {
     "path": "docs/spatial-repair.md",
@@ -256,8 +276,8 @@
   },
   {
     "path": "docs/STOCHASTIC-CALCULUS-PLAN.html",
-    "bytes": 35535,
-    "sha256": "32259c65c6ac813c852049570bb317382c5453fb0f419ecf089cd1a7fb304bd1"
+    "bytes": 35589,
+    "sha256": "5fc60d6b6128527520dc28be49d0a157a6c2e822ff5469b001ab3f8fdc5f78da"
   },
   {
     "path": "docs/stochastic-calculus-plan.md",
@@ -266,8 +286,8 @@
   },
   {
     "path": "docs/STOCHASTIC-CALCULUS.html",
-    "bytes": 14674,
-    "sha256": "7c6518170803e7f41c0b238cd2cbb52d0d22655a9a0ae462f9610e1c3362e21f"
+    "bytes": 14728,
+    "sha256": "e76fc1baa4cdd506ad048760d99ed19667b45de76bfa5068128cab736f82cea9"
   },
   {
     "path": "index.html",
@@ -281,8 +301,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 12621,
-    "sha256": "320f1229d6f506e187995c80ff176a628bed3f46f4373c80b3ab483067fd9cff"
+    "bytes": 15389,
+    "sha256": "52f1c348aac9a5d936e45d4909f020387073ac96b7ca299d487bbfcc382f6028"
   },
   {
     "path": "research/assembly-literature.md",
@@ -303,6 +323,36 @@
     "path": "research/literature.md",
     "bytes": 5441,
     "sha256": "05f9c59a12f9943abd8e648286fcc4eff58a2462dc5826db33d175e7491b444b"
+  },
+  {
+    "path": "research/organization-model-design.md",
+    "bytes": 10852,
+    "sha256": "31d506b682388805399c9edecf3ce3cc01c5a7d6e3566a7e36f8cbc33e8ad2da"
+  },
+  {
+    "path": "research/organization-originality-audit.md",
+    "bytes": 17966,
+    "sha256": "b40c62606385fcf97409d5cc0b343258c031db445f4abe08ee0e582dcb918815"
+  },
+  {
+    "path": "research/organization-preregistration.md",
+    "bytes": 3731,
+    "sha256": "3aaa05cd802e5a4f34f7f4bc5d2561a020504bfcf1be3f9993a2e6e328e4c791"
+  },
+  {
+    "path": "research/organization-progress.md",
+    "bytes": 3345,
+    "sha256": "7d342d37932522600cd43ec1c979eb8e244caa71e3ff211c0f8b4396f1271061"
+  },
+  {
+    "path": "research/organization-search-receipt.json",
+    "bytes": 20722,
+    "sha256": "129dc5a858304f22ba4441fb67d45607556044a75f1ab407438856f36e4c0c66"
+  },
+  {
+    "path": "research/organization-verification-design.md",
+    "bytes": 8049,
+    "sha256": "f398d607360ab587f5a70101f88360155f3cfc24ccc2f2db1521ebf8fefb838a"
   },
   {
     "path": "research/priority-search-2026-11-17.md",
@@ -411,13 +461,13 @@
   },
   {
     "path": "results/document-previews/development-journey-1440.png",
-    "bytes": 104195,
-    "sha256": "ef575ff74c5b5f9c0586e4d37d969753de227734ecdad4ff1f660080225f270a"
+    "bytes": 104716,
+    "sha256": "969ff785bb1d78cd340e023c4067e207c16ca0ea743c0e371169fed247fb458b"
   },
   {
     "path": "results/document-previews/development-journey-390.png",
-    "bytes": 59014,
-    "sha256": "45add67687e515b21be61a00cbe160e4758b5275a5e44a900d4a380852e766c2"
+    "bytes": 59457,
+    "sha256": "33d7cda94c561cdae44d41280bdd95b01f614bd4947132e5b1cac3a9471e91ff"
   },
   {
     "path": "results/document-previews/manuscript-page-1.png",
@@ -445,6 +495,16 @@
     "sha256": "819209788b33200b07324d4a900996de336f9bca7a2cf5620c96e2cef6688a43"
   },
   {
+    "path": "results/document-previews/paid-organization-1440.png",
+    "bytes": 112446,
+    "sha256": "40d9f0939af030529ff9ee12bfe7e23a86321442f8899d47a6a849756f7c2509"
+  },
+  {
+    "path": "results/document-previews/paid-organization-390.png",
+    "bytes": 59420,
+    "sha256": "5577e9bea10ad9dcb08e4edd4b437c4ce5fff6a736645bddb4ad817cd3d57dc6"
+  },
+  {
     "path": "results/document-previews/research-manuscript-1440.png",
     "bytes": 100401,
     "sha256": "fbc600e62bc8382c1a48b48b3585e103407dbc82398eebb36f437e8253a2f6af"
@@ -456,58 +516,68 @@
   },
   {
     "path": "results/document-previews/scientific-dossier-1440.png",
-    "bytes": 103328,
-    "sha256": "88e727f256be2d102b732fbaa0ad6c20f31f794323929d9bf0359562e412f719"
+    "bytes": 106045,
+    "sha256": "3c4e9d703ba9ec096aa62feeaee57d8f347c47ccf03e16bb094c8d6d69b86635"
   },
   {
     "path": "results/document-previews/scientific-dossier-390.png",
-    "bytes": 55658,
-    "sha256": "bca10d79bc239a5b73da382d6ab85addbf5d95827b97077e511f57f1abe9446c"
+    "bytes": 54527,
+    "sha256": "56614a87f08869dd430aac26265ff6282a0c579bcb75af943f7c1fed0329e51e"
   },
   {
     "path": "results/document-previews/scientific-theorems.png",
-    "bytes": 117531,
-    "sha256": "f9ff52f773ce2bffd10c9b31880fde317d14e11e6f32033668b08bbcdefadd4f"
+    "bytes": 117549,
+    "sha256": "a09e53f36f60e599a82f96d00bc0db8e675386012b9bcd84216d9ea66b4531f3"
   },
   {
     "path": "results/document-previews/self-assembly-1440.png",
-    "bytes": 118548,
-    "sha256": "8e48396d661e496793c561fe2bad529c2a083fc682e36228ed1319c453a840f2"
+    "bytes": 119128,
+    "sha256": "fd208f7dc8c76135838fad3465a53268ad44a17b47257016ec81e5bcfc85e9a0"
   },
   {
     "path": "results/document-previews/self-assembly-390.png",
-    "bytes": 58109,
-    "sha256": "d1028ec04c2878f38a85fdb8caad1cf761499d4408ac91122396b413f2308167"
+    "bytes": 57052,
+    "sha256": "2be77ae5f0c27119ff75884993783ee933f3d761ccffbedbc53090c439f3dd3e"
+  },
+  {
+    "path": "results/document-previews/spatial-lessons-1440.png",
+    "bytes": 135342,
+    "sha256": "09f46d9c0f15006610e4855e0300dda47d873a057520ae25b2d3784ee60abd06"
+  },
+  {
+    "path": "results/document-previews/spatial-lessons-390.png",
+    "bytes": 54049,
+    "sha256": "078172202f06ae7eea0a84f673e99b7421d5e06131bc5b8f533684a37fbb5a64"
   },
   {
     "path": "results/document-previews/spatial-repair-1440.png",
-    "bytes": 115086,
-    "sha256": "c4c873ca1685621725c4de9c436ed68f3d95cc123e216a33ed2cceaecee6fed9"
+    "bytes": 115681,
+    "sha256": "364fab7d748211e8b2ac03253749b7775bacc5a0066ab31ff84344044b4d1ed2"
   },
   {
     "path": "results/document-previews/spatial-repair-390.png",
-    "bytes": 61908,
-    "sha256": "c8fe33bf40484778216f07ac71b111bc83be8a8cf14d24013ac62e1b184f10d9"
+    "bytes": 60099,
+    "sha256": "3fcad2e5811360888aa7ea1af98788a7ab31449952a65f0e45604acda4ce330f"
   },
   {
     "path": "results/document-previews/stochastic-calculus-1440.png",
-    "bytes": 106415,
-    "sha256": "6c41089386bf63a49846d246d579a7dadf2200b56e7675a71f736f8407633af9"
+    "bytes": 106930,
+    "sha256": "8150f27aa8542b01579572b4ac55f32cfb366a1c3efc0d6eeabdf1e0b7d82ecb"
   },
   {
     "path": "results/document-previews/stochastic-calculus-390.png",
-    "bytes": 60271,
-    "sha256": "3b2e975e106624c46cfb0f0491a6bef1c77a068f1750a2a4ca20d76e7728b36b"
+    "bytes": 57168,
+    "sha256": "ad06dc754281f28e3257e77c1e5bbca85403a1809a52bb92bb3eb5602f869c99"
   },
   {
     "path": "results/document-previews/stochastic-plan-1440.png",
-    "bytes": 106790,
-    "sha256": "6bd73ce34a047f43b81c8edfde6eb3619c4b0d9f3ad168a589ab91e56be4578c"
+    "bytes": 107309,
+    "sha256": "a6a213078387684ea9642eee78ed30c451ba17f1557e8c0c9c359f996908adcb"
   },
   {
     "path": "results/document-previews/stochastic-plan-390.png",
-    "bytes": 56595,
-    "sha256": "f2d440aaabc96dd523ceac715b4701ec25d19981f7e947f3c31a0fd8f9ea08b4"
+    "bytes": 55340,
+    "sha256": "cc183611cbe4e502695b433a6c325665801b64d1377addfa2c36d261aa38d0e3"
   },
   {
     "path": "results/dossier-execution-receipt.json",
@@ -516,23 +586,23 @@
   },
   {
     "path": "results/dossier-ui-validation.json",
-    "bytes": 3945,
-    "sha256": "4a209d0c74bb1788d42050de52705648192aa1f27ce4b29207248a14ddfcb18a"
+    "bytes": 5409,
+    "sha256": "a6b5c2f6745ac4af54ce11bba46c1c0214e02a05d7e807d9abe1c8f16ff72202"
   },
   {
     "path": "results/dossier-verification.json",
-    "bytes": 12801,
-    "sha256": "d697970a20c4aaa7dfe8c11d7bd76895b88e0c1480ba6cb8ae691aec2540996b"
+    "bytes": 15039,
+    "sha256": "75076906ffd2ce8939b524a9664e965c17a7f24036e35ea3eebbd1d4553a2dfc"
   },
   {
     "path": "results/encounter-feasibility.json",
     "bytes": 17533,
-    "sha256": "d444601969e4ebf25d25e70caf71e0faf9dcefc4f10df646e88d2a2ca53973c1"
+    "sha256": "d4bfc0d399edd7d6337c9f88aa0c33134141910ce7e92c10303f85aa1ab6470c"
   },
   {
     "path": "results/encounter-verification.json",
-    "bytes": 6606,
-    "sha256": "275caab44cd49d00d552d7c76e22df0629de71154fd3c957aa51423213103cfc"
+    "bytes": 7400,
+    "sha256": "f9b1150e9a7a3eeb1b6a96357bf8f5fe767ce1811051cc639b40be03a5077a36"
   },
   {
     "path": "results/figures/assembly-formation.pdf",
@@ -622,7 +692,7 @@
   {
     "path": "results/figures/encounter-feasibility.pdf",
     "bytes": 22720,
-    "sha256": "93a2f15319f018796f39c640b602f7ca8ac44eac66087baf6162345e093e33f5"
+    "sha256": "37b0a7562bae8b92bd89ddc951842dc30fb2a324fa3cd2a826a94c7070832b4d"
   },
   {
     "path": "results/figures/encounter-feasibility.png",
@@ -632,12 +702,42 @@
   {
     "path": "results/figures/encounter-timescales.pdf",
     "bytes": 105053,
-    "sha256": "f212b8fb4677b3fc5c10e66c16b7e82d3696ca96375534c9f7f99457aed6cb27"
+    "sha256": "395c47e45dc06d23b5c6ee450b5f70766fa800ff36f13b881fc96c1eb6fe9435"
   },
   {
     "path": "results/figures/encounter-timescales.png",
     "bytes": 120169,
     "sha256": "5643c03daa814c96367c4ab13a7a4c2b13b103dbb961214345cfdc3c6332efc3"
+  },
+  {
+    "path": "results/figures/organization-fixed-certificate.pdf",
+    "bytes": 19179,
+    "sha256": "ed05b8b02ca6f19cf799359322587ccc93eb81bcc02b17fb732482d25e838b3e"
+  },
+  {
+    "path": "results/figures/organization-fixed-certificate.png",
+    "bytes": 128695,
+    "sha256": "58a78d2b4bb6cc82f5f65536fdb666c6f08a7d8e736fec8a4ffeeabc48d52fde"
+  },
+  {
+    "path": "results/figures/organization-resources.pdf",
+    "bytes": 19906,
+    "sha256": "429bbaead5b7b744552ed2e1d74c4cffb0ea89370c7fd3915bae95c65bc3e171"
+  },
+  {
+    "path": "results/figures/organization-resources.png",
+    "bytes": 244637,
+    "sha256": "e4fccbb72fbb6b32c2c6e4a74376fec3e62400e7bbc6b34808af6d65ad46d120"
+  },
+  {
+    "path": "results/figures/organization-survival.pdf",
+    "bytes": 21741,
+    "sha256": "a48c03f6e36b3ad5219fdfd7b7ed203c7b0aaa78b32b166ab7bec19954029118"
+  },
+  {
+    "path": "results/figures/organization-survival.png",
+    "bytes": 157131,
+    "sha256": "e0f3ca1104011e0e30491e4f3ae45d4516543f18d88ed91d4f3497f0a0ae09bc"
   },
   {
     "path": "results/figures/power-frontier.png",
@@ -715,6 +815,46 @@
     "sha256": "455c7e40a08448ebfa518c000aa58609f5d88584947dc080e4fdad5cdfea15d8"
   },
   {
+    "path": "results/organization-certificate-controls.json",
+    "bytes": 2631,
+    "sha256": "565b6b58e344aefd72f672205343e9265fe0b596aefed12d6e2a7d53c2657c3e"
+  },
+  {
+    "path": "results/organization-continuum-check.json",
+    "bytes": 69390,
+    "sha256": "baacf51f331e403d8f20cc7d820aece3b1426cdafccdfa850bbe0599c8c03fa4"
+  },
+  {
+    "path": "results/organization-doc-verification.json",
+    "bytes": 12703,
+    "sha256": "6654890c9161612b94263640f21f8ba3bb3ca34b3e880d041b67758f962b9284"
+  },
+  {
+    "path": "results/organization-force-ablation.json",
+    "bytes": 1711,
+    "sha256": "f6973d17343d580815b449a20d6ab5bd6fa0adf3a8923fccd34ff5335c6a76cd"
+  },
+  {
+    "path": "results/organization-integrity.json",
+    "bytes": 597,
+    "sha256": "52bd5d8174d6d89f5f13defe58862b2d9d91e949a9316f425def808ba1da7426"
+  },
+  {
+    "path": "results/organization-review.json",
+    "bytes": 7483,
+    "sha256": "3a5474f0f405e6febb60d7b4d139862bd874074d82c9611d43525d2ca15e747d"
+  },
+  {
+    "path": "results/organization-verification.json",
+    "bytes": 10076,
+    "sha256": "c5d6e3f64bdd11e7c90615bc07f2b68e95ecc19cc73ff42268529dd3cb22eaa4"
+  },
+  {
+    "path": "results/organization.json",
+    "bytes": 136576,
+    "sha256": "574e39088b732fccb5262a8e055615d637f8e89ea1c072aed18d7e40eb3e0256"
+  },
+  {
     "path": "results/pdf-first-page.png",
     "bytes": 248919,
     "sha256": "4581e0804cac83ef9a93c1c09317aea440e3834e85fc9ef6df80ac3991e01024"
@@ -747,17 +887,17 @@
   {
     "path": "results/spatial-lessons-validation.json",
     "bytes": 815,
-    "sha256": "3e68a718ec823d8b2f78e7040d742ad6b298a496cc69081e9e49262c3d18f2b0"
+    "sha256": "00fa839036e84a35a20c69c178e59eab6365c91d9f98cc84df8de59f98a4e062"
   },
   {
     "path": "results/spatial-repair-delivery-manifest.json",
-    "bytes": 16480,
-    "sha256": "306b16064bdcde5bb3d648884dbc01e47078eece2d8df0a4dac922dbd9fca528"
+    "bytes": 16818,
+    "sha256": "3d14ca771de6a0bb51c66e476c57d29d014f54debd7107b5b040cc2d981b961f"
   },
   {
     "path": "results/spatial-repair-integrity.json",
     "bytes": 419,
-    "sha256": "9e4764ab407791d9b22d5807291679b4748bffb228ff23c62904dc38d18a946e"
+    "sha256": "5fdeda12a12fbc918f4c365f6ae7a8acab29a47fae2c9e4d31eb269e8a3a9eae"
   },
   {
     "path": "results/spatial-repair-review-check.json",
@@ -767,7 +907,7 @@
   {
     "path": "results/spatial-repair-ui-validation.json",
     "bytes": 1825,
-    "sha256": "524ae4579ed2542b6d6873961f665f830ab4075cf3c7fdda39618cdd92935e25"
+    "sha256": "06b78c1a048674bb1e68204faaa1a165e6b38c2dbba8775cf87614ad2a6081ae"
   },
   {
     "path": "results/spatial-repair-verification.json",
@@ -782,7 +922,7 @@
   {
     "path": "results/stochastic-plan-ui-validation.json",
     "bytes": 751,
-    "sha256": "effa5911b70b802e9bfe5be0e1067dd83c56e0955c3fd0b3a1fe909f95cbf422"
+    "sha256": "94a7f9992cb47d36d24b9dcaefb55e40dbd5b5395abc5bd87d54ef2e31b4063d"
   },
   {
     "path": "results/summary.json",
@@ -815,9 +955,14 @@
     "sha256": "106f2c7367b843bfc62120132aed9312c195cd57fc3bdad9e10cff147b1a4674"
   },
   {
+    "path": "scripts/build_organization_docs.py",
+    "bytes": 14489,
+    "sha256": "350c2d4520f15b0f3984c6d098041990f7fbcaf72ce85f1af7dfc9e881f0cb9e"
+  },
+  {
     "path": "scripts/build_research_docs.py",
-    "bytes": 45806,
-    "sha256": "2668edb0aff9a95d4bd69d706f453325034ce985d978cb6eab8b9dd907c8c9d3"
+    "bytes": 46511,
+    "sha256": "b47f604ddbee40259b748150e8f0754eaa89471e0ae9718ebdd3f176228c86b5"
   },
   {
     "path": "scripts/build_reserve_figure.py",
@@ -855,9 +1000,24 @@
     "sha256": "77a73821ab1f6e94b67f6eca30783415981fcac05e187ed1a03c6b21e6150342"
   },
   {
+    "path": "scripts/check_organization_certificate_controls.py",
+    "bytes": 1964,
+    "sha256": "3ebba0b99b029d3fc9b20cf975963ab5c09a75e065ff1a2e85a1f79a08e28b08"
+  },
+  {
+    "path": "scripts/check_organization_receipts.py",
+    "bytes": 1972,
+    "sha256": "9d655b6d041169e172dc40de2160402317215c5f848b5c8ada7e16484397d359"
+  },
+  {
     "path": "scripts/check_spatial_repair_receipts.py",
     "bytes": 4590,
     "sha256": "986796945a0cc8da25e0ff545072333eae348be953b87188bbf0a38f386a5c45"
+  },
+  {
+    "path": "scripts/organization_continuum_check.py",
+    "bytes": 11732,
+    "sha256": "dbd87977419dc65a9841386e1e48f071eac9e675c0aad3ae665ecf9569fb91b2"
   },
   {
     "path": "scripts/package_research_docs.py",
@@ -880,6 +1040,16 @@
     "sha256": "5f9a45e846e422abdf4b743edbfbafc0b438a39b96f8472ddb5dbdc760e7f83c"
   },
   {
+    "path": "scripts/run_organization.py",
+    "bytes": 8371,
+    "sha256": "d9b137fa2c807713cacf76f74eaae8fa40f728c700e5cf716da3e61ca680281b"
+  },
+  {
+    "path": "scripts/run_organization_ablation.py",
+    "bytes": 2012,
+    "sha256": "30ed8284bcb330be5a36a8ab9906f97fa4852356e84507ac4d5f964e4ac49176"
+  },
+  {
     "path": "scripts/run_reserve_study.py",
     "bytes": 1798,
     "sha256": "ed0e63f9386f55f0ce8fe8acf8bf56dbabeb18ec03f634e3a787321836f37007"
@@ -896,13 +1066,18 @@
   },
   {
     "path": "scripts/verify_live_spatial_publication.py",
-    "bytes": 4214,
-    "sha256": "4e0d9ea39a880f3c304499a30fdc659d8e8898637fbc63063414f2237026d42b"
+    "bytes": 5211,
+    "sha256": "b8a7ed8cae6f62a268348659f15f0bf42b86a6d1339cb708f26b8cc6ad22c653"
+  },
+  {
+    "path": "scripts/verify_organization.py",
+    "bytes": 22276,
+    "sha256": "84d4cc0a21e02f601c24929112a99f0740a1e3ab0b3ffa2395efa6a987275059"
   },
   {
     "path": "scripts/verify_research_docs.py",
-    "bytes": 5114,
-    "sha256": "8769835fb38040d777d076cdadadb97787c0d05c1207cd43d49bcac8a1ef950d"
+    "bytes": 5164,
+    "sha256": "63ecc9d37d8f63cc515e32cf4be8efd0ecc124f03d9365630442fac7ea3565c0"
   },
   {
     "path": "scripts/verify_spatial_repair.py",
@@ -945,6 +1120,11 @@
     "sha256": "31839e86ab4b82a29873b6fc875c4c723c38827cb311b81dc275ada3ef87a732"
   },
   {
+    "path": "src/purposeful/organization.py",
+    "bytes": 10576,
+    "sha256": "963406709c30234f467533793541baa050d0657bf6b9c64119aeac1416d75327"
+  },
+  {
     "path": "src/purposeful/reserve.py",
     "bytes": 4793,
     "sha256": "feb8c1ffc3d4219b613f2a77c5322a408b69600a03791697a79dcf1e3adc2700"
@@ -978,6 +1158,11 @@
     "path": "tests/test_model.py",
     "bytes": 4945,
     "sha256": "3f4fe1d7ad6a0b22aada7763bb85da553d52ee783b2b5858120d129df4039cc9"
+  },
+  {
+    "path": "tests/test_organization.py",
+    "bytes": 10735,
+    "sha256": "c584a1e44a577aa994961c99ba3cda49b31f3115bed92ea44f81070c98e1fca1"
   },
   {
     "path": "tests/test_reserve.py",
