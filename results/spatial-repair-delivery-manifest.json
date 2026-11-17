@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-17T21:48:54.951780+00:00",
+  "generated_utc": "2026-11-17T23:57:32.142306+00:00",
   "scope": "Spatial repair delivery, scientific source dependencies and offline equation assets.",
   "exclusions": [
     "Project-private MEMORY.md",
@@ -184,8 +184,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 15389,
-      "sha256": "52f1c348aac9a5d936e45d4909f020387073ac96b7ca299d487bbfcc382f6028"
+      "bytes": 16674,
+      "sha256": "088e1eb325c0ffb3e8dfbd2edbf2722367ae08f320bf0ac4af228021deb78227"
     },
     {
       "path": "research/spatial-repair-originality-audit.md",
@@ -334,8 +334,8 @@
     },
     {
       "path": "scripts/build_research_docs.py",
-      "bytes": 46511,
-      "sha256": "b47f604ddbee40259b748150e8f0754eaa89471e0ae9718ebdd3f176228c86b5"
+      "bytes": 47032,
+      "sha256": "c3b07bc672ce4e87556b30ecb3d81105f7cc24683a6f96fde33c153fcf085353"
     },
     {
       "path": "scripts/build_spatial_lessons.py",
@@ -369,13 +369,13 @@
     },
     {
       "path": "scripts/verify_live_spatial_publication.py",
-      "bytes": 5211,
-      "sha256": "b8a7ed8cae6f62a268348659f15f0bf42b86a6d1339cb708f26b8cc6ad22c653"
+      "bytes": 6121,
+      "sha256": "7ff6bf7e024841332308a97994f2485414f2e7044f0a9a9fe74dee492847c1ee"
     },
     {
       "path": "scripts/verify_research_docs.py",
-      "bytes": 5164,
-      "sha256": "63ecc9d37d8f63cc515e32cf4be8efd0ecc124f03d9365630442fac7ea3565c0"
+      "bytes": 5195,
+      "sha256": "e19a305ac1c4a9367aa23651842942482eeea055a9720968542c70ad65552384"
     },
     {
       "path": "scripts/verify_spatial_repair.py",

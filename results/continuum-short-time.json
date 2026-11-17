@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "Exact rational inequalities for the Brownian short-horizon proof. The sign at time two is a separate question.",
+  "result": "For 0<t<=1/1250, spectator loses to alpha=0 by at least t^3/60. Each fixed alpha>0 loses to alpha=0 by at least alpha*t^3/60.",
+  "rational": {
+    "radius": "8/25",
+    "diffusivity": "1/40",
+    "uniform_gate_mean_upper": "2/125",
+    "first_jump_mean_rate_upper": "14/5",
+    "closed_drift_upper": "3/4",
+    "base_generator_f2_absolute_upper": "32767/4",
+    "restricted_contact_integral_lower": "14601109619/2771340000000",
+    "initial_cubic_loss_coefficient_lower": "14601109619/10825546875",
+    "normalized_remainder_linear": "7552/5",
+    "normalized_remainder_quadratic": "40320",
+    "certified_short_horizon": "1/1250",
+    "remaining_margin_at_horizon": "1241033747/10825546875"
+  },
+  "decimal_for_display": {
+    "radius": 0.32,
+    "diffusivity": 0.025,
+    "uniform_gate_mean_upper": 0.016,
+    "first_jump_mean_rate_upper": 2.8,
+    "closed_drift_upper": 0.75,
+    "base_generator_f2_absolute_upper": 8191.75,
+    "restricted_contact_integral_lower": 0.005268609993360612,
+    "initial_cubic_loss_coefficient_lower": 1.3487641583003167,
+    "normalized_remainder_linear": 1510.4,
+    "normalized_remainder_quadratic": 40320.0,
+    "certified_short_horizon": 0.0008,
+    "remaining_margin_at_horizon": 0.11463935830031681
+  },
+  "source_sha256": {
+    "scripts/check_continuum_short_time.py": "d3ee90b02e883c806f84bd4abf797582140c50a9eff5c1a603f898b8e3bb9e71",
+    "src/purposeful/organization.py": "963406709c30234f467533793541baa050d0657bf6b9c64119aeac1416d75327",
+    "research/organization-preregistration.md": "3aaa05cd802e5a4f34f7f4bc5d2561a020504bfcf1be3f9993a2e6e328e4c791"
+  }
+}

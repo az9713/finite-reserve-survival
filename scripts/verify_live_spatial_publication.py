@@ -20,6 +20,7 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--commit',required=True)
     parser.add_argument('--include-organization',action='store_true')
+    parser.add_argument('--include-continuum',action='store_true')
     args=parser.parse_args()
     paths=['index.html','README.md','docs/SCIENTIFIC-DOSSIER.html',
            'docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html',
@@ -38,6 +39,12 @@ def main():
                 'organization-continuum-check','organization-force-ablation','organization-review',
                 'organization-doc-verification','organization-integrity','organization-certificate-controls']],
             *['results/figures/organization-'+name+'.png' for name in ['survival','resources','fixed-certificate']]]
+    if args.include_continuum:
+        paths += ['docs/CONTINUUM-ORGANIZATION.html','docs/continuum-organization.md',
+            'research/continuum-coupling.md','research/continuum-residual.md','research/continuum-spectral.md',
+            *['results/continuum-'+name+'.json' for name in ['organization-verification','short-time',
+                'fourier','weighted','residual-screen']],
+            'results/figures/continuum-organization-bounds.png','results/figures/continuum-organization-bounds.pdf']
     files=[]
     for relative in paths:
         request=Request(BASE+relative+'?publication='+args.commit,headers={'User-Agent':'Research-publication-verifier'})
@@ -52,6 +59,7 @@ def main():
         browser=p.chromium.launch(channel='chrome',headless=True)
         documents=['','docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html']
         if args.include_organization:documents+=['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html']
+        if args.include_continuum:documents+=['docs/CONTINUUM-ORGANIZATION.html']
         for relative in documents:
             for width in [1440,390]:
                 page=browser.new_page(viewport={'width':width,'height':1000})
@@ -70,8 +78,10 @@ def main():
                 state['console_errors']=errors
                 assert not errors and not state['mathErrors'] and not state['brokenImages'],state
                 assert state['equations']==state['rendered'],state
-                if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html']:
+                if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html','docs/CONTINUUM-ORGANIZATION.html']:
                     assert state['hasSpatialResults'],state
+                if args.include_continuum and relative in ['', 'docs/DEVELOPMENT-JOURNEY.html','docs/CONTINUUM-ORGANIZATION.html']:
+                    assert page.get_by_text('unresolved',exact=False).count()>0,state
                 assert state['scrollWidth']<=width,state
                 pages.append(state);page.close()
         browser.close()

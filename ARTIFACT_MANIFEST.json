@@ -155,9 +155,29 @@
     "sha256": "993c48b4db117eb4645eab36dd9970001e8bbeddce30492df86bf0031f924aba"
   },
   {
+    "path": "docs/continuum-journey.md",
+    "bytes": 2649,
+    "sha256": "d1e41343ead7dceac40d76ef3a560513c18a017fc4ec54403e12a8d13ea217eb"
+  },
+  {
+    "path": "docs/CONTINUUM-ORGANIZATION.html",
+    "bytes": 23732,
+    "sha256": "28f3bbeec5073b2a76e4539f6aab324af546063e63c1eabcd913cd98a1267cb0"
+  },
+  {
+    "path": "docs/continuum-organization.md",
+    "bytes": 11574,
+    "sha256": "dbe030da0a802c74b6b5a0e88fc3654147f16231f1eef434abd9d4cbec369f95"
+  },
+  {
+    "path": "docs/continuum-overview.md",
+    "bytes": 2565,
+    "sha256": "52cf4c8b683de8a9e13dc12a4f05402e49c51d16f0a4fd524e40aa95e764784d"
+  },
+  {
     "path": "docs/DEVELOPMENT-JOURNEY.html",
-    "bytes": 36414,
-    "sha256": "5993f09ec6a23bcb1fd3356c3d792dc8cef2c1686652f3a4d1676c8140e5a6b6"
+    "bytes": 39668,
+    "sha256": "7b4f4e5d13fa39962179064fbcaecf13883c4a092c6477ccec32bd515ce1cc3c"
   },
   {
     "path": "docs/finite-reserve-repair.md",
@@ -226,8 +246,8 @@
   },
   {
     "path": "docs/SCIENTIFIC-DOSSIER.html",
-    "bytes": 153663,
-    "sha256": "7c0afb4ffc3f71ad379eaf01aac678032eb2a339885339f0eee1e33fd00127d1"
+    "bytes": 157376,
+    "sha256": "cb06b13c7854c41911f40bd74e0c2af08a2e1d08b87c596882ad48f2ee3fe5b0"
   },
   {
     "path": "docs/SELF-ASSEMBLY.html",
@@ -301,8 +321,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 15389,
-    "sha256": "52f1c348aac9a5d936e45d4909f020387073ac96b7ca299d487bbfcc382f6028"
+    "bytes": 16674,
+    "sha256": "088e1eb325c0ffb3e8dfbd2edbf2722367ae08f320bf0ac4af228021deb78227"
   },
   {
     "path": "research/assembly-literature.md",
@@ -318,6 +338,21 @@
     "path": "research/claims.json",
     "bytes": 3573,
     "sha256": "00aa1b465e97ef720cf01f19173547562de16c13e722c98e5cd6f8f35e741929"
+  },
+  {
+    "path": "research/continuum-coupling.md",
+    "bytes": 17216,
+    "sha256": "2a7ed68305410ef784877608ec1aeb2eb5894ec402200daba6794d856f27e6b3"
+  },
+  {
+    "path": "research/continuum-residual.md",
+    "bytes": 9602,
+    "sha256": "94694d9cfe0e230eda493d7ec0231924fcee818161206d4a70ece9bb882d136d"
+  },
+  {
+    "path": "research/continuum-spectral.md",
+    "bytes": 9731,
+    "sha256": "2eb2662115c40c25b4edf24db4c3fd5dd514121c10a013e7bb548b5ea3200cfe"
   },
   {
     "path": "research/literature.md",
@@ -450,6 +485,31 @@
     "sha256": "7408eb1f2bd44f6277c0e06148a3f37b8989d5af82511d62054f5a5de5915df0"
   },
   {
+    "path": "results/continuum-fourier.json",
+    "bytes": 2542,
+    "sha256": "63aa68529a155e4aa97d8b58000483e6e984f223f6a863e5aac214ae2db97684"
+  },
+  {
+    "path": "results/continuum-organization-verification.json",
+    "bytes": 11220,
+    "sha256": "8cccc375cb586d0418be58bb73101795e4317ad07d54e1e4c68aeddec3dd32fc"
+  },
+  {
+    "path": "results/continuum-residual-screen.json",
+    "bytes": 3175,
+    "sha256": "23183d873468e686f06a32ad1015547122e6a6847e666d823e3e544ff5243a15"
+  },
+  {
+    "path": "results/continuum-short-time.json",
+    "bytes": 1804,
+    "sha256": "c74d8d2583e68af6ea6662fd0faca54041b1fc4baa5b5deec8a40d360f7177d2"
+  },
+  {
+    "path": "results/continuum-weighted.json",
+    "bytes": 7707,
+    "sha256": "48a2ab8d01076a132bffb6afc31b76c1ebd8127688648b1a3aa29cab48e8e70a"
+  },
+  {
     "path": "results/document-previews/assembly-certificate-page.png",
     "bytes": 136713,
     "sha256": "1036f0203b7b43ed506e90b1e57629c73e48911a3d5bff354ad8402bd50de64e"
@@ -458,6 +518,16 @@
     "path": "results/document-previews/assembly-proof-page.png",
     "bytes": 111127,
     "sha256": "7fe717d38107b16c9b1dc685a60acec7a4291610f98052c3dc4717fa74a5eb50"
+  },
+  {
+    "path": "results/document-previews/continuum-organization-1440.png",
+    "bytes": 124290,
+    "sha256": "233c5675d29cb6d05ec53752b1a194e8f1087dae5796b51968e4a7702df453fa"
+  },
+  {
+    "path": "results/document-previews/continuum-organization-390.png",
+    "bytes": 55725,
+    "sha256": "bbd641b87be412e9b07102d2a0d4f2c42ae026f2a8e8871a88a0be9ef2fc97a8"
   },
   {
     "path": "results/document-previews/development-journey-1440.png",
@@ -516,18 +586,18 @@
   },
   {
     "path": "results/document-previews/scientific-dossier-1440.png",
-    "bytes": 106045,
-    "sha256": "3c4e9d703ba9ec096aa62feeaee57d8f347c47ccf03e16bb094c8d6d69b86635"
+    "bytes": 103171,
+    "sha256": "ab4d13922de5b2e5bc3a5e639311e1f5d3a9647f34a8e6ca4ec4a51967c7a94a"
   },
   {
     "path": "results/document-previews/scientific-dossier-390.png",
-    "bytes": 54527,
-    "sha256": "56614a87f08869dd430aac26265ff6282a0c579bcb75af943f7c1fed0329e51e"
+    "bytes": 53190,
+    "sha256": "4d85215ac287769a88bf86da6f6da8e751cb9f469c3aa11239fb7c012ed195c3"
   },
   {
     "path": "results/document-previews/scientific-theorems.png",
-    "bytes": 117549,
-    "sha256": "a09e53f36f60e599a82f96d00bc0db8e675386012b9bcd84216d9ea66b4531f3"
+    "bytes": 117540,
+    "sha256": "40b5249496ce57811a48c9fc9047ccecd2790fbf03dc47244138963bfad58831"
   },
   {
     "path": "results/document-previews/self-assembly-1440.png",
@@ -586,13 +656,13 @@
   },
   {
     "path": "results/dossier-ui-validation.json",
-    "bytes": 5409,
-    "sha256": "a6b5c2f6745ac4af54ce11bba46c1c0214e02a05d7e807d9abe1c8f16ff72202"
+    "bytes": 6116,
+    "sha256": "83668ee537c7b149e5db57a7ff32ebcc189801000a02f95fa95a0ab501e759bf"
   },
   {
     "path": "results/dossier-verification.json",
-    "bytes": 15039,
-    "sha256": "75076906ffd2ce8939b524a9664e965c17a7f24036e35ea3eebbd1d4553a2dfc"
+    "bytes": 16572,
+    "sha256": "86b7c8ba287910afb8381e5effd15d6b493670b762e1ea21d4fd6de1fa4f4ef8"
   },
   {
     "path": "results/encounter-feasibility.json",
@@ -688,6 +758,16 @@
     "path": "results/figures/closed-loop-witness.png",
     "bytes": 122275,
     "sha256": "895394c3518a21d3bc4868bb9fe6fc554047028d09ef62199c5487980d8bde36"
+  },
+  {
+    "path": "results/figures/continuum-organization-bounds.pdf",
+    "bytes": 26001,
+    "sha256": "cc66c9a8c4c08d6e1110ca5868b9d1bcbe520cfec0008ca1cde87fdf237e0312"
+  },
+  {
+    "path": "results/figures/continuum-organization-bounds.png",
+    "bytes": 197375,
+    "sha256": "958d3497674a5e769b3508b151233c537916864ee5049f089bed4a198edf82bd"
   },
   {
     "path": "results/figures/encounter-feasibility.pdf",
@@ -892,12 +972,12 @@
   {
     "path": "results/spatial-repair-delivery-manifest.json",
     "bytes": 16818,
-    "sha256": "3d14ca771de6a0bb51c66e476c57d29d014f54debd7107b5b040cc2d981b961f"
+    "sha256": "accf0655642b40b41fcd5691c9478f28b1bb15fe2b75ded60a7cdf2b3559ead4"
   },
   {
     "path": "results/spatial-repair-integrity.json",
     "bytes": 419,
-    "sha256": "5fdeda12a12fbc918f4c365f6ae7a8acab29a47fae2c9e4d31eb269e8a3a9eae"
+    "sha256": "c12b137248b24be6b50b6f5662a3e654213c919f470c2c511898f1fc846616d2"
   },
   {
     "path": "results/spatial-repair-review-check.json",
@@ -950,6 +1030,11 @@
     "sha256": "16a2671bc0a6bf6dd803f26086d60f3b098401822f7b5bdfcbd21839761a3685"
   },
   {
+    "path": "scripts/build_continuum_organization.py",
+    "bytes": 14788,
+    "sha256": "92ba04d1ccc41acbe15c0d20e49b6609a91a46a2602bff8139898a6d1f924f4c"
+  },
+  {
     "path": "scripts/build_manuscript.py",
     "bytes": 5049,
     "sha256": "106f2c7367b843bfc62120132aed9312c195cd57fc3bdad9e10cff147b1a4674"
@@ -961,8 +1046,8 @@
   },
   {
     "path": "scripts/build_research_docs.py",
-    "bytes": 46511,
-    "sha256": "b47f604ddbee40259b748150e8f0754eaa89471e0ae9718ebdd3f176228c86b5"
+    "bytes": 47032,
+    "sha256": "c3b07bc672ce4e87556b30ecb3d81105f7cc24683a6f96fde33c153fcf085353"
   },
   {
     "path": "scripts/build_reserve_figure.py",
@@ -1000,6 +1085,11 @@
     "sha256": "77a73821ab1f6e94b67f6eca30783415981fcac05e187ed1a03c6b21e6150342"
   },
   {
+    "path": "scripts/check_continuum_short_time.py",
+    "bytes": 3455,
+    "sha256": "d3ee90b02e883c806f84bd4abf797582140c50a9eff5c1a603f898b8e3bb9e71"
+  },
+  {
     "path": "scripts/check_organization_certificate_controls.py",
     "bytes": 1964,
     "sha256": "3ebba0b99b029d3fc9b20cf975963ab5c09a75e065ff1a2e85a1f79a08e28b08"
@@ -1013,6 +1103,11 @@
     "path": "scripts/check_spatial_repair_receipts.py",
     "bytes": 4590,
     "sha256": "986796945a0cc8da25e0ff545072333eae348be953b87188bbf0a38f386a5c45"
+  },
+  {
+    "path": "scripts/explore_weighted_continuum_galerkin.py",
+    "bytes": 7946,
+    "sha256": "d6a4e88aef24ab394e49227278065ba2f04d67bd5820e46610b2a7fe9dadb7cd"
   },
   {
     "path": "scripts/organization_continuum_check.py",
@@ -1038,6 +1133,16 @@
     "path": "scripts/run_closed_loop.py",
     "bytes": 10441,
     "sha256": "5f9a45e846e422abdf4b743edbfbafc0b438a39b96f8472ddb5dbdc760e7f83c"
+  },
+  {
+    "path": "scripts/run_continuum_fourier.py",
+    "bytes": 8635,
+    "sha256": "6433c7de13f0f1cec34a6b6ac4cfc6e14fbff0ae4c8bf772c8f6ccfa11b5da99"
+  },
+  {
+    "path": "scripts/run_continuum_weighted.py",
+    "bytes": 9226,
+    "sha256": "f2e812180f9d0dff751bf6c4946866ca88e58374881f6ad674364da6503bca48"
   },
   {
     "path": "scripts/run_organization.py",
@@ -1066,8 +1171,8 @@
   },
   {
     "path": "scripts/verify_live_spatial_publication.py",
-    "bytes": 5211,
-    "sha256": "b8a7ed8cae6f62a268348659f15f0bf42b86a6d1339cb708f26b8cc6ad22c653"
+    "bytes": 6121,
+    "sha256": "7ff6bf7e024841332308a97994f2485414f2e7044f0a9a9fe74dee492847c1ee"
   },
   {
     "path": "scripts/verify_organization.py",
@@ -1076,8 +1181,8 @@
   },
   {
     "path": "scripts/verify_research_docs.py",
-    "bytes": 5164,
-    "sha256": "63ecc9d37d8f63cc515e32cf4be8efd0ecc124f03d9365630442fac7ea3565c0"
+    "bytes": 5195,
+    "sha256": "e19a305ac1c4a9367aa23651842942482eeea055a9720968542c70ad65552384"
   },
   {
     "path": "scripts/verify_spatial_repair.py",

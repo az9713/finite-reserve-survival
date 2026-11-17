@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-11-17T21:47:27.879085+00:00",
+  "generated_utc": "2026-11-17T23:57:17.449917+00:00",
   "broken_local_links": [],
   "browser_checks": [
     {
-      "equations": 4,
-      "rendered": 4,
+      "equations": 11,
+      "rendered": 11,
       "mathErrors": [],
-      "images": 8,
+      "images": 9,
       "brokenImages": [],
       "width": 1440,
       "scrollWidth": 1440,
@@ -16,10 +16,10 @@
       "console_errors": []
     },
     {
-      "equations": 4,
-      "rendered": 4,
+      "equations": 11,
+      "rendered": 11,
       "mathErrors": [],
-      "images": 8,
+      "images": 9,
       "brokenImages": [],
       "width": 390,
       "scrollWidth": 390,
@@ -29,10 +29,10 @@
       "console_errors": []
     },
     {
-      "equations": 558,
-      "rendered": 558,
+      "equations": 569,
+      "rendered": 569,
       "mathErrors": [],
-      "images": 17,
+      "images": 18,
       "brokenImages": [],
       "width": 1440,
       "scrollWidth": 1440,
@@ -42,10 +42,10 @@
       "console_errors": []
     },
     {
-      "equations": 558,
-      "rendered": 558,
+      "equations": 569,
+      "rendered": 569,
       "mathErrors": [],
-      "images": 17,
+      "images": 18,
       "brokenImages": [],
       "width": 390,
       "scrollWidth": 390,
@@ -181,6 +181,32 @@
       "scrollWidth": 390,
       "title": "Paid autonomous organization \u2014 shared fuel, best constant strategy and verification",
       "file": "PAID-ORGANIZATION.html",
+      "viewport": 390,
+      "console_errors": []
+    },
+    {
+      "equations": 108,
+      "rendered": 108,
+      "mathErrors": [],
+      "images": 1,
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Brownian continuum survival and its error bounds",
+      "file": "CONTINUUM-ORGANIZATION.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 108,
+      "rendered": 108,
+      "mathErrors": [],
+      "images": 1,
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Brownian continuum survival and its error bounds",
+      "file": "CONTINUUM-ORGANIZATION.html",
       "viewport": 390,
       "console_errors": []
     }

@@ -127,6 +127,8 @@ The rendering checks exercise desktop and phone widths, every local link, every 
 INTRO = r'''
 # Information, energy, and the survival of designed systems
 
+**Latest continuum result:** [Brownian proofs and the unresolved T=2 comparison](CONTINUUM-ORGANIZATION.html). The spectator strategy loses at proved short and long horizons. Its continuum advantage at time two remains unresolved.
+
 > **Looking for the stochastic calculus analysis?** [Open the mathematical chapter](STOCHASTIC-CALCULUS.html): the Brownian SDE, compensated reaction clocks, Itô formula, stopped martingale, backward survival equation and exact short-time proofs. [Spatial model and numerical evidence](SPATIAL-REPAIR.html) · [Lessons and novelty assessment](SPATIAL-LESSONS.html).
 
 This dossier makes five small mathematical models and their spatial maintenance and paid organization extensions inspectable by researchers unfamiliar with the project. It assumes graduate mathematics and physics, and introduces the chemical and biological vocabulary explicitly. The motivating question comes from the closing minutes of Tsimerman's Golden Gate Institute talk: could stronger mathematical reasoning make explanations travel across physics, chemistry, biology, and eventually questions of value? The user selected the physical cost of persistent purposeful behavior as a tractable starting point. [Talk at 9:05](https://www.youtube.com/watch?v=kbzIVh405r8&t=545s) · [Development journey](DEVELOPMENT-JOURNEY.html) · [Spatial repair extension](SPATIAL-REPAIR.html) · [Paid organization and thermal forces](PAID-ORGANIZATION.html)
@@ -278,7 +280,7 @@ def main():
         raise RuntimeError(run.stdout + run.stderr)
     receipt = ROOT / 'results' / 'dossier-verification.json'
     sources = sorted([*ROOT.glob('src/purposeful/*.py'), *ROOT.glob('tests/test_*.py'), *ROOT.glob('docs/*.md'),
-                      *ROOT.glob('scripts/run_*.py'), *ROOT.glob('scripts/build_*.py'), *ROOT.glob('scripts/*assembly*.py'), *ROOT.glob('research/assembly-*.md'),
+                      *ROOT.glob('scripts/run_*.py'), *ROOT.glob('scripts/build_*.py'), *ROOT.glob('scripts/*assembly*.py'), *ROOT.glob('research/assembly-*.md'), *ROOT.glob('research/continuum-*.md'), *ROOT.glob('results/continuum-*.json'),
                       *[ROOT / 'results' / name for name in ['summary.json', 'closed-loop.json', 'autonomous.json', 'reserve.json', 'assembly.json', 'assembly-evidence.json', 'assembly-certificate-check.json', 'spatial-repair.json', 'spatial-repair-verification.json', 'spatial-repair-review-check.json', 'organization.json', 'organization-verification.json', 'organization-continuum-check.json', 'organization-force-ablation.json', 'organization-certificate-controls.json']]])
     sources = sorted(set(p for p in sources if p.name != 'research-manuscript.md'))
     if args.tracked_only:
@@ -295,12 +297,14 @@ def main():
     spatial_journey = (DOCS / 'spatial-repair-journey.md').read_text(encoding='utf-8')
     organization_overview = (DOCS / 'organization-overview.md').read_text(encoding='utf-8')
     organization_journey = (DOCS / 'organization-journey.md').read_text(encoding='utf-8')
+    continuum_overview = (DOCS / 'continuum-overview.md').read_text(encoding='utf-8')
+    continuum_journey = (DOCS / 'continuum-journey.md').read_text(encoding='utf-8')
     repair = (DOCS / 'repair-lemma.md').read_text(encoding='utf-8')
     assembly = study('self-assembly.md', 'Study 05 — Self-assembly and cooperative maintenance')
     references = REFERENCES + '\n' + (ROOT / 'research/assembly-references.md').read_text(encoding='utf-8')
     assembly_results = (DOCS / 'assembly-results.md').read_text(encoding='utf-8')
     assembly += '\n\n' + assembly_results
-    science = '\n\n'.join([INTRO, organization_overview, spatial_overview, guide, study('model.md', 'Study 01 — Thermal sensing, temporal errors, and effective survival'), study('finite-reserve-repair.md', 'Study 02 — Finite reserve and paid repair'), study('closed-loop-survival.md', 'Study 03 — A common reserve for sensing, actuation, and repair'), study('autonomous-survival.md', 'Study 04 — Autonomous reactions and continuous-time failure'), assembly, receipt_md, LITERATURE, references])
+    science = '\n\n'.join([INTRO, continuum_overview, organization_overview, spatial_overview, guide, study('model.md', 'Study 01 — Thermal sensing, temporal errors, and effective survival'), study('finite-reserve-repair.md', 'Study 02 — Finite reserve and paid repair'), study('closed-loop-survival.md', 'Study 03 — A common reserve for sensing, actuation, and repair'), study('autonomous-survival.md', 'Study 04 — Autonomous reactions and continuous-time failure'), assembly, receipt_md, LITERATURE, references])
     manuscript = r'''# Finite-resource survival from sensing to self-assembled repair
 
 AI-assisted research workspace draft · 17 November 2026
@@ -320,7 +324,7 @@ The finite-time comparison and the asymptotic comparison are distinct objectives
     manuscript = '\n\n'.join([manuscript, guide, study('closed-loop-survival.md', 'Checkpoint architecture and proofs'), study('autonomous-survival.md', 'Autonomous architecture and certificates'), repair, assembly, receipt_md, LITERATURE, references])
     journey_extension = (DOCS / 'assembly-journey.md').read_text(encoding='utf-8')
     page('SELF-ASSEMBLY.html', (DOCS / 'self-assembly.md').read_text(encoding='utf-8') + '\n\n' + assembly_results + references, 'Self-assembly and maintenance with finite fuel')
-    page('DEVELOPMENT-JOURNEY.html', JOURNEY + journey_extension + spatial_journey + organization_journey + receipt_md, 'Development journey — Tsimerman and physical survival')
+    page('DEVELOPMENT-JOURNEY.html', JOURNEY + journey_extension + spatial_journey + organization_journey + continuum_journey + receipt_md, 'Development journey — Tsimerman and physical survival')
     page('SCIENTIFIC-DOSSIER.html', science, 'Scientific dossier — information, energy, and survival')
     if not args.site_only:
         page('RESEARCH-MANUSCRIPT.html', manuscript, 'Research manuscript — finite-resource survival and assembly')

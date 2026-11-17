@@ -1,0 +1,78 @@
+{
+  "recorded_utc": "2026-11-17T23:27:45.134306+00:00",
+  "status": "Exploratory coefficient/residual quadrature. No interval arithmetic or continuous-comparator enclosure.",
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "scipy": "1.16.0",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "source_sha256": {
+    "scripts/explore_weighted_continuum_galerkin.py": "d6a4e88aef24ab394e49227278065ba2f04d67bd5820e46610b2a7fe9dadb7cd",
+    "research/continuum-residual.md": "94694d9cfe0e230eda493d7ec0231924fcee818161206d4a70ece9bb882d136d",
+    "src/purposeful/organization.py": "963406709c30234f467533793541baa050d0657bf6b9c64119aeac1416d75327",
+    "src/purposeful/spatial_repair.py": "c8d77bfae448c189a920e7f91d6546088aaef3d95844997f0c1f67d023537d36"
+  },
+  "horizon": 2,
+  "runs": [
+    {
+      "command": "python -B scripts/explore_weighted_continuum_galerkin.py --cutoff 10 --nodes 24 --times 12 --policy spectator",
+      "cutoff": 10,
+      "spatial_quadrature_points_per_axis": 24,
+      "time_quadrature_points": 12,
+      "policy": "spectator",
+      "survival": 0.2337171840491079,
+      "primal_negative_norm": 0.00016315789117432795,
+      "dual_negative_norm": 0.05206419874035452,
+      "sampled_product": 8.494684872157345e-06,
+      "seconds": 14.069561899999826
+    },
+    {
+      "command": "python -B scripts/explore_weighted_continuum_galerkin.py --cutoff 10 --nodes 24 --times 12 --policy 1",
+      "cutoff": 10,
+      "spatial_quadrature_points_per_axis": 24,
+      "time_quadrature_points": 12,
+      "policy": "1",
+      "survival": 0.23357055768836119,
+      "primal_negative_norm": 0.0001630265926245121,
+      "dual_negative_norm": 0.05220200378345054,
+      "sampled_product": 8.51031480498783e-06,
+      "seconds": 15.667822199997318
+    },
+    {
+      "command": "python -B scripts/explore_weighted_continuum_galerkin.py --cutoff 12 --nodes 32 --times 16 --policy spectator",
+      "cutoff": 12,
+      "spatial_quadrature_points_per_axis": 32,
+      "time_quadrature_points": 16,
+      "policy": "spectator",
+      "survival": 0.23371560429427102,
+      "primal_negative_norm": 8.216405214334422e-05,
+      "dual_negative_norm": 0.030331415325275,
+      "sampled_product": 2.492151990367325e-06,
+      "seconds": 44.72439149999991
+    },
+    {
+      "command": "python -B scripts/explore_weighted_continuum_galerkin.py --cutoff 12 --nodes 32 --times 16 --policy 1",
+      "cutoff": 12,
+      "spatial_quadrature_points_per_axis": 32,
+      "time_quadrature_points": 16,
+      "policy": "1",
+      "survival": 0.23356883742946769,
+      "primal_negative_norm": 8.198198796833773e-05,
+      "dual_negative_norm": 0.03041399562917902,
+      "sampled_product": 2.493399823740431e-06,
+      "seconds": 26.313353699999425
+    }
+  ],
+  "comparison_gap_estimates": {
+    "K10": 0.00014662636074672108,
+    "K12": 0.00014676686480333268
+  },
+  "unvalidated_errors": [
+    "midpoint spatial quadrature",
+    "time quadrature",
+    "truncation and roundoff of displayed numerical solve",
+    "unresolved residual frequencies",
+    "supremum over constant alpha"
+  ]
+}

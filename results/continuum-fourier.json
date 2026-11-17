@@ -1,0 +1,84 @@
+{
+  "generated_utc": "2026-11-17T23:23:57.316573+00:00",
+  "model": {
+    "fuel": 4,
+    "eta": 1.0,
+    "diffusivity": 0.025,
+    "length": 1.0,
+    "radius": 0.32,
+    "activity": 16.0,
+    "local_width": 0.075,
+    "passive": 1.0,
+    "paid": 4.0,
+    "offset": 2.0,
+    "depth": 6.0
+  },
+  "horizon": 2,
+  "method": "Gibbs-conjugated Fourier Galerkin with de-aliased cosine transforms",
+  "scope": "Numerical check; no rigorous continuum error enclosure or global parameter certificate.",
+  "quadrature_relative_tolerance": 3e-12,
+  "numpy": "2.2.6",
+  "scipy": "1.16.0",
+  "rows": [
+    {
+      "cutoff": 4,
+      "values": {
+        "spectator": 0.2329664149894583,
+        "1.0": 0.23274585807588105
+      },
+      "paired_gap": 0.00022055691357725227,
+      "quadrature_error_estimate": 1.527806057869811e-13,
+      "chebyshev_degree": 144,
+      "seconds": 0.5871329999972659
+    },
+    {
+      "cutoff": 6,
+      "values": {
+        "spectator": 0.2337108493639235,
+        "1.0": 0.23356317644200975
+      },
+      "paired_gap": 0.00014767292191375514,
+      "quadrature_error_estimate": 3.296062712852956e-14,
+      "chebyshev_degree": 160,
+      "seconds": 2.6919373999990057
+    },
+    {
+      "cutoff": 8,
+      "values": {
+        "spectator": 0.23370988949834232,
+        "1.0": 0.233562355702176
+      },
+      "paired_gap": 0.0001475337961663048,
+      "quadrature_error_estimate": 4.5567174206005376e-14,
+      "chebyshev_degree": 179,
+      "seconds": 9.101822199998423
+    },
+    {
+      "cutoff": 10,
+      "values": {
+        "spectator": 0.233711313601521,
+        "1.0": 0.23356400376875777
+      },
+      "paired_gap": 0.00014730983276323162,
+      "quadrature_error_estimate": 4.505610707320548e-14,
+      "chebyshev_degree": 202,
+      "seconds": 16.56745410000076
+    },
+    {
+      "cutoff": 12,
+      "values": {
+        "spectator": 0.2337131124850077,
+        "1.0": 0.23356603307859852
+      },
+      "paired_gap": 0.0001470794064091785,
+      "quadrature_error_estimate": 4.5694314883989804e-14,
+      "chebyshev_degree": 226,
+      "seconds": 20.359283100002358
+    }
+  ],
+  "source_sha256": {
+    "scripts/run_continuum_fourier.py": "6433c7de13f0f1cec34a6b6ac4cfc6e14fbff0ae4c8bf772c8f6ccfa11b5da99",
+    "src/purposeful/organization.py": "963406709c30234f467533793541baa050d0657bf6b9c64119aeac1416d75327",
+    "src/purposeful/spatial_repair.py": "c8d77bfae448c189a920e7f91d6546088aaef3d95844997f0c1f67d023537d36"
+  }
+}

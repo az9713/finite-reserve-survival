@@ -6,6 +6,14 @@
 
 **[Paid autonomous spatial organization: shared fuel, best constant intensity and certificates](https://az9713.github.io/finite-reserve-survival/docs/PAID-ORGANIZATION.html)**
 
+**[Brownian continuum proofs, error bounds and the unresolved T=2 question](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-ORGANIZATION.html)**
+
+The continuum analysis proves that the spectator strategy loses to passive-only organization for **0 < T ≤ 0.0008** and at sufficiently long horizons. The passive decay rate is exactly **(7 − √17)/4**, and paid transitions strictly increase the spectator decay rate. At the prespecified **T=2**, the Brownian advantage remains unresolved. Independent Fourier calculations estimate a gap near **0.0147 percentage points** over constant intensity one. Validated spatial/time integration and optimization over the full constant-intensity interval are still required.
+
+[![Continuum proofs and error budget](results/figures/continuum-organization-bounds.png)](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-ORGANIZATION.html)
+
+[Full proofs](docs/continuum-organization.md) · [Rational short-time checks](results/continuum-short-time.json) · [Path-law and long-time derivations](research/continuum-coupling.md) · [Residual theorem](research/continuum-residual.md) · [Fourier evidence](results/continuum-fourier.json) · [Verification receipt](results/continuum-organization-verification.json)
+
 [![Scientific dossier preview](results/document-previews/scientific-dossier-1440.png)](https://az9713.github.io/finite-reserve-survival/)
 
 Five stochastic models track how sensing, action, and repair affect the chance that a physical device keeps functioning. The strongest results are exact survival bounds with attaining policies and a certified example in which the value of sensing changes with the time horizon.
