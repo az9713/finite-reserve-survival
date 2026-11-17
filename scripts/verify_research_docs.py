@@ -33,7 +33,7 @@ class Links(HTMLParser):
 def main():
     shots = RESULTS / 'document-previews'
     shots.mkdir(exist_ok=True)
-    names = ['DEVELOPMENT-JOURNEY.html', 'SCIENTIFIC-DOSSIER.html', 'RESEARCH-MANUSCRIPT.html', 'SELF-ASSEMBLY.html']
+    names = ['DEVELOPMENT-JOURNEY.html', 'SCIENTIFIC-DOSSIER.html', 'RESEARCH-MANUSCRIPT.html', 'SELF-ASSEMBLY.html', 'STOCHASTIC-CALCULUS.html']
     broken = []
     for name in names:
         document = DOCS / name

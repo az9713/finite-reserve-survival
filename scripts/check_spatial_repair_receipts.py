@@ -4,6 +4,7 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
+import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'results/spatial-repair-delivery-manifest.json'
@@ -24,6 +25,7 @@ def check_group(values):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--write-manifest',action='store_true',help='Seal current delivery after validating its receipts.')
+    parser.add_argument('--tracked-only',action='store_true',help='Exclude concurrent unpublished research from the delivery manifest.')
     args=parser.parse_args()
     data=read('results/spatial-repair.json')
     check_group(data['source_sha256'])
@@ -56,6 +58,9 @@ def main():
                         'results/document-previews/stochastic*']:
             paths.update(ROOT.glob(pattern))
         paths={p for p in paths if p.is_file() and p not in {MANIFEST,INTEGRITY}}
+        if args.tracked_only:
+            tracked=set(subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode('utf-8').split('\0'))
+            paths={p for p in paths if p.relative_to(ROOT).as_posix() in tracked}
         items=[{'path':p.relative_to(ROOT).as_posix(),'bytes':p.stat().st_size,'sha256':digest(p)}
                for p in sorted(paths)]
         MANIFEST.write_text(json.dumps({'generated_utc':datetime.now(timezone.utc).isoformat(),

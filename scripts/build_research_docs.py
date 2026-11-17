@@ -127,6 +127,8 @@ The rendering checks exercise desktop and phone widths, every local link, every 
 INTRO = r'''
 # Information, energy, and the survival of designed systems
 
+> **Looking for the stochastic calculus analysis?** [Open the mathematical chapter](STOCHASTIC-CALCULUS.html): the Brownian SDE, compensated reaction clocks, Itô formula, stopped martingale, backward survival equation and exact short-time proofs. [Spatial model and numerical evidence](SPATIAL-REPAIR.html) · [Lessons and novelty assessment](SPATIAL-LESSONS.html).
+
 This dossier makes five small mathematical models and their spatial maintenance extension inspectable by researchers unfamiliar with the project. It assumes graduate mathematics and physics, and introduces the chemical and biological vocabulary explicitly. The motivating question comes from the closing minutes of Tsimerman's Golden Gate Institute talk: could stronger mathematical reasoning make explanations travel across physics, chemistry, biology, and eventually questions of value? The user selected the physical cost of persistent purposeful behavior as a tractable starting point. [Talk at 9:05](https://www.youtube.com/watch?v=kbzIVh405r8&t=545s) · [Development journey](DEVELOPMENT-JOURNEY.html) · [Spatial repair extension](SPATIAL-REPAIR.html)
 
 ## Abstract
@@ -260,9 +262,16 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--site-only', action='store_true',
                         help='Refresh the dossier and journey while retaining the Studies 01–05 manuscript snapshot.')
+    parser.add_argument('--tracked-only', action='store_true',
+                        help='Validate staged/tracked sources while concurrent research remains unpublished.')
     args = parser.parse_args()
-    run = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-v'], cwd=ROOT,
-                         env={**__import__('os').environ, 'PYTHONPATH': str(ROOT / 'src')}, capture_output=True, text=True)
+    tracked = set(subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode('utf-8').split('\0'))
+    command = [sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+    if args.tracked_only:
+        modules = sorted(Path(name).stem for name in tracked if name.startswith('tests/test_') and name.endswith('.py'))
+        command = [sys.executable, '-B', '-m', 'unittest', *modules, '-v']
+    env = {**__import__('os').environ, 'PYTHONPATH': __import__('os').pathsep.join([str(ROOT/'src'), str(ROOT/'tests')])}
+    run = subprocess.run(command, cwd=ROOT, env=env, capture_output=True, text=True)
     if run.returncode:
         raise RuntimeError(run.stdout + run.stderr)
     receipt = ROOT / 'results' / 'dossier-verification.json'
@@ -270,7 +279,9 @@ def main():
                       *ROOT.glob('scripts/run_*.py'), *ROOT.glob('scripts/build_*.py'), *ROOT.glob('scripts/*assembly*.py'), *ROOT.glob('research/assembly-*.md'),
                       *[ROOT / 'results' / name for name in ['summary.json', 'closed-loop.json', 'autonomous.json', 'reserve.json', 'assembly.json', 'assembly-evidence.json', 'assembly-certificate-check.json', 'spatial-repair.json', 'spatial-repair-verification.json', 'spatial-repair-review-check.json']]])
     sources = sorted(set(p for p in sources if p.name != 'research-manuscript.md'))
-    record = {'generated_utc': datetime.now(timezone.utc).isoformat(), 'command': 'python -B -m unittest discover -s tests -v',
+    if args.tracked_only:
+        sources = [p for p in sources if p.relative_to(ROOT).as_posix() in tracked]
+    record = {'generated_utc': datetime.now(timezone.utc).isoformat(), 'command': ' '.join(command),
               'test_output': run.stdout + run.stderr, 'return_code': run.returncode,
               'sha256': {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}}
     receipt.write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')

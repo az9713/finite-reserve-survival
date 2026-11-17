@@ -206,8 +206,8 @@
   },
   {
     "path": "docs/SCIENTIFIC-DOSSIER.html",
-    "bytes": 150724,
-    "sha256": "ff37107bf3613a3dfc8d9501bf38a53156ffecef697a911a09b323ba12ef4390"
+    "bytes": 151172,
+    "sha256": "11871b9a4551df514b8fabdb8b30a4c3b714baec6165234bd838a1ae7890ae0c"
   },
   {
     "path": "docs/SELF-ASSEMBLY.html",
@@ -250,6 +250,11 @@
     "sha256": "3434605389253bd94f09d89b919eb515f31ce607c9cd3b159969e45b86f23792"
   },
   {
+    "path": "docs/stochastic-calculus-analysis.md",
+    "bytes": 7180,
+    "sha256": "60e6edddcbb682709ab61756f38ec7cbe92de94d1b129908ee5e0eda287c1a8c"
+  },
+  {
     "path": "docs/STOCHASTIC-CALCULUS-PLAN.html",
     "bytes": 35535,
     "sha256": "32259c65c6ac813c852049570bb317382c5453fb0f419ecf089cd1a7fb304bd1"
@@ -258,6 +263,11 @@
     "path": "docs/stochastic-calculus-plan.md",
     "bytes": 22308,
     "sha256": "ce0f4e953282f42c6e182ae72496ed0af61b7de6139fb818beafa395cadf25e1"
+  },
+  {
+    "path": "docs/STOCHASTIC-CALCULUS.html",
+    "bytes": 14674,
+    "sha256": "7c6518170803e7f41c0b238cd2cbb52d0d22655a9a0ae462f9610e1c3362e21f"
   },
   {
     "path": "index.html",
@@ -271,8 +281,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 12342,
-    "sha256": "631340d916fbb84526b2262726cad47ee18763b401dd41a90570e5e19c3fcc50"
+    "bytes": 12621,
+    "sha256": "320f1229d6f506e187995c80ff176a628bed3f46f4373c80b3ab483067fd9cff"
   },
   {
     "path": "research/assembly-literature.md",
@@ -446,18 +456,18 @@
   },
   {
     "path": "results/document-previews/scientific-dossier-1440.png",
-    "bytes": 113805,
-    "sha256": "300352f844ef15a6a56d4da4324351011c79121b4c2a3e525373064ebd47433d"
+    "bytes": 103328,
+    "sha256": "88e727f256be2d102b732fbaa0ad6c20f31f794323929d9bf0359562e412f719"
   },
   {
     "path": "results/document-previews/scientific-dossier-390.png",
-    "bytes": 53498,
-    "sha256": "5fba7a5cf28d69b5022f8bacadad2afc5f9e3443bdb52f566fc14cf8992d87ea"
+    "bytes": 55658,
+    "sha256": "bca10d79bc239a5b73da382d6ab85addbf5d95827b97077e511f57f1abe9446c"
   },
   {
     "path": "results/document-previews/scientific-theorems.png",
-    "bytes": 117543,
-    "sha256": "45e56932cfd0ae4e596f4131bc0526b8b7083faf1c3b4b96f33966a17c00344b"
+    "bytes": 117531,
+    "sha256": "f9ff52f773ce2bffd10c9b31880fde317d14e11e6f32033668b08bbcdefadd4f"
   },
   {
     "path": "results/document-previews/self-assembly-1440.png",
@@ -480,6 +490,16 @@
     "sha256": "c8fe33bf40484778216f07ac71b111bc83be8a8cf14d24013ac62e1b184f10d9"
   },
   {
+    "path": "results/document-previews/stochastic-calculus-1440.png",
+    "bytes": 106415,
+    "sha256": "6c41089386bf63a49846d246d579a7dadf2200b56e7675a71f736f8407633af9"
+  },
+  {
+    "path": "results/document-previews/stochastic-calculus-390.png",
+    "bytes": 60271,
+    "sha256": "3b2e975e106624c46cfb0f0491a6bef1c77a068f1750a2a4ca20d76e7728b36b"
+  },
+  {
     "path": "results/document-previews/stochastic-plan-1440.png",
     "bytes": 106790,
     "sha256": "6bd73ce34a047f43b81c8edfde6eb3619c4b0d9f3ad168a589ab91e56be4578c"
@@ -496,13 +516,13 @@
   },
   {
     "path": "results/dossier-ui-validation.json",
-    "bytes": 3176,
-    "sha256": "907c66d983254764a237ebb33bcdc462b297b36a732c3db159c0eb1d5e08fd27"
+    "bytes": 3945,
+    "sha256": "4a209d0c74bb1788d42050de52705648192aa1f27ce4b29207248a14ddfcb18a"
   },
   {
     "path": "results/dossier-verification.json",
-    "bytes": 12211,
-    "sha256": "4b63bd5394b9b9e4e9901da86121cbabe4955b5c04c2ca974e856cf236347b27"
+    "bytes": 12801,
+    "sha256": "d697970a20c4aaa7dfe8c11d7bd76895b88e0c1480ba6cb8ae691aec2540996b"
   },
   {
     "path": "results/encounter-feasibility.json",
@@ -731,13 +751,13 @@
   },
   {
     "path": "results/spatial-repair-delivery-manifest.json",
-    "bytes": 15569,
-    "sha256": "1a606bc99596aa3106ffcc646f6dd75d7e62072b25587734657b224fe108c67c"
+    "bytes": 16480,
+    "sha256": "306b16064bdcde5bb3d648884dbc01e47078eece2d8df0a4dac922dbd9fca528"
   },
   {
     "path": "results/spatial-repair-integrity.json",
     "bytes": 419,
-    "sha256": "4da5cc4a40825619b67200dd7a16a2f3601488b7e976b862e638509d4e4a11d2"
+    "sha256": "9e4764ab407791d9b22d5807291679b4748bffb228ff23c62904dc38d18a946e"
   },
   {
     "path": "results/spatial-repair-review-check.json",
@@ -796,8 +816,8 @@
   },
   {
     "path": "scripts/build_research_docs.py",
-    "bytes": 44790,
-    "sha256": "d3e73f6915b9542f875a9e6416beffe298785f7c93887014d99dd685d48762c0"
+    "bytes": 45806,
+    "sha256": "2668edb0aff9a95d4bd69d706f453325034ce985d978cb6eab8b9dd907c8c9d3"
   },
   {
     "path": "scripts/build_reserve_figure.py",
@@ -813,6 +833,11 @@
     "path": "scripts/build_spatial_repair_docs.py",
     "bytes": 9392,
     "sha256": "20dde3dc3f6e3800d7691448946671b5a5c5c45ea041c2384817d9f1edc71779"
+  },
+  {
+    "path": "scripts/build_stochastic_analysis.py",
+    "bytes": 421,
+    "sha256": "621d735702282be33ad82369e52e727a768d8df755b9dd6d172989d59fc4aba6"
   },
   {
     "path": "scripts/build_stochastic_plan.py",
@@ -831,8 +856,8 @@
   },
   {
     "path": "scripts/check_spatial_repair_receipts.py",
-    "bytes": 4212,
-    "sha256": "2f2a164897035bfa7830ccaf1c95b859ffc885451911273f33f31d421d4b7be3"
+    "bytes": 4590,
+    "sha256": "986796945a0cc8da25e0ff545072333eae348be953b87188bbf0a38f386a5c45"
   },
   {
     "path": "scripts/package_research_docs.py",
@@ -876,8 +901,8 @@
   },
   {
     "path": "scripts/verify_research_docs.py",
-    "bytes": 5086,
-    "sha256": "0ab1f0bd15698ef9ac795725c159483974756051c1101e9643619870c12d5f38"
+    "bytes": 5114,
+    "sha256": "8769835fb38040d777d076cdadadb97787c0d05c1207cd43d49bcac8a1ef950d"
   },
   {
     "path": "scripts/verify_spatial_repair.py",

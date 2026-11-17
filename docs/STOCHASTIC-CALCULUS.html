@@ -1,0 +1,111 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Stochastic calculus analysis — Brownian motion, reaction martingales and survival</title><style>
+:root{color-scheme:dark;--bg:#0d141d;--panel:#152233;--ink:#e6edf7;--muted:#adc0d6;--line:#2b4159;--accent:#72dbc1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 'Segoe UI',Arial,sans-serif}a{color:var(--accent);text-underline-offset:3px}nav{padding:18px 5vw;border-bottom:1px solid var(--line);display:flex;gap:24px;flex-wrap:wrap}main{max-width:1000px;margin:auto;padding:45px 30px 100px}h1{font:500 clamp(35px,5vw,65px)/1.12 Georgia,serif;letter-spacing:-.025em;margin:20px 0 30px}h2{font:500 32px/1.25 Georgia,serif;margin:65px 0 20px;padding-top:20px;border-top:1px solid var(--line)}h3{font-size:21px;margin:35px 0 12px}p{margin:16px 0}li{margin:9px 0}img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;margin:20px 0}pre{padding:20px;background:var(--panel);overflow:auto;border-radius:8px;font-size:14px}code{font-family:Consolas,monospace}table{width:100%;border-collapse:collapse;margin:25px 0;font-size:15px}td,th{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--panel)}blockquote{margin:25px 0;padding:15px 25px;border-left:3px solid var(--accent);background:var(--panel)}.meta{color:var(--muted);font-size:14px;letter-spacing:.04em}.toc{background:var(--panel);padding:22px 30px;border-radius:9px}.toc ul{columns:2;column-gap:35px;padding-left:20px}.toc li{break-inside:avoid;font-size:14px}.toc ul ul{display:none}.math.display{overflow-x:auto;padding:12px 0}.katex{font-size:1.08em}.receipt{background:var(--panel);padding:16px 22px;border-left:3px solid var(--accent)}button{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:6px 14px;cursor:pointer}footer{border-top:1px solid var(--line);padding:25px 5vw;color:var(--muted)}@media(max-width:700px){main{padding:25px 18px 60px}body{font-size:16px}h2{font-size:27px}.toc ul{columns:1}table{display:block;overflow-x:auto}nav{gap:13px}.katex{font-size:.95em}}@media print{:root{--bg:white;--ink:#151515;--panel:#f1f3f5;--muted:#444;--line:#bbb;--accent:#165663;color-scheme:light}nav,button,.toc{display:none}main{max-width:none;padding:0}body{font-size:10pt;line-height:1.5}h1{font-size:28pt}h2{font-size:19pt;break-after:avoid}h3{break-after:avoid}img,table,pre{break-inside:avoid}a{color:inherit}footer{font-size:8pt}.katex{font-size:1em}}
+.katex{position:relative}.math.display{display:block;max-width:100%}.math:not(.display){display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}.math{scrollbar-width:none}.math::-webkit-scrollbar{display:none}.katex-display{margin:0;text-align:left}td{overflow-wrap:anywhere}.contents{margin:30px 0}.contents summary{cursor:pointer;color:var(--accent)}</style><link rel="stylesheet" href="assets/katex/katex.min.css"><link rel="icon" type="image/svg+xml" href="assets/favicon.svg"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="SPATIAL-REPAIR.html">Spatial repair</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p><h1 id="stochastic-calculus-analysis-brownian-repair-with-finite-fuel">Stochastic calculus analysis: Brownian repair with finite fuel</h1>
+<p>This is the mathematical analysis behind the implemented spatial repair study. It exposes the stochastic differential equation, compensated reaction clocks, Itô generator, stopping-time martingale, backward survival equation and calibration problem. It uses established stochastic calculus; none of these tools is claimed as a new theorem. <a href="SPATIAL-REPAIR.html">Model, numerical results and verification</a> · <a href="SPATIAL-LESSONS.html">Lessons and novelty assessment</a></p>
+<details class="contents"><summary>Contents and navigation</summary><div class="toc">
+<ul>
+<li><a href="#1-the-continuous-and-discrete-state-variables">1. The continuous and discrete state variables</a></li>
+<li><a href="#2-compensated-reaction-clocks">2. Compensated reaction clocks</a></li>
+<li><a href="#3-itos-formula-and-the-generator">3. Itô's formula and the generator</a></li>
+<li><a href="#4-first-collapse-and-the-stopped-martingale">4. First collapse and the stopped martingale</a></li>
+<li><a href="#5-exact-short-time-consequences">5. Exact short-time consequences</a></li>
+<li><a href="#6-feynmankac-calibration-of-a-count-rate">6. Feynman–Kac calibration of a count rate</a></li>
+<li><a href="#7-what-is-proved-computed-and-still-open">7. What is proved, computed and still open</a></li>
+</ul>
+</div>
+</details><h2 id="1-the-continuous-and-discrete-state-variables">1. The continuous and discrete state variables</h2>
+<p>Let <span class="math" data-display="false">X_t\in\mathbb T_L^3</span> be the relative position of two independently diffusing complexes. Let <span class="math" data-display="false">C_t=(h_t,b_t)</span>, with <span class="math" data-display="false">h\in\{0,1,2\}</span> healthy complexes and <span class="math" data-display="false">b\in\{0,\ldots,N\}</span> fuel molecules. Damage count is <span class="math" data-display="false">2-h</span> and waste count is <span class="math" data-display="false">N-b</span>. The Brownian equation is</p>
+<p><span class="math display" data-display="true">
+dX_t=\sqrt{2D}\,dW_t\pmod L,\qquad D=D_1+D_2.
+</span></p>
+<p>It is distinct from the older count-only models. Particle position is continuous, while chemistry changes through discrete jumps. Fuel is treated as fast-mixed, rather than individually diffusing.</p>
+<p>Let <span class="math" data-display="false">g(x)=(1-|x|_{\rm per}^2/a^2)_+^4</span>. The feasible jumps and their rates are</p>
+<p><span class="math display" data-display="true">
+\begin{array}{lll}
+\nu_1=(-1,0),&amp;a_1(x,h,b)=\eta h,&amp;h&gt;0,\\
+\nu_2=(1,0),&amp;a_2(x,h,b)=\eta(2-h)/2,&amp;h&lt;2,\\
+\nu_3=(1,-1),&amp;a_3(x,1,b)=\kappa b g(x),&amp;b&gt;0,\\
+\nu_4=(-1,1),&amp;a_4(x,2,b)=\kappa(N-b)g(x)/2,&amp;b&lt;N.
+\end{array}
+</span></p>
+<p>Rates vanish when the source conditions fail. The factor two in the aggregate reverse repair counts two labelled reverse channels. All rates are bounded because the chemical inventory is finite and <span class="math" data-display="false">0\le g\le1</span>.</p>
+<h2 id="2-compensated-reaction-clocks">2. Compensated reaction clocks</h2>
+<p>Using independent unit-rate Poisson processes <span class="math" data-display="false">Y_r</span>, independent of <span class="math" data-display="false">W</span>, the random time-change representation is</p>
+<p><span class="math display" data-display="true">
+C_t=C_0+\sum_{r=1}^4\nu_r
+Y_r\!\left(\int_0^t a_r(X_s,C_{s-})\,ds\right).
+</span></p>
+<p>Write <span class="math" data-display="false">N_r(t)</span> for each time-changed count and define</p>
+<p><span class="math display" data-display="true">
+\widetilde N_r(t)=N_r(t)-\int_0^t a_r(X_s,C_{s-})\,ds.
+</span></p>
+<p>These are compensated counting martingales. Together with Brownian motion they account for two distinct sources of noise: continuously fluctuating separations and discrete chemical events. The bounded-rate construction rules out infinitely many jumps in finite time. <a href="https://people.math.wisc.edu/~dfanderson/papers/SURVEY_AndKurtz.pdf">Anderson and Kurtz, chemical-network formulation</a></p>
+<h2 id="3-itos-formula-and-the-generator">3. Itô's formula and the generator</h2>
+<p>For a function <span class="math" data-display="false">f(x,c)</span> that is twice continuously differentiable and periodic in <span class="math" data-display="false">x</span>, let <span class="math" data-display="false">\Delta_r f=f(x,c+\nu_r)-f(x,c)</span>. Itô's formula with jumps gives</p>
+<p><span class="math display" data-display="true">
+df(X_t,C_t)=\mathcal Lf(X_t,C_{t-})\,dt
++\sqrt{2D}\,\nabla_xf(X_t,C_{t-})\cdot dW_t
++\sum_r\Delta_rf(X_t,C_{t-})\,d\widetilde N_r(t),
+</span></p>
+<p>where</p>
+<p><span class="math display" data-display="true">
+\mathcal Lf=D\Delta_x f+\sum_r a_r\Delta_r f.
+</span></p>
+<p>The stochastic terms have zero expectation under the stated boundedness and regularity conditions. The predictable quadratic variation of their sum is</p>
+<p><span class="math display" data-display="true">
+\langle M_f\rangle_t=\int_0^t\left[
+2D|\nabla_xf|^2+\sum_r a_r(\Delta_rf)^2\right](X_s,C_{s-})\,ds.
+</span></p>
+<p>This identifies both fluctuation mechanisms explicitly. The generator and martingale also hold for the full uncensored process, where damaged complexes may later recover.</p>
+<h2 id="4-first-collapse-and-the-stopped-martingale">4. First collapse and the stopped martingale</h2>
+<p>Define <span class="math" data-display="false">\tau=\inf\{t:h_t=0\}</span>. For any admissible test function,</p>
+<p><span class="math display" data-display="true">
+M_f(t)=f(X_{t\wedge\tau},C_{t\wedge\tau})-f(X_0,C_0)
+-\int_0^{t\wedge\tau}\mathcal Lf(X_s,C_{s-})\,ds
+</span></p>
+<p>is a martingale. We stop at first collapse, rather than count recoveries after collapse. The killed process has payoff zero at a cemetery state. Its live-state survival function satisfies</p>
+<p><span class="math display" data-display="true">
+\partial_tu=\mathcal L_{\rm kill}u,\qquad
+u(0,x,h,b)=1\ (h&gt;0),\qquad u(t,x,0,b)=0.
+</span></p>
+<p>Periodic spatial boundary conditions apply. For an initial position law <span class="math" data-display="false">\mu</span>,</p>
+<p><span class="math display" data-display="true">
+S_\mu(t)=\int u(t,x,h_0,b_0)\,\mu(dx).
+</span></p>
+<p>Only damage from <span class="math" data-display="false">h=1</span> causes immediate collapse. Consequently,</p>
+<p><span class="math display" data-display="true">
+S_\mu&#x27;(t)=-\eta\Pr(\tau&gt;t,h_t=1),\qquad -\eta\le S_\mu&#x27;(t)\le0.
+</span></p>
+<p>This identity supplies a rigorous temporal interpolation bound for the numerical survival curves. It does not supply a spatial mesh-error bound.</p>
+<h2 id="5-exact-short-time-consequences">5. Exact short-time consequences</h2>
+<p>The killed generator applied to the constant live payoff is <span class="math" data-display="false">-\eta</span> in HD and zero in HH. Applying the generator again gives</p>
+<p><span class="math display" data-display="true">
+\begin{aligned}
+S_{\mu,HD,b}&#x27;(0)&amp;=-\eta,\\
+S_{\mu,HD,b}&#x27;&#x27;(0)&amp;=\eta\left(\frac32\eta+\kappa b\mathbb E_\mu g\right),\\
+S_{\mu,HH,b}&#x27;(0)&amp;=0,\\
+S_{\mu,HH,b}&#x27;&#x27;(0)&amp;=-\eta\left(2\eta+\frac{\kappa(N-b)}2\mathbb E_\mu g\right).
+\end{aligned}
+</span></p>
+<p>The diffusion term vanishes at this second application because the first generator image is position-independent. These are exact short-time formulas for the Brownian model. Position still affects higher-time behavior through the coupled dynamics. Different preparations with different expected contact activity cannot both be reproduced by one preparation-blind count model. Nearness can promote repair or its reverse, depending on the chemical launch.</p>
+<h2 id="6-feynmankac-calibration-of-a-count-rate">6. Feynman–Kac calibration of a count rate</h2>
+<p>Freeze chemistry at HD,b and retain only the repair clock. Its survival is</p>
+<p><span class="math display" data-display="true">
+\Pr_\mu(\tau_b&gt;t)=\mathbb E_\mu\exp\left[-\kappa b\int_0^tg(X_s)\,ds\right].
+</span></p>
+<p>The mean <span class="math" data-display="false">m_b(x)=\mathbb E_x\tau_b</span> solves</p>
+<p><span class="math display" data-display="true">
+(-D\Delta+\kappa b g)m_b=1
+</span></p>
+<p>periodically. The implemented count calibration is <span class="math" data-display="false">c_b=1/[b\langle m_b\rangle]</span>, where the average is uniform. Each reverse edge receives the same multiplier as its forward partner, retaining the thermodynamic ratio. This matches one mean per fuel edge; it cannot match every encounter distribution.</p>
+<p>For a uniform stationary Brownian launch, Jensen's inequality yields</p>
+<p><span class="math display" data-display="true">
+\Pr(\tau_b&gt;t)\ge e^{-\kappa b\langle g\rangle t},
+\qquad c_b\le\kappa\langle g\rangle.
+</span></p>
+<p>Thus matching the mean can already change the initial effective reaction intensity. This explains why the calibrated count model need not reproduce even the uniform short-time survival curvature.</p>
+<h2 id="7-what-is-proved-computed-and-still-open">7. What is proved, computed and still open</h2>
+<p>The stochastic equations, generator identities, event ledgers and short-time consequences are mathematical deductions within the model. The implemented solver discretizes space, exploits exact finite-grid symmetry and propagates a reversible killed generator with a controlled exact-arithmetic polynomial tail. Four spatial refinements provide numerical convergence evidence. Independent Brownian/Poisson thinning avoids a Brownian timestep approximation in this force-free spatial model. It would require modification for a future state-dependent binding force.</p>
+<p><img alt="Spatial curves and calibrated count comparison" src="../results/figures/spatial-repair-survival.png" /></p>
+<p>There are 51 passing tests, 200,000 formal continuum paths and 200,000 additional fresh-seed paths. Statistical confidence, arithmetic truncation and observed spatial refinement are separate. No rigorous continuum discretization enclosure, molecular calibration, or new general stochastic-calculus theorem is claimed. <a href="../results/spatial-repair-verification.json">Formal verification</a> · <a href="../results/spatial-repair-review-check.json">Independent review paths</a> · <a href="../research/spatial-repair-originality-audit.md">Originality audit</a></p></main><footer>Equations and figures are local. Sources link to the research package and primary literature.</footer><script src="assets/katex/katex.min.js"></script><script>document.querySelectorAll('.math').forEach(el=>{try{katex.render(el.textContent,el,{displayMode:el.dataset.display==='true',throwOnError:true,strict:'ignore'})}catch(e){el.dataset.error=e.message;console.error(e.message)}});document.getElementById('print').onclick=()=>window.print();</script></body></html>

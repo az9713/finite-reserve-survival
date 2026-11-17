@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-17T21:09:54.556483+00:00",
+  "generated_utc": "2026-11-17T21:26:47.445391+00:00",
   "broken_local_links": [],
   "browser_checks": [
     {
@@ -103,6 +103,32 @@
       "scrollWidth": 390,
       "title": "Self-assembly and maintenance with finite fuel",
       "file": "SELF-ASSEMBLY.html",
+      "viewport": 390,
+      "console_errors": []
+    },
+    {
+      "equations": 35,
+      "rendered": 35,
+      "mathErrors": [],
+      "images": 1,
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Stochastic calculus analysis \u2014 Brownian motion, reaction martingales and survival",
+      "file": "STOCHASTIC-CALCULUS.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 35,
+      "rendered": 35,
+      "mathErrors": [],
+      "images": 1,
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Stochastic calculus analysis \u2014 Brownian motion, reaction martingales and survival",
+      "file": "STOCHASTIC-CALCULUS.html",
       "viewport": 390,
       "console_errors": []
     }

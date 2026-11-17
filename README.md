@@ -2,6 +2,8 @@
 
 [**Open the live scientific dossier**](https://az9713.github.io/finite-reserve-survival/) · [Spatial repair: proofs and evidence](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-REPAIR.html) · [Development journey](https://az9713.github.io/finite-reserve-survival/docs/DEVELOPMENT-JOURNEY.html) · [Studies 01–05 paper draft](https://az9713.github.io/finite-reserve-survival/results/research-manuscript.pdf)
 
+**[Stochastic calculus analysis: SDEs, Itô formula, martingales and survival proofs](https://az9713.github.io/finite-reserve-survival/docs/STOCHASTIC-CALCULUS.html)**
+
 [![Scientific dossier preview](results/document-previews/scientific-dossier-1440.png)](https://az9713.github.io/finite-reserve-survival/)
 
 Five stochastic models track how sensing, action, and repair affect the chance that a physical device keeps functioning. The strongest results are exact survival bounds with attaining policies and a certified example in which the value of sensing changes with the time horizon.
@@ -43,7 +45,7 @@ Intermediate binding optima and fuel-driven chemical persistence have earlier th
 
 [![Spatial repair survival comparison](results/figures/spatial-repair-survival.png)](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-REPAIR.html)
 
-[Read the model, proofs and illustrated results](docs/SPATIAL-REPAIR.html) · [Numerical data](results/spatial-repair.json) · [Independent verification](results/spatial-repair-verification.json) · [Originality audit](research/spatial-repair-originality-audit.md)
+[Read the live model, proofs and illustrated results](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-REPAIR.html) · [Numerical data](results/spatial-repair.json) · [Independent verification](results/spatial-repair-verification.json) · [Originality audit](research/spatial-repair-originality-audit.md)
 
 Two preassembled complexes now diffuse in a periodic cube, change between healthy and damaged states, and exchange a finite inventory of fuel and waste through reversible repair. Each reversible edge of the well-mixed comparator is calibrated to the uniform-start forward encounter mean, preserving its equilibrium ratio without fitting survival.
 
@@ -57,7 +59,7 @@ All **51 tests pass**. The formal 200,000-path verification gives a **99% simult
 
 ## Stochastic calculus: implementation plan and feasibility check
 
-[Read the illustrated implementation plan](docs/STOCHASTIC-CALCULUS-PLAN.html) · [Plan source](docs/stochastic-calculus-plan.md) · [Prior-art comparison](research/stochastic-calculus-prior-art.md) · [Calculation receipt](results/encounter-feasibility.json) · [Full-suite verification](results/encounter-verification.json)
+[Read the live illustrated implementation plan](https://az9713.github.io/finite-reserve-survival/docs/STOCHASTIC-CALCULUS-PLAN.html) · [Plan source](docs/stochastic-calculus-plan.md) · [Prior-art comparison](research/stochastic-calculus-prior-art.md) · [Calculation receipt](results/encounter-feasibility.json) · [Full-suite verification](results/encounter-verification.json)
 
 The plan motivated the implemented spatial maintenance benchmark above. Its separate classical calculation gives a **2.037 s** mean encounter time for an illustrative 5 nm target in a 1 μm³ compartment, using a measured GFP diffusion coefficient as a tracer-scale anchor. With an assumed independent 1 s⁻¹ closure rate, exact capture probability is **32.9294%**, versus **32.9276%** for a matched-mean exponential model. Starting 1 nm outside the capture surface instead gives **88.6561%**. These dimensional tracer values are not a calibration of the new chemical model.
 
