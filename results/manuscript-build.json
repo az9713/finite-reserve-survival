@@ -1,0 +1,16 @@
+{
+  "generated_utc": "2026-11-17T14:37:32.514752+00:00",
+  "compiler": "tectonic",
+  "return_code": 0,
+  "figures": [
+    "autonomous-decay.png",
+    "autonomous-reactions.png",
+    "autonomous-survival.png",
+    "closed-loop-protocol.png",
+    "closed-loop-repair-rate.png",
+    "closed-loop-robustness.png",
+    "closed-loop-witness.png"
+  ],
+  "warnings": [],
+  "pdf_sha256": "15ea033bf812e0d555776cd038d308bb0f644d16a8693393611d74cb184642e9"
+}

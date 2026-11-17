@@ -1,0 +1,16 @@
+{
+  "desktop": [
+    1440,
+    1100
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "javascript_errors": [],
+  "mobile_horizontal_overflow": false,
+  "inspected": {
+    "hazard": "K=10.0000 \u00b7 energy gap=2.3125 kBT \u00b7 accuracy=90.19% \u00b7 power=0.18586 \u00b7 survival=39.07% \u00b7 information=0.37219 nats. Meets selected limits.",
+    "damage": "K=10.0000 \u00b7 energy gap=2.3125 kBT \u00b7 accuracy=90.19% \u00b7 power=0.18586 \u00b7 survival=98.20% \u00b7 information=0.37219 nats. Meets selected limits."
+  }
+}

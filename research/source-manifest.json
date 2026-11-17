@@ -1,0 +1,42 @@
+[
+  {
+    "arxiv_id": "1203.3271",
+    "url": "https://arxiv.org/pdf/1203.3271",
+    "retrieved_date": "2026-11-16",
+    "sha256": "feb70cf23efa7d99087aa462fe914e0993f73d5a380b04068cdc67a2f2babedb",
+    "bytes": 341536,
+    "access": "downloaded PDF and locally extracted text; inspected relevant sections"
+  },
+  {
+    "arxiv_id": "1402.0419",
+    "url": "https://arxiv.org/pdf/1402.0419",
+    "retrieved_date": "2026-11-16",
+    "sha256": "4c30715733568ad2e9b7286b65109a5e588106d5d04a080c4ebb9f544bb59451",
+    "bytes": 266160,
+    "access": "downloaded PDF and locally extracted text; inspected relevant sections"
+  },
+  {
+    "arxiv_id": "1402.3276",
+    "url": "https://arxiv.org/pdf/1402.3276",
+    "retrieved_date": "2026-11-16",
+    "sha256": "6c5dbe79d143304188e7eb593007e325d88569a8a0ad15cf9a888fcbef0e3557",
+    "bytes": 520699,
+    "access": "downloaded PDF and locally extracted text; inspected relevant sections"
+  },
+  {
+    "arxiv_id": "1509.02111",
+    "url": "https://arxiv.org/pdf/1509.02111",
+    "retrieved_date": "2026-11-16",
+    "sha256": "24a7a7e9a9a869418e78c2d372b4ccd3904b7a9c62c7e9c7ed9378f1f20b5c3e",
+    "bytes": 808456,
+    "access": "downloaded PDF and locally extracted text; inspected relevant sections"
+  },
+  {
+    "arxiv_id": "1806.08053",
+    "url": "https://arxiv.org/pdf/1806.08053",
+    "retrieved_date": "2026-11-16",
+    "sha256": "8d590babb3feead54ca778a7bb4bee986afcea44f29f140135235e93336bb2ff",
+    "bytes": 645722,
+    "access": "downloaded PDF and locally extracted text; inspected relevant sections"
+  }
+]

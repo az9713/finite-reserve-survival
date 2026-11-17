@@ -1,0 +1,89 @@
+{
+  "model": "binary thermal sensor plus explicitly effective failure layer",
+  "units": "k_B T = 1; arbitrary but shared time unit",
+  "horizon": 20.0,
+  "hazard": 0.5,
+  "damage_stages": 4,
+  "damage_duration": 2.0,
+  "calibration": "both laws have mean lethal uninterrupted mismatch duration 2",
+  "initialization": "unfailed stationary sensor; damage clock starts fresh",
+  "novelty": "candidate synthesis; priority unestablished",
+  "sensors": {
+    "slow": {
+      "r": 0.1,
+      "k": 0.4,
+      "affinity": 2.9444389791664394,
+      "a": 0.37999999999999995,
+      "b": 0.02000000000000002,
+      "q": 0.2,
+      "d": 0.5999999999999999,
+      "power": 0.17666633874998633,
+      "mutual_information_nats": 0.19274475702175742,
+      "learning_rate": 0.08317766166719343,
+      "efficiency": 0.47081782673327666,
+      "hazard_survival": 0.3026456741768194,
+      "hazard_decay": 0.057557109910194776,
+      "damage_survival": 0.38257221448084344,
+      "hazard_mc": {
+        "estimate": 0.3033666666666667,
+        "ci95": [
+          0.2981900761887357,
+          0.3085936079540973
+        ],
+        "samples": 30000,
+        "seed": 801
+      },
+      "damage_mc": {
+        "estimate": 0.3841333333333333,
+        "ci95": [
+          0.3786445841891102,
+          0.38965175181368483
+        ],
+        "samples": 30000,
+        "seed": 901
+      }
+    },
+    "fast": {
+      "r": 0.1,
+      "k": 5.8,
+      "affinity": 1.4522523289116882,
+      "a": 4.699999999999999,
+      "b": 1.0999999999999999,
+      "q": 0.19999999999999998,
+      "d": 0.6,
+      "power": 0.08713513973470129,
+      "mutual_information_nats": 0.19274475702175742,
+      "learning_rate": 0.08317766166719344,
+      "efficiency": 0.9545822950470143,
+      "hazard_survival": 0.1534855473495039,
+      "hazard_decay": 0.09365717958267404,
+      "damage_survival": 0.867882188529314,
+      "hazard_mc": {
+        "estimate": 0.15506666666666666,
+        "ci95": [
+          0.15101487259098592,
+          0.15920678591215628
+        ],
+        "samples": 30000,
+        "seed": 802
+      },
+      "damage_mc": {
+        "estimate": 0.8689,
+        "ci95": [
+          0.8650335098649484,
+          0.8726720279535407
+        ],
+        "samples": 30000,
+        "seed": 902
+      }
+    }
+  },
+  "max_flux_residual_200_cases": 7.105427357601002e-15,
+  "transfer": {
+    "total": 144,
+    "reversals": 69,
+    "interpretation": "counts over the stated grid; not a probability or universal claim",
+    "fresh_damage_clock": true
+  },
+  "elapsed_seconds": 7.564132496001548
+}

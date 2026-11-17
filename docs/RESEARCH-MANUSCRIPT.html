@@ -1,0 +1,876 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Research manuscript — reserve-dependent sensing</title><style>
+:root{color-scheme:dark;--bg:#0d141d;--panel:#152233;--ink:#e6edf7;--muted:#adc0d6;--line:#2b4159;--accent:#72dbc1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 'Segoe UI',Arial,sans-serif}a{color:var(--accent);text-underline-offset:3px}nav{padding:18px 5vw;border-bottom:1px solid var(--line);display:flex;gap:24px;flex-wrap:wrap}main{max-width:1000px;margin:auto;padding:45px 30px 100px}h1{font:500 clamp(35px,5vw,65px)/1.12 Georgia,serif;letter-spacing:-.025em;margin:20px 0 30px}h2{font:500 32px/1.25 Georgia,serif;margin:65px 0 20px;padding-top:20px;border-top:1px solid var(--line)}h3{font-size:21px;margin:35px 0 12px}p{margin:16px 0}li{margin:9px 0}img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;margin:20px 0}pre{padding:20px;background:var(--panel);overflow:auto;border-radius:8px;font-size:14px}code{font-family:Consolas,monospace}table{width:100%;border-collapse:collapse;margin:25px 0;font-size:15px}td,th{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--panel)}blockquote{margin:25px 0;padding:15px 25px;border-left:3px solid var(--accent);background:var(--panel)}.meta{color:var(--muted);font-size:14px;letter-spacing:.04em}.toc{background:var(--panel);padding:22px 30px;border-radius:9px}.toc ul{columns:2;column-gap:35px;padding-left:20px}.toc li{break-inside:avoid;font-size:14px}.toc ul ul{display:none}.math.display{overflow-x:auto;padding:12px 0}.katex{font-size:1.08em}.receipt{background:var(--panel);padding:16px 22px;border-left:3px solid var(--accent)}button{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:6px 14px;cursor:pointer}footer{border-top:1px solid var(--line);padding:25px 5vw;color:var(--muted)}@media(max-width:700px){main{padding:25px 18px 60px}body{font-size:16px}h2{font-size:27px}.toc ul{columns:1}table{display:block;overflow-x:auto}nav{gap:13px}.katex{font-size:.95em}}@media print{:root{--bg:white;--ink:#151515;--panel:#f1f3f5;--muted:#444;--line:#bbb;--accent:#165663;color-scheme:light}nav,button,.toc{display:none}main{max-width:none;padding:0}body{font-size:10pt;line-height:1.5}h1{font-size:28pt}h2{font-size:19pt;break-after:avoid}h3{break-after:avoid}img,table,pre{break-inside:avoid}a{color:inherit}footer{font-size:8pt}.katex{font-size:1em}}
+.katex{position:relative}.math.display{display:block;max-width:100%}.math:not(.display){display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}.math{scrollbar-width:none}.math::-webkit-scrollbar{display:none}.katex-display{margin:0;text-align:left}td{overflow-wrap:anywhere}.contents{margin:30px 0}.contents summary{cursor:pointer;color:var(--accent)}</style><link rel="stylesheet" href="assets/katex/katex.min.css"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p><h1 id="reserve-dependent-sensing-and-survival-in-two-finite-state-physical-architectures">Reserve-dependent sensing and survival in two finite-state physical architectures</h1>
+<p>AI-assisted research workspace draft · 17 November 2026</p>
+<details class="contents"><summary>Contents and navigation</summary><div class="toc">
+<ul>
+<li><a href="#abstract">Abstract</a></li>
+<li><a href="#motivation-and-relation-to-previous-work">Motivation and relation to previous work</a></li>
+<li><a href="#main-results-and-the-logic-connecting-them">Main results and the logic connecting them</a></li>
+<li><a href="#checkpoint-architecture-and-proofs">Checkpoint architecture and proofs</a></li>
+<li><a href="#autonomous-architecture-and-certificates">Autonomous architecture and certificates</a></li>
+<li><a href="#appendix-paid-repair-contact-and-its-sharp-energy-bound">Appendix — Paid repair contact and its sharp energy bound</a></li>
+<li><a href="#evidence-and-reproduction-receipts">Evidence and reproduction receipts</a></li>
+<li><a href="#literature-comparison-and-novelty-assessment">Literature comparison and novelty assessment</a></li>
+<li><a href="#publication-readiness-and-limitations">Publication readiness and limitations</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+</details><h2 id="abstract">Abstract</h2>
+<p>We study survival of devices whose sensing, control, and repair compete for finite stored energy. In a checkpoint model with endogenous harvesting, we construct a strict two-round sensing-feedback advantage and derive its accuracy threshold. For a symmetric two-unit device, we prove an exact asymptotic separation from every fixed sensing word and identify a switch in its optimal fixed regime. In an autonomous reversible reaction network, we certify a finite-time advantage over all constant sensing intensities within a specified control class, while the best binary asymptotic circuit leaves sensing off. The comparisons establish architecture-dependent value of information. We provide explicit assumptions, attaining constructions, numerical certificates, and reproducible code. Priority and independent proof review remain open.</p>
+<h2 id="motivation-and-relation-to-previous-work">Motivation and relation to previous work</h2>
+<p>Information thermodynamics and information-dependent viability provide the conceptual setting [1–5,11]. Battery-dependent costly sensing and energy-harvesting control are established [6–8]. Controlled reachability and products of nonnegative matrices provide the mathematical tools [9,10]. Our candidate contribution is a pair of explicit, fully specified survival examples with analytically or computationally certified optima. Each statement below quantifies over its declared policy or circuit class. The autonomous system uses a maintained fuel reservoir, and the checkpoint construction uses supplied phase timing and work registers.</p>
+<p>The finite-time comparison and the asymptotic comparison are distinct objectives. Changing architectures changes several physical assumptions simultaneously. We therefore claim conditional results within each model, with no causal inference that removing a clock alone determines the outcome.</p>
+<h2 id="main-results-and-the-logic-connecting-them">Main results and the logic connecting them</h2>
+<p>The results use two meanings of time: the integer round count <span class="math" data-display="false">N</span> in the checkpoint model and continuous duration <span class="math" data-display="false">T</span> in the autonomous model. All energetic statements specify what is inside the accounting boundary. No molecular mechanism is assumed merely because a Markov edge has a thermodynamically admissible rate ratio.</p>
+<p><strong>Theorem A (finite-horizon checkpoint control).</strong> Under the supplied-phase protocol below, the Bellman recurrence gives the supremum survival probability over all admissible history-dependent, randomized controllers. A deterministic maximizing policy and maximum-rate repair attain it. The proof is conditioning plus induction, with repair reduced to a two-state master equation.</p>
+<p><strong>Theorem B (strict feedback value).</strong> For two rounds, perfect readout, initial reserve two, unit sensing and engagement costs, capacity and harvest at least two, and IID opportunity probability <span class="math" data-display="false">q\in(0,1)</span>, adaptive sensing strictly exceeds every precommitted sensing word whenever <span class="math" data-display="false">0&lt;\kappa&lt;1</span>. At <span class="math" data-display="false">q=\kappa=1/2</span> and capacity/harvest two the values are <span class="math" data-display="false">7/8</span> and <span class="math" data-display="false">3/4</span>. With symmetric readout accuracy <span class="math" data-display="false">f</span>, this instance has a strict advantage precisely for <span class="math" data-display="false">f&gt;2/3</span>. These constants belong to this architecture and parameter choice.</p>
+<p><strong>Theorem C (all-word asymptotic comparison).</strong> In the symmetric, perfect-readout, two-unit checkpoint model, the optimal adaptive and fixed-word survival root rates are</p>
+<p><span class="math display" data-display="true">
+r_{\rm ad}=\frac{1+\sqrt5}{4},\qquad
+r_{\rm fixed}=\frac12\max\left\{\sqrt2,\frac{1+\sqrt{1+4\kappa}}2\right\}.
+</span></p>
+<p>The upper bounds apply even to nonperiodic words chosen separately for each horizon. Matching stationary or alternating constructions attain the rates. The proof reduces the fixed problem to products of two nonnegative matrices plus bounded additive terms. Without harvesting, finite reserves give the same root rate <span class="math" data-display="false">1-q(1-\rho)</span> to both classes. Thus replenishment is essential to this example's exponential advantage.</p>
+<p><strong>Theorem D (certified autonomous instance).</strong> With the exact rational parameters and launch distribution specified below, one of 324 static binary circuits is uniquely optimal at <span class="math" data-display="false">T=4</span>. It senses at full reserve only. Writing <span class="math" data-display="false">D=288230376151711744</span>, its certified survival satisfies</p>
+<p><span class="math display" data-display="true">
+\frac{153847617132986168}{D}\le S_{\rm winner}\le
+\frac{153847742532300097}{D}.
+</span></p>
+<p>Every other binary circuit has survival at most <span class="math" data-display="false">153763933422971466/D</span>. Allowing a constant sensing activity anywhere in <span class="math" data-display="false">[0,1]</span>, with each actuator table reoptimized, gives the uniform comparator bound</p>
+<p><span class="math display" data-display="true">
+\sup_{\alpha,\,\mathrm{table}}S_{\rm uniform}(4)
+\le\frac{145923831922267153}{D}
+&lt;\frac{153847617132986168}{D}.
+</span></p>
+<p>This is a certified gap of at least about 2.75 percentage points. Its proof combines nonnegative uniformization, outward integer rounding, and a rigorous interpolation remainder. The finite binary optimum is sharp within its declared class; the continuum upper bound need not be attained.</p>
+<p><strong>Theorem E (the large-time objective selects differently).</strong> Among the same binary autonomous circuits, the best reachable spectral decay exponent is attained with sensing off. The exponent is about <span class="math" data-display="false">0.24252027</span>, smaller than the best exponent with any sensing enabled. Exact positive-vector ratio bounds certify the ordering. This does not optimize all analogue circuits at infinite time.</p>
+<p>The scientific lesson is that information's survival value depends jointly on temporal error structure, resource state, fuel access, damage dynamics, and the horizon. A finite-time advantage and an exponential-rate advantage are different statements. The golden ratio here is the eigenvalue of a two-state surviving reserve process, not evidence of a universal biological constant. Detailed definitions and proofs follow.</p>
+<h2 id="checkpoint-architecture-and-proofs">Checkpoint architecture and proofs</h2>
+<p><em>Model boundary note: the derivation below retains the assumptions of this study. Statements about later extensions are historical and should be read alongside the subsequent studies.</em></p>
+<p>A finite battery funds sensing, actuation, and reversible repair. Correct
+actuation can move work from a finite environmental packet back into the
+battery. For the specified checkpoint architecture, we derive the <strong>exact
+survival probability attainable from each initial reserve</strong>. We then give a
+two-round family with a strict feedback advantage, an exact noise threshold,
+and a case where feedback improves the exponential rate of survival over
+<strong>every</strong> precommitted sensing schedule.</p>
+<h3 id="1-one-reserve-with-feedback-through-the-environment">1. One reserve, with feedback through the environment</h3>
+<p><img alt="Sensing and engagement draw energy from one battery. Matching engagement can harvest work. Mismatch requires paid reversible repair. A successful checkpoint carries the reserve to the next round." src="../results/figures/closed-loop-protocol.png" /></p>
+<p>A healthy device starts a round with <span class="math" data-display="false">b\in\{0,\ldots,C\}</span> units in its battery.
+A unit has energy <span class="math" data-display="false">\epsilon k_BT</span>. The hidden binary environment <span class="math" data-display="false">X</span> has
+stationary probability <span class="math" data-display="false">q</span> of state <span class="math" data-display="false">1</span>. That state makes a work packet
+accessible to an engaged actuator. From one round to the next the transition
+law is</p>
+<p><span class="math display" data-display="true">
+P(X=1\mid X_{\rm prev}=j)=q(1-\rho)+\rho j,\qquad j=0,1 .
+</span></p>
+<p>The launch prior is <span class="math" data-display="false">q</span> when the previous state is unknown. The parameter
+<span class="math" data-display="false">\rho\in[0,1]</span> measures persistence. For <span class="math" data-display="false">0&lt;q&lt;1</span> and <span class="math" data-display="false">0&lt;\rho&lt;1</span>, a thermal
+two-state switch realizes this law by relaxing for time <span class="math" data-display="false">\Delta</span> with total
+rate <span class="math" data-display="false">-\log(\rho)/\Delta</span> and energy gap <span class="math" data-display="false">k_BT\log((1-q)/q)</span>. The IID case
+uses fresh equilibrium flags. The flag is held fixed from sensing through
+repair. Endpoints with degenerate probabilities can be read as preparations
+or limits of these switches.</p>
+<ol>
+<li><strong>Sense or skip.</strong> A probe pays <span class="math" data-display="false">c\ge1</span> units into an isolated work
+   receiver and reveals a bit <span class="math" data-display="false">Y</span> with <span class="math" data-display="false">P(Y=X\mid X)=f\in[1/2,1]</span>.</li>
+<li><strong>Idle or engage.</strong> Idle is action <span class="math" data-display="false">A=0</span>, which has no work bill. Engagement
+   is <span class="math" data-display="false">A=1</span> and pays <span class="math" data-display="false">d\ge1</span> units, regardless of the environment. This bill
+   is due before any harvesting. If <span class="math" data-display="false">X=A=1</span>, transfer up to <span class="math" data-display="false">H</span> units from
+   the external packet into the battery, stopping at capacity. A match with
+   <span class="math" data-display="false">X=A=0</span> transfers nothing.</li>
+<li><strong>Repair a mismatch.</strong> The load permutes the degenerate damage bit by
+   <span class="math" data-display="false">D\mapsto D\mathbin{\mathrm{XOR}}[X\ne A]</span>. During mismatch, the contact
+   opens the reversible pair
+   <span class="math" data-display="false">(D=1,b,R=0)\leftrightarrow(D=0,b-1,R=1)</span> for <span class="math" data-display="false">b\ge1</span>, with <span class="math" data-display="false">R</span> a
+   repair receipt. Forward repair releases <span class="math" data-display="false">\epsilon k_BT</span> as heat. Its
+   reverse absorbs the same heat, restores the battery unit, and clears the
+   receipt. With a sum-of-rates ceiling <span class="math" data-display="false">\Gamma</span> and contact duration <span class="math" data-display="false">\tau</span>,
+   the maximum probability of ending this contact healthy is
+   <span class="math" data-display="false">\kappa=(1-e^{-\Gamma\tau})/(1+e^{-\epsilon})</span>, as in Study 02.</li>
+<li><strong>Check the damage bit.</strong> The first damaged checkpoint ends operation.
+   The experiment tolerates a healthy checkpoint at zero reserve. On a
+   surviving path the work receipts reveal the previous <span class="math" data-display="false">X</span> by <span class="math" data-display="false">X=A
+   \mathbin{\mathrm{XOR}} R</span>. This reveals past conditions through the
+   consequences of action, with current conditions hidden until the next
+   probe or checkpoint.</li>
+</ol>
+<h4 id="microscopic-accounting-and-admissible-control">Microscopic accounting and admissible control</h4>
+<p>A powered gate can be an ideal energy-conserving swap on the device plus its
+work registers. For example, with an initially empty sensing receiver <span class="math" data-display="false">w_s</span>,
+an energy-degenerate readout bit <span class="math" data-display="false">y=0</span>, and a noise bit <span class="math" data-display="false">e</span> with
+<span class="math" data-display="false">P(e=1)=1-f</span>, swap the two states</p>
+<p><span class="math display" data-display="true">
+(b,w_s=0,y=0,X,e)\leftrightarrow
+(b-c,w_s=c,y=X\mathbin{\mathrm{XOR}}e,X,e).
+</span></p>
+<p>Each allowed pair preserves total energy and the non-overlapping receiver
+levels make the transformation reversible. The engagement bill can be
+transferred by the corresponding swap with the actuation receiver. Its
+nonzero level is the action receipt. The harvest swap retains the residual
+packet energy, so the reverse is well defined even when capacity clips the
+transfer. The two-state noise bit can have a thermal bias with gap
+<span class="math" data-display="false">k_BT\log(f/(1-f))</span>, and serves only as an unchanged control. After the
+action, the same XOR uncomputes <span class="math" data-display="false">Y</span> from the preserved <span class="math" data-display="false">X,e</span> and the probe
+receipt. The ideal perfect probe uses <span class="math" data-display="false">e=0</span>. Repair rates have ratio
+<span class="math" data-display="false">k_+/k_-=e^\epsilon</span>, consistent with the energy difference of the full
+repair pair. Work receivers retain their records. No step erases an unknown
+readout or automatically recharges a spent battery.</p>
+<p>On each surviving round the pathwise ledger, in units of <span class="math" data-display="false">\epsilon k_BT</span>, is</p>
+<p><span class="math display" data-display="true">
+b&#x27;=b-c\,\mathbf1_{\rm probe}-d\,\mathbf1_{\rm engage}
+  +h_{\rm admitted}-\mathbf1_{\rm repaired}.
+</span></p>
+<p>Repeated forward and reverse repair jumps cancel except for the final net
+transition. Lost reserve moves into the work receivers or the bath. Admitted
+work comes from the explicit packet, and rejected work remains there.
+The two powered gates have prescribed positive work bills. These are
+properties of the stipulated task hardware.
+Externally supplied components are the phase clock, prepared receivers and
+receipt registers, thermal flags, and packets. The bound below is on the
+initial <strong>operating battery</strong> given those resources. It imposes no price on
+building the apparatus or on maintaining the clock and receipts. The
+controller has access to reserve and receipts, and has no current <span class="math" data-display="false">X</span>
+input except the paid readout. The environment still couples physically to
+the actuator and damage gate. The IID proofs need no previous-state receipt
+in the control policy.</p>
+<h3 id="2-sharp-survival-frontier-and-attaining-control">2. Sharp survival frontier and attaining control</h3>
+<p>Let <span class="math" data-display="false">V_n(j,b)</span> be the best survival probability with <span class="math" data-display="false">n</span> rounds left, prior
+index <span class="math" data-display="false">j</span>, and reserve <span class="math" data-display="false">b</span>. Index <span class="math" data-display="false">j=\ast</span> denotes a stationary launch.
+The base is <span class="math" data-display="false">V_0=1</span>. For any nonnegative continuation <span class="math" data-display="false">v(j,b)</span>, define
+<span class="math" data-display="false">G_v(x,a,r)</span> for the paid or unpaid battery <span class="math" data-display="false">r</span> immediately before
+actuation. Action <span class="math" data-display="false">a</span> is admissible when <span class="math" data-display="false">r\ge da</span>. Let <span class="math" data-display="false">z=r-da</span>.
+The four live-outcome rules collapse to</p>
+<p><span class="math display" data-display="true">
+G_v(x,a,r)=
+\begin{cases}
+v(x,\min(C,z+aH)) &amp; x=a,\\
+\kappa\,v(x,z-1) &amp; x\ne a,\ z\ge1,\\
+0 &amp; x\ne a,\ z=0.
+\end{cases}
+</span></p>
+<p>Write <span class="math" data-display="false">p_j(x)</span> for the current prior and <span class="math" data-display="false">L_f(y\mid x)</span> for the symmetric
+readout likelihood. Maxima range only over affordable actions. The exact
+Bellman update is</p>
+<p><span class="math display" data-display="true">
+\begin{aligned}
+B_v(j,b)&amp;=\max_a\sum_x p_j(x)G_v(x,a,b),\\
+P_v(j,b)&amp;=\sum_y\max_a\sum_x p_j(x)L_f(y\mid x)G_v(x,a,b-c),\quad b\ge c,\\
+V_{n+1}(j,b)&amp;=\max\{B_{V_n}(j,b),P_{V_n}(j,b)\}.
+\end{aligned}
+</span></p>
+<p>Omit the probe option when <span class="math" data-display="false">b&lt;c</span>. The max in the blind branch comes
+before knowing <span class="math" data-display="false">X</span>. In the probe branch, the max occurs separately for each
+observation. These are joint probabilities of <span class="math" data-display="false">(x,y)</span>, so no division by
+a possibly zero observation probability is needed.</p>
+<p><strong>Proof of both directions.</strong> Given a mismatch, every permitted contact
+schedule ends healthy with probability at most <span class="math" data-display="false">\kappa</span>. Its only live
+outcome has the same battery and inferred <span class="math" data-display="false">x</span>, irrespective of the contact
+schedule. The maximum-rate contact thus dominates for every nonnegative
+continuation. Once a round survives, the next prior depends only on its
+inferred <span class="math" data-display="false">x</span> and the remaining battery. Conditioning on the available
+information bounds each possible decision by the corresponding maximum.
+Induction from <span class="math" data-display="false">V_0=1</span> bounds arbitrary history-dependent or randomized
+controllers. Conversely, store the maximizing mode and action for each
+entry of the table and use the maximum-rate repair contact. Every step of
+the induction attains equality. The adaptive frontier uses <span class="math" data-display="false">O(NC)</span> time
+and space. Monotonicity in <span class="math" data-display="false">b</span> follows by induction since the live branch
+maps are nondecreasing in remaining reserve and additional reserve only
+adds affordable actions. For target <span class="math" data-display="false">\eta</span>, invert <span class="math" data-display="false">V_N</span> over
+<span class="math" data-display="false">b=0,\ldots,C</span> to obtain an exact minimum initial battery or infeasibility.</p>
+<h4 id="a-strong-fixed-schedule-comparator">A strong fixed-schedule comparator</h4>
+<p>A fixed sensing schedule is any length-<span class="math" data-display="false">N</span> binary word chosen before the
+first round. It still gets optimal feedback for actuation, including the
+current readout on scheduled probe rounds. If the scheduled probe is
+unaffordable it falls back to blind action, which gives the comparator a
+more favorable rule than failing on the spot. Allowing it to electively
+cancel an <em>affordable</em> scheduled probe on depleted paths would make its
+sensing decision a feedback rule.</p>
+<p>Each word composes monotone maps <span class="math" data-display="false">B,P</span> with the fallback. We compute the
+maximum over all words, including nonperiodic schedules. The implementation
+prunes a suffix only if another suffix dominates its entire vector of
+continuation values. Applying any common prefix preserves that dominance.
+The comparison is exact. In the worst case the number of undominated
+vectors is exponential. Randomizing over fixed schedules cannot exceed
+their maximum.</p>
+<h3 id="3-exact-separation-after-two-rounds">3. Exact separation after two rounds</h3>
+<p><img alt="Adaptive sensing probes first. A zero opportunity leaves one unit and calls for a blind second round. A positive opportunity replenishes to two units and calls for a second probe. The four fixed schedules attain at most 75 percent, compared with 87.5 percent under feedback." src="../results/figures/closed-loop-witness.png" /></p>
+<p>Set <span class="math" data-display="false">c=d=1</span>, <span class="math" data-display="false">H\ge2</span>, <span class="math" data-display="false">C\ge2</span>, and start with <span class="math" data-display="false">b=2</span>. Take IID flags
+with <span class="math" data-display="false">q\in(0,1)</span>, perfect sensing, and <span class="math" data-display="false">\kappa\in(0,1)</span>. The optimal
+last-round survival with 0, 1, or at least 2 units is <span class="math" data-display="false">1-q,m,1</span>, where
+<span class="math" data-display="false">m=\max(1-q+q\kappa,q)</span>. At one unit skipping the probe is strictly best
+because spending it leaves only the possibility of a correct idle. At two
+or more units a probe is strictly best because blind action has positive
+mismatch probability and <span class="math" data-display="false">\kappa&lt;1</span>.</p>
+<p>Probing first and acting on the readout gives
+<span class="math" data-display="false">A=(1-q)m+q</span>. The two possible blind alternatives give
+<span class="math" data-display="false">S_0=1-q+q\kappa m</span> and <span class="math" data-display="false">S_1=q+(1-q)^2\kappa</span>.
+We have <span class="math" data-display="false">A&gt;S_1</span> because <span class="math" data-display="false">m&gt;\kappa(1-q)</span>.
+If <span class="math" data-display="false">m=1-q+q\kappa</span>, then <span class="math" data-display="false">A-S_0=q^2(1-\kappa^2)&gt;0</span>.
+If <span class="math" data-display="false">m=q</span>, then <span class="math" data-display="false">A-S_0=3q-1-(1+\kappa)q^2</span>.
+The latter is concave on <span class="math" data-display="false">[1/(2-\kappa),1]</span>, where at the left endpoint it
+agrees with the positive first expression and at the right endpoint it equals
+<span class="math" data-display="false">1-\kappa&gt;0</span>. Thus probing first is strictly required. The unique optimal
+action after the probe matches the flag. Each flag has positive probability,
+and the resulting reserves require opposite probe decisions on the next
+round. A fixed schedule cannot attain <span class="math" data-display="false">A</span>, even if it optimizes every
+actuation decision. The strict separation holds over the whole open
+<span class="math" data-display="false">(q,\kappa)</span> parameter family.</p>
+<p>For the symmetric instance <span class="math" data-display="false">q=\kappa=1/2</span>, <span class="math" data-display="false">C=H=2</span>, choose
+<span class="math" data-display="false">\epsilon=\ln3</span> and <span class="math" data-display="false">\Gamma\tau=\ln3</span> to realize the repair probability.
+The four fixed schedules <span class="math" data-display="false">00,01,10,11</span>, with 1 denoting probe, attain
+<span class="math" data-display="false">9/16,5/8,3/4,3/4</span>. The adaptive optimum is <span class="math" data-display="false">7/8</span>. With capacity two,
+the adaptive controller reaches 80% using <span class="math" data-display="false">2\ln3\,k_BT</span> of initial
+battery and every fixed schedule falls short even at full charge.</p>
+<h3 id="4-noise-and-persistence">4. Noise and persistence</h3>
+<p><img alt="Heatmap of the adaptive advantage over the fixed frontier for noisy and persistent conditions. The adjacent log plot compares exact finite-horizon survival with the proven rates for the symmetric IID device." src="../results/figures/closed-loop-robustness.png" /></p>
+<p>The zero-information limit <span class="math" data-display="false">f=1/2</span> makes the probe dominated by skipping.
+The readout supplies only an independent coin and spending its work cannot
+increase the optimal nondecreasing continuation. Increasing <span class="math" data-display="false">f</span> cannot
+lower the optimal survival of either policy class. A better symmetric
+channel can be degraded to a worse one using an independent random flip
+after paying the same sensor bill, and the optimized controller dominates
+that simulated strategy. The same reasoning applies to the fixed comparator
+word by word.</p>
+<p>For the symmetric two-round instance with IID flags, <strong>the adaptive
+advantage is strictly positive exactly when <span class="math" data-display="false">f&gt;2/3</span></strong>. In the last round,
+one unit always favors skipping. At two units, after probing, the posterior
+<span class="math" data-display="false">\theta=P(X=1\mid Y)</span> gives live probabilities <span class="math" data-display="false">1-\theta/2</span> for idle and
+<span class="math" data-display="false">\theta</span> for engagement. The two equally likely posteriors are <span class="math" data-display="false">f</span> and
+<span class="math" data-display="false">1-f</span>. The optimized last-round survival at two units is therefore <span class="math" data-display="false">3/4</span>
+for <span class="math" data-display="false">f\le2/3</span> and <span class="math" data-display="false">(1+3f)/4</span> above it. Below or at the threshold, a fixed
+second-round skip can realize the adaptive result for any first-round choice.</p>
+<p>Above the threshold, an optimal first-round skip uses idle strictly and
+reaches both one and two units on live paths. If the first round probes,
+idle after <span class="math" data-display="false">Y=0</span> and engagement after <span class="math" data-display="false">Y=1</span> are the unique maximizing
+actions. The branch with <span class="math" data-display="false">X=Y=0</span> reaches one unit, and <span class="math" data-display="false">X=Y=1</span> reaches
+two. In either case the final probe decisions conflict. For
+<span class="math" data-display="false">f&gt;2/3</span>, subtracting the first-round blind value from its probe value gives
+<span class="math" data-display="false">3f^2/8-3/16</span>. Consequently the first-round probe is strictly favored
+only above <span class="math" data-display="false">1/\sqrt2</span>, with a tie there. For <span class="math" data-display="false">f\le2/3</span>, the first-round
+probe value is no greater than its value at <span class="math" data-display="false">2/3</span>, which is below the
+blind value.</p>
+<p>Persistence changes the posterior before any costly probe. The same
+Bellman proof applies because live work receipts distinguish the preceding
+flag. At <span class="math" data-display="false">f=0.9,\rho=0.5</span> the symmetric example still gains 2.8125
+percentage points in two rounds. The heatmap is a numerical illustration
+of the exact finite-state recurrence. The IID threshold above is proved
+analytically.</p>
+<h3 id="5-exact-long-horizon-rate-separation">5. Exact long-horizon rate separation</h3>
+<p>Keep the symmetric IID instance with perfect sensing, <span class="math" data-display="false">C=H=2</span>, and
+start at full charge, but allow any repair success probability
+<span class="math" data-display="false">0&lt;\kappa&lt;1</span>. Let <span class="math" data-display="false">a_N</span> be optimal adaptive survival and <span class="math" data-display="false">s_N</span> the
+largest survival of any length-<span class="math" data-display="false">N</span> precommitted schedule. Then</p>
+<p><span class="math display" data-display="true">
+\lim_{N\to\infty} a_N^{1/N}=\frac{1+\sqrt5}{4},\qquad
+\lim_{N\to\infty} s_N^{1/N}
+ =\frac12\max\!\left(\sqrt2,\frac{1+\sqrt{1+4\kappa}}2\right).
+</span></p>
+<p>These are survival factors per round on an exponential scale. Adaptive
+sensing wins strictly for every <span class="math" data-display="false">0&lt;\kappa&lt;1</span>.
+Alternating fixed probe and blind rounds attains the fixed rate below
+<span class="math" data-display="false">\kappa=2-\sqrt2</span>. Always acting blind attains it above that threshold.
+Both attain it at equality. The survival ratio grows exponentially while
+both absolute survival probabilities tend to zero.</p>
+<p><img alt="The adaptive per-round root rate is constant across repair probabilities. The optimal fixed root rate is constant until repair success reaches 2 minus square root of 2, then rises toward the adaptive rate." src="../results/figures/closed-loop-repair-rate.png" /></p>
+<p><strong>Adaptive upper bound and construction.</strong> Let <span class="math" data-display="false">v=(x,y,z)</span> list
+continuation values at reserves 0, 1, 2. When <span class="math" data-display="false">0\le x\le y\le z</span>, the
+blind and scheduled sensing maps are</p>
+<p><span class="math display" data-display="true">
+ B(v)=(x/2,\max(y/2+\kappa x/2,z/2),z/2+\kappa y/2),\quad
+ P(v)=(x/2,x/2,(y+z)/2).
+</span></p>
+<p>Each preserves the ordered nonnegative cone. With
+<span class="math" data-display="false">r=(1+\sqrt5)/4</span>, take <span class="math" data-display="false">u_0=\min(1,(2r-1)/\kappa)&gt;0</span> and
+<span class="math" data-display="false">w=(u_0,1,2r)</span>. Then <span class="math" data-display="false">\max(B(w),P(w))\le r w</span> componentwise because
+<span class="math" data-display="false">\kappa u_0\le2r-1</span> and <span class="math" data-display="false">2r^2=r+1/2</span>. The inequality
+<span class="math" data-display="false">\mathbf1\le w/u_0</span>, order preservation, and homogeneity give
+<span class="math" data-display="false">a_N\le(2r/u_0)r^N</span>.
+For the lower bound use a stationary policy. With two units, probe and
+match the environment. With one unit, engage blind to try to replenish.
+On reserve states 1 and 2 its live matrix is
+<span class="math" data-display="false">\bigl(\begin{smallmatrix}0&amp;1/2\\1/2&amp;1/2\end{smallmatrix}\bigr)</span>
+with eigenvalue <span class="math" data-display="false">r</span> and positive right eigenvector <span class="math" data-display="false">(1,2r)</span>.
+Since <span class="math" data-display="false">(1,2r)/(2r)\le\mathbf1</span>, starting at two units attains at least
+<span class="math" data-display="false">r^N</span>.
+The attaining stationary policy uses no repair on surviving paths. It
+spends the probe when two units can cover it and the possible action.
+At one unit it takes the risk of blind engagement to get back to two.
+That is why the adaptive exponential factor is independent of <span class="math" data-display="false">\kappa</span>,
+even though repair can improve finite-horizon survival.</p>
+<p><strong>Fixed upper bound and construction.</strong> Work with doubled maps <span class="math" data-display="false">2B,2P</span>,
+so <span class="math" data-display="false">x=1</span> throughout a backwards evaluation from <span class="math" data-display="false">(1,1,1)</span>.
+For <span class="math" data-display="false">u=(y,z)^T</span>, the blind map is between <span class="math" data-display="false">Lu</span> and
+<span class="math" data-display="false">Lu+(\kappa,0)^T</span>, and the probe map equals <span class="math" data-display="false">Ju+(1,0)^T</span>, with</p>
+<p><span class="math display" data-display="true">
+ L=\begin{pmatrix}0&amp;1\\\kappa&amp;1\end{pmatrix},\qquad
+ J=\begin{pmatrix}0&amp;0\\1&amp;1\end{pmatrix}.
+</span></p>
+<p>Write <span class="math" data-display="false">e=(0,1)^T</span> and <span class="math" data-display="false">g_k=(1,1)L^k e</span>. Then <span class="math" data-display="false">JL^kJ=g_kJ</span>,
+<span class="math" data-display="false">g_0=1</span>, <span class="math" data-display="false">g_1=2</span>, and <span class="math" data-display="false">g_{k+2}=g_{k+1}+\kappa g_k</span>
+since <span class="math" data-display="false">L^2=L+\kappa I</span>.
+Put <span class="math" data-display="false">\ell=(1+\sqrt{1+4\kappa})/2</span> and <span class="math" data-display="false">m_*=\max(\sqrt2,\ell)</span>.
+Induction gives <span class="math" data-display="false">g_k\le m_*^{k+1}</span> because <span class="math" data-display="false">m_*^2\ge m_*+\kappa</span>.
+Any word in <span class="math" data-display="false">L,J</span> can be split at occurrences
+of <span class="math" data-display="false">J</span>. The interior <span class="math" data-display="false">L</span>-runs contract to factors <span class="math" data-display="false">g_k</span>, and the
+initial and final <span class="math" data-display="false">L</span>-runs have norm bounded by a constant times <span class="math" data-display="false">m_*^k</span>
+because <span class="math" data-display="false">L</span> has two distinct eigenvalues of absolute value at most
+<span class="math" data-display="false">m_*</span>. Hence every word of length <span class="math" data-display="false">n</span> has norm at most <span class="math" data-display="false">K m_*^n</span>
+for one finite constant <span class="math" data-display="false">K</span>, independent of the word.
+Summing the bounded additive inputs along any word retains a constant
+times <span class="math" data-display="false">m_*^N</span> upper bound. Dividing by <span class="math" data-display="false">2^N</span> gives the fixed rate
+upper bound. Conversely, the doubled maps dominate their homogeneous
+parts. Since <span class="math" data-display="false">JL e=2e</span>, an alternating schedule achieves at least
+<span class="math" data-display="false">2^{\lfloor N/2\rfloor}/2^N</span>. The all-blind schedule dominates
+<span class="math" data-display="false">(L/2)^N(1,1)^T</span>, which gives rate at least <span class="math" data-display="false">\ell/2</span> by the positive
+eigenvector of <span class="math" data-display="false">L</span>. The matching constructions and the word bound
+establish the fixed rate, including for nonperiodic and horizon-dependent
+schedules.</p>
+<p><strong>Robust rate gap.</strong> Return to repair success <span class="math" data-display="false">\kappa=1/2</span>. At stationary
+probability <span class="math" data-display="false">1/2</span> and persistence <span class="math" data-display="false">\rho&lt;1</span>, the probability of any full
+flag path relative to the IID path
+is between <span class="math" data-display="false">(1-\rho)^{N-1}</span> and <span class="math" data-display="false">(1+\rho)^{N-1}</span>.
+For the adaptive construction, restrict to the event that all <span class="math" data-display="false">N</span> noise
+bits are correct, with probability <span class="math" data-display="false">f^N</span>. For the fixed upper bound,
+give the fixed controller perfect accuracy, which can only help.
+This proves the inequalities</p>
+<p><span class="math display" data-display="true">
+\liminf a_N(f,\rho)^{1/N}\ \ge f(1-\rho)r,\qquad
+\limsup s_N(f,\rho)^{1/N}\ \le(1+\rho)/\sqrt2 .
+</span></p>
+<p>In particular <span class="math" data-display="false">f=0.97,\rho=0.03</span> preserves strict exponential separation.
+These inequalities certify an open region and allow the full feedback
+policy to exploit reserve and prior conditions.</p>
+<h4 id="removing-harvest-removes-the-exponential-advantage">Removing harvest removes the exponential advantage</h4>
+<p>Set <span class="math" data-display="false">H=0</span>, keeping the paid operations, sensing accuracy, and repair.
+On each live path at most <span class="math" data-display="false">C</span> checkpoints can spend a net battery unit.
+Every other checkpoint must be an idle match in environment <span class="math" data-display="false">0</span>.
+For any set of <span class="math" data-display="false">j</span> exceptional rounds, at least <span class="math" data-display="false">N-1-2j</span> adjacent
+pairs have both indices outside the set. In a Markov flag path all such
+pairs must be <span class="math" data-display="false">0\to0</span>, each with probability <span class="math" data-display="false">p_{00}=1-q(1-\rho)</span>
+conditional on the forced preceding zero. Other constraints only remove
+probability. A union bound over exceptional sets gives</p>
+<p><span class="math display" data-display="true">
+S_N\le\sum_{j=0}^{\min(C,N)}{N\choose j}
+p_{00}^{\max(0,N-1-2j)}.
+</span></p>
+<p>The policy that always skips and idles survives whenever all flags are zero,
+with probability <span class="math" data-display="false">(1-q)p_{00}^{N-1}</span> for a stationary launch and <span class="math" data-display="false">N\ge1</span>.
+Thus for <span class="math" data-display="false">0&lt;q&lt;1</span> and <span class="math" data-display="false">\rho&lt;1</span>, both optimal adaptive and best fixed
+survival have exact per-round root rate <span class="math" data-display="false">p_{00}</span> regardless of the
+initial reserve. The bound allows finite-horizon advantages. The
+exponential separation in the symmetric example depends on replenishment.</p>
+<h4 id="a-limitation-for-every-finite-device-in-this-class">A limitation for every finite device in this class</h4>
+<p>For <span class="math" data-display="false">0&lt;q&lt;1,\rho&lt;1</span>, let <span class="math" data-display="false">p_{\min}&gt;0</span> be the least probability of either
+flag among all launch and preceding-flag priors. Put
+<span class="math" data-display="false">L_0=\lfloor C/c\rfloor+1</span>.
+Under any policy there is probability at least <span class="math" data-display="false">p_{\min}^{L_0}</span> of
+reaching a first mismatch within the next <span class="math" data-display="false">L_0</span> rounds from a healthy state.
+To see it, until a mismatch occurs, at each probed round ask for <span class="math" data-display="false">X=0</span>.
+That branch either mismatches immediately or uses at least <span class="math" data-display="false">c</span> battery
+units with no harvest. At the first blind round ask for the flag opposite
+its chosen action. Each requested outcome has conditional probability at
+least <span class="math" data-display="false">p_{\min}</span> and there can be at most <span class="math" data-display="false">\lfloor C/c\rfloor</span> consecutive
+probed rounds on this branch. At the forced mismatch the survival
+probability is at most <span class="math" data-display="false">\kappa</span>. Consequently every controller satisfies</p>
+<p><span class="math display" data-display="true">
+S_N \le \bigl[1-(1-\kappa)p_{\min}^{L_0}\bigr]^{\lfloor N/L_0\rfloor}.
+</span></p>
+<p>The bound explains why continued harvesting and feedback cannot eliminate
+all risk under this protocol. It is a uniform, generally loose bound.
+The Bellman frontier is the sharp finite-horizon result.</p>
+<h3 id="6-verification-and-research-status">6. Verification and research status</h3>
+<p>Run from the project root.</p>
+<pre><code class="language-powershell">python scripts/run_closed_loop.py
+$env:PYTHONPATH = 'src'
+python -B -m unittest discover -s tests -v
+</code></pre>
+<p>The tests enumerate short decision trees independently of the vectorized
+Bellman solver, evaluate the attaining policy, compare the best fixed
+envelope against every fixed word in those trees, and obtain repair
+probabilities from a two-state matrix exponential. They check the pathwise
+energy ledger, the analytical noise threshold, and the exponential
+construction. The figures and the numerical arrays are generated by the
+same reproduction script. The results record is
+<a href="../results/closed-loop.json">closed-loop.json</a>.</p>
+<p>Finite-horizon survival recursions are instances of established stochastic
+reachability. Prior work on energy-harvesting transmitters already optimizes
+costly sensing with feedback over correlated channels. Prior work on
+energy-harvesting estimation also derives energy-dependent optimal
+scheduling. Energy-harvesting reliability has also been studied as an
+outage problem with exogenous arrivals. Switching-system analysis supplies established tools for
+growth rates of matrix products.
+<a href="https://arxiv.org/abs/1407.5449">Stochastic reachability</a> ·
+<a href="https://arxiv.org/abs/1703.10519">Costly channel sensing</a> ·
+<a href="https://arxiv.org/abs/1908.06070">Energy-harvesting estimation</a> ·
+<a href="https://arxiv.org/abs/1702.01648">Energy-outage analysis</a> ·
+<a href="https://perso.uclouvain.be/vincent.blondel/publications/09BN.pdf">Blondel and Nesterov on nonnegative matrix products</a></p>
+<p>The candidate contributions are the reversible shared-reserve construction,
+the two-round strict separation over an open parameter family, the
+two-thirds threshold, the exact exponential separation from all fixed
+sensing words, and the threshold at which the best fixed regime changes.
+This targeted comparison leaves priority unestablished. The proofs apply to
+an externally timed, checkpointed device with supplied packets and ideal gates. A
+continuous-time controller paid from the same battery, with physically
+priced clock and memory operations and failure between checkpoints, is a
+separate extension.</p>
+<h2 id="autonomous-architecture-and-certificates">Autonomous architecture and certificates</h2>
+<p><em>Model boundary note: the derivation below retains the assumptions of this study. Statements about later extensions are historical and should be read alongside the subsequent studies.</em></p>
+<p><strong>Reserve-dependent sensing improves finite-time survival in this autonomous
+model. Its advantage does not extend to the best asymptotic decay rate of
+the same benchmark.</strong> The model is a continuous-time Markov jump process
+with fixed reaction barriers. Sensing, control, and repair each consume a
+unit of the same battery when they run forward. Correct control opens an
+external fuel channel. All enabled reactions have finite, positive reverse
+rates.</p>
+<h3 id="1-autonomous-reaction-network">1. Autonomous reaction network</h3>
+<p><img alt="Autonomous sensing, control, and repair exchange energy with one battery. Matching engagement opens the fuel channel. Mismatch can advance damage to the failure state." src="../results/figures/autonomous-reactions.png" /></p>
+<p>A state is <span class="math" data-display="false">s=(b,x,y,a,d)</span>. The battery <span class="math" data-display="false">b</span> runs from 0 to capacity <span class="math" data-display="false">C</span>.
+The environment <span class="math" data-display="false">x</span>, sensor memory <span class="math" data-display="false">y</span>, and actuator <span class="math" data-display="false">a</span> are binary.
+Damage <span class="math" data-display="false">d</span> takes values 0, 1, and 2. Define failure as the <strong>first entry
+into <span class="math" data-display="false">d=2</span></strong>. A device at <span class="math" data-display="false">b=0</span> can still operate if the available
+reactions allow it.</p>
+<p>In units of <span class="math" data-display="false">k_BT</span>, let <span class="math" data-display="false">\epsilon</span> be the energy of a battery unit,
+<span class="math" data-display="false">\delta</span> the energy released by one step of damage, and <span class="math" data-display="false">\mu</span> the
+chemical work available from one unit of fuel. Use <span class="math" data-display="false">0\le\delta&lt;\epsilon&lt;\mu</span>
+and internal energy <span class="math" data-display="false">E(s)=b\epsilon-d\delta</span>. All other states have
+degenerate energies. Each enabled edge has a forward rate <span class="math" data-display="false">k_+</span>.
+The reverse rate is fixed by local detailed balance,</p>
+<p><span class="math display" data-display="true">
+ \log(k_+/k_-)=W-\Delta E,\qquad
+ \Delta E=E(s&#x27;)-E(s),
+</span></p>
+<p>where <span class="math" data-display="false">W</span> is the chemical work supplied to the device on the forward
+jump. The right-hand side is the heat released to the bath in units of
+<span class="math" data-display="false">k_BT</span>. Signs reverse on a backward jump.</p>
+<table>
+<thead>
+<tr>
+<th>Forward channel</th>
+<th>Condition and state change</th>
+<th style="text-align: right;">Bath heat on forward jump</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Environment</td>
+<td><span class="math" data-display="false">x=0\to1</span>, independent of the other bits</td>
+<td style="text-align: right;"><span class="math" data-display="false">0</span></td>
+</tr>
+<tr>
+<td>Sense</td>
+<td><span class="math" data-display="false">b\ge1,\ y\ne x</span>. Set <span class="math" data-display="false">y=x</span> and spend one unit</td>
+<td style="text-align: right;"><span class="math" data-display="false">\epsilon</span></td>
+</tr>
+<tr>
+<td>Control</td>
+<td><span class="math" data-display="false">b\ge1</span>. Move <span class="math" data-display="false">a</span> toward the circuit's selected target and spend one unit</td>
+<td style="text-align: right;"><span class="math" data-display="false">\epsilon</span></td>
+</tr>
+<tr>
+<td>Harvest</td>
+<td><span class="math" data-display="false">x=a=1,\ b&lt;C</span>. A fuel conversion increases <span class="math" data-display="false">b</span> by one</td>
+<td style="text-align: right;"><span class="math" data-display="false">\mu-\epsilon</span></td>
+</tr>
+<tr>
+<td>Wear or terminal damage</td>
+<td><span class="math" data-display="false">x\ne a</span>. Increase <span class="math" data-display="false">d</span> by one</td>
+<td style="text-align: right;"><span class="math" data-display="false">\delta</span></td>
+</tr>
+<tr>
+<td>Repair</td>
+<td><span class="math" data-display="false">d=1,\ b\ge1</span>. Return to <span class="math" data-display="false">d=0</span> and spend one unit</td>
+<td style="text-align: right;"><span class="math" data-display="false">\epsilon-\delta</span></td>
+</tr>
+</tbody>
+</table>
+<p>The state can change by any enabled reaction at any time. There is no phase
+variable, externally prescribed pulse, or checkpoint in the physical
+dynamics. <span class="math" data-display="false">x</span> is a thermal switch with equal flip rates. The only supplied
+work during operation is the explicitly priced harvest reaction, powered by
+a fuel reservoir at fixed chemical potential. Its reverse returns chemical
+work and removes a battery unit. The static gates represent a choice of
+barriers at fabrication. They multiply both directions of a channel at
+once. For example, the reverse of a paid correction restores a battery unit
+and turns a correct sensor into an incorrect one. A reverse repair can
+create damage while replenishing the reserve. Reactions remain microscopically
+reversible even at <span class="math" data-display="false">d=2</span>, but trajectories are stopped there for the
+first-passage question.</p>
+<p>This is an autonomous <strong>open</strong> system. The fuel reservoir is maintained
+outside the device, and the initial battery and actuator position are
+prepared. Fabrication and maintaining the ambient fuel concentration are
+outside the initial operating-reserve bound.</p>
+<h4 id="which-circuits-can-compete">Which circuits can compete?</h4>
+<p>The binary circuit class chooses for each funded level <span class="math" data-display="false">b=1,\ldots,C</span>
+whether to enable sensing at its full reference rate. The actuator circuit
+chooses one of three settings at each funded pair <span class="math" data-display="false">(b,y)</span>: disable
+forward movement, target 0, or target 1. It never receives <span class="math" data-display="false">x</span> directly.
+Each setting indexes the <strong>higher battery endpoint</strong> of the reversible edge,
+so the corresponding return path is always retained. A circuit's rates
+depend on its actual current state, with no access to elapsed time.</p>
+<p>The fixed-sensing comparator has the same actuator truth tables. Its
+sensing activity is identical at every funded level. We compare with both
+binary choices and every constant intensity <span class="math" data-display="false">\alpha\in[0,1]</span>, where
+<span class="math" data-display="false">\alpha</span> multiplies both sensing rates. The latter is a larger comparator
+class than the binary family. The sharp adaptive optimum below is for
+binary sensing gates and the stated actuator tables.</p>
+<h3 id="2-sharp-survival-bound">2. Sharp survival bound</h3>
+<p>For each circuit <span class="math" data-display="false">c</span>, retain states with <span class="math" data-display="false">d&lt;2</span>. The row subgenerator
+<span class="math" data-display="false">Q_c</span> has all live transition rates, and its diagonal retains the outgoing
+rate into <span class="math" data-display="false">d=2</span>. Let <span class="math" data-display="false">\pi_b</span> initialize the battery at <span class="math" data-display="false">b</span>, draw <span class="math" data-display="false">x</span>
+uniformly, and set <span class="math" data-display="false">y=a=d=0</span>. Then</p>
+<p><span class="math display" data-display="true">
+ S_c(T,b)=\pi_b e^{TQ_c}\mathbf1,\qquad
+ S^*(T,b)=\max_{c\in\mathcal C}S_c(T,b).
+</span></p>
+<p>The first identity follows from the killed forward equation. The finite
+class <span class="math" data-display="false">\mathcal C</span> has <span class="math" data-display="false">2^C3^{2C}</span> circuits. Enumerating that class gives
+an exact bound and its matching construction: install a circuit that
+attains the maximum. The construction fixes all its rate barriers before
+launch. Evaluating a different horizon can select a different circuit.
+There is no switching between circuits during operation. Random selection
+of a circuit before launch cannot beat the largest value.</p>
+<p>A separate maximization over the outgoing rates from each live state would
+allow the reverse of an edge to be set independently of its forward rate.
+That relaxation could violate local detailed balance. The exact enumeration
+keeps every forward–reverse pair linked.</p>
+<h4 id="certification-with-integer-arithmetic">Certification with integer arithmetic</h4>
+<p>The benchmark uses rational rates. Choose a common uniformization rate
+<span class="math" data-display="false">\Lambda</span> at least as large as the largest exit rate, and put
+<span class="math" data-display="false">P_c=I+Q_c/\Lambda</span>. Each <span class="math" data-display="false">P_c</span> is nonnegative and substochastic. Expanding
+the matrix exponential gives</p>
+<p><span class="math display" data-display="true">
+ S_c(T,b)=e^{-z}\sum_{k=0}^\infty\frac{z^k}{k!}\,\pi_bP_c^k\mathbf1,
+ \qquad z=\Lambda T .
+</span></p>
+<p>The Poisson series is a mathematical way to evaluate a continuous-time
+chain. <span class="math" data-display="false">\Lambda</span> is not a physical device clock.</p>
+<p>For rational <span class="math" data-display="false">T</span>, write <span class="math" data-display="false">w_k=z^k/k!</span> and <span class="math" data-display="false">Z_L=\sum_{k=0}^Lw_k</span>.
+If <span class="math" data-display="false">L+2&gt;z</span>, the omitted unnormalized tail is at most
+<span class="math" data-display="false">R_L=w_{L+1}/(1-z/(L+2))</span>, by a geometric comparison. Hence each retained
+normalized weight lies between <span class="math" data-display="false">w_k/(Z_L+R_L)</span> and <span class="math" data-display="false">w_k/Z_L</span>, and
+the normalized tail is at most <span class="math" data-display="false">R_L/Z_L</span>. The code rounds those rational
+bounds outward to an integer grid. It also propagates lower and upper
+vectors for <span class="math" data-display="false">P_c^k\mathbf1</span> with floor and ceiling division. Nonnegative
+matrix entries preserve componentwise bounds at every power. Every
+uncomputed survival factor is at most one. Summing the rounded products
+and adding the tail to the upper bound certifies the survival
+probabilities. The benchmark compares integer numerators on a common
+denominator. It isolates the winning circuit even after every competitor
+receives its upper bound.</p>
+<h3 id="3-finite-time-adaptive-advantage-survives">3. Finite-time adaptive advantage survives</h3>
+<p><img alt="Survival curves for the best binary reserve-dependent circuits, uniform gates, and the sensor-disconnected comparison. The bars report the best time-four survival for each sensing mask." src="../results/figures/autonomous-survival.png" /></p>
+<p>Use capacity two, <span class="math" data-display="false">(e^\epsilon,e^\delta,e^\mu)=(8,2,128)</span>, and forward
+rates</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Environment</th>
+<th style="text-align: right;">Sense</th>
+<th style="text-align: right;">Control</th>
+<th style="text-align: right;">Harvest</th>
+<th style="text-align: right;">Wear</th>
+<th style="text-align: right;">Terminal damage</th>
+<th style="text-align: right;">Repair</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><span class="math" data-display="false">1/2</span></td>
+<td style="text-align: right;"><span class="math" data-display="false">11</span></td>
+<td style="text-align: right;"><span class="math" data-display="false">21/2</span></td>
+<td style="text-align: right;"><span class="math" data-display="false">17/4</span></td>
+<td style="text-align: right;"><span class="math" data-display="false">5/2</span></td>
+<td style="text-align: right;"><span class="math" data-display="false">5/2</span></td>
+<td style="text-align: right;"><span class="math" data-display="false">21/4</span></td>
+</tr>
+</tbody>
+</table>
+<p>The rates are an example selected by exploratory numerical search. The
+certificate applies to these exact rational parameters. Start full and
+observe at <span class="math" data-display="false">T=4</span>. Each row below optimizes all 81 actuator truth tables.</p>
+<table>
+<thead>
+<tr>
+<th>Sense at <span class="math" data-display="false">b=1</span></th>
+<th>Sense at <span class="math" data-display="false">b=2</span></th>
+<th style="text-align: right;">Best survival at <span class="math" data-display="false">T=4</span>, approximately</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Off</td>
+<td>Off</td>
+<td style="text-align: right;">47.2884%</td>
+</tr>
+<tr>
+<td>Off</td>
+<td>On</td>
+<td style="text-align: right;"><strong>53.3766%</strong></td>
+</tr>
+<tr>
+<td>On</td>
+<td>Off</td>
+<td style="text-align: right;">40.9363%</td>
+</tr>
+<tr>
+<td>On</td>
+<td>On</td>
+<td style="text-align: right;">49.1504%</td>
+</tr>
+</tbody>
+</table>
+<p>The unique best binary circuit senses at full charge only. At one unit the
+actuator targets the sensor reading. At full charge it targets 1 when
+<span class="math" data-display="false">y=1</span>, while disabling forward actuation when <span class="math" data-display="false">y=0</span>. The winner's lower
+bound exceeds the highest upper bound of the other 323 circuits. This is
+an energy-reserve feedback rule implemented by static state-dependent
+reaction pathways. For example, a correct update from <span class="math" data-display="false">b=2</span> can leave
+one unit for the commanded move, after which matching engagement opens
+the fuel channel.</p>
+<p>Optimizing all binary circuits at each starting reserve gives about
+29.7976%, 36.9134%, and 53.3766% survival for zero, one, and two units,
+respectively. Thus <strong>two units, or <span class="math" data-display="false">2k_BT\log 8</span>, are necessary and
+sufficient to reach 52% survival at <span class="math" data-display="false">T=4</span></strong> within this class. The
+certificate compares both smaller reserves directly, without assuming
+that more initial charge always helps a given circuit.</p>
+<h4 id="against-every-constant-sensing-intensity">Against every constant sensing intensity</h4>
+<p>For one actuator table write <span class="math" data-display="false">Q_\alpha=Q_0+\alpha A</span>, where <span class="math" data-display="false">A</span> is the
+sensing generator with activity one. Duhamel's identity, differentiated
+twice, expresses <span class="math" data-display="false">S&#x27;&#x27;(\alpha)</span> as two insertions of <span class="math" data-display="false">A</span> between
+substochastic semigroups, integrated over an ordered time simplex with
+a factor of two. Their induced infinity norms are at most one, so</p>
+<p><span class="math display" data-display="true">
+ |S&#x27;&#x27;(\alpha)|\le T^2\|A\|_\infty^2 .
+</span></p>
+<p>The linear interpolation error on an interval of width <span class="math" data-display="false">h</span> is at most
+<span class="math" data-display="false">T^2\|A\|_\infty^2 h^2/8</span>. Therefore, evaluate all 81 actuator tables on
+the 257 nodes with <span class="math" data-display="false">h=1/256</span>, take the largest certified node upper
+bound, and add the error allowance. The result bounds the whole continuum
+by 50.6275%, below the adaptive winner's certified lower bound. Both classes use
+the same actuator choices and bath accounting. The bounds also certify
+strict separation for <span class="math" data-display="false">T\in[3.99,4.01]</span>. In any circuit,
+<span class="math" data-display="false">-k_{\rm failure}\le\partial_T S\le0</span>, since the probability loss rate
+is the current mass in the failure-enabled live states times their
+terminal jump rate. Thus the certified gap at <span class="math" data-display="false">T=4</span> can shrink by at
+most <span class="math" data-display="false">0.025</span> over this interval.</p>
+<h4 id="does-the-direct-information-channel-matter">Does the direct information channel matter?</h4>
+<p>In a separate comparison, remove the direct coupling <span class="math" data-display="false">x\to y</span>. An enabled
+sensor now flips the memory independent of <span class="math" data-display="false">x</span> at the same forward
+reference rate, spends the same battery unit, and has the same reverse
+heat. It can still use reserve-dependent gates, and the controller can
+still use both reserve and <span class="math" data-display="false">y</span>. Endogenous correlations can remain.
+Reoptimizing all 324 circuits of this comparison leaves the best
+survival below the informative winner. Thus paying for an
+environment-independent memory flip cannot explain the observed advantage.</p>
+<h3 id="4-the-long-run-separation-does-not-transfer-in-this-example">4. The long-run separation does not transfer in this example</h3>
+<p><img alt="The best asymptotic decay exponents under four binary sensing masks. Leaving sensing off has the smallest exponent." src="../results/figures/autonomous-decay.png" /></p>
+<p>For any circuit, restrict <span class="math" data-display="false">Q_c</span> to live states reachable from the launch
+distribution. The live graph is connected on that set because every
+internal edge has its reverse and the two launch states communicate by
+the environment flip. Perron–Frobenius applied after a positive diagonal
+shift of this irreducible Metzler matrix gives the real spectral
+abscissa <span class="math" data-display="false">\lambda_c</span>, and
+<span class="math" data-display="false">\lim_{T\to\infty}\log S_c(T,b)/T=\lambda_c</span>.</p>
+<p>The numerical eigensolver only proposes a positive integer vector <span class="math" data-display="false">v</span>.
+The certificate checks the following componentwise ratios in exact
+rational arithmetic,</p>
+<p><span class="math display" data-display="true">
+ \min_i (Q_cv)_i/v_i\ \le\ \lambda_c\ \le\
+ \max_i (Q_cv)_i/v_i .
+</span></p>
+<p>Indeed, if <span class="math" data-display="false">l v\le Q_cv\le u v</span>, positivity of the killed semigroup
+sandwiches <span class="math" data-display="false">e^{tQ_c}v</span> between <span class="math" data-display="false">e^{lt}v</span> and <span class="math" data-display="false">e^{ut}v</span>.
+Comparison of <span class="math" data-display="false">\mathbf1</span> with constant multiples of <span class="math" data-display="false">v</span> yields the same
+exponential bounds on survival. The reachability restriction prevents
+unreachable sensor states from supplying an artificial leading eigenvalue.</p>
+<p>Among the 324 binary circuits, the optimized large-time exponent
+<span class="math" data-display="false">-\lambda_c</span> is about <strong>0.24252027</strong> and is attained with sensing off.
+The best exponents with sensing enabled only at full charge, only at one
+unit, or at both funded levels are about 0.26435182, 0.26019620, and
+0.25318551, respectively. The exact intervals for all circuits with
+some sensing lie strictly above the best off exponent. The unrestricted
+binary optimum and the uniform binary optimum thus share the same
+long-run decay rate. The continuum of constant sensing activities was
+bounded for the finite-time comparison. The spectral comparison here is
+for binary circuits.</p>
+<h3 id="5-reproduce-and-read-the-evidence">5. Reproduce and read the evidence</h3>
+<pre><code class="language-powershell">python scripts/run_autonomous.py
+$env:PYTHONPATH = 'src'
+python -B -m unittest discover -s tests -v
+</code></pre>
+<p><a href="../results/autonomous.json">Results and exact enclosure values</a> include the
+winning gates, the best uniform-intensity enclosure, and the reachable
+spectral intervals. Tests check every physical reverse edge and energy
+ratio, compare the certified intervals with an independent matrix
+exponential, and check spectral and interpolation enclosures. Continuous
+autonomous information thermodynamics, uniformization, and spectral
+comparison are established tools. The specific finite-time separation,
+its information-channel comparison, and its loss at large time are
+candidate contributions in this architecture. Literature priority is
+unestablished. <a href="https://arxiv.org/abs/2209.10644">Autonomous energy and information flows</a>
+· <a href="https://web.stanford.edu/~glynn/papers/1988/FG88.html">Rigorous Poisson truncation</a></p>
+<h2 id="appendix-paid-repair-contact-and-its-sharp-energy-bound">Appendix — Paid repair contact and its sharp energy bound</h2>
+<p>Let a repair pair have damaged probability <span class="math" data-display="false">1-p(t)</span>, healthy probability <span class="math" data-display="false">p(t)</span>, energy drop <span class="math" data-display="false">\epsilon k_BT</span>, and sum of directional rates <span class="math" data-display="false">\gamma(t)\in[0,\Gamma]</span>. Fixed local detailed balance implies</p>
+<p><span class="math display" data-display="true">
+k_+(t)=\gamma(t)\sigma(\epsilon),\quad
+k_-(t)=\gamma(t)[1-\sigma(\epsilon)],\quad
+\sigma(x)=\frac1{1+e^{-x}}.
+</span></p>
+<p>With a damaged start, <span class="math" data-display="false">p(0)=0</span> and the master equation is
+<span class="math" data-display="false">p&#x27;=\gamma(t)[\sigma(\epsilon)-p]</span>. Integration gives</p>
+<p><span class="math display" data-display="true">
+p(\tau)=\sigma(\epsilon)\left[1-e^{-\int_0^\tau\gamma(t)\,dt}\right]
+\le(1-e^{-\Gamma\tau})\sigma(\epsilon)=\kappa.
+</span></p>
+<p>Equality holds by taking <span class="math" data-display="false">\gamma\equiv\Gamma</span>. The protocol may choose the barrier schedule before contact but cannot latch the first repair using unpriced within-contact feedback. On a live outcome, the net battery expenditure is exactly one unit, irrespective of back-and-forth jumps. This proves the repair bound used by Theorem A.</p>
+<p>For exogenous stresses, let <span class="math" data-display="false">M</span> count the number of stressed checkpoints in <span class="math" data-display="false">N</span> rounds, continued mathematically even beyond a device failure. With <span class="math" data-display="false">B</span> identical reserve units, sequential conditioning bounds survival on every flag path by <span class="math" data-display="false">\kappa^M\mathbf1_{M\le B}</span>. Maximum-rate contact attains each factor, so</p>
+<p><span class="math display" data-display="true">
+S^*(B)=\sum_{m=0}^{\min(B,N)}\Pr(M=m)\kappa^m.
+</span></p>
+<p>This argument allows arbitrarily correlated stresses. With <span class="math" data-display="false">m\ge1</span> certain stresses and variable positive battery gaps whose sum is at most <span class="math" data-display="false">F</span>, put <span class="math" data-display="false">a=1-e^{-\Gamma\tau}</span>. Since
+<span class="math" data-display="false">(\log\sigma)&#x27;&#x27;=-\sigma(1-\sigma)&lt;0</span>, Jensen's inequality yields</p>
+<p><span class="math display" data-display="true">
+\Pr(\mathrm{survive}\mid M=m)
+\le a^m\prod_{i=1}^m\sigma(\epsilon_i)
+\le [a\sigma(F/m)]^m.
+</span></p>
+<p>For <span class="math" data-display="false">F&gt;0</span>, exactly <span class="math" data-display="false">m</span> equal gaps and maximum-rate contact attain equality. This is a conditional allocation theorem for a known stress count. It does not optimize an unknown count with arbitrary gaps. The clock, load gate, and initial preparations remain supplied resources outside this reserve bound.</p>
+<h2 id="evidence-and-reproduction-receipts">Evidence and reproduction receipts</h2>
+<p>The dossier build reran the existing test suite. The machine-readable receipt records the full output, UTC execution time, and SHA-256 hashes of source, tests, and mathematical notes. Passing tests supports implementation agreement within the tested cases. The proofs and certificates carry the mathematical claims. <a href="../results/dossier-verification.json">Fresh verification receipt</a></p>
+<table>
+<thead>
+<tr>
+<th>Study</th>
+<th>Executable source</th>
+<th>Reproduction</th>
+<th>Numerical evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td><a href="../src/purposeful/model.py">model.py</a></td>
+<td><a href="../scripts/run_study.py">run_study.py</a></td>
+<td><a href="../results/summary.json">summary</a>, <a href="../results/transfer.csv">all 144 cases</a></td>
+</tr>
+<tr>
+<td>02</td>
+<td><a href="../src/purposeful/reserve.py">reserve.py</a></td>
+<td><a href="../scripts/run_reserve_study.py">run_reserve_study.py</a></td>
+<td><a href="../tests/test_reserve.py">independent full-state test</a></td>
+</tr>
+<tr>
+<td>03</td>
+<td><a href="../src/purposeful/closed_loop.py">closed_loop.py</a></td>
+<td><a href="../scripts/run_closed_loop.py">run_closed_loop.py</a></td>
+<td><a href="../results/closed-loop.json">arrays and example</a></td>
+</tr>
+<tr>
+<td>04</td>
+<td><a href="../src/purposeful/autonomous.py">autonomous.py</a></td>
+<td><a href="../scripts/run_autonomous.py">run_autonomous.py</a></td>
+<td><a href="../results/autonomous.json">integer and rational enclosures</a></td>
+</tr>
+</tbody>
+</table>
+<p>The earlier run-manifest contains historical hashes and package versions for Study 01. Two hashes were already stale on first inspection. The present receipt identifies the exact sources used for this dossier's fresh test run. The 30 tests are a local reproducibility check. Independent scientific review remains pending.</p>
+<h2 id="literature-comparison-and-novelty-assessment">Literature comparison and novelty assessment</h2>
+<p>The targeted search on 17 November 2026 used combinations of “survival”, “adaptive sensing”, “finite reserve”, “paid repair”, “golden ratio”, “spectral radius”, and autonomous information thermodynamics. Exact-expression searches for the two-thirds sensing threshold and the characteristic rate constants returned substantial unrelated material. A missing search hit supplies limited evidence. The search is not a proof that the formulas have never appeared in another notation or field.</p>
+<table>
+<thead>
+<tr>
+<th>Prior source</th>
+<th>Established overlap</th>
+<th>Specific distinction requiring further priority review</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hartich, Barato and Seifert (2014), <a href="https://arxiv.org/abs/1402.0419">bipartite stochastic thermodynamics</a></td>
+<td>Four-state examples, information flow, and thermodynamic inequalities</td>
+<td>Our equal-accuracy task-ranking combination and restricted kinetic frontier</td>
+</tr>
+<tr>
+<td>Kolchinsky and Wolpert (2018), <a href="https://arxiv.org/abs/1806.08053">semantic information and agency</a></td>
+<td>Causal relation between information and viability</td>
+<td>The reserve-constrained constructive bounds and specific feedback comparisons</td>
+</tr>
+<tr>
+<td>Abad, Ercetin and Gündüz (2017), <a href="https://arxiv.org/html/1703.10519v2">costly channel sensing</a></td>
+<td>Sensing spends energy, battery-dependent policies exploit correlated conditions</td>
+<td>Our survival objective, paid repair, exact two-round separation, and explicit exponents</td>
+</tr>
+<tr>
+<td>Vasconcelos et al. (2019), <a href="https://arxiv.org/abs/1908.06070">energy-harvesting estimation</a></td>
+<td>Globally optimal scheduling with finite batteries</td>
+<td>The present damage process and survival criterion</td>
+</tr>
+<tr>
+<td>Guruacharya and Hossain (2018 version), <a href="https://arxiv.org/abs/1702.01648">self-sustainability and outage</a></td>
+<td>Eventual outage, stochastic energy input, asymptotic bounds</td>
+<td>Finite capacity with actions gating fuel and explicit repair</td>
+</tr>
+<tr>
+<td>Tkachev et al. (2014), <a href="https://arxiv.org/html/1407.5449v1">controlled Markov reachability</a></td>
+<td>Optimal event probabilities and dynamic programming</td>
+<td>Our explicit closed-form example and model-specific constructions</td>
+</tr>
+<tr>
+<td>Blondel and Nesterov (2009), <a href="https://perso.uclouvain.be/vincent.blondel/publications/09BN.pdf">nonnegative matrix products</a></td>
+<td>Spectral growth bounds and special matrix families</td>
+<td>The two matrices induced by this sensing task and its regime-switch formula</td>
+</tr>
+<tr>
+<td>Ehrich and Sivak (2023), <a href="https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2023.1108357/full">autonomous energy and information flows</a></td>
+<td>Autonomous information thermodynamics and molecular-machine interpretation</td>
+<td>Our shared-reserve first-passage comparison and its digital-circuit certificate</td>
+</tr>
+<tr>
+<td>Fox and Glynn (1988), <a href="https://web.stanford.edu/~glynn/papers/1988/FG88.html">Poisson probability computation</a></td>
+<td>Rigorous Poisson truncation and CTMC evaluation</td>
+<td>Our small integer-grid implementation is a verification tool within established methodology</td>
+</tr>
+<tr>
+<td>Chen, Chen and Ma (2026), <a href="https://arxiv.org/abs/2604.15953">finite-time autonomous information machine</a></td>
+<td>Finite-time autonomous information/energy tradeoffs</td>
+<td>The abstract studies erasure and refrigeration; our survival circuit differs. Full theorem comparison remains pending</td>
+</tr>
+<tr>
+<td>Liu and Darabi (2005), <a href="https://skoge.folk.ntnu.no/prost/proceedings/ifac2005/Fullpapers/03504.pdf">control with a dynamic sensing set</a></td>
+<td>Controller survival, changing observability, and sensor repair</td>
+<td>Their finite-automaton formulation does not give this shared-reserve thermodynamic comparison</td>
+</tr>
+<tr>
+<td>Hasidi and Kalech (2021), <a href="https://www.mdpi.com/2076-3417/11/3/995">anticipatory troubleshooting</a></td>
+<td>Survival-aware diagnosis and maintenance decisions</td>
+<td>Their reported experiments omit sensing costs; the objectives and physical constraints differ</td>
+</tr>
+</tbody>
+</table>
+<p>The Hartich, Kolchinsky, Vasconcelos, Guruacharya, and Chen entries were checked at abstract or overview level in this pass. The costly-sensing and reachability full HTML pages and the matrix-product paper were opened for their formulations. The Liu–Darabi introduction and the Hasidi–Kalech experimental discussion were also inspected. This is a targeted comparison, not an exhaustive full-text survey. The initial package contains a separate five-paper thermodynamic audit. <a href="../research/literature.md">Earlier literature audit</a> · <a href="../research/priority-search-2026-11-17.md">Dated search receipt and access depths</a></p>
+<p><strong>Assessment.</strong> Generic information-to-viability connections, autonomous information engines, battery-dependent sensing, Bellman optimization, and uniformization are established. No exact prior match was identified for the present complete combination of assumptions and formulas. The most focused novelty candidates are the checkpoint rate formula and switch at 2−√2, the model-specific noise threshold, and the certified continuous-time separation with its asymptotic reversal. Their priority remains unestablished.</p>
+<h2 id="publication-readiness-and-limitations">Publication readiness and limitations</h2>
+<p>The accompanying manuscript is a candidate research draft with full mathematical definitions, proofs, references, and computational supplements. It carries no claim of established priority, peer review, or arXiv acceptance. Its author line identifies an AI-assisted workspace draft so that a human author can take responsibility before submission.</p>
+<p>The sharp checkpoint bounds are within stated policy classes. The continuous-time sharp optimum is over binary circuit gates with restricted control tables; its uniform-intensity comparator permits a continuum only in the sensing multiplier. Arbitrary analogue reserve-dependent sensing, arbitrary reaction architectures, and every possible controller are outside that optimization. The finite-time autonomous benchmark was selected through exploratory search. The certificate verifies the exact chosen rates; it supplies no frequency estimate for how often such advantages occur in physical devices.</p>
+<p>The direct-sensor-disconnection comparison changes its channel structure and may retain indirect information through the reserve. It demonstrates the performance difference for that intervention. It does not isolate a universal number of useful bits or a general thermodynamic price of meaning. Operating energy omits apparatus preparation and fabrication. The checkpoint model relies on supplied clocks and registers, while the autonomous model relies on a maintained fuel reservoir and designed barriers.</p>
+<p>Before submission, a human reviewer should check the optimal-policy inequalities, the matrix-product proof for all fixed words, and the implementation of interval rounding. Priority review should extend to partially observed control, intermittent toxic exposure, occupation-time reliability, joint spectral radii, and autonomous molecular networks. An explicit mass-action realization would strengthen the chemical interpretation. A self-assembly model would address a new question about where the architecture comes from.</p>
+<h2 id="references">References</h2>
+<ol>
+<li>U. Seifert. <em>Stochastic thermodynamics, fluctuation theorems and molecular machines</em>. Reports on Progress in Physics 75, 126001 (2012). <a href="https://arxiv.org/abs/1205.4176">arXiv:1205.4176</a>.</li>
+<li>D. Hartich, A. C. Barato, U. Seifert. <em>Stochastic thermodynamics of bipartite systems: transfer entropy inequalities and a Maxwell's demon interpretation</em>. Journal of Statistical Mechanics, P02016 (2014). <a href="https://arxiv.org/abs/1402.0419">arXiv:1402.0419</a>.</li>
+<li>J. M. Horowitz, M. Esposito. <em>Thermodynamics with continuous information flow</em>. Physical Review X 4, 031015 (2014). <a href="https://arxiv.org/abs/1402.3276">arXiv:1402.3276</a>.</li>
+<li>S. Still, D. A. Sivak, A. J. Bell, G. E. Crooks. <em>Thermodynamics of prediction</em>. Physical Review Letters 109, 120604 (2012). <a href="https://arxiv.org/abs/1203.3271">arXiv:1203.3271</a>.</li>
+<li>A. Kolchinsky, D. H. Wolpert. <em>Semantic information, autonomous agency, and nonequilibrium statistical physics</em>. Interface Focus 8, 20180041 (2018). <a href="https://arxiv.org/abs/1806.08053">arXiv:1806.08053</a>.</li>
+<li>M. Salehi Heydar Abad, O. Ercetin, D. Gündüz. <em>Channel Sensing and Communication over a Time-Correlated Channel with an Energy Harvesting Transmitter</em> (2017). <a href="https://arxiv.org/abs/1703.10519">arXiv:1703.10519</a>.</li>
+<li>M. M. Vasconcelos, M. Gagrani, A. Nayyar, U. Mitra. <em>Optimal scheduling strategy for networked estimation with energy harvesting</em> (2019). <a href="https://arxiv.org/abs/1908.06070">arXiv:1908.06070</a>.</li>
+<li>S. Guruacharya, E. Hossain. <em>Self-Sustainability of Energy Harvesting Systems: Concept, Analysis, and Design</em> (2017, revised 2018). <a href="https://arxiv.org/abs/1702.01648">arXiv:1702.01648</a>.</li>
+<li>I. Tkachev, A. Mereacre, J.-P. Katoen, A. Abate. <em>Quantitative model-checking of controlled discrete-time Markov processes</em> (2014). <a href="https://arxiv.org/abs/1407.5449">arXiv:1407.5449</a>.</li>
+<li>V. D. Blondel, Y. Nesterov. <em>Polynomial-time computation of the joint spectral radius for some sets of nonnegative matrices</em>. SIAM Journal on Matrix Analysis and Applications 31, 865–876 (2009). <a href="https://doi.org/10.1137/080723764">doi:10.1137/080723764</a>.</li>
+<li>J. Ehrich, D. A. Sivak. <em>Energy and information flows in autonomous systems</em>. Frontiers in Physics 11, 1108357 (2023). <a href="https://doi.org/10.3389/fphy.2023.1108357">doi:10.3389/fphy.2023.1108357</a>.</li>
+<li>B. L. Fox, P. W. Glynn. <em>Computing Poisson Probabilities</em>. Communications of the ACM 31, 440–445 (1988). <a href="https://web.stanford.edu/~glynn/papers/1988/FG88.html">Author page</a>.</li>
+<li>W. Chen, M. Chen, Y.-H. Ma. <em>Finite-Time Thermodynamics of an Autonomous Information Machine</em> (2026). <a href="https://arxiv.org/abs/2604.15953">arXiv:2604.15953</a>.</li>
+<li>J. Liu, H. Darabi. <em>Reconfiguration of Discrete Event System Controllers with Dynamic Sensing Set</em>. IFAC World Congress (2005). <a href="https://skoge.folk.ntnu.no/prost/proceedings/ifac2005/Fullpapers/03504.pdf">Proceedings PDF</a>.</li>
+<li>N. Hasidi, M. Kalech. <em>Anticipatory Troubleshooting</em>. Applied Sciences 11(3), 995 (2021). <a href="https://doi.org/10.3390/app11030995">doi:10.3390/app11030995</a>.</li>
+</ol></main><footer>Equations and figures are local. Sources link to the research package and primary literature.</footer><script src="assets/katex/katex.min.js"></script><script>document.querySelectorAll('.math').forEach(el=>{try{katex.render(el.textContent,el,{displayMode:el.dataset.display==='true',throwOnError:true,strict:'ignore'})}catch(e){el.dataset.error=e.message;console.error(e.message)}});document.getElementById('print').onclick=()=>window.print();</script></body></html>

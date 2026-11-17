@@ -1,0 +1,36 @@
+{
+  "recorded_after_execution_utc": "2026-11-17T14:40:37.849574+00:00",
+  "runs": [
+    {
+      "command": "python -B scripts/run_autonomous.py",
+      "exit_code": 0,
+      "observed_results": {
+        "winner": "Circuit(sensing=(0, 1), targets=(0, 1, -1, 1))",
+        "survival_interval": [
+          0.53376615,
+          0.53376658
+        ],
+        "uniform_sensing_upper": 0.50627499,
+        "sensor_disconnected_upper": 0.47288435,
+        "best_spectral_interval": [
+          -0.24252027127042403,
+          -0.2425202711663448
+        ]
+      },
+      "scope": "Full benchmark rerun, including 324 binary circuits, 257 uniform-activity nodes per control table, and reachable spectral enclosures."
+    },
+    {
+      "command": "python -B scripts/build_reserve_figure.py",
+      "exit_code": 0,
+      "scope": "Recomputed Study 02 values via run_reserve_study.py and generated the explanatory figure."
+    }
+  ],
+  "sha256": {
+    "scripts/run_autonomous.py": "5aaac1b3eca950a794cb7c15eaf44828ee8b004cb198fbc31dcf72aa175c9285",
+    "src/purposeful/autonomous.py": "485ec7e1da9183989c099a91dcbc4542dbcb8d46beb5190f7ce3faed62388bab",
+    "results/autonomous.json": "f4c7f49bb582f33f2e1d07c553672f4ecea68de60756f2c08968b7c83741bdd9",
+    "scripts/build_reserve_figure.py": "679178e6c7e9b11b7e8a2c7521ab7256d92d09fd2690b913794a11c4e68eda4e",
+    "results/reserve.json": "928498dec68076a23d150eac91714aa210f12841ab2188e4da71403a851601c3"
+  },
+  "note": "Execution start/end timestamps were not captured; the timestamp above is when this receipt was recorded. Unit-test output is in dossier-verification.json."
+}

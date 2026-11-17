@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+research/sources/*.pdf
+research/sources/*.txt

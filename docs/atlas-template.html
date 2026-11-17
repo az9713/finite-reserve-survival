@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sensing, energy, and survival — research atlas</title>
+<style>
+:root{color-scheme:light;--ink:#17262c;--muted:#52626a;--line:#d7e0df;--accent:#087e82}
+*{box-sizing:border-box}body{margin:0;background:#f6f7f3;color:var(--ink);font:16px/1.55 system-ui,sans-serif}
+main{max-width:1240px;margin:auto;padding:40px 24px}h1{font:600 clamp(30px,4vw,48px)/1.12 Georgia,serif;max-width:850px;margin:14px 0}h2{font-size:20px;margin:0 0 12px}.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:750}.lead{max-width:850px;color:var(--muted)}.grid{display:grid;grid-template-columns:290px 1fr;gap:22px;margin:30px 0}.panel{background:white;border:1px solid var(--line);border-radius:12px;padding:22px}.controls label{display:block;font-weight:650;font-size:14px;margin-top:18px}.controls label:first-child{margin-top:0}select,input{width:100%;margin-top:6px;font:inherit;accent-color:var(--accent)}select{padding:8px;border:1px solid #b8c7ca;border-radius:6px;background:white}button{font:inherit;cursor:pointer;border:1px solid var(--accent);background:#eef8f6;color:#07595b;padding:9px 12px;border-radius:6px;margin-top:14px}button:hover{background:#dff1ed}button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid #8c51bb;outline-offset:3px}canvas{width:100%;height:420px;display:block}.small{font-size:13px;color:var(--muted)}.legend{display:flex;gap:20px;flex-wrap:wrap;font-size:13px}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;background:var(--accent)}.dot.gray{background:#cbd2d2}#inspection{border-top:1px solid var(--line);padding-top:12px;margin-top:12px;font-variant-numeric:tabular-nums}.columns{display:grid;grid-template-columns:1fr 1fr;gap:22px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:9px 7px;border-bottom:1px solid var(--line)}a{color:#075f72}.foot{margin-top:26px;border-top:1px solid var(--line);padding-top:18px}.status{color:#725512;font-weight:650}code{font-size:.9em} @media(max-width:850px){.grid,.columns{grid-template-columns:1fr}main{padding:25px 16px}canvas{height:350px}}
+</style>
+<main>
+<div class="eyebrow">Physical possibilities of purposeful activity · Study 01</div>
+<h1>The same accuracy can conceal opposite survival outcomes.</h1>
+<p class="lead">Explore how a physical sensor’s energy use and response speed connect to task survival. The failure mechanism changes which design performs better—even when the designs have identical average accuracy.</p>
+<p class="small status">Restricted model · analytically derived and numerically checked · scientific novelty unestablished</p>
+<div class="grid">
+ <section class="panel controls" aria-label="Atlas controls">
+  <label for="rate">Environment switching rate</label><select id="rate"><option value="0">0.03</option><option value="1" selected>0.1</option><option value="2">0.3</option></select>
+  <label for="horizon">Task duration</label><select id="horizon"><option value="0">5</option><option value="1" selected>20</option><option value="2">50</option></select>
+  <label for="law">Failure mechanism</label><select id="law"><option value="hazard">Instantaneous hazard</option><option value="damage">Multistage damage + reset</option></select>
+  <label for="accuracy">Required accuracy: <span id="accuracyValue">80%</span></label><input id="accuracy" type="range" min="50" max="95" value="80" step="1">
+  <label for="budget">Mean sensor power budget: <span id="budgetValue">0.20</span></label><input id="budget" type="range" min="0.01" max="1" value="0.20" step="0.01">
+  <p class="small">Power is in k<sub>B</sub>T per time unit. This budget covers stationary sensor work, not actuator, repair, or finite-reserve costs.</p>
+  <button id="best">Inspect best eligible sampled design</button>
+ </section>
+ <section class="panel" aria-label="Sampled resource and survival map">
+  <h2>Energy cost versus survival</h2><p id="count" class="small" aria-live="polite"></p>
+  <canvas id="plot" aria-label="Scatter plot of sensor power versus task survival. Use the inspect button for a textual design summary." role="img"></canvas>
+  <div class="legend"><span><i class="dot"></i>Meets selected accuracy and power limits</span><span><i class="dot gray"></i>Outside selected limits</span></div>
+  <div id="inspection" aria-live="polite">Select a point or inspect the best eligible sampled design.</div>
+ </section>
+</div>
+<div class="columns">
+ <section class="panel"><h2>A constructive reversal</h2><p>Both designs below achieve 80% stationary accuracy in the same environment (r=0.1). Survival is measured over 20 time units.</p>
+ <table><thead><tr><th>Quantity</th><th>Slow</th><th>Fast</th></tr></thead><tbody><tr><td>Sensor capacity K</td><td>0.4</td><td>5.8</td></tr><tr><td>Power</td><td>0.176666</td><td>0.087135</td></tr><tr><td>Instantaneous-hazard survival</td><td>30.26%</td><td>15.35%</td></tr><tr><td>Multistage-damage survival</td><td>38.26%</td><td>86.79%</td></tr></tbody></table>
+ <p class="small">The faster design uses less stationary sensor work. Its survival advantage depends on the task law. Both laws have mean lethal uninterrupted exposure of 2 time units, with different exposure-duration distributions.</p></section>
+ <section class="panel"><h2>What crosses the disciplinary boundary?</h2><p>Energy levels and thermal transition rates determine information quality and the timing of errors. Those error histories, combined with an explicit damage law, determine survival.</p><p>A static information score omits temporal structure. Under instantaneous hazard, slow trajectories leave a fortunate surviving subset. Under multistage damage, frequent recovery can interrupt harmful exposure.</p><p class="small">These are effective failure models, not a complete thermodynamic account of repair or autonomous life. The sensor starts in its unfailed stationary distribution; the damage clock starts fresh.</p></section>
+</div>
+<div class="foot small">Read the <a href="../docs/paper.md">research note</a>, <a href="../docs/model.md">model and proofs</a>, <a href="verification.md">verification record</a>, or <a href="research-note.pdf">PDF</a>. <a href="atlas-data.json">Download the numerical atlas</a>. All data are embedded; this page makes no network requests. Grid results are sampled designs, not global optima.</div>
+</main>
+<script type="application/json" id="data">__ATLAS_DATA__</script>
+<script>
+const data=JSON.parse(document.getElementById('data').textContent);
+const el=id=>document.getElementById(id);let points=[],coords=[],selected=null;
+const eligible=p=>1-p.q>=Number(el('accuracy').value)/100-1e-12&&p.power<=Number(el('budget').value)+1e-12;
+function inspect(p){selected=p;if(!p){el('inspection').textContent='No eligible design in this finite grid. This is not a proof of physical infeasibility.';return;}
+ const t=Number(el('horizon').value),law=el('law').value;
+ el('inspection').textContent=`K=${p.k.toFixed(4)} · energy gap=${p.affinity.toFixed(4)} kBT · accuracy=${(100*(1-p.q)).toFixed(2)}% · power=${p.power.toFixed(5)} · survival=${(100*p[law][t]).toFixed(2)}% · information=${p.information.toFixed(5)} nats. ${eligible(p)?'Meets selected limits.':'Outside selected limits.'}`;
+}
+function draw(){const canvas=el('plot'),rect=canvas.getBoundingClientRect(),dpr=window.devicePixelRatio||1;canvas.width=rect.width*dpr;canvas.height=rect.height*dpr;const c=canvas.getContext('2d');c.scale(dpr,dpr);const w=rect.width,h=rect.height,L=65,R=18,top=18,bottom=55;
+ points=data.slices[Number(el('rate').value)].points;const law=el('law').value,ti=Number(el('horizon').value);
+ const xmax=Math.max(...points.map(p=>p.power))*1.04,xx=x=>L+x/xmax*(w-L-R),yy=y=>h-bottom-y*(h-top-bottom);
+ c.font='12px system-ui';c.fillStyle='#52626a';c.strokeStyle='#e3e8e6';c.lineWidth=1;
+ for(let i=0;i<=5;i++){let y=i/5;c.beginPath();c.moveTo(L,yy(y));c.lineTo(w-R,yy(y));c.stroke();c.fillText((100*y).toFixed(0)+'%',12,yy(y)+4);let x=xmax*i/5;c.fillText(x.toFixed(2),xx(x)-12,h-bottom+22);}
+ c.fillText('Stationary sensor power / (kBT per time)',L+(w-L-R)/2-115,h-9);
+ c.save();c.translate(13,h/2+30);c.rotate(-Math.PI/2);c.fillText('Survival probability',0,0);c.restore();
+ coords=points.map(p=>({p,x:xx(p.power),y:yy(p[law][ti])}));
+ for(const pass of [false,true])for(const v of coords){if(eligible(v.p)!==pass)continue;c.fillStyle=pass?'#087e82':'#d1d7d6';c.globalAlpha=pass?.8:.5;c.beginPath();c.arc(v.x,v.y,pass?3:2.3,0,2*Math.PI);c.fill();}c.globalAlpha=1;
+ if(selected){const v=coords.find(v=>v.p===selected);if(v){c.strokeStyle='#713ea2';c.lineWidth=2;c.beginPath();c.arc(v.x,v.y,7,0,2*Math.PI);c.stroke();}}
+ el('count').textContent=`${points.filter(eligible).length} of ${points.length} sampled designs meet the selected accuracy and mean-power limits. Click a point to inspect it.`;
+ el('accuracyValue').textContent=el('accuracy').value+'%';el('budgetValue').textContent=Number(el('budget').value).toFixed(2);
+}
+for(const id of ['rate','horizon','law','accuracy','budget'])el(id).addEventListener('input',()=>{selected=null;draw();el('inspection').textContent='Select a point or inspect the best eligible sampled design.';});
+el('best').addEventListener('click',()=>{const law=el('law').value,ti=Number(el('horizon').value);inspect(points.filter(eligible).sort((a,b)=>b[law][ti]-a[law][ti])[0]);draw();});
+el('plot').addEventListener('click',event=>{const rect=el('plot').getBoundingClientRect(),x=event.clientX-rect.left,y=event.clientY-rect.top;let near=coords.reduce((a,b)=>Math.hypot(b.x-x,b.y-y)<Math.hypot(a.x-x,a.y-y)?b:a);inspect(near.p);draw();});
+window.addEventListener('resize',draw);draw();
+</script></html>

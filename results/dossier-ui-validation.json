@@ -1,0 +1,88 @@
+{
+  "generated_utc": "2026-11-17T15:34:37.348687+00:00",
+  "broken_local_links": [],
+  "browser_checks": [
+    {
+      "equations": 0,
+      "rendered": 0,
+      "mathErrors": [],
+      "images": 4,
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Development journey \u2014 Tsimerman and physical survival",
+      "file": "DEVELOPMENT-JOURNEY.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 0,
+      "rendered": 0,
+      "mathErrors": [],
+      "images": 4,
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Development journey \u2014 Tsimerman and physical survival",
+      "file": "DEVELOPMENT-JOURNEY.html",
+      "viewport": 390,
+      "console_errors": []
+    },
+    {
+      "equations": 370,
+      "rendered": 370,
+      "mathErrors": [],
+      "images": 9,
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Scientific dossier \u2014 information, energy, and survival",
+      "file": "SCIENTIFIC-DOSSIER.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 370,
+      "rendered": 370,
+      "mathErrors": [],
+      "images": 9,
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Scientific dossier \u2014 information, energy, and survival",
+      "file": "SCIENTIFIC-DOSSIER.html",
+      "viewport": 390,
+      "console_errors": []
+    },
+    {
+      "equations": 372,
+      "rendered": 372,
+      "mathErrors": [],
+      "images": 7,
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "title": "Research manuscript \u2014 reserve-dependent sensing",
+      "file": "RESEARCH-MANUSCRIPT.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 372,
+      "rendered": 372,
+      "mathErrors": [],
+      "images": 7,
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "title": "Research manuscript \u2014 reserve-dependent sensing",
+      "file": "RESEARCH-MANUSCRIPT.html",
+      "viewport": 390,
+      "console_errors": []
+    }
+  ],
+  "pdf_pages": 20,
+  "pdf_blank_text_pages": [],
+  "scientific_receipt_hash_mismatches": [],
+  "external_links": "Not all external links are health-checked; primary sources were inspected during literature work."
+}

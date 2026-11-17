@@ -1,0 +1,51 @@
+{
+  "rounds": 2,
+  "exposure_interval": 1.0,
+  "stationary_stress_probability": 0.2,
+  "token_energy_kBT": 2.1972245773362196,
+  "repair_rate_ceiling": 2.302585092994046,
+  "repair_duration": 1.0,
+  "maximum_success_per_repair": 0.8099999999999999,
+  "initial_tokens": [
+    0,
+    1,
+    2
+  ],
+  "survival_target": 0.88,
+  "designs": {
+    "slow": {
+      "mixing_rate": 0.6000000000000001,
+      "challenge_count_distribution": [
+        0.7278098617750443,
+        0.14438027644991155,
+        0.12780986177504425
+      ],
+      "maximum_survival": [
+        0.7278098617750443,
+        0.8447578856994726,
+        0.9286139360100791
+      ],
+      "minimum_tokens_for_target": 2
+    },
+    "fast": {
+      "mixing_rate": 6.0,
+      "challenge_count_distribution": [
+        0.6403966003482666,
+        0.3192067993034668,
+        0.040396600348266615
+      ],
+      "maximum_survival": [
+        0.6403966003482666,
+        0.8989541077840747,
+        0.9254583172725724
+      ],
+      "minimum_tokens_for_target": 1
+    }
+  },
+  "three_certain_stresses": {
+    "survival_target": 0.4,
+    "repair_rate_ceiling": 2.0,
+    "repair_duration": 1.0,
+    "minimum_initial_reserve_kBT": 5.254204500644713
+  }
+}
