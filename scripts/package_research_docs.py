@@ -3,6 +3,8 @@ from pathlib import Path
 import hashlib
 import json
 import zipfile
+import argparse
+import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -16,7 +18,15 @@ def included(path):
 
 
 def main():
-    paths = sorted(path for path in ROOT.rglob('*') if included(path))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--tracked-only', action='store_true',
+                        help='Package only staged/tracked files, excluding concurrent unpublished work.')
+    args = parser.parse_args()
+    if args.tracked_only:
+        names = subprocess.check_output(['git', 'ls-files', '-z'], cwd=ROOT).decode('utf-8').split('\0')
+        paths = sorted(ROOT / name for name in names if name and included(ROOT / name))
+    else:
+        paths = sorted(path for path in ROOT.rglob('*') if included(path))
     manifest = [{'path': path.relative_to(ROOT).as_posix(), 'bytes': path.stat().st_size,
                  'sha256': hashlib.sha256(path.read_bytes()).hexdigest()} for path in paths]
     manifest_path = ROOT / 'ARTIFACT_MANIFEST.json'

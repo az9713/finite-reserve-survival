@@ -39,6 +39,8 @@ Intermediate binding optima and fuel-driven chemical persistence have earlier th
 
 ## Implemented spatial repair benchmark
 
+[What we learned, what is not novel, and the next research claim](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-LESSONS.html)
+
 [![Spatial repair survival comparison](results/figures/spatial-repair-survival.png)](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-REPAIR.html)
 
 [Read the model, proofs and illustrated results](docs/SPATIAL-REPAIR.html) · [Numerical data](results/spatial-repair.json) · [Independent verification](results/spatial-repair-verification.json) · [Originality audit](research/spatial-repair-originality-audit.md)

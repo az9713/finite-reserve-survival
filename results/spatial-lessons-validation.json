@@ -1,0 +1,29 @@
+{
+  "generated_utc": "2026-11-17T21:19:19.221282+00:00",
+  "status": "PASS",
+  "browser_checks": [
+    {
+      "equations": 5,
+      "rendered": 5,
+      "mathErrors": 0,
+      "brokenImages": 0,
+      "width": 1440,
+      "scrollWidth": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 5,
+      "rendered": 5,
+      "mathErrors": 0,
+      "brokenImages": 0,
+      "width": 390,
+      "scrollWidth": 390,
+      "console_errors": []
+    }
+  ],
+  "sha256": {
+    "docs/spatial-lessons.md": "3d4af86d50a6f51bc797c1f4da5870dfe8dc38e68d6c7287e1ddf1a28023eaa8",
+    "docs/SPATIAL-LESSONS.html": "61b4d0139ea7fe8cec35943efd617025a465f993955250067b8da1daa7db5742",
+    "scripts/build_spatial_lessons.py": "6517efc06b714689fe8e1c9414328bb0faa71f477b88253e1a286b636cebe6c7"
+  }
+}
