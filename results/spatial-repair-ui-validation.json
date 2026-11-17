@@ -1,0 +1,38 @@
+{
+  "generated_utc": "2026-11-17T21:04:53.680003+00:00",
+  "status": "PASS",
+  "broken_local_links": [],
+  "browser_checks": [
+    {
+      "equations": 104,
+      "rendered": 104,
+      "mathErrors": 0,
+      "brokenImages": 0,
+      "scrollWidth": 1440,
+      "width": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 104,
+      "rendered": 104,
+      "mathErrors": 0,
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "width": 390,
+      "console_errors": []
+    }
+  ],
+  "source_and_artifact_sha256": {
+    "results/spatial-repair.json": "3f21e5e23bf1e70fa957a26f8fbd3b5e5d1d186d0644eea8989fc67797ac90fc",
+    "results/spatial-repair-verification.json": "91c3cdf665936987ce403e5e0cc712a9cc61013cc711d675163b5f5c35b8d017",
+    "docs/SPATIAL-REPAIR.html": "91f785190512ef42b6e0a4bc8eb6fc838d70519042296755466f42a75bf5e2cd",
+    "docs/spatial-repair.md": "3434605389253bd94f09d89b919eb515f31ce607c9cd3b159969e45b86f23792",
+    "scripts/build_spatial_repair_docs.py": "20dde3dc3f6e3800d7691448946671b5a5c5c45ea041c2384817d9f1edc71779",
+    "results/figures/spatial-repair-independent.pdf": "899b4dad527a14a83ada658316c3cef6dea6ae3b40294b98e1d49f4a37c5952f",
+    "results/figures/spatial-repair-independent.png": "ea04303ea8753fe5f35b0eb70c0897f5cada5c875747bdf75380163f288eca48",
+    "results/figures/spatial-repair-refinement.pdf": "24ad5d1b66c29b169f2e3b724e0c6f8278fea3a183aa15140413c050758bb6aa",
+    "results/figures/spatial-repair-refinement.png": "a6f355c23a821bce475734433409cf8c714ee06919c19477b25523003e60d4e2",
+    "results/figures/spatial-repair-survival.pdf": "3a17a6947fe517eef9e40b12211f9489035dc6a7d3873fef95c28edecbe6d7a5",
+    "results/figures/spatial-repair-survival.png": "31e0e6205dce6113fb448e18f675a2895c60d84116d115c4b095503bf77f7a86"
+  }
+}

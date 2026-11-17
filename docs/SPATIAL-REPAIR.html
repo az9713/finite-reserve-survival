@@ -1,0 +1,372 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Two-complex spatial repair: model, proofs and verification</title><style>
+:root{color-scheme:dark;--bg:#0d141d;--panel:#152233;--ink:#e6edf7;--muted:#adc0d6;--line:#2b4159;--accent:#72dbc1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 'Segoe UI',Arial,sans-serif}a{color:var(--accent);text-underline-offset:3px}nav{padding:18px 5vw;border-bottom:1px solid var(--line);display:flex;gap:24px;flex-wrap:wrap}main{max-width:1000px;margin:auto;padding:45px 30px 100px}h1{font:500 clamp(35px,5vw,65px)/1.12 Georgia,serif;letter-spacing:-.025em;margin:20px 0 30px}h2{font:500 32px/1.25 Georgia,serif;margin:65px 0 20px;padding-top:20px;border-top:1px solid var(--line)}h3{font-size:21px;margin:35px 0 12px}p{margin:16px 0}li{margin:9px 0}img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;margin:20px 0}pre{padding:20px;background:var(--panel);overflow:auto;border-radius:8px;font-size:14px}code{font-family:Consolas,monospace}table{width:100%;border-collapse:collapse;margin:25px 0;font-size:15px}td,th{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--panel)}blockquote{margin:25px 0;padding:15px 25px;border-left:3px solid var(--accent);background:var(--panel)}.meta{color:var(--muted);font-size:14px;letter-spacing:.04em}.toc{background:var(--panel);padding:22px 30px;border-radius:9px}.toc ul{columns:2;column-gap:35px;padding-left:20px}.toc li{break-inside:avoid;font-size:14px}.toc ul ul{display:none}.math.display{overflow-x:auto;padding:12px 0}.katex{font-size:1.08em}.receipt{background:var(--panel);padding:16px 22px;border-left:3px solid var(--accent)}button{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:6px 14px;cursor:pointer}footer{border-top:1px solid var(--line);padding:25px 5vw;color:var(--muted)}@media(max-width:700px){main{padding:25px 18px 60px}body{font-size:16px}h2{font-size:27px}.toc ul{columns:1}table{display:block;overflow-x:auto}nav{gap:13px}.katex{font-size:.95em}}@media print{:root{--bg:white;--ink:#151515;--panel:#f1f3f5;--muted:#444;--line:#bbb;--accent:#165663;color-scheme:light}nav,button,.toc{display:none}main{max-width:none;padding:0}body{font-size:10pt;line-height:1.5}h1{font-size:28pt}h2{font-size:19pt;break-after:avoid}h3{break-after:avoid}img,table,pre{break-inside:avoid}a{color:inherit}footer{font-size:8pt}.katex{font-size:1em}}
+.katex{position:relative}.math.display{display:block;max-width:100%}.math:not(.display){display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}.math{scrollbar-width:none}.math::-webkit-scrollbar{display:none}.katex-display{margin:0;text-align:left}td{overflow-wrap:anywhere}.contents{margin:30px 0}.contents summary{cursor:pointer;color:var(--accent)}</style><link rel="stylesheet" href="assets/katex/katex.min.css"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="SPATIAL-REPAIR.html">Spatial repair</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p><h1 id="two-diffusing-complexes-finite-fuel-and-the-limits-of-a-calibrated-count-model">Two diffusing complexes, finite fuel, and the limits of a calibrated count model</h1>
+<p>This study implements the maintenance-only spatial extension of Study 05. Two complexes already exist. Each can be healthy or damaged, and a healthy complex can help repair a damaged partner when they are near one another. Repair and its microscopic reverse exchange a finite stock of fuel and waste. Brownian motion changes their relative position. We compare functional survival from uniform, localized, and gate-weighted preparations with count models calibrated before examining survival. The gate-weighted position law is the equilibrium law at repair events, but some chemical launches are synthetic controls, as explained below.</p>
+<p>The originality audit came first. It identified spatial detailed balance, diffusion-dependent rates, localization, and repeated encounters as established concepts. The present experiment is a reproducible, model-specific extension. Neither a new scientific concept nor a new general theorem is claimed. <a href="../research/spatial-repair-originality-audit.md">Audit and equation-level comparisons</a> · <a href="../research/spatial-repair-search-receipt.json">Search receipt</a></p>
+<details class="contents"><summary>Contents and navigation</summary><div class="toc">
+<ul>
+<li><a href="#1-precise-scope-and-physical-assumptions">1. Precise scope and physical assumptions</a></li>
+<li><a href="#2-reversible-chemistry-and-its-energy-ledger">2. Reversible chemistry and its energy ledger</a></li>
+<li><a href="#3-survival-is-a-first-passage-event">3. Survival is a first-passage event</a></li>
+<li><a href="#4-calibration-before-comparing-survival">4. Calibration before comparing survival</a></li>
+<li><a href="#5-deterministic-solver-and-independent-paths">5. Deterministic solver and independent paths</a></li>
+<li><a href="#6-results-and-spatial-refinement">6. Results and spatial refinement</a></li>
+<li><a href="#7-verification-receipts-and-their-scope">7. Verification receipts and their scope</a></li>
+<li><a href="#8-what-we-learn-and-what-remains-open">8. What we learn, and what remains open</a></li>
+<li><a href="#reproduce-and-inspect">Reproduce and inspect</a></li>
+</ul>
+</div>
+</details><h2 id="1-precise-scope-and-physical-assumptions">1. Precise scope and physical assumptions</h2>
+<p>Two preassembled labelled complexes move independently in a periodic cube of side <span class="math" data-display="false">L</span>. Their relative displacement <span class="math" data-display="false">x=X_1-X_2</span> belongs to the torus <span class="math" data-display="false">\mathbb T_L^3</span> and obeys</p>
+<p><span class="math display" data-display="true">
+dx_t=\sqrt{2D}\,dW_t\pmod L,
+\qquad D=D_1+D_2.
+</span></p>
+<p>Diffusivity is the same in every chemical state. The complexes are point particles without steric exclusion or an interaction potential. A contact gate changes reaction kinetics, not the mechanical energy. Fuel and waste are treated as fast-mixed small molecules, while the two larger repair partners have resolved positions. Thus this is a hybrid spatial model; resolving fuel diffusion would be a further model change.</p>
+<p>There are <span class="math" data-display="false">N</span> fuel-plus-waste molecules, <span class="math" data-display="false">b</span> of them fuel and <span class="math" data-display="false">w=N-b</span> waste. The gate is</p>
+<p><span class="math display" data-display="true">
+g(x)=\left(1-\frac{|x|_{\rm per}^2}{a^2}\right)_+^4,
+\qquad 0&lt;a&lt;L/2,
+</span></p>
+<p>where <span class="math" data-display="false">|x|_{\rm per}</span> is the minimum-image distance. It is bounded by one, is three times continuously differentiable, and has compact support away from the periodic seams. Its spatial average is exactly</p>
+<p><span class="math display" data-display="true">
+\langle g\rangle=2\pi(a/L)^3 B(3/2,5).
+</span></p>
+<p>The default parameters are explicit exploratory choices in model units, <strong>not measured biological repair parameters</strong>. In particular, this experiment is distinct from the dimensional GFP tracer calculation in the implementation plan.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: right;">Value</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fuel</td>
+<td style="text-align: right;">4</td>
+<td>Conserved fuel plus waste inventory</td>
+</tr>
+<tr>
+<td>eta</td>
+<td style="text-align: right;">1</td>
+<td>Forward damage rate per healthy complex</td>
+</tr>
+<tr>
+<td>diffusivity</td>
+<td style="text-align: right;">0.025</td>
+<td>Relative diffusivity D1 + D2</td>
+</tr>
+<tr>
+<td>length</td>
+<td style="text-align: right;">1</td>
+<td>Periodic box side</td>
+</tr>
+<tr>
+<td>radius</td>
+<td style="text-align: right;">0.32</td>
+<td>Fixed physical gate radius in model length units</td>
+</tr>
+<tr>
+<td>activity</td>
+<td style="text-align: right;">16</td>
+<td>Intrinsic bounded contact activity κ</td>
+</tr>
+<tr>
+<td>local_width</td>
+<td style="text-align: right;">0.075</td>
+<td>Localized preparation σ</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-reversible-chemistry-and-its-energy-ledger">2. Reversible chemistry and its energy ledger</h2>
+<p>Each labelled complex has a reversible damage reaction <span class="math" data-display="false">H\rightleftharpoons D</span>, with rates <span class="math" data-display="false">\eta</span> and <span class="math" data-display="false">\eta/2</span>. For either choice of the damaged partner, the repair pair is</p>
+<p><span class="math display" data-display="true">
+(H_1,D_2,b)\mathrel{\mathop{\rightleftharpoons}^{\kappa b g(x)}_{\kappa(w+1)g(x)/4}}
+(H_1,H_2,b-1).
+</span></p>
+<p>Both directions leave positions unchanged. The identical spatial gate in each direction is essential. When both complexes are healthy there are two reverse channels. Aggregating exchangeable labels gives the count <span class="math" data-display="false">h\in\{0,1,2\}</span>, with rates</p>
+<p><span class="math display" data-display="true">
+\begin{aligned}
+(h,b)&amp;\to(h-1,b) &amp;&amp;\eta h,\\
+(h,b)&amp;\to(h+1,b) &amp;&amp;\eta(2-h)/2,\\
+(1,b)&amp;\to(2,b-1) &amp;&amp;\kappa b g(x),\\
+(2,b)&amp;\to(1,b+1) &amp;&amp;\kappa(N-b)g(x)/2.
+\end{aligned}
+</span></p>
+<p>Only feasible transitions are included. There is no assembly or dissociation in this subnetwork: both directions of those channels are absent from the outset.</p>
+<p>In thermal units, choose</p>
+<p><span class="math display" data-display="true">
+\beta E(h,b)=b\log8-(2-h)\log2.
+</span></p>
+<p>Let <span class="math" data-display="false">M_D</span> be net forward damage events and <span class="math" data-display="false">M_R</span> net forward repair events. Every trajectory obeys</p>
+<p><span class="math display" data-display="true">
+\Delta h=-M_D+M_R,\qquad
+\Delta b=-M_R,\qquad
+\beta\Delta E=-M_D\log2-M_R\log4.
+</span></p>
+<p>These are exact event identities. Reverse repair regenerates fuel and recreates damage. Consequently, <span class="math" data-display="false">b</span> is finite but is not required to decrease monotonically. The heat bath supplies thermal fluctuations; no external chemical reservoir replenishes the inventory. The bookkeeping is an idealized stochastic-thermodynamic model, not a molecular implementation of an enzyme.</p>
+<h3 id="proposition-1-invariant-law-and-detailed-balance">Proposition 1: invariant law and detailed balance</h3>
+<p>The <strong>uncensored</strong> process is reversible with uniform positions and chemical law</p>
+<p><span class="math display" data-display="true">
+\pi(h,b)=\binom2h (1/3)^h(2/3)^{2-h}
+\binom Nb(1/9)^b(8/9)^{N-b}.
+</span></p>
+<p>Proof. The labelled unnormalized weight is <span class="math" data-display="false">2^{2-h}8^{-b}/[b!(N-b)!]</span>. Damage multiplies its ratio by two, giving the prescribed forward/reverse ratio. For a labelled repair edge, the target/source weight ratio is <span class="math" data-display="false">4b/(w+1)</span>, exactly the ratio of the two rates. Summing over labelled configurations with <span class="math" data-display="false">h</span> healthy complexes produces the binomial multiplicity in <span class="math" data-display="false">\pi</span>. Brownian diffusion with constant <span class="math" data-display="false">D</span> is reversible under uniform torus measure. Since each component has zero equilibrium flux, their generator sum is reversible under the product law. This is a direct application of established spatial detailed-balance theory. <a href="https://arxiv.org/html/2201.04099v3">Zhang and Isaacson</a></p>
+<h2 id="3-survival-is-a-first-passage-event">3. Survival is a first-passage event</h2>
+<p>Collapse occurs at the first time both complexes are damaged:</p>
+<p><span class="math display" data-display="true">
+\tau=\inf\{t:h_t=0\},\qquad
+S_\mu(t)=\Pr_{\mu,h_0,b_0}(\tau&gt;t).
+</span></p>
+<p>The full equilibrium process can subsequently recover from <span class="math" data-display="false">h=0</span>. The survival calculation stops there and permits no return. Equilibrium occupancy is therefore not survival probability.</p>
+<p>For <span class="math" data-display="false">h=1,2</span>, the backward survival function solves</p>
+<p><span class="math display" data-display="true">
+\partial_t u=\mathcal L_{\rm kill}u,\qquad
+u(0,x,h,b)=1,\qquad u(t,x,0,b)=0,
+</span></p>
+<p>with periodic spatial conditions. Here</p>
+<p><span class="math display" data-display="true">
+\mathcal Lf=D\Delta f+
+\sum_{s&#x27;}q_x(s,s&#x27;)[f(x,s&#x27;)-f(x,s)].
+</span></p>
+<p>The coefficients are bounded and the chemical state space is finite. Brownian motion coupled to bounded Poisson reaction clocks therefore defines a nonexplosive process. Itô's formula plus compensated jump counts gives Dynkin's martingale and the backward equation. The maximum principle, or its probabilistic representation, gives <span class="math" data-display="false">0\le u\le1</span>. <a href="https://people.math.wisc.edu/~dfanderson/papers/SURVEY_AndKurtz.pdf">Anderson and Kurtz</a></p>
+<h3 id="three-distinct-spatial-preparations">Three distinct spatial preparations</h3>
+<p>All comparisons retain the same initial chemical counts. Uniform preparation uses Lebesgue measure on the torus. Localized preparation has density proportional to <span class="math" data-display="false">\exp[-|x|_{\rm per}^2/(2\sigma^2)]</span>. The third preparation has density <span class="math" data-display="false">g(x)/\int g</span>. It is the equilibrium event-Palm position law of an enabled repair channel, because equilibrium positions are uniform and event intensity is proportional to <span class="math" data-display="false">g</span>.</p>
+<p>The Palm preparation illustrates reaction-generated proximity. It is not claimed to represent every history-conditioned post-repair trajectory. For both <span class="math" data-display="false">HD</span> and <span class="math" data-display="false">HH</span> preparations the initial fuel is <span class="math" data-display="false">N</span>. A real reverse-repair event ending at <span class="math" data-display="false">HD,N</span>, or forward repair ending at <span class="math" data-display="false">HH,N</span>, may require a different pre-event fuel count; the reported position law is imposed independently of those chemical histories. In particular <span class="math" data-display="false">HH,N</span> cannot be produced by a forward repair inside this fixed inventory. This distinction prevents an artificial preparation from being interpreted as an observed assembly trajectory.</p>
+<h2 id="4-calibration-before-comparing-survival">4. Calibration before comparing survival</h2>
+<p>To calibrate forward repair at each available fuel count <span class="math" data-display="false">b\ge1</span>, clamp the chemistry at <span class="math" data-display="false">HD,b</span>, omit damage, and let Brownian motion run until a repair attempt fires with hazard <span class="math" data-display="false">\kappa b g(x)</span>. The mean <span class="math" data-display="false">m_b(x)</span> solves</p>
+<p><span class="math display" data-display="true">
+(-D\Delta+\kappa b g)m_b=1
+</span></p>
+<p>periodically. Define</p>
+<p><span class="math display" data-display="true">
+c_b=\frac1{b\langle m_b\rangle}.
+</span></p>
+<p>The calibrated count chain uses forward rate <span class="math" data-display="false">b c_b</span>. The reverse partner on the <strong>same fuel edge</strong> uses <span class="math" data-display="false">(w+1)c_b/4</span> for each labelled orientation. This matches every uniform-start clamped forward mean and preserves every equilibrium rate ratio. It involves no fitting to survival curves and is more stringent than matching one reference fuel state.</p>
+<p>A second comparator sets every <span class="math" data-display="false">c_b=c_N</span>, matching the initial full-fuel forward mean. We show it to expose calibration dependence. Neither comparator is asserted to match all waiting-time distributions or both forward and reverse mean encounter times. Such matching is generally incompatible with a single equilibrium-preserving multiplier.</p>
+<h3 id="proposition-2-why-a-matched-mean-can-miss-short-time-survival">Proposition 2: why a matched mean can miss short-time survival</h3>
+<p>For a uniform stationary Brownian start, Jensen's inequality gives</p>
+<p><span class="math display" data-display="true">
+\Pr(\tau_b&gt;t)=\mathbb E\exp\!\left[-\kappa b\int_0^tg(x_s)\,ds\right]
+\ge e^{-\kappa b\langle g\rangle t}.
+</span></p>
+<p>Integrating over time yields <span class="math" data-display="false">c_b\le\kappa\langle g\rangle</span>. Fast diffusion averages the contact gate and leads to the count coefficient <span class="math" data-display="false">\kappa\langle g\rangle</span>; the finite-diffusion calibrated coefficient can be smaller.</p>
+<p>For an initial <span class="math" data-display="false">HD,b</span> and any spatial law <span class="math" data-display="false">\mu</span>, direct application of the killed generator twice gives</p>
+<p><span class="math display" data-display="true">
+S_\mu&#x27;(0)=-\eta,\qquad
+S_\mu&#x27;&#x27;(0)=\eta\left(\frac32\eta+\kappa b\mathbb E_\mu g\right).
+</span></p>
+<p>For the edge-calibrated count model, replace <span class="math" data-display="false">\kappa\mathbb E_\mu g</span> by <span class="math" data-display="false">c_b</span>. Hence</p>
+<p><span class="math display" data-display="true">
+S_\mu(t)-S_{\rm count}(t)
+=\frac{\eta b}{2}(\kappa\mathbb E_\mu g-c_b)t^2+o(t^2).
+</span></p>
+<p>Proof. The killed generator applied to the constant live payoff is <span class="math" data-display="false">-\eta</span> in <span class="math" data-display="false">HD</span> and zero in <span class="math" data-display="false">HH</span>. Applying it again in <span class="math" data-display="false">HD</span> gives a contribution from collapse at rate <span class="math" data-display="false">\eta</span>, spontaneous recovery at rate <span class="math" data-display="false">\eta/2</span>, and paid repair at rate <span class="math" data-display="false">\kappa b g</span>. Spatial derivatives of the first generator image vanish because it is constant in position. This establishes the formula without diffusion approximation. The bounded, sufficiently regular gate justifies the semigroup expansion.</p>
+<p>For the Palm law, <span class="math" data-display="false">\mathbb E_\mu g=\langle g^2\rangle/\langle g\rangle</span>. This explains why localization can affect early survival even after matching a uniform mean. It is a model-specific deduction using established generator and Jensen arguments, not a claimed new principle. It does not prove a sign for the difference at every later time.</p>
+<p><strong>Corollary: one preparation-blind count model cannot reproduce both launches.</strong> For two spatial laws <span class="math" data-display="false">\mu,\nu</span> with different <span class="math" data-display="false">\mathbb E g</span>, the exact Brownian survival curves from the same <span class="math" data-display="false">HD,b</span>, <span class="math" data-display="false">b&gt;0</span>, have different second derivatives. A count model given only the common initial chemical counts produces a single survival curve, so it cannot equal both. No choice of its fixed rate constants repairs that loss of preparation information. This is an elementary failure of a count-only reduction, not a new lumpability theorem. It follows analytically and does not rely on lattice convergence or Monte Carlo.</p>
+<h2 id="5-deterministic-solver-and-independent-paths">5. Deterministic solver and independent paths</h2>
+<p>The continuous model is approximated by a nearest-neighbor periodic lattice with spacing <span class="math" data-display="false">\ell=L/n</span> and diffusion rate <span class="math" data-display="false">D/\ell^2</span> to each of six neighbors. The finite-range gate is evaluated at lattice points; its physical radius stays fixed as the mesh is refined. This is a discretization of bounded-volume Doi killing, not a zero-range voxel reaction whose physical contact radius shrinks with the mesh.</p>
+<p>Signed coordinate permutations leave the gate, payoff, and all three preparations invariant. The lattice chain can therefore be lumped exactly by sorting absolute coordinate indices. Orbit multiplicities provide uniform-volume weights. This symmetry reduction is exact for each finite lattice; the approximation is replacing continuum diffusion by that lattice.</p>
+<p>The solver propagates the killed backward equation and solves the clamped calibration problem on the same lattice. Reversibility permits a symmetric representation. Numerical exponential evaluation and its truncation controls are checked separately from spatial refinement. Adjacent mesh differences are evidence of convergence, not rigorous continuum error enclosures.</p>
+<h3 id="exponential-truncation-bound">Exponential truncation bound</h3>
+<p>Let <span class="math" data-display="false">Q</span> be the finite-grid killed backward generator and <span class="math" data-display="false">q=\max_i(-Q_{ii})</span>. Reversibility makes it self-adjoint in the equilibrium-weighted inner product, and Gershgorin bounds its spectrum in <span class="math" data-display="false">[-2q,0]</span>. Thus <span class="math" data-display="false">B=I+Q/q</span> has spectrum in <span class="math" data-display="false">[-1,1]</span>, so every Chebyshev polynomial satisfies <span class="math" data-display="false">\|T_k(B)\|\le1</span> in that norm. For <span class="math" data-display="false">s=qt</span>,</p>
+<p><span class="math display" data-display="true">
+e^{tQ}=e^{-s}\left[I_0(s)I+2\sum_{k\ge1}I_k(s)T_k(B)\right].
+</span></p>
+<p>The omitted scalar coefficients after degree <span class="math" data-display="false">K</span> equal the probability that the absolute difference of two independent Poisson variables of mean <span class="math" data-display="false">s/2</span> exceeds <span class="math" data-display="false">K</span>. Chernoff's inequality therefore bounds their sum by</p>
+<p><span class="math display" data-display="true">
+2\exp\left[s(\cosh\theta-1)-(K+1)\theta\right],
+\qquad \theta=\operatorname{arsinh}((K+1)/s),\quad s&gt;0.
+</span></p>
+<p>For a start concentrated at chemical state <span class="math" data-display="false">j</span> with spatial weights <span class="math" data-display="false">\mu_i</span>, Cauchy–Schwarz converts this to an observable error by the factor</p>
+<p><span class="math display" data-display="true">
+C_j=\sqrt{\frac{\pi(\text{live})}{\pi(j)}
+\sum_i\frac{\mu_i^2}{w_i}},
+</span></p>
+<p>where <span class="math" data-display="false">w_i</span> are spatial orbit probabilities. The implementation chooses the degree so the product of this factor and the scalar tail bound is at most <span class="math" data-display="false">2\times10^{-14}</span> for every reported start. This is an <strong>exact-arithmetic polynomial-truncation bound</strong>. Floating-point roundoff is checked against a separately assembled dense exponential on a small grid; it is not covered by this analytic tail bound.</p>
+<p>An independent simulator instead generates continuous relative Brownian positions at candidate reaction times. In each chemical state a constant bound dominates the total reaction rate, because <span class="math" data-display="false">0\le g\le1</span>. Draw an exponential candidate time, advance position by a Gaussian increment with covariance <span class="math" data-display="false">2D\Delta t I</span> modulo <span class="math" data-display="false">L</span>, and accept a channel using its actual rate at that position. Rejections retain the chemical state. Poisson thinning and the Markov property give the stated continuous jump-diffusion law, without a Brownian time grid. Pseudorandom sampling and floating-point arithmetic remain numerical operations; statistical uncertainty is reported explicitly.</p>
+<h2 id="6-results-and-spatial-refinement">6. Results and spatial refinement</h2>
+<table>
+<thead>
+<tr>
+<th>Initial chemistry</th>
+<th>Spatial start</th>
+<th style="text-align: right;">Survival at t = 4</th>
+<th style="text-align: right;">Edge-calibrated count at t = 4</th>
+<th style="text-align: right;">Spatial minus count at sampled maximum absolute gap</th>
+<th style="text-align: right;">Time of maximum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HD, full fuel</td>
+<td>uniform</td>
+<td style="text-align: right;">6.13245%</td>
+<td style="text-align: right;">5.60605%</td>
+<td style="text-align: right;">+1.34001 percentage points</td>
+<td style="text-align: right;">1.2725</td>
+</tr>
+<tr>
+<td>HD, full fuel</td>
+<td>localized</td>
+<td style="text-align: right;">9.71756%</td>
+<td style="text-align: right;">5.60605%</td>
+<td style="text-align: right;">+23.20757 percentage points</td>
+<td style="text-align: right;">0.8725</td>
+</tr>
+<tr>
+<td>HD, full fuel</td>
+<td>reaction</td>
+<td style="text-align: right;">9.44823%</td>
+<td style="text-align: right;">5.60605%</td>
+<td style="text-align: right;">+21.35392 percentage points</td>
+<td style="text-align: right;">0.8850</td>
+</tr>
+<tr>
+<td>HH, full fuel</td>
+<td>uniform</td>
+<td style="text-align: right;">9.18847%</td>
+<td style="text-align: right;">8.51213%</td>
+<td style="text-align: right;">+1.22635 percentage points</td>
+<td style="text-align: right;">1.9025</td>
+</tr>
+<tr>
+<td>HH, full fuel</td>
+<td>localized</td>
+<td style="text-align: right;">11.63962%</td>
+<td style="text-align: right;">8.51213%</td>
+<td style="text-align: right;">+11.61213 percentage points</td>
+<td style="text-align: right;">1.2900</td>
+</tr>
+<tr>
+<td>HH, full fuel</td>
+<td>reaction</td>
+<td style="text-align: right;">11.45576%</td>
+<td style="text-align: right;">8.51213%</td>
+<td style="text-align: right;">+10.71360 percentage points</td>
+<td style="text-align: right;">1.3050</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Survival from three spatial preparations and two calibrated count comparators" src="../results/figures/spatial-repair-survival.png" /></p>
+<p><img alt="Spatial refinement and fuel-edge calibration" src="../results/figures/spatial-repair-refinement.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Grid comparison</th>
+<th style="text-align: right;">HD uniform maximum change</th>
+<th style="text-align: right;">HD localized maximum change</th>
+<th style="text-align: right;">HD Palm maximum change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32 → 48</td>
+<td style="text-align: right;">0.00002531</td>
+<td style="text-align: right;">0.00010453</td>
+<td style="text-align: right;">0.00011592</td>
+</tr>
+<tr>
+<td>48 → 64</td>
+<td style="text-align: right;">0.00000885</td>
+<td style="text-align: right;">0.00003657</td>
+<td style="text-align: right;">0.00004049</td>
+</tr>
+<tr>
+<td>64 → 96</td>
+<td style="text-align: right;">0.00000631</td>
+<td style="text-align: right;">0.00002611</td>
+<td style="text-align: right;">0.00002889</td>
+</tr>
+</tbody>
+</table>
+<p>These entries are absolute probability differences, not percentages. Each n denotes the full periodic lattice points per axis before exact symmetry reduction. The finest grid has 20825 spatial orbits.</p>
+<p>The sampled maximum curve gap is a lower bound on the time-continuous maximum for that numerical spatial grid. The instantaneous killing hazard is <span class="math" data-display="false">\eta</span> in <span class="math" data-display="false">HD</span> and zero in <span class="math" data-display="false">HH</span>. Thus each survival slope lies in <span class="math" data-display="false">[-\eta,0]</span>, their difference is <span class="math" data-display="false">\eta</span>-Lipschitz, and a time grid with maximum spacing <span class="math" data-display="false">\delta t</span> gives the upper correction <span class="math" data-display="false">\eta\delta t/2</span> when both endpoints are included. This time-interpolation bound does not bound spatial discretization error or floating-point propagation error.</p>
+<h2 id="7-verification-receipts-and-their-scope">7. Verification receipts and their scope</h2>
+<p>The independent verification receipt below retains test output, deterministic diagnostics, continuous-space path comparisons, random seeds, source hashes, and explicit acceptance checks.</p>
+<p><a href="../results/spatial-repair-verification.json">Open machine-readable verification receipt</a> · <a href="../research/spatial-repair-verification-design.md">Verification design and derivations</a></p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;passed&quot;,
+  &quot;test_count&quot;: 51,
+  &quot;structural_checks&quot;: [
+    &quot;test_chemical_channels_and_energy_bookkeeping&quot;,
+    &quot;test_clamped_forward_calibration_and_count_reverses&quot;,
+    &quot;test_fast_diffusion_approaches_stationary_average&quot;,
+    &quot;test_full_label_and_periodic_grid_reference&quot;,
+    &quot;test_invalid_parameters_mesh_and_failure_start&quot;,
+    &quot;test_no_fuel_and_disabled_repair_reduce_to_damage_only&quot;,
+    &quot;test_short_time_survival_curvature_resolves_contact&quot;,
+    &quot;test_spherical_doi_reference_and_hard_contact_limit&quot;,
+    &quot;test_uncensored_detailed_balance_and_killing&quot;
+  ],
+  &quot;monte_carlo_paths_per_preparation&quot;: 50000,
+  &quot;monte_carlo_paths_total&quot;: 200000,
+  &quot;confidence&quot;: 0.99,
+  &quot;dkw_half_width&quot;: 0.008175947484951164,
+  &quot;maximum_mc_curve_discrepancy&quot;: 0.00643440742735496,
+  &quot;grids_compared_for_refinement&quot;: [
+    64,
+    96
+  ],
+  &quot;maximum_last_grid_difference&quot;: 3.301147572076779e-05,
+  &quot;deterministic_checks_passed&quot;: true
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Continuous-space launch</th>
+<th style="text-align: right;">Maximum MC–lattice discrepancy</th>
+<th style="text-align: right;">99% simultaneous lower bound on maximum gap from fixed calibrated count curve</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HD, uniform</td>
+<td style="text-align: right;">0.003557</td>
+<td style="text-align: right;">0.876 percentage points</td>
+</tr>
+<tr>
+<td>HD, localized</td>
+<td style="text-align: right;">0.006434</td>
+<td style="text-align: right;">22.241 percentage points</td>
+</tr>
+<tr>
+<td>HD, reaction</td>
+<td style="text-align: right;">0.004522</td>
+<td style="text-align: right;">20.597 percentage points</td>
+</tr>
+<tr>
+<td>HH, localized</td>
+<td style="text-align: right;">0.003225</td>
+<td style="text-align: right;">10.769 percentage points</td>
+</tr>
+</tbody>
+</table>
+<p>These confidence lower bounds compare the true Brownian survival law with the <strong>fixed count coefficients computed on the finest grid</strong>. They do not enclose error in calibrating the exact continuum encounter mean. The localized HD lower bound exceeds 22 percentage points; the uniform HD lower bound is below the proposed one-point screening threshold. The deterministic uniform gap of 1.340 points should therefore not be presented as a statistically verified continuum gap above that threshold.</p>
+<p>A <a href="../results/spatial-repair-review-check.json">supplemental fresh-seed review receipt</a> retains two further 100,000-path HD runs, their replay program, ledgers, sampled curves and source hashes. They are separate from the formal 200,000-path verification above.</p>
+<p><img alt="Independent continuous-space Brownian path check and its sampling uncertainty" src="../results/figures/spatial-repair-independent.png" /></p>
+<p>For <span class="math" data-display="false">M</span> independent paths in each of <span class="math" data-display="false">J</span> preparations, the Dvoretzky–Kiefer–Wolfowitz inequality with Massart's constant and a union bound give <a href="https://doi.org/10.1214/aop/1176990746">Massart, 1990</a></p>
+<p><span class="math display" data-display="true">
+\Pr\!\left(\max_{1\le j\le J}\sup_{0\le t\le4}
+|\widehat S_j(t)-S_j(t)|&gt;\epsilon\right)
+\le2J e^{-2M\epsilon^2}.
+</span></p>
+<p>The receipt uses 50,000 paths in each of four preparations and familywise confidence 99%. Its simultaneous half-width is 0.008176 in absolute probability. This bounds the empirical survival error relative to the true continuous-path law on the observation horizon. Agreement of the lattice curve with the empirical band is a compatibility check, not a proof that the lattice error is zero. Pointwise Wilson intervals are also retained and have a different coverage interpretation.</p>
+<p>The independent paths are a consistency check with confidence bounds, not a proof that every mesh value equals its continuum limit. Structural detailed balance and event identities are mathematical statements; unit tests exercise their implementation. Agreement across meshes and paths supports the selected numerical cases. It does not certify a continuum of parameter choices or establish experimental biological validity.</p>
+<h2 id="8-what-we-learn-and-what-remains-open">8. What we learn, and what remains open</h2>
+<p>This experiment asks a narrower question than whether diffusion matters in biology. Can a calibrated count model retain the functional survival prediction when molecular proximity is prepared differently and fuel is finite? The observable is first collapse; the compared chemistry, initial inventory, and equilibrium ratios remain explicit.</p>
+<p>For the stated HD/full-fuel case, the largest sampled deviation from the edge-calibrated count chain is <strong>1.340 percentage points</strong> for a uniform start and <strong>23.208 percentage points</strong> for a localized start. At time four the localized spatial survival is <strong>9.718%</strong>, compared with <strong>5.606%</strong> for the count chain. This is a substantial preparation effect within this exploratory parameter choice. Matching all uniform-start forward means and preserving equilibrium ratios does not retain the preparation information. The second reference calibration and HH launch are reported to make the scope assessable.</p>
+<p>The result is consistent with known localization and rebinding effects. Finite fuel, the chosen first-collapse event, and the replayable comparison define this benchmark; they do not by themselves establish originality. Rigorous continuum error enclosures and an experimentally calibrated molecular mechanism remain open.</p>
+<p>The model does not implement assembly, heredity, replication, endogenous sensing, or an adaptive controller. It does not overcome the chemistry-to-biology barrier. It supplies a tractable spatial maintenance test with an auditable thermodynamic construction. We have not isolated fuel depletion as the cause of the observed gap: that would require a separate matched chemostatted or inventory ablation. A future theorem about finite-resource spatial reliability would need a separate statement and originality audit.</p>
+<h2 id="reproduce-and-inspect">Reproduce and inspect</h2>
+<p>From the repository root, install the project with <code>python -m pip install -e .</code>. Then run:</p>
+<pre><code class="language-powershell">python -B scripts/run_spatial_repair.py
+python -B scripts/verify_spatial_repair.py
+python -B scripts/build_spatial_repair_docs.py
+python -B scripts/check_spatial_repair_receipts.py --write-manifest
+</code></pre>
+<p>The documentation builder additionally requires <code>markdown</code> and Playwright with Chrome available. The numerical core uses NumPy and SciPy; figures use Matplotlib. After rebuilding and validating the study, <code>--write-manifest</code> seals the current deliverables. For a later integrity replay, run <code>python -B scripts/check_spatial_repair_receipts.py</code> without that flag. Hashes detect a stale result after code changes; they establish byte integrity, not mathematical correctness.</p>
+<p><a href="../src/purposeful/spatial_repair.py">Model source</a> · <a href="../scripts/run_spatial_repair.py">Experiment runner</a> · <a href="../scripts/verify_spatial_repair.py">Independent verification</a> · <a href="../tests/test_spatial_repair.py">Unit tests</a> · <a href="../results/spatial-repair.json">Full numerical data</a> · <a href="../results/spatial-repair-verification.json">Verification receipt</a></p></main><footer>Equations and figures are local. Sources link to the research package and primary literature.</footer><script src="assets/katex/katex.min.js"></script><script>document.querySelectorAll('.math').forEach(el=>{try{katex.render(el.textContent,el,{displayMode:el.dataset.display==='true',throwOnError:true,strict:'ignore'})}catch(e){el.dataset.error=e.message;console.error(e.message)}});document.getElementById('print').onclick=()=>window.print();</script></body></html>

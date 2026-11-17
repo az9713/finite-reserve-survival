@@ -1,6 +1,6 @@
 # Finite Reserve Survival
 
-[**Open the live scientific dossier**](https://az9713.github.io/finite-reserve-survival/) · [Development journey](https://az9713.github.io/finite-reserve-survival/docs/DEVELOPMENT-JOURNEY.html) · [Paper draft](https://az9713.github.io/finite-reserve-survival/results/research-manuscript.pdf)
+[**Open the live scientific dossier**](https://az9713.github.io/finite-reserve-survival/) · [Spatial repair: proofs and evidence](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-REPAIR.html) · [Development journey](https://az9713.github.io/finite-reserve-survival/docs/DEVELOPMENT-JOURNEY.html) · [Studies 01–05 paper draft](https://az9713.github.io/finite-reserve-survival/results/research-manuscript.pdf)
 
 [![Scientific dossier preview](results/document-previews/scientific-dossier-1440.png)](https://az9713.github.io/finite-reserve-survival/)
 
@@ -37,6 +37,30 @@ The assembly-and-maintenance result uses two copies of each complementary monome
 
 Intermediate binding optima and fuel-driven chemical persistence have earlier theoretical and experimental precedents. The candidate contribution is the particular finite-inventory reliability model, its constructive resource bound, and the replayable continuum certificate. Priority remains open.
 
+## Implemented spatial repair benchmark
+
+[![Spatial repair survival comparison](results/figures/spatial-repair-survival.png)](https://az9713.github.io/finite-reserve-survival/docs/SPATIAL-REPAIR.html)
+
+[Read the model, proofs and illustrated results](docs/SPATIAL-REPAIR.html) · [Numerical data](results/spatial-repair.json) · [Independent verification](results/spatial-repair-verification.json) · [Originality audit](research/spatial-repair-originality-audit.md)
+
+Two preassembled complexes now diffuse in a periodic cube, change between healthy and damaged states, and exchange a finite inventory of fuel and waste through reversible repair. Each reversible edge of the well-mixed comparator is calibrated to the uniform-start forward encounter mean, preserving its equilibrium ratio without fitting survival.
+
+For the exploratory four-fuel case starting with one healthy and one damaged complex, the largest sampled survival difference from this calibrated count model is **1.340 percentage points** for a uniform start, **23.208 points** for a localized start, and **21.354 points** for a gate-weighted start. At time four, localized spatial survival is **9.718%**, compared with **5.606%** for the count model. Localization preserves information that these calibrated rates discard.
+
+Evidence includes four spatial refinements (32, 48, 64 and 96 points per axis), independent continuous-space Brownian paths, detailed-balance and energy-ledger checks, and independently assembled dense and spherical references. The report separates exact mathematical statements, numerical truncation bounds, observed spatial convergence and sampling confidence. It does not claim a rigorous continuum error enclosure.
+
+All **51 tests pass**. The formal 200,000-path verification gives a **99% simultaneous lower bound of 22.24 percentage points** on the localized HD survival gap from the fixed finest-grid-calibrated count comparator. Another 200,000 fresh-seed paths are retained in a [separate review receipt](results/spatial-repair-review-check.json). [Browser validation](results/spatial-repair-ui-validation.json), [delivery manifest](results/spatial-repair-delivery-manifest.json) and [integrity replay](results/spatial-repair-integrity.json) preserve the evidence. The existing manuscript/PDF covers Studies 01–05; the spatial report is a separate extension.
+
+**Novelty status:** the audit identifies direct precedents for spatial detailed balance, diffusion-calibrated rates and rebinding effects. This finite-inventory first-collapse benchmark is a targeted numerical extension; no new general concept is established. Self-assembly, a molecular realization and an adaptive spatial controller remain outside this maintenance-only model.
+
+## Stochastic calculus: implementation plan and feasibility check
+
+[Read the illustrated implementation plan](docs/STOCHASTIC-CALCULUS-PLAN.html) · [Plan source](docs/stochastic-calculus-plan.md) · [Prior-art comparison](research/stochastic-calculus-prior-art.md) · [Calculation receipt](results/encounter-feasibility.json) · [Full-suite verification](results/encounter-verification.json)
+
+The plan motivated the implemented spatial maintenance benchmark above. Its separate classical calculation gives a **2.037 s** mean encounter time for an illustrative 5 nm target in a 1 μm³ compartment, using a measured GFP diffusion coefficient as a tracer-scale anchor. With an assumed independent 1 s⁻¹ closure rate, exact capture probability is **32.9294%**, versus **32.9276%** for a matched-mean exponential model. Starting 1 nm outside the capture surface instead gives **88.6561%**. These dimensional tracer values are not a calibration of the new chemical model.
+
+These are classical diffusion calculations, not a new discovery or a calibrated biological repair model. The planning package includes derivations, two figures, an independent boundary-value check, and desktop/mobile HTML validation. Spatial maintenance is now implemented; spatial self-assembly and a new general survival theorem remain open.
+
 ## Reproduce
 
 Python 3.10+ with numpy, scipy, and matplotlib. PDF export additionally uses reportlab.
@@ -60,4 +84,4 @@ Study 01 tracks sensor work and heat under local detailed balance, with a power 
 
 The studies connect physical kinetics and energetic constraints to **temporal error structure** and task-dependent survival. Studies 02–04 add paid repair, a shared reserve, and autonomous reversible channels. A finite battery in the latter studies limits storage while an explicitly supplied external source replenishes it. Study 05 adds self-assembly with finite chemical inventories and exact detailed balance. Molecular realization and biological validation remain open. The dossier distinguishes each study's boundary and comparator class.
 
-To rebuild the documentation, install `markdown` and run `python -B scripts/build_research_docs.py`. This reruns the 38 scientific tests and records source hashes. The HTML equations use the bundled, licensed KaTeX files and work offline. `scripts/build_manuscript.py` additionally uses `pypandoc_binary` and Tectonic to build the LaTeX/PDF and submission-source archive. See `results/dossier-ui-validation.json` for the browser and link checks.
+To rebuild the original dossier, install `markdown` and run `python -B scripts/build_research_docs.py`. This reruns the current scientific test suite and records source hashes. The earlier chemical-study receipt contains 38 tests; the spatial verification now contains 51. The HTML equations use the bundled, licensed KaTeX files and work offline. `scripts/build_manuscript.py` additionally uses `pypandoc_binary` and Tectonic to build the LaTeX/PDF and submission-source archive. See `results/dossier-ui-validation.json` for the original dossier's browser and link checks. Reproduce the spatial study with `run_spatial_repair.py`, `verify_spatial_repair.py`, and `build_spatial_repair_docs.py` in `scripts/`.

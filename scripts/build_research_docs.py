@@ -1,5 +1,6 @@
 """Build the public journey, scientific dossier, and manuscript from audited sources."""
 from pathlib import Path
+import argparse
 import hashlib
 import html
 import json
@@ -19,7 +20,7 @@ STYLE = '''
 '''
 
 JOURNEY = r'''
-# From a prediction about science to five auditable models
+# From a prediction about science to auditable survival models
 
 The project began with the closing minutes of Jacob Tsimerman's Golden Gate Institute talk. Around 8:22–8:39, the supplied transcript records his prediction that the current landscape of mathematical problems would be resolved within five years, with several generations of progress compressed into that interval. Around 8:57 he asks researchers to reconsider their scientific ambition. At 9:05–9:28 he invokes the chain from mathematics to physics, chemistry, and biology, suggesting that computational difficulty might cease to enforce familiar disciplinary boundaries. At 9:36–9:56 he extends the challenge to philosophy, including attention, love, and value. These are a research invitation and predictions about the future. The experiments below test a small, explicitly defined part of that invitation. [Video from 8:57](https://www.youtube.com/watch?v=kbzIVh405r8&t=537s) · [Transcript provenance and closing excerpt](../research/talk-closing-excerpt.md)
 
@@ -126,7 +127,7 @@ The rendering checks exercise desktop and phone widths, every local link, every 
 INTRO = r'''
 # Information, energy, and the survival of designed systems
 
-This dossier makes five small mathematical models inspectable by researchers unfamiliar with the project. It assumes graduate mathematics and physics, and introduces the chemical and biological vocabulary explicitly. The motivating question comes from the closing minutes of Tsimerman's Golden Gate Institute talk: could stronger mathematical reasoning make explanations travel across physics, chemistry, biology, and eventually questions of value? The user selected the physical cost of persistent purposeful behavior as a tractable starting point. [Talk at 9:05](https://www.youtube.com/watch?v=kbzIVh405r8&t=545s) · [Development journey](DEVELOPMENT-JOURNEY.html)
+This dossier makes five small mathematical models and their spatial maintenance extension inspectable by researchers unfamiliar with the project. It assumes graduate mathematics and physics, and introduces the chemical and biological vocabulary explicitly. The motivating question comes from the closing minutes of Tsimerman's Golden Gate Institute talk: could stronger mathematical reasoning make explanations travel across physics, chemistry, biology, and eventually questions of value? The user selected the physical cost of persistent purposeful behavior as a tractable starting point. [Talk at 9:05](https://www.youtube.com/watch?v=kbzIVh405r8&t=545s) · [Development journey](DEVELOPMENT-JOURNEY.html) · [Spatial repair extension](SPATIAL-REPAIR.html)
 
 ## Abstract
 
@@ -236,6 +237,8 @@ def page(filename, source, title):
     js = '''document.querySelectorAll('.math').forEach(el=>{try{katex.render(el.textContent,el,{displayMode:el.dataset.display==='true',throwOnError:true,strict:'ignore'})}catch(e){el.dataset.error=e.message;console.error(e.message)}});document.getElementById('print').onclick=()=>window.print();'''
     extra_css = '.katex{position:relative}.math.display{display:block;max-width:100%}.math:not(.display){display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}.math{scrollbar-width:none}.math::-webkit-scrollbar{display:none}.katex-display{margin:0;text-align:left}td{overflow-wrap:anywhere}.contents{margin:30px 0}.contents summary{cursor:pointer;color:var(--accent)}'
     content = f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(title)}</title><style>{STYLE}{extra_css}</style><link rel="stylesheet" href="assets/katex/katex.min.css"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p>{body}</main><footer>Equations and figures are local. Sources link to the research package and primary literature.</footer><script src="assets/katex/katex.min.js"></script><script>{js}</script></body></html>'''
+    content = content.replace('<a href="SELF-ASSEMBLY.html">Self-assembly study</a>',
+                              '<a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="SPATIAL-REPAIR.html">Spatial repair</a>')
     (DOCS / filename).write_text(content, encoding='utf-8')
 
 def study(name, label):
@@ -253,6 +256,10 @@ def study(name, label):
     return '\n'.join(lines)
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--site-only', action='store_true',
+                        help='Refresh the dossier and journey while retaining the Studies 01–05 manuscript snapshot.')
+    args = parser.parse_args()
     run = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover', '-s', 'tests', '-v'], cwd=ROOT,
                          env={**__import__('os').environ, 'PYTHONPATH': str(ROOT / 'src')}, capture_output=True, text=True)
     if run.returncode:
@@ -260,7 +267,7 @@ def main():
     receipt = ROOT / 'results' / 'dossier-verification.json'
     sources = sorted([*ROOT.glob('src/purposeful/*.py'), *ROOT.glob('tests/test_*.py'), *ROOT.glob('docs/*.md'),
                       *ROOT.glob('scripts/run_*.py'), *ROOT.glob('scripts/build_*.py'), *ROOT.glob('scripts/*assembly*.py'), *ROOT.glob('research/assembly-*.md'),
-                      *[ROOT / 'results' / name for name in ['summary.json', 'closed-loop.json', 'autonomous.json', 'reserve.json', 'assembly.json', 'assembly-evidence.json', 'assembly-certificate-check.json']]])
+                      *[ROOT / 'results' / name for name in ['summary.json', 'closed-loop.json', 'autonomous.json', 'reserve.json', 'assembly.json', 'assembly-evidence.json', 'assembly-certificate-check.json', 'spatial-repair.json', 'spatial-repair-verification.json', 'spatial-repair-review-check.json']]])
     sources = sorted(set(p for p in sources if p.name != 'research-manuscript.md'))
     record = {'generated_utc': datetime.now(timezone.utc).isoformat(), 'command': 'python -B -m unittest discover -s tests -v',
               'test_output': run.stdout + run.stderr, 'return_code': run.returncode,
@@ -268,12 +275,16 @@ def main():
     receipt.write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
     receipt_md = '''\n## Evidence and reproduction receipts\n\nThe dossier build reran the existing test suite. The machine-readable receipt records the full output, UTC execution time, and SHA-256 hashes of source, tests, and mathematical notes. Passing tests supports implementation agreement within the tested cases. The proofs and certificates carry the mathematical claims. [Fresh verification receipt](../results/dossier-verification.json)\n\n| Study | Executable source | Reproduction | Numerical evidence |\n|---|---|---|---|\n| 01 | [model.py](../src/purposeful/model.py) | [run_study.py](../scripts/run_study.py) | [summary](../results/summary.json), [all 144 cases](../results/transfer.csv) |\n| 02 | [reserve.py](../src/purposeful/reserve.py) | [run_reserve_study.py](../scripts/run_reserve_study.py) | [independent full-state test](../tests/test_reserve.py) |\n| 03 | [closed_loop.py](../src/purposeful/closed_loop.py) | [run_closed_loop.py](../scripts/run_closed_loop.py) | [arrays and example](../results/closed-loop.json) |\n| 04 | [autonomous.py](../src/purposeful/autonomous.py) | [run_autonomous.py](../scripts/run_autonomous.py) | [integer and rational enclosures](../results/autonomous.json) |\n| 05 | [assembly.py](../src/purposeful/assembly.py) | [run_assembly.py](../scripts/run_assembly.py) | [certificate](../results/assembly.json), [full replay](../results/assembly-certificate-check.json), [simulation](../results/assembly-evidence.json) |\n\nThe earlier run-manifest contains historical hashes and package versions for Study 01. Two hashes were already stale on first inspection. The present receipt identifies the exact sources used for this dossier's fresh test run. The 38 tests are a local reproducibility check. Independent scientific review remains pending.\n'''
     guide = (DOCS / 'math-results-guide.md').read_text(encoding='utf-8')
+    test_count = re.search(r'Ran (\d+) tests?', run.stdout + run.stderr).group(1)
+    receipt_md = receipt_md.replace('The 38 tests', 'The ' + test_count + ' tests')
+    spatial_overview = (DOCS / 'spatial-repair-overview.md').read_text(encoding='utf-8')
+    spatial_journey = (DOCS / 'spatial-repair-journey.md').read_text(encoding='utf-8')
     repair = (DOCS / 'repair-lemma.md').read_text(encoding='utf-8')
     assembly = study('self-assembly.md', 'Study 05 — Self-assembly and cooperative maintenance')
     references = REFERENCES + '\n' + (ROOT / 'research/assembly-references.md').read_text(encoding='utf-8')
     assembly_results = (DOCS / 'assembly-results.md').read_text(encoding='utf-8')
     assembly += '\n\n' + assembly_results
-    science = '\n\n'.join([INTRO, guide, study('model.md', 'Study 01 — Thermal sensing, temporal errors, and effective survival'), study('finite-reserve-repair.md', 'Study 02 — Finite reserve and paid repair'), study('closed-loop-survival.md', 'Study 03 — A common reserve for sensing, actuation, and repair'), study('autonomous-survival.md', 'Study 04 — Autonomous reactions and continuous-time failure'), assembly, receipt_md, LITERATURE, references])
+    science = '\n\n'.join([INTRO, spatial_overview, guide, study('model.md', 'Study 01 — Thermal sensing, temporal errors, and effective survival'), study('finite-reserve-repair.md', 'Study 02 — Finite reserve and paid repair'), study('closed-loop-survival.md', 'Study 03 — A common reserve for sensing, actuation, and repair'), study('autonomous-survival.md', 'Study 04 — Autonomous reactions and continuous-time failure'), assembly, receipt_md, LITERATURE, references])
     manuscript = r'''# Finite-resource survival from sensing to self-assembled repair
 
 AI-assisted research workspace draft · 17 November 2026
@@ -293,11 +304,14 @@ The finite-time comparison and the asymptotic comparison are distinct objectives
     manuscript = '\n\n'.join([manuscript, guide, study('closed-loop-survival.md', 'Checkpoint architecture and proofs'), study('autonomous-survival.md', 'Autonomous architecture and certificates'), repair, assembly, receipt_md, LITERATURE, references])
     journey_extension = (DOCS / 'assembly-journey.md').read_text(encoding='utf-8')
     page('SELF-ASSEMBLY.html', (DOCS / 'self-assembly.md').read_text(encoding='utf-8') + '\n\n' + assembly_results + references, 'Self-assembly and maintenance with finite fuel')
-    page('DEVELOPMENT-JOURNEY.html', JOURNEY + journey_extension + receipt_md, 'Development journey — Tsimerman and physical survival')
+    page('DEVELOPMENT-JOURNEY.html', JOURNEY + journey_extension + spatial_journey + receipt_md, 'Development journey — Tsimerman and physical survival')
     page('SCIENTIFIC-DOSSIER.html', science, 'Scientific dossier — information, energy, and survival')
-    page('RESEARCH-MANUSCRIPT.html', manuscript, 'Research manuscript — finite-resource survival and assembly')
-    (DOCS / 'research-manuscript.md').write_text(manuscript, encoding='utf-8')
-    print('Built journey, scientific dossier, manuscript HTML/source, and fresh verification receipt.')
+    if not args.site_only:
+        page('RESEARCH-MANUSCRIPT.html', manuscript, 'Research manuscript — finite-resource survival and assembly')
+        (DOCS / 'research-manuscript.md').write_text(manuscript, encoding='utf-8')
+    print('Built journey, scientific dossier, self-assembly page, and fresh verification receipt.'
+          + (' Retained the Studies 01–05 manuscript snapshot.' if args.site_only
+             else ' Also rebuilt manuscript HTML/source.'))
 
 if __name__ == '__main__':
     main()

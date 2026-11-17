@@ -1,8 +1,8 @@
 [
   {
     "path": ".gitignore",
-    "bytes": 84,
-    "sha256": "828da29ca7c00e70a095494401388146736d3869e0ae5daa4355516be748e1dd"
+    "bytes": 94,
+    "sha256": "00d4f4b029377d05e922f23117c402c3ded597886137a5dbe613bac71948e42d"
   },
   {
     "path": ".nojekyll",
@@ -151,8 +151,8 @@
   },
   {
     "path": "docs/DEVELOPMENT-JOURNEY.html",
-    "bytes": 26973,
-    "sha256": "322a7673b2990a2aded865dc4061a9b14743beda9858ec4b53bb6356271630d5"
+    "bytes": 32386,
+    "sha256": "caceb465a22b2599bd57f45d0f1ebc3770daa96760ba75065c489b32e0653bf3"
   },
   {
     "path": "docs/finite-reserve-repair.md",
@@ -201,18 +201,48 @@
   },
   {
     "path": "docs/SCIENTIFIC-DOSSIER.html",
-    "bytes": 145674,
-    "sha256": "e7ba49c31e7f93e9e62c32d5640116a55ce96a730ca75a4dd17b240d2c715f6d"
+    "bytes": 150660,
+    "sha256": "29862968e65cdc73ad351046a7c54d58f63cc81b0c677d7403e9bb59fa52f163"
   },
   {
     "path": "docs/SELF-ASSEMBLY.html",
-    "bytes": 44161,
-    "sha256": "9d2c11fdb2a305a095e7245ad6592b10fcbadf4ce340834152fb6d990aec903c"
+    "bytes": 44209,
+    "sha256": "73658b3b29596f01698df31f7001d9183a3923093dc7c50cddd064bffd9ef209"
   },
   {
     "path": "docs/self-assembly.md",
     "bytes": 21300,
     "sha256": "53c42c5b2a1bb03eba225cc4010fa68070139926fc55206dd6a5fa4caa4c5408"
+  },
+  {
+    "path": "docs/spatial-repair-journey.md",
+    "bytes": 4741,
+    "sha256": "8bdc6cc096df8a1d116b2616daa86c81233266c84842e7e5519bc0dc6e9db90a"
+  },
+  {
+    "path": "docs/spatial-repair-overview.md",
+    "bytes": 4036,
+    "sha256": "d3a8675ba3103137f6bed8bcbb670a0f94c3574c2c1d99b91e83362d4dac0470"
+  },
+  {
+    "path": "docs/SPATIAL-REPAIR.html",
+    "bytes": 37672,
+    "sha256": "91f785190512ef42b6e0a4bc8eb6fc838d70519042296755466f42a75bf5e2cd"
+  },
+  {
+    "path": "docs/spatial-repair.md",
+    "bytes": 18043,
+    "sha256": "3434605389253bd94f09d89b919eb515f31ce607c9cd3b159969e45b86f23792"
+  },
+  {
+    "path": "docs/STOCHASTIC-CALCULUS-PLAN.html",
+    "bytes": 35471,
+    "sha256": "bb4a76aafbfcc3a17a47c324152e78eb6992c5c7c029bb992b17e2706f8abd72"
+  },
+  {
+    "path": "docs/stochastic-calculus-plan.md",
+    "bytes": 22308,
+    "sha256": "ce0f4e953282f42c6e182ae72496ed0af61b7de6139fb818beafa395cadf25e1"
   },
   {
     "path": "index.html",
@@ -226,8 +256,8 @@
   },
   {
     "path": "README.md",
-    "bytes": 7718,
-    "sha256": "25baec39e0b8a8563691a5c11950eb4269b44c81f15ba4f4f9dadb4579134647"
+    "bytes": 12197,
+    "sha256": "c0dd9eac0cd1fd195e2c1f411e5646f6b05da40cc31ec3fdd467dd16785e0184"
   },
   {
     "path": "research/assembly-literature.md",
@@ -258,6 +288,36 @@
     "path": "research/source-manifest.json",
     "bytes": 1556,
     "sha256": "9f1480c706d054ad38b51480c9b5ba8ca25a6cbe5da52e928f59e2028a5263f5"
+  },
+  {
+    "path": "research/spatial-repair-originality-audit.md",
+    "bytes": 14276,
+    "sha256": "77da7ca24ee78befbf319426c1e76f2dc325663221068d41c4eff8a9d22fb313"
+  },
+  {
+    "path": "research/spatial-repair-progress.md",
+    "bytes": 3467,
+    "sha256": "87e32a7ef43b5c2a4248739ef9ddcdfb8825dd6a5d17bdc4fd819e6a55dc020f"
+  },
+  {
+    "path": "research/spatial-repair-search-receipt.json",
+    "bytes": 19692,
+    "sha256": "e4c904af75cbcf7f7fb07f0c8d0a85f2ac9320d39b76dfa8afe424c68ca2ef34"
+  },
+  {
+    "path": "research/spatial-repair-statistical-source.md",
+    "bytes": 1171,
+    "sha256": "401dddff09fd2e871c63fa8b3bc4d604fefa95d5d6c9c6393baa263de48ad64a"
+  },
+  {
+    "path": "research/spatial-repair-verification-design.md",
+    "bytes": 7001,
+    "sha256": "1f151d67d3338382b40b2e0442393f87c44189509e69fb022d177694dc7f1b8d"
+  },
+  {
+    "path": "research/stochastic-calculus-prior-art.md",
+    "bytes": 7725,
+    "sha256": "4b28fb19ac4f9dc2c7cf2fe5e0b12390f1092a8063dbc805fdc77bf4b779a408"
   },
   {
     "path": "research/talk-closing-excerpt.md",
@@ -326,13 +386,13 @@
   },
   {
     "path": "results/document-previews/development-journey-1440.png",
-    "bytes": 102232,
-    "sha256": "3f9dc00953ae1f61eaedffb880402a8aa39624a3edf577644742239ca2ae4e46"
+    "bytes": 104195,
+    "sha256": "ef575ff74c5b5f9c0586e4d37d969753de227734ecdad4ff1f660080225f270a"
   },
   {
     "path": "results/document-previews/development-journey-390.png",
-    "bytes": 57035,
-    "sha256": "2da338dc2fa2818632356c91fa181cb477bfbc2f4f299d3225319809a7c1de6b"
+    "bytes": 59014,
+    "sha256": "45add67687e515b21be61a00cbe160e4758b5275a5e44a900d4a380852e766c2"
   },
   {
     "path": "results/document-previews/manuscript-page-1.png",
@@ -371,28 +431,48 @@
   },
   {
     "path": "results/document-previews/scientific-dossier-1440.png",
-    "bytes": 112808,
-    "sha256": "f445262219bc9bb8ef559b632967a24fbc42a9c0d8c2e64a44de6be5d11ef594"
+    "bytes": 113805,
+    "sha256": "300352f844ef15a6a56d4da4324351011c79121b4c2a3e525373064ebd47433d"
   },
   {
     "path": "results/document-previews/scientific-dossier-390.png",
-    "bytes": 53957,
-    "sha256": "34cf9a108bde4812b95e2a33501b3f40f16e8acc51df3bb21aad2eddf48df007"
+    "bytes": 53498,
+    "sha256": "5fba7a5cf28d69b5022f8bacadad2afc5f9e3443bdb52f566fc14cf8992d87ea"
   },
   {
     "path": "results/document-previews/scientific-theorems.png",
-    "bytes": 106156,
-    "sha256": "cc123652512e78d8f81d4fe17ec67ae06eb5a2d9acac2730a1fb40cd9c57a611"
+    "bytes": 117543,
+    "sha256": "45e56932cfd0ae4e596f4131bc0526b8b7083faf1c3b4b96f33966a17c00344b"
   },
   {
     "path": "results/document-previews/self-assembly-1440.png",
-    "bytes": 118026,
-    "sha256": "dcef7cbfda98bd35b1472564cb355774e318de33dc385151c75b61d8486a5141"
+    "bytes": 118548,
+    "sha256": "8e48396d661e496793c561fe2bad529c2a083fc682e36228ed1319c453a840f2"
   },
   {
     "path": "results/document-previews/self-assembly-390.png",
-    "bytes": 57523,
-    "sha256": "bfb99f25868535153b37ec514318e7afc54becb0e946c8110339a389bfb775cc"
+    "bytes": 58109,
+    "sha256": "d1028ec04c2878f38a85fdb8caad1cf761499d4408ac91122396b413f2308167"
+  },
+  {
+    "path": "results/document-previews/spatial-repair-1440.png",
+    "bytes": 115086,
+    "sha256": "c4c873ca1685621725c4de9c436ed68f3d95cc123e216a33ed2cceaecee6fed9"
+  },
+  {
+    "path": "results/document-previews/spatial-repair-390.png",
+    "bytes": 61908,
+    "sha256": "c8fe33bf40484778216f07ac71b111bc83be8a8cf14d24013ac62e1b184f10d9"
+  },
+  {
+    "path": "results/document-previews/stochastic-plan-1440.png",
+    "bytes": 106790,
+    "sha256": "6bd73ce34a047f43b81c8edfde6eb3619c4b0d9f3ad168a589ab91e56be4578c"
+  },
+  {
+    "path": "results/document-previews/stochastic-plan-390.png",
+    "bytes": 56595,
+    "sha256": "f2d440aaabc96dd523ceac715b4701ec25d19981f7e947f3c31a0fd8f9ea08b4"
   },
   {
     "path": "results/dossier-execution-receipt.json",
@@ -402,12 +482,22 @@
   {
     "path": "results/dossier-ui-validation.json",
     "bytes": 3176,
-    "sha256": "b0ece2468c9cf4ebc74ffb14673db9713dd3718d4c997c37ee486c2326612d78"
+    "sha256": "2186019ed363818dfe8ec4b9d13249e2100c5a2b5a265e52a1249406f8f79b63"
   },
   {
     "path": "results/dossier-verification.json",
-    "bytes": 8897,
-    "sha256": "c70bd457ad6a59f25a3fcb229cb24fc350442b0b44569de14fd13f56c2d3d485"
+    "bytes": 12211,
+    "sha256": "881f646bf4be80bc3a0d7e1f9d1e8d0f0ebc5905481b26c46ad3448913de6e08"
+  },
+  {
+    "path": "results/encounter-feasibility.json",
+    "bytes": 17533,
+    "sha256": "f32d9ae1912c8502c559162861b024858308fbd122b877d05af3aeaa3fc58550"
+  },
+  {
+    "path": "results/encounter-verification.json",
+    "bytes": 6606,
+    "sha256": "44c825650467a5e068e097b3566459f7217c886b560645e9d39eeb444729bf4c"
   },
   {
     "path": "results/figures/assembly-formation.pdf",
@@ -495,6 +585,26 @@
     "sha256": "895394c3518a21d3bc4868bb9fe6fc554047028d09ef62199c5487980d8bde36"
   },
   {
+    "path": "results/figures/encounter-feasibility.pdf",
+    "bytes": 22720,
+    "sha256": "88f1ff679d27415d297e6796ed57b76e4b6dd34cbad78c2b0dbf0bb163db23a5"
+  },
+  {
+    "path": "results/figures/encounter-feasibility.png",
+    "bytes": 143875,
+    "sha256": "2434e8598c829ba77dffd1d012dcf94cdf3a8ff45845770fb28dd5171608c394"
+  },
+  {
+    "path": "results/figures/encounter-timescales.pdf",
+    "bytes": 105053,
+    "sha256": "703e202722c2a5597de21936f38c1ae688c313f33cb0cc49071cc57d1ef07443"
+  },
+  {
+    "path": "results/figures/encounter-timescales.png",
+    "bytes": 120169,
+    "sha256": "5643c03daa814c96367c4ab13a7a4c2b13b103dbb961214345cfdc3c6332efc3"
+  },
+  {
     "path": "results/figures/power-frontier.png",
     "bytes": 66144,
     "sha256": "2bcd94a5e82a0a9666fcff76c1f032c6935a4aff5bbd408ccfb98975303ac7bf"
@@ -528,6 +638,36 @@
     "path": "results/figures/reserve-frontier.png",
     "bytes": 133235,
     "sha256": "68c588a8419132066afb2e8f0bc5875cf4fd8230b7f66f09c3d183824c433e13"
+  },
+  {
+    "path": "results/figures/spatial-repair-independent.pdf",
+    "bytes": 70753,
+    "sha256": "899b4dad527a14a83ada658316c3cef6dea6ae3b40294b98e1d49f4a37c5952f"
+  },
+  {
+    "path": "results/figures/spatial-repair-independent.png",
+    "bytes": 287270,
+    "sha256": "ea04303ea8753fe5f35b0eb70c0897f5cada5c875747bdf75380163f288eca48"
+  },
+  {
+    "path": "results/figures/spatial-repair-refinement.pdf",
+    "bytes": 20618,
+    "sha256": "24ad5d1b66c29b169f2e3b724e0c6f8278fea3a183aa15140413c050758bb6aa"
+  },
+  {
+    "path": "results/figures/spatial-repair-refinement.png",
+    "bytes": 138912,
+    "sha256": "a6f355c23a821bce475734433409cf8c714ee06919c19477b25523003e60d4e2"
+  },
+  {
+    "path": "results/figures/spatial-repair-survival.pdf",
+    "bytes": 22665,
+    "sha256": "3a17a6947fe517eef9e40b12211f9489035dc6a7d3873fef95c28edecbe6d7a5"
+  },
+  {
+    "path": "results/figures/spatial-repair-survival.png",
+    "bytes": 195181,
+    "sha256": "31e0e6205dce6113fb448e18f675a2895c60d84116d115c4b095503bf77f7a86"
   },
   {
     "path": "results/manuscript-build.json",
@@ -570,6 +710,41 @@
     "sha256": "fa19cfd8da841e9398e09269cc3c3e2ba1a292c6f2342ad72a7ff7061061a76d"
   },
   {
+    "path": "results/spatial-repair-delivery-manifest.json",
+    "bytes": 14906,
+    "sha256": "6c4c079fc93c8b267133158b1ec84f30936be1943e7edc0d56c6561a4daf3456"
+  },
+  {
+    "path": "results/spatial-repair-integrity.json",
+    "bytes": 419,
+    "sha256": "fc20eb4229825b7f8f52a22200d400ed14160293f8e83c9b0d6a11b28605759e"
+  },
+  {
+    "path": "results/spatial-repair-review-check.json",
+    "bytes": 142346,
+    "sha256": "edd5543c114b2489e9783a40d06f1597c3f76e501bf0fd71e70189a6ea6fd44a"
+  },
+  {
+    "path": "results/spatial-repair-ui-validation.json",
+    "bytes": 1825,
+    "sha256": "ebd1a135c0106d97ea37ac4f8faa44ac106fcc8569672c65ecea6b57991cbf7d"
+  },
+  {
+    "path": "results/spatial-repair-verification.json",
+    "bytes": 691315,
+    "sha256": "91c3cdf665936987ce403e5e0cc712a9cc61013cc711d675163b5f5c35b8d017"
+  },
+  {
+    "path": "results/spatial-repair.json",
+    "bytes": 2254492,
+    "sha256": "3f21e5e23bf1e70fa957a26f8fbd3b5e5d1d186d0644eea8989fc67797ac90fc"
+  },
+  {
+    "path": "results/stochastic-plan-ui-validation.json",
+    "bytes": 751,
+    "sha256": "401076279aeae68fcad015c75f4032aa8c392a097cf1f2733a4ee608244709ed"
+  },
+  {
     "path": "results/summary.json",
     "bytes": 2557,
     "sha256": "f1dd15664b30b1bc92215a6ad0108b103ea7cb6f43ae21742a02b3595bf11706"
@@ -601,13 +776,23 @@
   },
   {
     "path": "scripts/build_research_docs.py",
-    "bytes": 43445,
-    "sha256": "2f99398f2c584bba9a73bf6970e084c5ab75c10737c29283007d0195b50446c4"
+    "bytes": 44674,
+    "sha256": "5a480fb369b7a47917c3a889497ee5d700fca1428d08b273f904dffc300c9c67"
   },
   {
     "path": "scripts/build_reserve_figure.py",
     "bytes": 2761,
     "sha256": "679178e6c7e9b11b7e8a2c7521ab7256d92d09fd2690b913794a11c4e68eda4e"
+  },
+  {
+    "path": "scripts/build_spatial_repair_docs.py",
+    "bytes": 9392,
+    "sha256": "20dde3dc3f6e3800d7691448946671b5a5c5c45ea041c2384817d9f1edc71779"
+  },
+  {
+    "path": "scripts/build_stochastic_plan.py",
+    "bytes": 8365,
+    "sha256": "bf83b6cc937a55e6cb6efb74ec9461325d6cb4c2408de8af74fa86219d70531c"
   },
   {
     "path": "scripts/check_assembly_certificate.py",
@@ -620,9 +805,14 @@
     "sha256": "77a73821ab1f6e94b67f6eca30783415981fcac05e187ed1a03c6b21e6150342"
   },
   {
+    "path": "scripts/check_spatial_repair_receipts.py",
+    "bytes": 4186,
+    "sha256": "91cc6b7e6b1a4cd2c4389d24d8fad70ed0f87b5bdbd0586a21025c540af16eeb"
+  },
+  {
     "path": "scripts/package_research_docs.py",
-    "bytes": 2446,
-    "sha256": "61cc7b8e313f58edde7bed3e7a70fe5f1b7b6fbbe823655a8eaf7296c5f10263"
+    "bytes": 2465,
+    "sha256": "c1580b581f4f00ee12c6110d2e7d22ca498d1535bac30e90b11edd910b89dd70"
   },
   {
     "path": "scripts/run_assembly.py",
@@ -645,14 +835,34 @@
     "sha256": "ed0e63f9386f55f0ce8fe8acf8bf56dbabeb18ec03f634e3a787321836f37007"
   },
   {
+    "path": "scripts/run_spatial_repair.py",
+    "bytes": 7979,
+    "sha256": "6524c69c5aa1cdb2b0479aadd176dd4565cded06bfe825271b5c3dca9228877b"
+  },
+  {
     "path": "scripts/run_study.py",
     "bytes": 7695,
     "sha256": "3b9719ddf0aedee60da640b60c5551b8122699c6a959ec9aa0e9ecf1ccaba313"
   },
   {
+    "path": "scripts/verify_live_spatial_publication.py",
+    "bytes": 4214,
+    "sha256": "4e0d9ea39a880f3c304499a30fdc659d8e8898637fbc63063414f2237026d42b"
+  },
+  {
     "path": "scripts/verify_research_docs.py",
     "bytes": 5086,
     "sha256": "0ab1f0bd15698ef9ac795725c159483974756051c1101e9643619870c12d5f38"
+  },
+  {
+    "path": "scripts/verify_spatial_repair.py",
+    "bytes": 21928,
+    "sha256": "f4430892de48554b7f863fbf0c2c5574f108654de03d7ab498883b302f2ef19c"
+  },
+  {
+    "path": "scripts/verify_stochastic_plan.py",
+    "bytes": 3589,
+    "sha256": "78986e8fb8abfd0dcf9ba082a51f05d35ac112da8e2da431958bc1853fe0c675"
   },
   {
     "path": "src/purposeful/__init__.py",
@@ -675,6 +885,11 @@
     "sha256": "c034f5cdbf416ece7fdc05fca97827b9719a3245c6e56ea01c78caffc33c3c6f"
   },
   {
+    "path": "src/purposeful/encounter.py",
+    "bytes": 3448,
+    "sha256": "e05f4b9603e3bdea581698c46feea60ae45bb600c568097d3dd9e236a9b3952f"
+  },
+  {
     "path": "src/purposeful/model.py",
     "bytes": 7758,
     "sha256": "31839e86ab4b82a29873b6fc875c4c723c38827cb311b81dc275ada3ef87a732"
@@ -683,6 +898,11 @@
     "path": "src/purposeful/reserve.py",
     "bytes": 4793,
     "sha256": "feb8c1ffc3d4219b613f2a77c5322a408b69600a03791697a79dcf1e3adc2700"
+  },
+  {
+    "path": "src/purposeful/spatial_repair.py",
+    "bytes": 11633,
+    "sha256": "c8d77bfae448c189a920e7f91d6546088aaef3d95844997f0c1f67d023537d36"
   },
   {
     "path": "tests/test_assembly.py",
@@ -700,6 +920,11 @@
     "sha256": "195ad55d9390995115bf7e82c720fd64344609f3f1b9c5c4eb363cc2060e4544"
   },
   {
+    "path": "tests/test_encounter.py",
+    "bytes": 3782,
+    "sha256": "c841c366862c7ff5573e5644e88687253577935fae4aac8eee761cef1a55df67"
+  },
+  {
     "path": "tests/test_model.py",
     "bytes": 4945,
     "sha256": "3f4fe1d7ad6a0b22aada7763bb85da553d52ee783b2b5858120d129df4039cc9"
@@ -708,5 +933,10 @@
     "path": "tests/test_reserve.py",
     "bytes": 4659,
     "sha256": "4811bd81490b97a5a36996f0c57fb4cd9c47b15e58f58b88d4eef6c7ee4465ca"
+  },
+  {
+    "path": "tests/test_spatial_repair.py",
+    "bytes": 15679,
+    "sha256": "95c4d3509398b5632ed244f460f3484a7aebdfcaffbc9dbb36bce21258f2dbeb"
   }
 ]

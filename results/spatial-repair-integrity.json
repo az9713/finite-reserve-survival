@@ -1,0 +1,10 @@
+{
+  "generated_utc": "2026-11-17T21:06:23.712035+00:00",
+  "status": "PASS",
+  "manifest_sha256": "6c4c079fc93c8b267133158b1ec84f30936be1943e7edc0d56c6561a4daf3456",
+  "artifacts_checked": 82,
+  "formal_tests_passed": 51,
+  "formal_continuous_paths": 200000,
+  "supplemental_fresh_seed_paths": 200000,
+  "scope": "Integrity and retained-acceptance replay; not a new simulation or independent proof review."
+}

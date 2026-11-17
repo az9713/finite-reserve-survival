@@ -1,0 +1,421 @@
+{
+  "generated_utc": "2026-11-17T21:06:23.701407+00:00",
+  "scope": "Spatial repair delivery, scientific source dependencies and offline equation assets.",
+  "exclusions": [
+    "Project-private MEMORY.md",
+    ".git",
+    "caches"
+  ],
+  "artifacts": [
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_AMS-Regular.woff2",
+      "bytes": 28076,
+      "sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Bold.woff2",
+      "bytes": 6912,
+      "sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Caligraphic-Regular.woff2",
+      "bytes": 6908,
+      "sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Bold.woff2",
+      "bytes": 11348,
+      "sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Fraktur-Regular.woff2",
+      "bytes": 11316,
+      "sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Bold.woff2",
+      "bytes": 25324,
+      "sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-BoldItalic.woff2",
+      "bytes": 16780,
+      "sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Italic.woff2",
+      "bytes": 16988,
+      "sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Main-Regular.woff2",
+      "bytes": 26272,
+      "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-BoldItalic.woff2",
+      "bytes": 16400,
+      "sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Math-Italic.woff2",
+      "bytes": 16440,
+      "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Bold.woff2",
+      "bytes": 12216,
+      "sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Italic.woff2",
+      "bytes": 12028,
+      "sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_SansSerif-Regular.woff2",
+      "bytes": 10344,
+      "sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Script-Regular.woff2",
+      "bytes": 9644,
+      "sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size1-Regular.woff2",
+      "bytes": 5468,
+      "sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size2-Regular.woff2",
+      "bytes": 5208,
+      "sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size3-Regular.woff2",
+      "bytes": 3624,
+      "sha256": "73d591271b1604960cb10bb90fee021670af7297017e0e98480b332d11f51995"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Size4-Regular.woff2",
+      "bytes": 4928,
+      "sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0"
+    },
+    {
+      "path": "docs/assets/katex/fonts/KaTeX_Typewriter-Regular.woff2",
+      "bytes": 13568,
+      "sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b"
+    },
+    {
+      "path": "docs/assets/katex/katex.min.css",
+      "bytes": 21202,
+      "sha256": "5a0ff74f11887f7260dc16b216906f51352b84ca29f21abb9a14b62a2ca6eb15"
+    },
+    {
+      "path": "docs/assets/katex/katex.min.js",
+      "bytes": 275414,
+      "sha256": "e6bfe5deebd4c7ccd272055bab63bd3ab2c73b907b6e6a22d352740a81381fd4"
+    },
+    {
+      "path": "docs/assets/katex/LICENSE",
+      "bytes": 1107,
+      "sha256": "766ccc1f306c885aa45542a9846bbd0a505b27a0374f146778171c2254ce18e3"
+    },
+    {
+      "path": "docs/spatial-repair-journey.md",
+      "bytes": 4741,
+      "sha256": "8bdc6cc096df8a1d116b2616daa86c81233266c84842e7e5519bc0dc6e9db90a"
+    },
+    {
+      "path": "docs/spatial-repair-overview.md",
+      "bytes": 4036,
+      "sha256": "d3a8675ba3103137f6bed8bcbb670a0f94c3574c2c1d99b91e83362d4dac0470"
+    },
+    {
+      "path": "docs/SPATIAL-REPAIR.html",
+      "bytes": 37672,
+      "sha256": "91f785190512ef42b6e0a4bc8eb6fc838d70519042296755466f42a75bf5e2cd"
+    },
+    {
+      "path": "docs/spatial-repair.md",
+      "bytes": 18043,
+      "sha256": "3434605389253bd94f09d89b919eb515f31ce607c9cd3b159969e45b86f23792"
+    },
+    {
+      "path": "docs/STOCHASTIC-CALCULUS-PLAN.html",
+      "bytes": 35471,
+      "sha256": "bb4a76aafbfcc3a17a47c324152e78eb6992c5c7c029bb992b17e2706f8abd72"
+    },
+    {
+      "path": "docs/stochastic-calculus-plan.md",
+      "bytes": 22308,
+      "sha256": "ce0f4e953282f42c6e182ae72496ed0af61b7de6139fb818beafa395cadf25e1"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 373,
+      "sha256": "19c15345f59c57285676afe2179bd61ebaae22e715eebdad40d3fc5810b99288"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12197,
+      "sha256": "c0dd9eac0cd1fd195e2c1f411e5646f6b05da40cc31ec3fdd467dd16785e0184"
+    },
+    {
+      "path": "research/spatial-repair-originality-audit.md",
+      "bytes": 14276,
+      "sha256": "77da7ca24ee78befbf319426c1e76f2dc325663221068d41c4eff8a9d22fb313"
+    },
+    {
+      "path": "research/spatial-repair-progress.md",
+      "bytes": 3467,
+      "sha256": "87e32a7ef43b5c2a4248739ef9ddcdfb8825dd6a5d17bdc4fd819e6a55dc020f"
+    },
+    {
+      "path": "research/spatial-repair-search-receipt.json",
+      "bytes": 19692,
+      "sha256": "e4c904af75cbcf7f7fb07f0c8d0a85f2ac9320d39b76dfa8afe424c68ca2ef34"
+    },
+    {
+      "path": "research/spatial-repair-statistical-source.md",
+      "bytes": 1171,
+      "sha256": "401dddff09fd2e871c63fa8b3bc4d604fefa95d5d6c9c6393baa263de48ad64a"
+    },
+    {
+      "path": "research/spatial-repair-verification-design.md",
+      "bytes": 7001,
+      "sha256": "1f151d67d3338382b40b2e0442393f87c44189509e69fb022d177694dc7f1b8d"
+    },
+    {
+      "path": "research/stochastic-calculus-prior-art.md",
+      "bytes": 7725,
+      "sha256": "4b28fb19ac4f9dc2c7cf2fe5e0b12390f1092a8063dbc805fdc77bf4b779a408"
+    },
+    {
+      "path": "results/document-previews/spatial-repair-1440.png",
+      "bytes": 115086,
+      "sha256": "c4c873ca1685621725c4de9c436ed68f3d95cc123e216a33ed2cceaecee6fed9"
+    },
+    {
+      "path": "results/document-previews/spatial-repair-390.png",
+      "bytes": 61908,
+      "sha256": "c8fe33bf40484778216f07ac71b111bc83be8a8cf14d24013ac62e1b184f10d9"
+    },
+    {
+      "path": "results/document-previews/stochastic-plan-1440.png",
+      "bytes": 106790,
+      "sha256": "6bd73ce34a047f43b81c8edfde6eb3619c4b0d9f3ad168a589ab91e56be4578c"
+    },
+    {
+      "path": "results/document-previews/stochastic-plan-390.png",
+      "bytes": 56595,
+      "sha256": "f2d440aaabc96dd523ceac715b4701ec25d19981f7e947f3c31a0fd8f9ea08b4"
+    },
+    {
+      "path": "results/encounter-feasibility.json",
+      "bytes": 17533,
+      "sha256": "f32d9ae1912c8502c559162861b024858308fbd122b877d05af3aeaa3fc58550"
+    },
+    {
+      "path": "results/encounter-verification.json",
+      "bytes": 6606,
+      "sha256": "44c825650467a5e068e097b3566459f7217c886b560645e9d39eeb444729bf4c"
+    },
+    {
+      "path": "results/figures/encounter-feasibility.pdf",
+      "bytes": 22720,
+      "sha256": "88f1ff679d27415d297e6796ed57b76e4b6dd34cbad78c2b0dbf0bb163db23a5"
+    },
+    {
+      "path": "results/figures/encounter-feasibility.png",
+      "bytes": 143875,
+      "sha256": "2434e8598c829ba77dffd1d012dcf94cdf3a8ff45845770fb28dd5171608c394"
+    },
+    {
+      "path": "results/figures/encounter-timescales.pdf",
+      "bytes": 105053,
+      "sha256": "703e202722c2a5597de21936f38c1ae688c313f33cb0cc49071cc57d1ef07443"
+    },
+    {
+      "path": "results/figures/encounter-timescales.png",
+      "bytes": 120169,
+      "sha256": "5643c03daa814c96367c4ab13a7a4c2b13b103dbb961214345cfdc3c6332efc3"
+    },
+    {
+      "path": "results/figures/spatial-repair-independent.pdf",
+      "bytes": 70753,
+      "sha256": "899b4dad527a14a83ada658316c3cef6dea6ae3b40294b98e1d49f4a37c5952f"
+    },
+    {
+      "path": "results/figures/spatial-repair-independent.png",
+      "bytes": 287270,
+      "sha256": "ea04303ea8753fe5f35b0eb70c0897f5cada5c875747bdf75380163f288eca48"
+    },
+    {
+      "path": "results/figures/spatial-repair-refinement.pdf",
+      "bytes": 20618,
+      "sha256": "24ad5d1b66c29b169f2e3b724e0c6f8278fea3a183aa15140413c050758bb6aa"
+    },
+    {
+      "path": "results/figures/spatial-repair-refinement.png",
+      "bytes": 138912,
+      "sha256": "a6f355c23a821bce475734433409cf8c714ee06919c19477b25523003e60d4e2"
+    },
+    {
+      "path": "results/figures/spatial-repair-survival.pdf",
+      "bytes": 22665,
+      "sha256": "3a17a6947fe517eef9e40b12211f9489035dc6a7d3873fef95c28edecbe6d7a5"
+    },
+    {
+      "path": "results/figures/spatial-repair-survival.png",
+      "bytes": 195181,
+      "sha256": "31e0e6205dce6113fb448e18f675a2895c60d84116d115c4b095503bf77f7a86"
+    },
+    {
+      "path": "results/spatial-repair-review-check.json",
+      "bytes": 142346,
+      "sha256": "edd5543c114b2489e9783a40d06f1597c3f76e501bf0fd71e70189a6ea6fd44a"
+    },
+    {
+      "path": "results/spatial-repair-ui-validation.json",
+      "bytes": 1825,
+      "sha256": "ebd1a135c0106d97ea37ac4f8faa44ac106fcc8569672c65ecea6b57991cbf7d"
+    },
+    {
+      "path": "results/spatial-repair-verification.json",
+      "bytes": 691315,
+      "sha256": "91c3cdf665936987ce403e5e0cc712a9cc61013cc711d675163b5f5c35b8d017"
+    },
+    {
+      "path": "results/spatial-repair.json",
+      "bytes": 2254492,
+      "sha256": "3f21e5e23bf1e70fa957a26f8fbd3b5e5d1d186d0644eea8989fc67797ac90fc"
+    },
+    {
+      "path": "results/stochastic-plan-ui-validation.json",
+      "bytes": 751,
+      "sha256": "401076279aeae68fcad015c75f4032aa8c392a097cf1f2733a4ee608244709ed"
+    },
+    {
+      "path": "scripts/build_research_docs.py",
+      "bytes": 44674,
+      "sha256": "5a480fb369b7a47917c3a889497ee5d700fca1428d08b273f904dffc300c9c67"
+    },
+    {
+      "path": "scripts/build_spatial_repair_docs.py",
+      "bytes": 9392,
+      "sha256": "20dde3dc3f6e3800d7691448946671b5a5c5c45ea041c2384817d9f1edc71779"
+    },
+    {
+      "path": "scripts/build_stochastic_plan.py",
+      "bytes": 8365,
+      "sha256": "bf83b6cc937a55e6cb6efb74ec9461325d6cb4c2408de8af74fa86219d70531c"
+    },
+    {
+      "path": "scripts/check_spatial_repair_receipts.py",
+      "bytes": 4186,
+      "sha256": "91cc6b7e6b1a4cd2c4389d24d8fad70ed0f87b5bdbd0586a21025c540af16eeb"
+    },
+    {
+      "path": "scripts/run_spatial_repair.py",
+      "bytes": 7979,
+      "sha256": "6524c69c5aa1cdb2b0479aadd176dd4565cded06bfe825271b5c3dca9228877b"
+    },
+    {
+      "path": "scripts/verify_live_spatial_publication.py",
+      "bytes": 4214,
+      "sha256": "4e0d9ea39a880f3c304499a30fdc659d8e8898637fbc63063414f2237026d42b"
+    },
+    {
+      "path": "scripts/verify_research_docs.py",
+      "bytes": 5086,
+      "sha256": "0ab1f0bd15698ef9ac795725c159483974756051c1101e9643619870c12d5f38"
+    },
+    {
+      "path": "scripts/verify_spatial_repair.py",
+      "bytes": 21928,
+      "sha256": "f4430892de48554b7f863fbf0c2c5574f108654de03d7ab498883b302f2ef19c"
+    },
+    {
+      "path": "scripts/verify_stochastic_plan.py",
+      "bytes": 3589,
+      "sha256": "78986e8fb8abfd0dcf9ba082a51f05d35ac112da8e2da431958bc1853fe0c675"
+    },
+    {
+      "path": "src/purposeful/__init__.py",
+      "bytes": 76,
+      "sha256": "1d10a0f1a0a3c65eae0385bdc2802812404370a09e3f04ca0e57ca5a20e0f15d"
+    },
+    {
+      "path": "src/purposeful/assembly.py",
+      "bytes": 12412,
+      "sha256": "e7d887fed1a7c8b7f0b667521fe27ac40fcc01e3f492a50e9eb682d678a0c70e"
+    },
+    {
+      "path": "src/purposeful/autonomous.py",
+      "bytes": 12145,
+      "sha256": "485ec7e1da9183989c099a91dcbc4542dbcb8d46beb5190f7ce3faed62388bab"
+    },
+    {
+      "path": "src/purposeful/closed_loop.py",
+      "bytes": 7218,
+      "sha256": "c034f5cdbf416ece7fdc05fca97827b9719a3245c6e56ea01c78caffc33c3c6f"
+    },
+    {
+      "path": "src/purposeful/encounter.py",
+      "bytes": 3448,
+      "sha256": "e05f4b9603e3bdea581698c46feea60ae45bb600c568097d3dd9e236a9b3952f"
+    },
+    {
+      "path": "src/purposeful/model.py",
+      "bytes": 7758,
+      "sha256": "31839e86ab4b82a29873b6fc875c4c723c38827cb311b81dc275ada3ef87a732"
+    },
+    {
+      "path": "src/purposeful/reserve.py",
+      "bytes": 4793,
+      "sha256": "feb8c1ffc3d4219b613f2a77c5322a408b69600a03791697a79dcf1e3adc2700"
+    },
+    {
+      "path": "src/purposeful/spatial_repair.py",
+      "bytes": 11633,
+      "sha256": "c8d77bfae448c189a920e7f91d6546088aaef3d95844997f0c1f67d023537d36"
+    },
+    {
+      "path": "tests/test_assembly.py",
+      "bytes": 6623,
+      "sha256": "771b348081fec72db6a1216198f5aa52b2a207696153fd0ab4e248ecaf9ba603"
+    },
+    {
+      "path": "tests/test_autonomous.py",
+      "bytes": 3862,
+      "sha256": "b16e93aa93463aeb4ba540cf5a0e4491365e966c901ead9e1ac7733a6e441ea6"
+    },
+    {
+      "path": "tests/test_closed_loop.py",
+      "bytes": 8092,
+      "sha256": "195ad55d9390995115bf7e82c720fd64344609f3f1b9c5c4eb363cc2060e4544"
+    },
+    {
+      "path": "tests/test_encounter.py",
+      "bytes": 3782,
+      "sha256": "c841c366862c7ff5573e5644e88687253577935fae4aac8eee761cef1a55df67"
+    },
+    {
+      "path": "tests/test_model.py",
+      "bytes": 4945,
+      "sha256": "3f4fe1d7ad6a0b22aada7763bb85da553d52ee783b2b5858120d129df4039cc9"
+    },
+    {
+      "path": "tests/test_reserve.py",
+      "bytes": 4659,
+      "sha256": "4811bd81490b97a5a36996f0c57fb4cd9c47b15e58f58b88d4eef6c7ee4465ca"
+    },
+    {
+      "path": "tests/test_spatial_repair.py",
+      "bytes": 15679,
+      "sha256": "95c4d3509398b5632ed244f460f3484a7aebdfcaffbc9dbb36bce21258f2dbeb"
+    }
+  ]
+}

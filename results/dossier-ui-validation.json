@@ -1,12 +1,12 @@
 {
-  "generated_utc": "2026-11-17T19:28:21.288162+00:00",
+  "generated_utc": "2026-11-17T21:05:20.845446+00:00",
   "broken_local_links": [],
   "browser_checks": [
     {
       "equations": 4,
       "rendered": 4,
       "mathErrors": [],
-      "images": 5,
+      "images": 7,
       "brokenImages": [],
       "width": 1440,
       "scrollWidth": 1440,
@@ -19,7 +19,7 @@
       "equations": 4,
       "rendered": 4,
       "mathErrors": [],
-      "images": 5,
+      "images": 7,
       "brokenImages": [],
       "width": 390,
       "scrollWidth": 390,
@@ -29,10 +29,10 @@
       "console_errors": []
     },
     {
-      "equations": 556,
-      "rendered": 556,
+      "equations": 558,
+      "rendered": 558,
       "mathErrors": [],
-      "images": 14,
+      "images": 16,
       "brokenImages": [],
       "width": 1440,
       "scrollWidth": 1440,
@@ -42,10 +42,10 @@
       "console_errors": []
     },
     {
-      "equations": 556,
-      "rendered": 556,
+      "equations": 558,
+      "rendered": 558,
       "mathErrors": [],
-      "images": 14,
+      "images": 16,
       "brokenImages": [],
       "width": 390,
       "scrollWidth": 390,

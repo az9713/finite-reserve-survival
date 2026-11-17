@@ -1,0 +1,29 @@
+{
+  "generated_utc": "2026-11-17T21:05:24.116191+00:00",
+  "source_hash_mismatches": [],
+  "broken_local_links": [],
+  "browser_checks": [
+    {
+      "equations": 92,
+      "rendered": 92,
+      "mathErrors": 0,
+      "brokenImages": 0,
+      "scrollWidth": 1440,
+      "width": 1440,
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 92,
+      "rendered": 92,
+      "mathErrors": 0,
+      "brokenImages": 0,
+      "scrollWidth": 390,
+      "width": 390,
+      "viewport": 390,
+      "console_errors": []
+    }
+  ],
+  "test_count": 51,
+  "scope": "Classical encounter benchmark and historical implementation plan. The implemented maintenance model has its own report and verification."
+}

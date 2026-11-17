@@ -4,3 +4,4 @@ __pycache__/
 *.egg-info/
 research/sources/*.pdf
 research/sources/*.txt
+MEMORY.md

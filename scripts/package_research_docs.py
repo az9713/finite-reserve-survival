@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def included(path):
     relative = path.relative_to(ROOT)
-    return (path.is_file() and path.name != 'ARTIFACT_MANIFEST.json'
+    return (path.is_file() and path.name not in {'ARTIFACT_MANIFEST.json', 'MEMORY.md'}
             and not any(part in {'.git', '.venv', '__pycache__'} or part.endswith('.egg-info') for part in relative.parts)
             and path.suffix != '.pyc'
             and not (relative.parts[:2] == ('research', 'sources') and path.suffix in {'.pdf', '.txt'}))

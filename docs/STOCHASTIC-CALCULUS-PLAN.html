@@ -1,0 +1,287 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Implementation plan — diffusion, repair, and stochastic calculus</title><style>
+:root{color-scheme:dark;--bg:#0d141d;--panel:#152233;--ink:#e6edf7;--muted:#adc0d6;--line:#2b4159;--accent:#72dbc1}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.75 'Segoe UI',Arial,sans-serif}a{color:var(--accent);text-underline-offset:3px}nav{padding:18px 5vw;border-bottom:1px solid var(--line);display:flex;gap:24px;flex-wrap:wrap}main{max-width:1000px;margin:auto;padding:45px 30px 100px}h1{font:500 clamp(35px,5vw,65px)/1.12 Georgia,serif;letter-spacing:-.025em;margin:20px 0 30px}h2{font:500 32px/1.25 Georgia,serif;margin:65px 0 20px;padding-top:20px;border-top:1px solid var(--line)}h3{font-size:21px;margin:35px 0 12px}p{margin:16px 0}li{margin:9px 0}img{width:100%;height:auto;border:1px solid var(--line);border-radius:8px;margin:20px 0}pre{padding:20px;background:var(--panel);overflow:auto;border-radius:8px;font-size:14px}code{font-family:Consolas,monospace}table{width:100%;border-collapse:collapse;margin:25px 0;font-size:15px}td,th{padding:12px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:var(--panel)}blockquote{margin:25px 0;padding:15px 25px;border-left:3px solid var(--accent);background:var(--panel)}.meta{color:var(--muted);font-size:14px;letter-spacing:.04em}.toc{background:var(--panel);padding:22px 30px;border-radius:9px}.toc ul{columns:2;column-gap:35px;padding-left:20px}.toc li{break-inside:avoid;font-size:14px}.toc ul ul{display:none}.math.display{overflow-x:auto;padding:12px 0}.katex{font-size:1.08em}.receipt{background:var(--panel);padding:16px 22px;border-left:3px solid var(--accent)}button{font:inherit;background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:6px 14px;cursor:pointer}footer{border-top:1px solid var(--line);padding:25px 5vw;color:var(--muted)}@media(max-width:700px){main{padding:25px 18px 60px}body{font-size:16px}h2{font-size:27px}.toc ul{columns:1}table{display:block;overflow-x:auto}nav{gap:13px}.katex{font-size:.95em}}@media print{:root{--bg:white;--ink:#151515;--panel:#f1f3f5;--muted:#444;--line:#bbb;--accent:#165663;color-scheme:light}nav,button,.toc{display:none}main{max-width:none;padding:0}body{font-size:10pt;line-height:1.5}h1{font-size:28pt}h2{font-size:19pt;break-after:avoid}h3{break-after:avoid}img,table,pre{break-inside:avoid}a{color:inherit}footer{font-size:8pt}.katex{font-size:1em}}
+.katex{position:relative}.math.display{display:block;max-width:100%}.math:not(.display){display:inline-block;max-width:100%;overflow-x:auto;vertical-align:middle}.math{scrollbar-width:none}.math::-webkit-scrollbar{display:none}.katex-display{margin:0;text-align:left}td{overflow-wrap:anywhere}.contents{margin:30px 0}.contents summary{cursor:pointer;color:var(--accent)}</style><link rel="stylesheet" href="assets/katex/katex.min.css"></head><body><nav aria-label="Documents"><a href="DEVELOPMENT-JOURNEY.html">Development journey</a><a href="SCIENTIFIC-DOSSIER.html">Scientific dossier</a><a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="SPATIAL-REPAIR.html">Spatial repair</a><a href="RESEARCH-MANUSCRIPT.html">Manuscript</a><button id="print">Print or save PDF</button></nav><main><p class="meta">Research dossier · 17 November 2026 · Candidate results, priority unestablished</p><h1 id="bringing-stochastic-calculus-into-finite-resource-repair">Bringing stochastic calculus into finite-resource repair</h1>
+<p><em>Historical planning document. The two-complex maintenance pilot is now implemented in the <a href="SPATIAL-REPAIR.html">spatial repair report</a>, with its own results and verification receipts. The proposed stages below retain the original plan's distinctions.</em></p>
+<p>The first implementation should measure when molecular positions change the prediction of functional survival after the chemical rates have been calibrated for diffusion. The current count model already has random reaction times. The additional state variables are particle positions and, in a later extension, molecular conformations. Fuel and molecule numbers continue to change through discrete reaction jumps.</p>
+<p>This plan includes completed feasibility calculations and a tested analytical benchmark. The spatial chemical simulator, its detailed-balance construction, and any new theorem are proposed implementation stages. The new calculations reproduce classical diffusion-to-capture results. Their role is to choose the next experiment and expose assumptions before building a larger model.</p>
+<details class="contents"><summary>Contents and navigation</summary><div class="toc">
+<ul>
+<li><a href="#what-the-initial-calculation-says">What the initial calculation says</a></li>
+<li><a href="#parameter-provenance-and-units">Parameter provenance and units</a></li>
+<li><a href="#back-of-the-envelope-calculation">Back-of-the-envelope calculation</a></li>
+<li><a href="#an-exact-stochastic-calculus-benchmark">An exact stochastic-calculus benchmark</a></li>
+<li><a href="#the-implementation-sequence">The implementation sequence</a></li>
+<li><a href="#numerical-method-and-computational-cost">Numerical method and computational cost</a></li>
+<li><a href="#deliverables-sequence-and-stopping-criteria">Deliverables, sequence, and stopping criteria</a></li>
+<li><a href="#evidence-and-reproduction">Evidence and reproduction</a></li>
+<li><a href="#calculated-feasibility-cases">Calculated feasibility cases</a></li>
+</ul>
+</div>
+</details><h2 id="what-the-initial-calculation-says">What the initial calculation says</h2>
+<p>Consider a mobile protein finding a fixed target with effective capture radius 5 nm inside an accessible volume of one cubic micrometre. Use diffusion coefficient 7.7 square micrometres per second as a measured tracer anchor. The exact mean search time in the spherical benchmark is <strong>2.03696 seconds</strong>. A free-diffusion crossing scale is <strong>0.021645 seconds</strong>. Repeatedly crossing the compartment can precede finding a small target.</p>
+<p>For an independent observation window that closes at rate one per second, the exact probability of capture before closure is <strong>0.32929410</strong>. A count-model exponential waiting time calibrated to the same mean gives <strong>0.32927628</strong>. Their absolute difference is about <strong>0.00001783</strong>, or <strong>0.001783 percentage points</strong>. A long encounter time alone therefore supplies insufficient evidence that spatial resolution will change this observable appreciably.</p>
+<p>Starting the same particle 1 nm outside the capture surface instead gives probability <strong>0.88656113</strong>. This is a deliberately localized preparation. It identifies initial separation and repeated near-contact encounters as concrete variables to test. These classical spatial effects have established precedents. The finite-resource feedback question would need a separate originality audit.</p>
+<p><img alt="Exact spatial benchmark, matched count approximation, and localized preparation" src="../results/figures/encounter-feasibility.png" /></p>
+<h2 id="parameter-provenance-and-units">Parameter provenance and units</h2>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Value or range</th>
+<th>Status and interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protein diffusion coefficient</td>
+<td>Reference <span class="math" data-display="false">D=7.7\ \mu\mathrm m^2/\mathrm s</span></td>
+<td>Elowitz et al. measured apparent GFP diffusion <span class="math" data-display="false">7.7\pm2.5</span> in <em>E. coli</em>. This is a mobility anchor, with no calibration to our abstract repair catalyst.</td>
+</tr>
+<tr>
+<td>Capture radius</td>
+<td>Reference <span class="math" data-display="false">a=0.005\ \mu\mathrm m</span>, sensitivity 2–10 nm</td>
+<td>Assumed effective capture scale. A molecular realization must determine orientation and steric accessibility.</td>
+</tr>
+<tr>
+<td>Accessible volume</td>
+<td><span class="math" data-display="false">10^{-3},10^{-2},1,10^3\ \mu\mathrm m^3</span></td>
+<td>Assumed sensitivity cases. Larger values hold the number of searching particles fixed and hence dilute them.</td>
+</tr>
+<tr>
+<td>Window closure rate</td>
+<td>Reference <span class="math" data-display="false">\gamma=1\ \mathrm s^{-1}</span>, sensitivity <span class="math" data-display="false">10^{-3}</span>–<span class="math" data-display="false">10^3</span></td>
+<td>Assumed independent competing-event clock. It is a benchmark observation rule.</td>
+</tr>
+<tr>
+<td>Target motion</td>
+<td>Fixed for the exact spherical calculation</td>
+<td>For a dilute, unbounded pair of independently moving particles, use <span class="math" data-display="false">D_{\rm rel}=D_H+D_D</span> in the Smoluchowski estimate. Two mobile particles in a bounded cell require their joint geometry.</td>
+</tr>
+<tr>
+<td>Surface reactivity</td>
+<td>Example <span class="math" data-display="false">\kappa=10,1000\ \mu\mathrm m/\mathrm s</span></td>
+<td>Assumed Robin-boundary sensitivities. These are not measured catalytic rate constants.</td>
+</tr>
+<tr>
+<td>Initial positions</td>
+<td>Uniform volume or fixed radial separation</td>
+<td>An experimental preparation variable that count-only models discard.</td>
+</tr>
+</tbody>
+</table>
+<p>The GFP measurement and its fusion-protein comparison illustrate that mobility depends on molecule and environment. Its uncertainty is not an uncertainty interval for our unbuilt catalyst. The search-radius and damage assumptions require calibration against a chosen chemical system. <a href="https://doi.org/10.1128/JB.181.1.197-203.1999">Elowitz et al., 1999</a></p>
+<p>The existing Study 05 time unit has <span class="math" data-display="false">\eta=1</span> by convention. It has no experimentally established conversion to seconds. The dimensional calculation above is a separate feasibility scenario. Likewise, four fuel molecules are a deliberate small-inventory preparation. Selecting an ATP-based or other chemical realization requires measured fuel concentrations and an explicit reaction mechanism.</p>
+<h2 id="back-of-the-envelope-calculation">Back-of-the-envelope calculation</h2>
+<p>For a perfectly reactive target in three dimensions, the dilute diffusion-limited rate constant is</p>
+<p><span class="math display" data-display="true">
+k_D=4\pi D_{\rm rel}a.
+</span></p>
+<p>Its dimensions are volume per time. For one searcher and one target in volume <span class="math" data-display="false">V</span>, the small-target mean-search estimate is <span class="math" data-display="false">V/k_D</span>. For an approximate well-mixed population of <span class="math" data-display="false">n</span> independent searchers, the corresponding event-rate estimate is <span class="math" data-display="false">nk_D/V</span>. Exact first-arrival statistics for multiple walkers require their joint survival law, and cannot generally be inferred by dividing every first-passage time by <span class="math" data-display="false">n</span>.</p>
+<p>At <span class="math" data-display="false">D=7.7,a=0.005,V=1</span> in micrometre–second units,</p>
+<p><span class="math display" data-display="true">
+k_D=0.48380527\ \mu\mathrm m^3/\mathrm s,
+\qquad V/k_D=2.06694731\ \mathrm s.
+</span></p>
+<p>The molar rate is about <span class="math" data-display="false">2.91\times10^8\ \mathrm M^{-1}\mathrm s^{-1}</span>, using <span class="math" data-display="false">1\ \mu\mathrm m^3=10^{-15}</span> litres. One molecule in this volume corresponds to about 1.66054 nM. These are perfect-capture upper-rate estimates. Chemical conversion and orientation can lower an effective association rate.</p>
+<p>The free-diffusion crossing scale for <span class="math" data-display="false">\ell=V^{1/3}=1\ \mu\mathrm m</span> is</p>
+<p><span class="math display" data-display="true">
+t_{\rm cross}=\ell^2/(6D)=0.0216450\ \mathrm s.
+</span></p>
+<p>This root-mean-square displacement scale is a diagnostic, rather than a mixing-time theorem or mean target-search time. The dimensionless race parameter <span class="math" data-display="false">\gamma V/k_D</span> is about 2.07 at <span class="math" data-display="false">\gamma=1</span>, indicating that capture and window closure compete. It does not by itself diagnose failure of a calibrated well-mixed description. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3945090/">Smoluchowski and Collins–Kimball formulas in a primary theoretical study</a></p>
+<h2 id="an-exact-stochastic-calculus-benchmark">An exact stochastic-calculus benchmark</h2>
+<p>Let a point particle diffuse outside a central target of radius <span class="math" data-display="false">a</span>, inside a reflecting sphere of radius <span class="math" data-display="false">R</span>. The accessible volume is <span class="math" data-display="false">V=4\pi(R^3-a^3)/3</span>. Before capture, its radial coordinate satisfies</p>
+<p><span class="math display" data-display="true">
+d\rho_t=\frac{2D}{\rho_t}\,dt+\sqrt{2D}\,dW_t-dL_t^R,
+\qquad a&lt;\rho_t\le R,
+</span></p>
+<p>where <span class="math" data-display="false">L_t^R</span> is the upper-boundary reflection regulator, increasing only at <span class="math" data-display="false">R</span>. The process stops at <span class="math" data-display="false">\tau_a=\inf\{t:\rho_t=a\}</span>. The drift <span class="math" data-display="false">2D/\rho</span> is the radial Itô term for three-dimensional Brownian motion. It is required even in the absence of a physical force.</p>
+<h3 id="mean-first-passage-time">Mean first-passage time</h3>
+<p>Dynkin's formula gives the backward equation</p>
+<p><span class="math display" data-display="true">
+D\left(T&#x27;&#x27;+\frac2rT&#x27;\right)=-1,
+\qquad T(a)=0,\quad T&#x27;(R)=0.
+</span></p>
+<p>Integrating yields</p>
+<p><span class="math display" data-display="true">
+T(r)=\frac{R^3(1/a-1/r)-(r^2-a^2)/2}{3D}.
+</span></p>
+<p>The process <span class="math" data-display="false">T(\rho_{t\wedge\tau_a})+(t\wedge\tau_a)</span> is a martingale. The reflecting contribution vanishes because <span class="math" data-display="false">T&#x27;(R)=0</span>. Taking expectations and then the first-passage limit gives <span class="math" data-display="false">T(r)=\mathbb E_r\tau_a</span>.</p>
+<p>A uniform initial point has radial density <span class="math" data-display="false">4\pi r^2/V</span>. Its mean is</p>
+<p><span class="math display" data-display="true">
+\overline T=
+\frac{(R-a)^2(5R^3+6R^2a+3Ra^2+a^3)}
+{15Da(R^2+Ra+a^2)}.
+</span></p>
+<p>This stable factored expression agrees with direct quadrature of <span class="math" data-display="false">T(r)</span>. Its small-target limit recovers <span class="math" data-display="false">V/(4\pi Da)</span>, with a finite-volume correction. This gives an explicit connection between the Brownian model and the approximate count propensity.</p>
+<h3 id="capture-before-a-competing-event">Capture before a competing event</h3>
+<p>Let an independent exponential clock of rate <span class="math" data-display="false">\gamma</span> close the observation window. The relevant probability is a Laplace transform,</p>
+<p><span class="math display" data-display="true">
+q(r)=\Pr_r(\tau_a&lt;\zeta)=\mathbb E_r e^{-\gamma\tau_a}.
+</span></p>
+<p>Itô's formula applied to <span class="math" data-display="false">e^{-\gamma t}q(\rho_t)</span>, stopped at capture, gives</p>
+<p><span class="math display" data-display="true">
+D\left(q&#x27;&#x27;+\frac2r q&#x27;\right)-\gamma q=0,
+\qquad q(a)=1,\quad q&#x27;(R)=0.
+</span></p>
+<p>For <span class="math" data-display="false">k=\sqrt{\gamma/D}</span>, define</p>
+<p><span class="math display" data-display="true">
+v(r)=\cosh[k(R-r)]-\frac{\sinh[k(R-r)]}{kR},
+\qquad q(r)=\frac{a\,v(r)}{r\,v(a)}.
+</span></p>
+<p>At <span class="math" data-display="false">\gamma=0</span>, use <span class="math" data-display="false">q=1</span>. The calculator uses equivalent scaled exponentials and a small-argument series to avoid cancellation and overflow. An independent boundary-value solver checks the formula at <span class="math" data-display="false">\gamma=0.01,1,100</span>, including the volume average.</p>
+<p>The comparison <span class="math" data-display="false">1/(1+\gamma\overline T)</span> assumes an exponential waiting-time distribution with the same mean. It is an approximation, distinct from the exact transform <span class="math" data-display="false">\mathbb E e^{-\gamma\tau_a}</span>. The checked small-<span class="math" data-display="false">\gamma</span> limit is <span class="math" data-display="false">(1-\overline q)/\gamma\to\overline T</span>.</p>
+<h3 id="imperfect-chemistry-at-contact">Imperfect chemistry at contact</h3>
+<p>For surface reactivity <span class="math" data-display="false">\kappa</span>, the reflecting-shell mean reaction time has the exact additional term</p>
+<p><span class="math display" data-display="true">
+\overline T_\kappa=\overline T+\frac{V}{4\pi a^2\kappa}.
+</span></p>
+<p>This follows from <span class="math" data-display="false">DT&#x27;(a)=\kappa T(a)</span> and the same derivative solution. At the reference geometry, the examples <span class="math" data-display="false">\kappa=1000</span> and <span class="math" data-display="false">10</span> give means about <strong>5.22006 s</strong> and <strong>320.347 s</strong>, respectively. Unknown chemistry can dominate the physical uncertainty. In the dilute infinite-domain approximation,</p>
+<p><span class="math display" data-display="true">
+\frac1{k_{\rm eff}}=\frac1{4\pi Da}+\frac1{4\pi a^2\kappa}.
+</span></p>
+<p>Reversible association requires a corresponding treatment of effective dissociation and rebinding to preserve the equilibrium constant. Changing only the forward effective rate would generally alter the thermodynamics. <a href="https://doi.org/10.1063/1.4816105">Primary reversible-receptor treatment</a></p>
+<p><img alt="Sensitivity of the exact search time to volume and diffusion" src="../results/figures/encounter-timescales.png" /></p>
+<h2 id="the-implementation-sequence">The implementation sequence</h2>
+<h3 id="stage-0-fix-the-research-claim-and-comparison">Stage 0 — Fix the research claim and comparison</h3>
+<p>Write the proposed claim before building a spatial chemical simulator. The first question is whether initial localization and reaction-induced spatial correlations change finite-fuel persistence after matching the equilibrium constants and the diffusion-calibrated count rates.</p>
+<p>Define the observable <span class="math" data-display="false">S_{\rm spatial}(t)</span>, its count approximation <span class="math" data-display="false">S_{\rm count}(t)</span>, identical failure criteria, the admissible initial spatial laws, and an error quantity</p>
+<p><span class="math display" data-display="true">
+\Delta_T=\sup_{0\le t\le T}|S_{\rm spatial}(t)-S_{\rm count}(t)|.
+</span></p>
+<p>A proposed experimental decision threshold is 0.01 absolute probability. It is a practical screening choice. It supplies no universal definition of scientific significance. Compare fixed-count and fixed-concentration volume sweeps separately. A concentration change already alters a count propensity through dilution.</p>
+<p><strong>Deliverable and verification.</strong> A claim-comparison table links the closest full-text theorems to each proposed claim. Any remaining gap must survive an attempt to derive it from existing results. Current novelty status is unresolved. The literature receipt records the limited comparisons completed in this planning pass. <a href="../research/stochastic-calculus-prior-art.md">Prior-work audit</a></p>
+<h3 id="stage-1-validate-a-search-calculation-before-chemistry">Stage 1 — Validate a search calculation before chemistry</h3>
+<p>This stage is completed in the accompanying calculator. It evaluates mean capture times, capture-before-closure probabilities, imperfect-contact sensitivities, and localized preparations. The exact target geometry remains a single fixed central target. A two-mobile-particle model would use a different bounded-domain state space.</p>
+<p><strong>Files.</strong> <a href="../src/purposeful/encounter.py">Analytical module</a>, <a href="../tests/test_encounter.py">independent tests</a>, <a href="../scripts/build_stochastic_plan.py">data and figure builder</a>.</p>
+<p><strong>Acceptance checks.</strong> Mean-time formula agrees with independent quadrature to 12 decimal places in the reference case. Laplace probabilities agree with a separately discretized boundary-value solution within <span class="math" data-display="false">2\times10^{-8}</span> at the tested rates. Scaling <span class="math" data-display="false">V\to8V,a\to2a</span> multiplies the mean by four at fixed <span class="math" data-display="false">D</span>. The small-rate limit, zero-rate boundary, and invalid inputs are tested. These checks reproduce known mathematics and provide a benchmark for a future simulator.</p>
+<h3 id="stage-2-add-spatial-repair-in-a-controlled-subnetwork">Stage 2 — Add spatial repair in a controlled subnetwork</h3>
+<p>Start with two already assembled, labelled complexes. Each is in state <span class="math" data-display="false">H</span> or <span class="math" data-display="false">D</span>, and each has a Brownian position in a periodic cube. Keep the finite fuel/waste count. This is a maintenance-only subnetwork with assembly channels absent in both directions. It isolates spatial repair without introducing association placement or a new assembly mechanism.</p>
+<p>The continuous part is <span class="math" data-display="false">dX_i=\sqrt{2D_i}\,dW_i</span>, with periodic positions. Local repair is allowed through a finite-range activity <span class="math" data-display="false">g(|X_1-X_2|)</span>, applied to both directions of the same labelled reaction pair. For a channel</p>
+<p><span class="math display" data-display="true">
+(H_1,D_2,b)\rightleftharpoons(H_1,H_2,b-1),
+</span></p>
+<p>choose rates proportional to <span class="math" data-display="false">g(r)b</span> and <span class="math" data-display="false">g(r)(w+1)/4</span>, respectively. Their ratio is <span class="math" data-display="false">4b/(w+1)</span>, matching the same species-energy difference and fuel-count entropy. The other labelled orientation supplies the second reverse channel. Marginalizing labels recovers the <span class="math" data-display="false">h(h-1)</span> convention in Study 05. Diffusion is reversible under uniform positions when the particles have no interaction potential.</p>
+<p>Thus spatial gating can preserve pointwise detailed balance in this maintenance-only pilot. Calibration must still distinguish intrinsic contact activity from the diffusion-renormalized rate. Multiplying a contact activity to match its spatial average recovers the count rate only in the appropriate fast-mixing limit. Repeated encounters at finite diffusion require validation.</p>
+<p>For a homogeneous periodic cube, relative position reduces the two translational coordinates to three dimensions, with diffusivity <span class="math" data-display="false">D_1+D_2</span>. This reduction avoids a six-dimensional position grid. The radial fixed-target case remains the separate analytical validation geometry. Product placement and reflecting-wall corrections enter at Stage 3.</p>
+<p><strong>New files when implemented.</strong> <code>src/purposeful/spatial_repair.py</code>, <code>scripts/run_spatial_repair.py</code>, <code>tests/test_spatial_repair.py</code>, and a source-hashed result receipt.</p>
+<p><strong>Acceptance checks.</strong> Verify every jump's inventory and energy changes, the invariant law of the full uncensored process, and zero equilibrium currents. Compare a radial special case with Stage 1. Compare the fast-diffusion limit with the corresponding restricted count generator. Measure <span class="math" data-display="false">\Delta_T</span> for uniform, localized, and reaction-generated preparations. A spatial effect should survive refinement and a matched-rate comparison before advancing.</p>
+<p>The finite-particle generator becomes</p>
+<p><span class="math display" data-display="true">
+\mathcal L f=\sum_iD_i\Delta_{X_i}f
++\sum_\rho a_\rho(X,s)[f(X,s+\nu_\rho)-f(X,s)].
+</span></p>
+<p>Itô's formula for the Brownian coordinates and compensated reaction-counting processes makes
+<span class="math" data-display="false">f(X_t,s_t)-f(X_0,s_0)-\int_0^t\mathcal L f\,du</span> a martingale. This is the concrete stochastic-calculus object used for stopping-time probabilities, sensitivity calculations, and bounds across allowed rate choices. <a href="https://people.math.wisc.edu/~dfanderson/papers/SURVEY_AndKurtz.pdf">Jump-process formulation</a></p>
+<h3 id="stage-3-restore-self-assembly-with-explicit-microscopic-reverses">Stage 3 — Restore self-assembly with explicit microscopic reverses</h3>
+<p>Spatialize association and dissociation only after selecting reactant and product placement kernels. Free <span class="math" data-display="false">P,Q</span> and bound complexes have different particle numbers. The spatial reverse must restore monomer positions with the correct equilibrium probability density. Near reflecting walls, simple placement rules can violate detailed balance. Zhang and Isaacson derive the relevant constraints for reversible particle models. <a href="https://arxiv.org/html/2201.04099v3">Full-text formulation</a></p>
+<p>The present effective termolecular channels <span class="math" data-display="false">P+Q+F</span> and <span class="math" data-display="false">H+D+F</span> require a chosen treatment. One option is a fast, well-mixed small-fuel approximation while resolving the larger partners. Another is an explicit reversible intermediate mechanism. The first requires a timescale justification. The second requires new intermediate energies and a controlled reduction to the old count model. Both need their own assumptions and validation.</p>
+<p>Volume dependence must be explicit. With <span class="math" data-display="false">v=V/V_0</span>, a consistent ideal-mixture extension of the present count model scales assembly forward propensity as <span class="math" data-display="false">a m^2b/v^2</span> and its reverse as <span class="math" data-display="false">azhw/(8v)</span>. Both repair propensities scale as <span class="math" data-display="false">v^{-2}</span>. The equilibrium count weight acquires a factor <span class="math" data-display="false">v^{-(h+d)}</span>, up to a conserved constant, because association reduces the number of independently translating particles by one. This matches the scaled assembly-rate ratio. Changing volume while holding every original numerical propensity fixed would represent a different chemical model.</p>
+<p><strong>Acceptance checks.</strong> Verify spatial detailed balance including placement densities, recover the correct volume-dependent count law in a justified limit, preserve the original net resource identity, and repeat the same formation-and-maintenance event definitions. A future spatial result must identify whether it arises from fuel depletion, geometry, initialization, or repeated binding.</p>
+<h3 id="stage-4-seek-a-theorem-after-the-physical-comparison-passes">Stage 4 — Seek a theorem after the physical comparison passes</h3>
+<p>Possible mathematical targets are a controlled error estimate for the calibrated count approximation, a bound on finite-fuel persistence that retains spatial information, or a sharp description of how reaction-generated correlations alter the failure-time distribution. Choose one only after the prior-work comparison identifies a substantive unresolved statement.</p>
+<p>For example, a nonnegative test function <span class="math" data-display="false">F</span>, zero at the specified failure set and at least one on functional states, could satisfy <span class="math" data-display="false">\mathcal LF\le-cF</span>, with <span class="math" data-display="false">c&gt;0</span>, for an allowed device class. Here the generator is that of the process killed on first failure. Require nonexplosion and sufficient regularity and integrability for the stopped Dynkin formula; for reflecting diffusion, require the corresponding zero-normal-derivative boundary condition. The stopped supermartingale then gives <span class="math" data-display="false">\Pr(\tau&gt;t)\le F(X_0,s_0)e^{-ct}</span>. Deriving a useful uniform inequality and an attaining construction is the research task. The martingale implication itself is established. Recent stopped-CRN work must be compared before claiming originality. <a href="https://arxiv.org/abs/2601.12854">Li and Chou, 2026 preprint</a></p>
+<h2 id="numerical-method-and-computational-cost">Numerical method and computational cost</h2>
+<p>The exact benchmark uses ordinary quadrature and a separate boundary-value solver. Future spatial paths should use an event-driven or first-passage method where possible. A Brownian displacement comparable to a 5 nm target occurs on scale <span class="math" data-display="false">a^2/(6D)\approx5.41\times10^{-7}</span> seconds. A naive fixed-step path over seconds can therefore require millions of steps, and accurate contact detection demands a stricter criterion. Its cost must be estimated before requesting tens of thousands of trajectories.</p>
+<p>Protective-domain first-passage algorithms are an established option. A prototype lattice CTMC is also possible, but its reaction rates need mesh-dependent calibration. Shrinking a conventional reaction-diffusion voxel indefinitely does not automatically converge to the intended microscopic chemistry. <a href="https://doi.org/10.1103/PhysRevE.80.066701">First-passage kinetic Monte Carlo</a>, <a href="https://doi.org/10.1063/1.4863990">validity conditions and voxel limits</a></p>
+<p>For a discretized pilot, use at least three refinement levels, measure both timestep or grid bias and sampling uncertainty, and compare the equilibrium law as well as first-passage probabilities. Seeded simulations alone cannot certify an unseen continuum parameter range. A claimed bound needs an analytic comparison or validated numerical enclosure.</p>
+<h2 id="deliverables-sequence-and-stopping-criteria">Deliverables, sequence, and stopping criteria</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Output</th>
+<th>Status in this planning package</th>
+<th>Criterion to advance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Precise question and prior-art comparison</td>
+<td>Question formulated, closest methodological sources identified, substantive theorem audit pending</td>
+<td>A defensible gap or an explicit reproduction objective</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Calculator, dimensional table, exact benchmark, figures and tests</td>
+<td>Completed and checked</td>
+<td>Decide which preparations and rate regimes justify a spatial pilot</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Two-complex spatial maintenance pilot</td>
+<td>Specified for implementation</td>
+<td>Matched-rate spatial effect or quantified validity of the count approximation</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Spatial self-assembly and finite-fuel chemistry</td>
+<td>Mechanism and placement choices specified as dependencies</td>
+<td>Thermodynamic consistency and recovery of the intended count limit</td>
+</tr>
+<tr>
+<td>4</td>
+<td>General theorem or decisive counterexample</td>
+<td>Candidate targets only</td>
+<td>Direct prior-work comparison and complete proof</td>
+</tr>
+<tr>
+<td>Publication</td>
+<td>Updated study, paper and journey</td>
+<td>Plan documented separately from established Study 05 results</td>
+<td>Add scientific claims only after their evidence is complete</td>
+</tr>
+</tbody>
+</table>
+<p>The recommended next executable experiment is Stage 2 with uniform versus localized preparations, preceded by the Stage 0 comparison. Its outcome can justify continued spatial modeling or show that calibrated count dynamics already captures the observable. Both outcomes address the research question.</p>
+<p>Planning estimates are one focused session for the Stage 0 full-text comparison, one or more sessions for the first validated Stage 2 pilot, and further work determined by the intermediate mechanism needed in Stage 3. These are effort estimates. A new general theorem has an uncertain research timescale.</p>
+<h2 id="evidence-and-reproduction">Evidence and reproduction</h2>
+<p>Run the calculator, figures, plan renderer, and all tests with:</p>
+<pre><code class="language-powershell">python -B scripts/build_stochastic_plan.py
+</code></pre>
+<p>The resulting JSON records dimensional assumptions, all numerical cases, source hashes, and probability curves. A separate receipt retains the current full-suite test output, including four encounter checks. The plan has its own status and does not alter the existing certified chemical benchmark.</p>
+<p><a href="../results/encounter-feasibility.json">Calculation data</a> · <a href="../results/encounter-verification.json">Verification receipt</a> · <a href="../research/stochastic-calculus-prior-art.md">Source and access-depth audit</a></p>
+<h2 id="calculated-feasibility-cases">Calculated feasibility cases</h2>
+<table>
+<thead>
+<tr>
+<th>Accessible volume (um cubed)</th>
+<th style="text-align: right;">Exact mean search (s)</th>
+<th style="text-align: right;">Smoluchowski estimate (s)</th>
+<th style="text-align: right;">Exact capture before closure</th>
+<th style="text-align: right;">Matched-mean exponential</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.001</td>
+<td style="text-align: right;">0.00177006</td>
+<td style="text-align: right;">0.00206695</td>
+<td style="text-align: right;">0.99823308</td>
+<td style="text-align: right;">0.99823307</td>
+</tr>
+<tr>
+<td>0.01</td>
+<td style="text-align: right;">0.0192807</td>
+<td style="text-align: right;">0.0206695</td>
+<td style="text-align: right;">0.98108429</td>
+<td style="text-align: right;">0.98108399</td>
+</tr>
+<tr>
+<td>1</td>
+<td style="text-align: right;">2.03696</td>
+<td style="text-align: right;">2.06695</td>
+<td style="text-align: right;">0.3292941</td>
+<td style="text-align: right;">0.32927628</td>
+</tr>
+<tr>
+<td>1000</td>
+<td style="text-align: right;">2063.95</td>
+<td style="text-align: right;">2066.95</td>
+<td style="text-align: right;">0.00048462616</td>
+<td style="text-align: right;">0.00048427355</td>
+</tr>
+</tbody>
+</table>
+<p><a href="../results/encounter-feasibility.json">Machine-readable calculations</a> · <a href="../results/encounter-verification.json">Full-suite verification receipt</a></p></main><footer>Equations and figures are local. Sources link to the research package and primary literature.</footer><script src="assets/katex/katex.min.js"></script><script>document.querySelectorAll('.math').forEach(el=>{try{katex.render(el.textContent,el,{displayMode:el.dataset.display==='true',throwOnError:true,strict:'ignore'})}catch(e){el.dataset.error=e.message;console.error(e.message)}});document.getElementById('print').onclick=()=>window.print();</script></body></html>

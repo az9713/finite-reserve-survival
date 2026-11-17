@@ -1,0 +1,528 @@
+{
+  "schema_version": 1,
+  "as_of_local_date": "2026-11-17",
+  "purpose": "Claim-level originality gate for the two-complex finite-fuel Brownian maintenance pilot",
+  "gate_classification": "targeted_numerical_extension",
+  "search_method": "Targeted web index queries, primary-text link following, and locate-by-equation within opened articles",
+  "query_batches": [
+    [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04"
+    ],
+    [
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08"
+    ],
+    [
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12"
+    ],
+    [
+      "Q13",
+      "Q14",
+      "Q15",
+      "Q16"
+    ],
+    [
+      "Q17",
+      "Q18",
+      "Q19"
+    ],
+    [
+      "Q20",
+      "Q21",
+      "Q22",
+      "Q23"
+    ],
+    [
+      "Q24",
+      "Q25",
+      "Q26"
+    ],
+    [
+      "Q27",
+      "Q28"
+    ]
+  ],
+  "queries": [
+    {
+      "id": "Q01",
+      "field": "reversible particle reaction diffusion",
+      "query": "Doi volume reactivity reversible bimolecular reaction diffusion back reaction finite domain two particles uniform initial condition Isaacson Zhang detailed balance"
+    },
+    {
+      "id": "Q02",
+      "field": "encounter-time geometry",
+      "query": "two particle encounter limited reaction localized versus uniform initial distribution mean first passage bounded domain Doi model diffusion reaction well mixed"
+    },
+    {
+      "id": "Q03",
+      "field": "finite-resource proofreading",
+      "query": "truncated geometric ATP driven kinetic proofreading finite fuel proofreading spatially resolved two particle Brownian proximity repair stochastic reaction diffusion"
+    },
+    {
+      "id": "Q04",
+      "field": "finite-resource proofreading",
+      "query": "reversible two particle encounter diffusion kinetic proofreading local search finite energy budget finite ATP stochastic"
+    },
+    {
+      "id": "Q05",
+      "field": "maintenance and reliability",
+      "query": "finite fuel maintenance Markov degradation repair reliability repairman proximity diffusing particle finite repair resources chemical reaction network persistence"
+    },
+    {
+      "id": "Q06",
+      "field": "fuel-driven assembly",
+      "query": "spatially heterogeneous assembly and disassembly maintenance kinetically trapped reversible repair chemical reaction finite fuel diffusional encounter"
+    },
+    {
+      "id": "Q07",
+      "field": "fast-diffusion averaging",
+      "query": "spatial stochastic averaging fast diffusion reaction network position conditional propensity well mixed particle based Lawley Miles encounter rates"
+    },
+    {
+      "id": "Q08",
+      "field": "reversibility and calibration",
+      "query": "reversible diffusion-influenced reaction Doi pair dynamic disorder occupation time first reaction mean matching effective rates rebinding Andrews Bray Morelli Wolde"
+    },
+    {
+      "id": "Q09",
+      "field": "fast-diffusion averaging",
+      "query": "spatial chemical reaction networks multiscale fast diffusion Pfaffelhuber Popovic averaging theorem molecular movement spatial compartment"
+    },
+    {
+      "id": "Q10",
+      "field": "spatial proofreading",
+      "query": "kinetic proofreading spatial gradients Galstyan full text 60415 PMC equations"
+    },
+    {
+      "id": "Q11",
+      "field": "limited-repair reliability",
+      "query": "repairable systems limited repair attempts spare finite repair resources redundancy Markov reliability repairman failure first passage"
+    },
+    {
+      "id": "Q12",
+      "field": "stopped thermodynamic observables",
+      "query": "A generalized work theorem for stopped stochastic chemical reaction networks Li Chou full text 2601.12854"
+    },
+    {
+      "id": "Q13",
+      "field": "Doi occupation-time representation",
+      "query": "Doi theory stochastic process occupation time Brownian penetrable target Bressloff interior reactivity occupation time exponential threshold finite reactivity"
+    },
+    {
+      "id": "Q14",
+      "field": "reaction-induced spatial memory",
+      "query": "diffusion inhibited enzymatic reactions rebinding multisite phosphorylation Takahashi Tanase Nicola ten Wolde well mixed Brownian initial positions"
+    },
+    {
+      "id": "Q15",
+      "field": "Doi historical terminology",
+      "query": "Doi stochastic reaction process 1976 Stochastic theory of diffusion-controlled reaction exact results"
+    },
+    {
+      "id": "Q16",
+      "field": "finite-copy-number autocatalysis",
+      "query": "autocatalytic chemical reaction networks reversible stochastic finite size Togashi Kaneko small numbers catalyst extinction finite molecules"
+    },
+    {
+      "id": "Q17",
+      "field": "calibrated rebinding comparison",
+      "query": "Takahashi Tanase Nicola ten Wolde 2010 Spatio-temporal correlations can drastically change the response of a MAPK pathway full text"
+    },
+    {
+      "id": "Q18",
+      "field": "Doi occupation-time representation",
+      "query": "Bressloff diffusion-mediated absorption partially reactive spherical target occupation time Doi Feynman Kac Brownian 2022"
+    },
+    {
+      "id": "Q19",
+      "field": "continuum particle reaction dynamics",
+      "query": "Popovic Veber spatial measure valued model continuous movement fast diffusion averaged reaction rates 2008.12373"
+    },
+    {
+      "id": "Q20",
+      "field": "exact phrase overlap",
+      "query": "\"finite fuel\" reversible autocatalytic stochastic reaction diffusion repair survival proximity"
+    },
+    {
+      "id": "Q21",
+      "field": "exact phrase overlap",
+      "query": "\"fuel depletion\" \"stochastic\" \"self-repair\" diffusive chemical systems reversible reaction Brownian"
+    },
+    {
+      "id": "Q22",
+      "field": "exact phrase overlap",
+      "query": "\"finite repair\" stochastic search Brownian repairable system diffusive mobility two components"
+    },
+    {
+      "id": "Q23",
+      "field": "coarse-graining and memory",
+      "query": "Mori Zwanzig stochastic reaction diffusion memory kernel coarse graining Brownian chemical master equation hidden spatial correlations"
+    },
+    {
+      "id": "Q24",
+      "field": "fuel-structure reciprocity",
+      "query": "\"Reciprocal Coupling in Chemically Fueled Assembly\" Kriebisch Boekhoven"
+    },
+    {
+      "id": "Q25",
+      "field": "coarse-graining and memory",
+      "query": "\"Encounter-memory kernels for diffusion-controlled chemical kinetics\""
+    },
+    {
+      "id": "Q26",
+      "field": "spatial autocatalysis",
+      "query": "spatial model autocatalytic Togashi Kaneko locality diffusion small number molecules autocatalytic systems spatial chemical reaction"
+    },
+    {
+      "id": "Q27",
+      "field": "bibliographic verification",
+      "query": "Goyal On repairable systems time redundancy operational constraints 110631 DOI"
+    },
+    {
+      "id": "Q28",
+      "field": "bibliographic verification",
+      "query": "Gopich Szabo Diffusion modifies connectivity kinetic schemes 2013 DOI 1319943110"
+    }
+  ],
+  "sources": [
+    {
+      "id": "zhang-isaacson-2022",
+      "title": "Detailed balance for particle models of reversible reactions in bounded domains",
+      "url": "https://par.nsf.gov/servlets/purl/10336262",
+      "doi": "10.1063/5.0085296",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Sections II–IV",
+        "Eq. (III.4)",
+        "Theorem III.1",
+        "Eqs. (IV.2)–(IV.3)"
+      ],
+      "query_ids": [
+        "Q01"
+      ],
+      "comparison": "Pointwise flux balance for volume or contact reactivity, including placement. The pilot uses identity placement."
+    },
+    {
+      "id": "le-vot-2022",
+      "title": "First-encounter time of two diffusing particles in two- and three-dimensional confinement",
+      "url": "https://pmc.polytechnique.fr/pagesperso/dg/publi/2022_04.pdf",
+      "doi": "10.1103/PhysRevE.105.044119",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Section II.A",
+        "Eqs. (1)–(9)"
+      ],
+      "query_ids": [
+        "Q02"
+      ],
+      "comparison": "Two mobile particles with reflecting outer boundaries and absorbing encounter. No finite-resource chemistry."
+    },
+    {
+      "id": "agbanusi-isaacson-2013",
+      "title": "A Comparison of Bimolecular Reaction Models for Stochastic Reaction Diffusion Systems",
+      "url": "https://arxiv.org/html/1301.0547v2",
+      "doi": "10.1007/s11538-013-9833-6",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Sections 2–3",
+        "Section 5 including Lemma 5.1"
+      ],
+      "query_ids": [],
+      "comparison": "Followed from the existing planning audit. Volume-reactive and perfectly absorbing single-target processes."
+    },
+    {
+      "id": "prustel-tachiya-2013",
+      "title": "Reversible diffusion-influenced reactions of an isolated pair on two dimensional surfaces",
+      "url": "https://arxiv.org/html/1307.5354",
+      "doi": null,
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Eq. (2.18)",
+        "Eqs. (3.44)–(3.46)"
+      ],
+      "query_ids": [
+        "Q08"
+      ],
+      "comparison": "Reversible pair convolutions and explicit mean reaction time approximation on bounded surfaces."
+    },
+    {
+      "id": "bressloff-2022",
+      "title": "Diffusion-mediated surface reactions, Brownian functionals and the Feynman-Kac formula",
+      "url": "https://arxiv.org/html/2201.01671",
+      "doi": null,
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Sections 2–3",
+        "Occupation-time definition and stopping threshold",
+        "Exponential threshold recovers finite volume sink"
+      ],
+      "query_ids": [
+        "Q13",
+        "Q18"
+      ],
+      "comparison": "First gated reaction has the standard occupation-time law."
+    },
+    {
+      "id": "takahashi-2010",
+      "title": "Spatio-temporal correlations can drastically change the response of a MAPK pathway",
+      "url": "https://ir.amolf.nl/pub/5456/15114OA.pdf",
+      "doi": "10.1073/pnas.0906885107",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Fig. 4",
+        "Matched diffusion-renormalized on/off rates in supplement",
+        "Eqs. (S27)–(S31)"
+      ],
+      "query_ids": [
+        "Q14",
+        "Q17"
+      ],
+      "comparison": "Closest procedural antecedent for matched-rate comparison and near-contact rebinding; tracks different chemical states and outputs."
+    },
+    {
+      "id": "gopich-szabo-2013",
+      "title": "Diffusion modifies the connectivity of kinetic schemes for multisite binding and catalysis",
+      "url": "https://www.pnas.org/content/pnas/110/49/19784.full.pdf",
+      "doi": "10.1073/pnas.1319943110",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Scheme in Fig. 1",
+        "Eqs. (1), (2), (6)",
+        "Double phosphorylation example"
+      ],
+      "query_ids": [
+        "Q14",
+        "Q28"
+      ],
+      "comparison": "Re-encounters change effective rate-network connectivity for multisite kinetics."
+    },
+    {
+      "id": "pfaffelhuber-popovic-2015",
+      "title": "Scaling limits of spatial compartment models for chemical reaction networks",
+      "url": "https://mypage.concordia.ca/mathstat/lpopovic/spatialchemfinal.pdf",
+      "doi": "10.1214/14-AAP1070",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Eq. (3.7)",
+        "Theorem 3.7",
+        "Corollary 3.8"
+      ],
+      "query_ids": [
+        "Q07",
+        "Q09"
+      ],
+      "comparison": "Equilibrium averaging for discrete compartments; analogous to the fixed periodic continuum geometry."
+    },
+    {
+      "id": "popovic-veber-2023",
+      "title": "A spatial measure-valued model for chemical reaction networks in heterogeneous systems",
+      "url": "https://arxiv.org/html/2008.12373",
+      "doi": null,
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Section 2",
+        "Remark 2.1",
+        "Definition 2.3"
+      ],
+      "query_ids": [
+        "Q09",
+        "Q19"
+      ],
+      "comparison": "General finite spatial process and martingale infrastructure; scaling regime differs from pilot."
+    },
+    {
+      "id": "goyal-2025",
+      "title": "On repairable systems with time redundancy and operational constraints",
+      "url": "https://pure.strath.ac.uk/ws/portalfiles/portal/250685629/Goyal-etal-2024-On-repairable-systems-with-time-redundancy-and-operational-constraints.pdf",
+      "doi": "10.1016/j.ress.2024.110631",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Section 2",
+        "Section 4",
+        "Box I"
+      ],
+      "query_ids": [
+        "Q11",
+        "Q27"
+      ],
+      "comparison": "First final failure with finite gross repairs and operational redundancy. No diffusing repair partners or reversible fuel."
+    },
+    {
+      "id": "togashi-kaneko-2001",
+      "title": "Transitions induced by the discreteness of molecules in a small autocatalytic system",
+      "url": "https://arxiv.org/pdf/physics/0008238",
+      "doi": "10.1103/PhysRevLett.86.2459",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Autocatalytic loop and Eq. (1)",
+        "Reservoir and well-stirred preparation"
+      ],
+      "query_ids": [
+        "Q16",
+        "Q26"
+      ],
+      "comparison": "Finite-number autocatalytic stochastic effects in an open, well-stirred system."
+    },
+    {
+      "id": "kriebisch-traps",
+      "title": "Kinetic traps in chemically fueled self-assembly and how to overcome them",
+      "url": "https://chemrxiv.org/engage/api-gateway/chemrxiv/assets/orp/resource/item/6282a99f44bdd5a43565a443/original/kinetic-traps-in-chemically-fueled-self-assembly-and-how-to-overcome-them.pdf",
+      "doi": null,
+      "access_depth": "full_text_selected_sections",
+      "locators": [
+        "Scheme 1",
+        "Fig. 1",
+        "Fuel depletion and metastability discussion"
+      ],
+      "query_ids": [
+        "Q06"
+      ],
+      "comparison": "Experimental finite-fuel assembly with structural trapping; morphology and activation are the principal observables."
+    },
+    {
+      "id": "chen-2023",
+      "title": "Design rules for reciprocal coupling in chemically fueled assembly",
+      "url": "https://pubs.rsc.org/en/content/articlepdf/2023/sc/d3sc02062b",
+      "doi": "10.1039/d3sc02062b",
+      "access_depth": "full_text_selected_sections",
+      "locators": [
+        "Scheme 1",
+        "Figs. 2–4",
+        "Activation and deactivation rate comparison"
+      ],
+      "query_ids": [
+        "Q24"
+      ],
+      "comparison": "Experimental reciprocal coupling of fuel consumption and assembly structure."
+    },
+    {
+      "id": "kriebisch-reciprocal-2020",
+      "title": "Reciprocal Coupling in Chemically Fueled Assembly: A Reaction Cycle Regulates Self-Assembly and Vice Versa",
+      "url": "https://pubs.acs.org/doi/10.1021/jacs.0c10486",
+      "doi": "10.1021/jacs.0c10486",
+      "access_depth": "search_metadata_and_reference",
+      "locators": [
+        "Publisher page returned HTTP 403",
+        "Mechanism described in Chen et al. 2023 Scheme 1"
+      ],
+      "query_ids": [
+        "Q24"
+      ],
+      "comparison": "Related experimental precedent, with original full text unverified in this pass."
+    },
+    {
+      "id": "galstyan-2020",
+      "title": "Proofreading through spatial gradients",
+      "url": "https://arxiv.org/html/2005.11615",
+      "doi": "10.7554/eLife.60415",
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Eqs. (1)–(3)",
+        "Substrate gradient and localized production model"
+      ],
+      "query_ids": [
+        "Q03",
+        "Q04",
+        "Q10"
+      ],
+      "comparison": "Spatially resolved proofreading uses concentration profiles and differential output fidelity. Publisher page presented a client challenge; arXiv full text used."
+    },
+    {
+      "id": "li-chou-2026",
+      "title": "A generalized work theorem for stopped stochastic chemical reaction networks",
+      "url": "https://arxiv.org/html/2601.12854v1",
+      "doi": null,
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Eq. (23)",
+        "Eqs. (27) and (35), discussed with bounded optional stopping"
+      ],
+      "query_ids": [
+        "Q12"
+      ],
+      "comparison": "Stopped entropy martingale for mesoscopic CRNs. Different observable from killed-process survival."
+    },
+    {
+      "id": "encounter-memory-2026",
+      "title": "Encounter-memory kernels for diffusion-controlled chemical kinetics",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0301010426002715",
+      "doi": null,
+      "access_depth": "publisher_search_excerpt_only",
+      "locators": [
+        "Indexed excerpts",
+        "Both ScienceDirect full and abstract URLs returned HTTP 403"
+      ],
+      "query_ids": [
+        "Q23",
+        "Q25"
+      ],
+      "comparison": "Relevant to hidden encounter dynamics and memory closures. Full formulation and publication details not independently established."
+    },
+    {
+      "id": "chemical-diffusion-master-equation",
+      "title": "A probabilistic framework for particle-based reaction-diffusion dynamics using classical Fock space representations",
+      "url": "https://arxiv.org/html/2109.13616",
+      "doi": null,
+      "access_depth": "full_text_selected_equations",
+      "locators": [
+        "Section II.2",
+        "Eqs. (15)–(16)"
+      ],
+      "query_ids": [
+        "Q23"
+      ],
+      "comparison": "General particle-resolved diffusion and reaction gain/loss framework."
+    },
+    {
+      "id": "doi-1976",
+      "title": "Stochastic theory of diffusion-controlled reaction",
+      "url": "https://math.pku.edu.cn/teachers/litj/notes/stoch_topics2015/JPhysA_9_1479_Doi.pdf",
+      "doi": null,
+      "access_depth": "indexed_primary_text_excerpt",
+      "locators": [
+        "Introduction and abstract in search result"
+      ],
+      "query_ids": [
+        "Q15"
+      ],
+      "comparison": "Historical source lead; the comparison uses later opened volume-reactivity full texts."
+    },
+    {
+      "id": "bressloff-gated-2017",
+      "title": "Stochastically-gated local and occupation times of a Brownian particle",
+      "url": "https://link.aps.org/accepted/10.1103/PhysRevE.95.012130",
+      "doi": "10.1103/PhysRevE.95.012130",
+      "access_depth": "full_text_selected_sections",
+      "locators": [
+        "Abstract",
+        "Section I comparison of gated local and occupation times"
+      ],
+      "query_ids": [
+        "Q13"
+      ],
+      "comparison": "Neighboring stochastic-gating mechanism; pilot gate is a deterministic function of particle separation."
+    }
+  ],
+  "limitations": [
+    "Queries and selected primary sources only; no systematic database or citation-network review.",
+    "A full_text_selected_equations or full_text_selected_sections label records selected inspection of the complete document, not a full linear reading.",
+    "Relevance screens include competing names such as volume reactivity, rebinding, finite repairs, spatial proofreading, and autocatalysis; exact-phrase queries have low recall.",
+    "Negative evidence is limited to the retrieved and examined material.",
+    "An encounter-memory paper was accessible only through publisher search excerpts.",
+    "No external specialist review was solicited."
+  ],
+  "local_context": [
+    "MEMORY.md",
+    "docs/self-assembly.md",
+    "docs/stochastic-calculus-plan.md",
+    "research/stochastic-calculus-prior-art.md"
+  ]
+}
