@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="340" viewBox="0 0 960 340" role="img" aria-labelledby="title desc">
+<title id="title">What the continuum proofs establish about the horizon</title>
+<desc id="desc">The spectator loses to the passive member at sufficiently short times, beats every constant intensity near time two, and eventually loses again. The gaps between these certified regimes have unresolved ordering. No crossover uniqueness is asserted.</desc>
+<rect width="960" height="340" rx="12" fill="#0d141d"/>
+<g font-family="Segoe UI,Arial,sans-serif" text-anchor="middle">
+<text x="480" y="35" fill="#e6edf7" font-size="22">One model, three proved regimes</text>
+<g stroke-width="2"><rect x="20" y="65" width="275" height="170" rx="10" fill="#241d29" stroke="#d899ae"/><rect x="343" y="65" width="275" height="170" rx="10" fill="#122a29" stroke="#72dbc1"/><rect x="665" y="65" width="275" height="170" rx="10" fill="#241d29" stroke="#d899ae"/></g>
+<g fill="#e6edf7" font-size="19"><text x="157" y="98">Short horizon: loss</text><text x="480" y="98">Intermediate: advantage</text><text x="802" y="98">Late horizon: loss</text></g>
+<g fill="#adc0d6" font-size="17"><text x="157" y="136">0 &lt; t ≤ 0.0008</text><text x="157" y="170">G(t) ≤ −t³/60</text><text x="157" y="207">Passive intensity 0 is best</text><text x="480" y="136">1.99989 &lt; t &lt; 2.00011</text><text x="480" y="170">G(2) ≥ 0.00011005117</text><text x="480" y="207">Full constant family covered</text><text x="802" y="136">Eventually G(t) &lt; 0</text><text x="802" y="170">S★(t) / S₀(t) → 0</text><text x="802" y="207">Sufficient witness: 4 × 10¹²</text></g>
+<g stroke="#adc0d6" stroke-dasharray="5 5" stroke-width="2"><path d="M301 152 H337"/><path d="M624 152 H659"/></g>
+<text x="480" y="275" fill="#e6edf7" font-size="17">G(t) = spectator survival − best constant-intensity survival</text>
+<text x="480" y="302" fill="#adc0d6" font-size="16">Cards are not to scale. Gaps: ordering unresolved. Crossovers are not located; uniqueness is unproved.</text>
+<text x="480" y="326" fill="#adc0d6" font-size="16">Uncalibrated model time units; the late witness is a conservative bound, not a prediction.</text>
+</g></svg>

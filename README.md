@@ -16,6 +16,7 @@ The same strategy loses at sufficiently short and sufficiently long horizons. Th
 [![Validated Brownian continuum comparison](results/figures/continuum-validated-certificate.png)](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-CERTIFICATE.html)
 
 [Exact comparison receipt](results/continuum-validated-comparison.json) · [Independent replay](results/continuum-validated-independent-replay.json) · [Proof and implementation](research/validated-residual-implementation.md) · [Verification](results/continuum-validated-verification.json) · [Earlier short/long-time proofs](docs/CONTINUUM-ORGANIZATION.html)
+[What we learn, novelty limits, and the strongest next theorem](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-CERTIFICATE.html#what-do-we-learn-from-the-certified-continuum-result)
 <!-- continuum-certificate:end -->
 
 [![Scientific dossier preview](results/document-previews/scientific-dossier-1440.png)](https://az9713.github.io/finite-reserve-survival/)

@@ -27,3 +27,9 @@ The final calculation retains the nonzero corrected-observable integral, every u
 ![The completed continuum certificate](../results/figures/continuum-validated-certificate.png)
 
 This closes a specific mathematical validation gap. The result remains a narrow designed example, with publication priority and an elementary chemical implementation unestablished. [Full new report](CONTINUUM-CERTIFICATE.html) · [Execution and verification receipts](../results/continuum-validated-verification.json) · [Engineering record](../results/continuum-validation-engineering.json)
+
+## 16. Interpreting the certificate without inflating novelty
+
+The next question asked what the continuum result teaches, whether it establishes a new concept, and which next step offers the strongest prospect of an original result. The assessment distinguishes a rigorous model-specific existence example from a general principle. A fresh focused literature comparison identifies precedents for interaction protocols, autonomous feedback, adjoint optimization, spatial detailed balance and residual estimation, recording access limits.
+
+The proposed next target is a structural mechanism theorem for physically admitted fuel-dependent organization under a common reserve. A standard sensitivity/Taylor argument supplies an entry point; deriving predictive conditions, a useful quantitative bound, a null regime and fair stronger comparators remains unproved. An unspecified open neighborhood follows from continuity and is not treated as a new robustness theorem. [Interpretation and next-theorem section](CONTINUUM-CERTIFICATE.html#what-do-we-learn-from-the-certified-continuum-result) · [Literature check](../research/continuum-assessment-literature.md). No new model result or publication priority is claimed in this documentation step.

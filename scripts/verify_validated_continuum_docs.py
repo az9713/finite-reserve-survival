@@ -83,6 +83,13 @@ def main():
                 assert not errors and not item['brokenImages'],item
                 assert item['scrollWidth']<=item['width']+1,item
                 tab.screenshot(path=str(shots/f'{Path(name).stem.lower()}-{width}.png'))
+                if name=='CONTINUUM-CERTIFICATE.html':
+                    for heading in ('What do we learn from the certified continuum result?',
+                                    'Does this establish anything conceptually new?',
+                                    'The strongest next step toward a novel result'):
+                        assert tab.get_by_role('heading',name=heading,exact=True).count()==1,heading
+                    tab.get_by_role('heading',name='What do we learn from the certified continuum result?',exact=True).scroll_into_view_if_needed()
+                    tab.screenshot(path=str(shots/f'continuum-assessment-{width}.png'))
                 if name=='CONTINUUM-CERTIFICATE.html' and width==1440:
                     tab.locator('img').first.scroll_into_view_if_needed()
                     tab.screenshot(path=str(shots/'continuum-certificate-figure.png'))
@@ -97,9 +104,11 @@ def main():
                     'results/continuum-validated-nodes/*.json','results/continuum-trials/*.json',
                     'results/continuum-trials/*.npz','results/figures/continuum-validated-certificate.*',
                     'results/figures/continuum-certificate-pipeline.svg','results/continuum-time-tests.log',
+                    'results/figures/continuum-interpretation.svg',
                     'results/continuum-validated-*-progress.txt'):
         paths.update(ROOT.glob(pattern))
     paths.update(ROOT/p for p in ['README.md','pyproject.toml','docs/continuum-certificate.md',
+        'docs/continuum-assessment.md',
         'docs/continuum-overview.md','docs/continuum-journey.md','results/continuum-validated-spatial-tables.npz',
         'docs/continuum-organization.md','docs/continuum-organization-initial.md',
         'docs/CONTINUUM-ORGANIZATION-INITIAL.html','results/research-manuscript.pdf',

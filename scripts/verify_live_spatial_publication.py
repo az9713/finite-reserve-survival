@@ -59,6 +59,8 @@ def main():
             'results/figures/continuum-validated-certificate.png',
             'results/figures/continuum-validated-certificate.pdf',
             'results/figures/continuum-certificate-pipeline.svg',
+            'docs/continuum-assessment.md','research/continuum-assessment-literature.md',
+            'results/continuum-assessment-literature.json','results/figures/continuum-interpretation.svg',
             'results/continuum-validated-nodes/spectator.json',
             *[f'results/continuum-validated-nodes/node{j:02d}.json' for j in range(38)]]
     paths=list(dict.fromkeys(paths))
@@ -103,6 +105,11 @@ def main():
                         assert page.get_by_text('unresolved',exact=False).count()>0,state
                 if args.include_validated_continuum and relative in ['', 'docs/DEVELOPMENT-JOURNEY.html','docs/CONTINUUM-CERTIFICATE.html']:
                     assert '0.0110051' in page.locator('body').inner_text(),state
+                if args.include_validated_continuum and relative=='docs/CONTINUUM-CERTIFICATE.html':
+                    for heading in ('What do we learn from the certified continuum result?',
+                                    'Does this establish anything conceptually new?',
+                                    'The strongest next step toward a novel result'):
+                        assert page.get_by_role('heading',name=heading,exact=True).count()==1,heading
                 assert state['scrollWidth']<=width,state
                 pages.append(state);page.close()
         browser.close()

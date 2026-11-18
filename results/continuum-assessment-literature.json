@@ -1,0 +1,53 @@
+{
+  "generated_utc": "2026-11-18T02:54:46.025582+00:00",
+  "scope": "Focused interpretation/precedent check, not a systematic priority audit",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/1609.05008",
+      "authors": "Fullerton and Jack",
+      "date": "2016 preprint",
+      "access_scope": "HTML abstract/introduction/interaction sections"
+    },
+    {
+      "url": "https://arxiv.org/html/2210.05749",
+      "authors": "Trubiano and Hagan",
+      "date": "2022 preprint",
+      "access_scope": "HTML methods, Fig.5 and Appendix B/C"
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39557837/",
+      "authors": "Reja et al.",
+      "date": "2024",
+      "access_scope": "Abstract and indexed result excerpts; direct Nature/PMC full-page access challenged"
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12042269/",
+      "authors": "Faran and Bisker",
+      "date": "2025",
+      "access_scope": "Indexed publisher/manuscript excerpts; direct PMC full-page access challenged"
+    },
+    {
+      "url": "https://arxiv.org/abs/2201.04099v3",
+      "authors": "Zhang and Isaacson",
+      "date": "2022",
+      "access_scope": "Abstract/version record"
+    },
+    {
+      "url": "https://arxiv.org/abs/1706.04281",
+      "authors": "Wu et al.",
+      "date": "2017",
+      "access_scope": "Abstract/bibliographic record"
+    }
+  ],
+  "search_strings_record": "research/continuum-assessment-literature.md",
+  "claim_status": {
+    "continuum_result": "previously certified, unchanged",
+    "new_general_concept": "not established",
+    "new_structural_theorem": "proposed, unproved",
+    "sensitivity_and_Taylor_argument": "standard supporting mathematics, not a novelty claim"
+  },
+  "source_sha256": {
+    "docs/continuum-assessment.md": "75bc6798652c905989bb8c1e5801d7c3db0ade9df6be5148a70a45d4523dadd3",
+    "research/continuum-assessment-literature.md": "bf053695e8f7058a40b6c5b012321019ae601994cb720d407b398309fada6a50"
+  }
+}

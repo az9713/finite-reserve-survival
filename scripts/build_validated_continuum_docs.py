@@ -72,6 +72,7 @@ def main():
         significance+=r''' In fact, if \(\delta\) is the exact certified gap lower bound, the advantage holds throughout \(|t-2|<\delta\). The only killing jump is \(h=1\to0\), at rate one. Hence each survival derivative lies in \([-1,0]\); every difference \(S_\star-S_\alpha\) is 1-Lipschitz, uniformly in \(\alpha\). Taking their infimum gives \(S_\star(t)-\sup_\alpha S_\alpha(t)\ge\delta-|t-2|\). This supplies a rigorous nonempty time window, with no additional simulation.'''
         if F(p['spectator_minus_best_fixed_lower'])>F(11,100000):
             significance+=r''' In particular, the advantage is proved for every \(1.99989<t<2.00011\). These conservative endpoints do not locate the actual crossovers.'''
+    assessment=(ROOT/'docs/continuum-assessment.md').read_text(encoding='utf-8')
     report=rf'''# The Brownian time-two comparison: validated residual certificate
 
 {status} The physical parameters, uniform dispersed start, four-molecule fuel inventory, and first-collapse criterion are the same as in the previously released spatial-organization model. The comparator consists of every **constant paid-channel intensity** \(\alpha\in[0,1]\), with the remaining rates and potential fixed.
@@ -88,6 +89,8 @@ The displayed bounds are rounded outwards from the exact rational endpoints in t
 ![Validated continuum values, full-family error budgets, and the final comparison](../results/figures/continuum-validated-certificate.png)
 
 [Complete exact receipt](../results/continuum-validated-comparison.json) · [Independent parameter replay](../results/continuum-validated-independent-replay.json) · [Figure PDF](../results/figures/continuum-validated-certificate.pdf)
+
+[Read what this establishes, its novelty limits, and the strongest next research target](#what-do-we-learn-from-the-certified-continuum-result).
 
 ## 1. Fix the physical process and failure event
 
@@ -187,6 +190,8 @@ The two functions in this cross pairing differ, so positivity of \(B\) does not 
 It compares an autonomous spectator-fuel mechanism with a prescribed constant-intensity family. It does not optimize all fixed materials, all physical rate parameters, or all adaptive policies. There is no experimental validation, elementary molecular implementation, or confirmed novelty claim. Residual certification, reaction–diffusion models, paid organization and horizon-dependent optimality have substantial prior art; the contribution assessed here is the narrowly stated, replayable example and its certified comparison.
 
 The [retained originality audit](../research/organization-originality-audit.md) and the [earlier residual discussion](../research/continuum-residual.md) identify the relevant physical and goal-oriented error-estimation precedents. Closing this numerical proof gap does not establish publication priority.
+
+{assessment}
 
 ## Reproduce and assess
 
