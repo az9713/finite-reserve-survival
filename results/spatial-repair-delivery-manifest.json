@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-18T02:21:36.105005+00:00",
+  "generated_utc": "2026-11-18T02:36:30.580663+00:00",
   "scope": "Spatial repair delivery, scientific source dependencies and offline equation assets.",
   "exclusions": [
     "Project-private MEMORY.md",
@@ -379,8 +379,8 @@
     },
     {
       "path": "scripts/verify_live_spatial_publication.py",
-      "bytes": 7720,
-      "sha256": "7d280281069c6954dfb73084f78476520b3a66bc9fdc887a696f15ecf8b10ba2"
+      "bytes": 7833,
+      "sha256": "980060c0193d5a73925321ce2f85791b8893e91b69ac627a745fff206b99a2bb"
     },
     {
       "path": "scripts/verify_research_docs.py",

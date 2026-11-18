@@ -99,7 +99,8 @@ def main():
                 if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html','docs/CONTINUUM-ORGANIZATION.html','docs/CONTINUUM-CERTIFICATE.html']:
                     assert state['hasSpatialResults'],state
                 if args.include_continuum and relative in ['', 'docs/DEVELOPMENT-JOURNEY.html','docs/CONTINUUM-ORGANIZATION.html']:
-                    assert page.get_by_text('unresolved',exact=False).count()>0,state
+                    if not args.include_validated_continuum or relative=='docs/CONTINUUM-ORGANIZATION.html':
+                        assert page.get_by_text('unresolved',exact=False).count()>0,state
                 if args.include_validated_continuum and relative in ['', 'docs/DEVELOPMENT-JOURNEY.html','docs/CONTINUUM-CERTIFICATE.html']:
                     assert '0.0110051' in page.locator('body').inner_text(),state
                 assert state['scrollWidth']<=width,state

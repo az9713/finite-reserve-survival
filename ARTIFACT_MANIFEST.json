@@ -1822,12 +1822,12 @@
   {
     "path": "results/spatial-repair-delivery-manifest.json",
     "bytes": 18917,
-    "sha256": "57ff41f119cd7e846c4420968cd85f6470e0e5a04688e013d5397f13aaef7b9c"
+    "sha256": "12ec3c2a1f67b5eb9b93f5d6d06d02ed33260721fade9d6ae09528edccb13e1a"
   },
   {
     "path": "results/spatial-repair-integrity.json",
     "bytes": 753,
-    "sha256": "6146cb77079949943d5365287c7343d2e5b0a1e0815b7ea451ac7d1cdcf8c8ee"
+    "sha256": "1843c5ea4f35147b7b1604f917c9be31e5bd7c796ab0f0d66cb3cb904fdace1f"
   },
   {
     "path": "results/spatial-repair-review-check.json",
@@ -2061,8 +2061,8 @@
   },
   {
     "path": "scripts/verify_live_spatial_publication.py",
-    "bytes": 7720,
-    "sha256": "7d280281069c6954dfb73084f78476520b3a66bc9fdc887a696f15ecf8b10ba2"
+    "bytes": 7833,
+    "sha256": "980060c0193d5a73925321ce2f85791b8893e91b69ac627a745fff206b99a2bb"
   },
   {
     "path": "scripts/verify_organization.py",
