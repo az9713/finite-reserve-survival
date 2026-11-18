@@ -1,0 +1,20 @@
+{
+  "scope": "Engineering observations only; these timings are not survival enclosures.",
+  "attempts": [
+    {
+      "result": "stopped before any node enclosure was emitted",
+      "cause": "Fraction-per-entry exact common time refinement was too slow",
+      "replacement": "exact integer dyadic refinement, checked against the Fraction reference",
+      "receipt": "results/continuum-refinement-verification.json"
+    },
+    {
+      "result": "stopped before any node enclosure was emitted",
+      "cause": "radius products near underflow dominated matrix arithmetic",
+      "profile": "488 of 499 sampled stack leaves were in positive_matmul",
+      "same_matrix_single_multiply_seconds": {"original": 0.7568079000011494, "upward_positive_floor": 0.010518499999307096},
+      "replacement": "in nonnegative error products only, raise positive operands below the binary64 value 1e-100 to that value; monotonicity preserves upper bounds",
+      "verification": "independent mathematical review and test_upward_tiny_floor_preserves_bound against Arb"
+    }
+  ],
+  "claim": "Only final frozen-source node receipts enter the continuum comparison. No numerical survival claim is inferred from either stopped attempt."
+}

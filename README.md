@@ -6,13 +6,17 @@
 
 **[Paid autonomous spatial organization: shared fuel, best constant intensity and certificates](https://az9713.github.io/finite-reserve-survival/docs/PAID-ORGANIZATION.html)**
 
-**[Brownian continuum proofs, error bounds and the unresolved T=2 question](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-ORGANIZATION.html)**
+<!-- continuum-certificate:start -->
+**[Validated Brownian continuum advantage at T=2](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-CERTIFICATE.html)**
 
-The continuum analysis proves that the spectator strategy loses to passive-only organization for **0 < T ≤ 0.0008** and at sufficiently long horizons. The passive decay rate is exactly **(7 − √17)/4**, and paid transitions strictly increase the spectator decay rate. At the prespecified **T=2**, the Brownian advantage remains unresolved. Independent Fourier calculations estimate a gap near **0.0147 percentage points** over constant intensity one. Validated spatial/time integration and optimization over the full constant-intensity interval are still required.
+The spectator strategy beats **every constant paid intensity in [0,1]** at time two by at least **0.0110051 percentage points**. The proof includes spatial Fourier tails, exact polynomial time integration, roundoff and a complete parameter-interval cover.
 
-[![Continuum proofs and error budget](results/figures/continuum-organization-bounds.png)](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-ORGANIZATION.html)
+The same strategy loses at sufficiently short and sufficiently long horizons. This is a rigorously enclosed finite-horizon example in one designed model; no new general concept, molecular realization or confirmed novelty is claimed. The validated calculation uses 38 fixed-intensity nodes, an exact full-interval cover and retained integer trial archives.
 
-[Full proofs](docs/continuum-organization.md) · [Rational short-time checks](results/continuum-short-time.json) · [Path-law and long-time derivations](research/continuum-coupling.md) · [Residual theorem](research/continuum-residual.md) · [Fourier evidence](results/continuum-fourier.json) · [Verification receipt](results/continuum-organization-verification.json)
+[![Validated Brownian continuum comparison](results/figures/continuum-validated-certificate.png)](https://az9713.github.io/finite-reserve-survival/docs/CONTINUUM-CERTIFICATE.html)
+
+[Exact comparison receipt](results/continuum-validated-comparison.json) · [Independent replay](results/continuum-validated-independent-replay.json) · [Proof and implementation](research/validated-residual-implementation.md) · [Verification](results/continuum-validated-verification.json) · [Earlier short/long-time proofs](docs/CONTINUUM-ORGANIZATION.html)
+<!-- continuum-certificate:end -->
 
 [![Scientific dossier preview](results/document-previews/scientific-dossier-1440.png)](https://az9713.github.io/finite-reserve-survival/)
 
@@ -53,7 +57,7 @@ Intermediate binding optima and fuel-driven chemical persistence have earlier th
 
 The new model starts uniformly dispersed and can activate an attractive interaction mode through reversible passive and fuel-paid reactions. Organization and repair share the same four-molecule fuel/waste inventory. The candidate uses spectator-fuel catalysis; the comparator covers **every constant paid-channel intensity alpha in [0,1]**, with the same other parameters, initial preparation and kinetic ceilings. This is not a comparison against every fixed material or architecture.
 
-At the preregistered time two, an independent interval calculation on the **48³ lattice** encloses the candidate's gap to the best constant arm between **0.01460412 and 0.01471414 percentage points**. The 64³ numerical survival estimates are **23.36998%** for the candidate and **23.35528%** for the fixed attaining sample. The best constant supremum is enclosed, rather than assumed from a grid search. The effect is small and has no rigorous Brownian-continuum error enclosure.
+At the preregistered time two, an independent interval calculation on the **48³ lattice** encloses the candidate's gap to the best constant arm between **0.01460412 and 0.01471414 percentage points**. The 64³ numerical survival estimates are **23.36998%** for the candidate and **23.35528%** for the fixed attaining sample. The best constant supremum is enclosed, rather than assumed from a grid search. The effect is small; the subsequent validated continuum certificate above now supplies a Brownian error enclosure and covers the full constant-intensity interval.
 
 [![Paid organization survival and spatial refinements](results/figures/organization-survival.png)](https://az9713.github.io/finite-reserve-survival/docs/PAID-ORGANIZATION.html)
 
@@ -91,10 +95,10 @@ These are classical diffusion calculations, not a new discovery or a calibrated 
 
 ## Reproduce
 
-Python 3.10+ with numpy, scipy, and matplotlib. PDF export additionally uses reportlab.
+Python 3.10+ with numpy, scipy, and matplotlib. The rigorous continuum calculation additionally requires python-flint >= 0.9 (the validation extra). PDF export additionally uses reportlab.
 
 ```bash
-python -m pip install -e .
+python -m pip install -e ".[validation]"
 python -m pip install reportlab
 PYTHONPATH=src python -m unittest discover -s tests -v
 python scripts/run_study.py --samples 30000

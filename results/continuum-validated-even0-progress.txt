@@ -1,0 +1,18 @@
+node04 begin validation
+node04 completed 84.70629519999784 seconds; radius 8.318917642787077e-06
+node08 begin validation
+node08 completed 88.42912380000053 seconds; radius 7.7129105096121e-06
+node12 begin validation
+node12 completed 103.02135790000102 seconds; radius 6.808086325721017e-06
+node16 begin validation
+node16 completed 102.67849760000172 seconds; radius 5.7072231121969565e-06
+node20 begin validation
+node20 completed 143.63376309999876 seconds; radius 4.550187173315721e-06
+node24 begin validation
+node24 completed 107.39053100000092 seconds; radius 3.5122879875737542e-06
+node28 begin validation
+node28 completed 3275.7706572999996 seconds; radius 2.7805366876184976e-06
+node32 begin validation
+node32 completed 82.56652159999794 seconds; radius 2.442741861921541e-06
+node36 begin validation
+node36 completed 67.05603189999965 seconds; radius 2.366360981134285e-06

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "original_frozen_receipt_accepted": true,
+  "missing_cache_receipt_rejected": true,
+  "effect": "A fresh checkout recomputes missing cached node evidence; source/trial matches alone cannot silently bypass the cache chain.",
+  "source_sha256": {
+    "scripts/complete_validated_continuum.py": "140dea9dd00aa43a6841239ac154e63b08783bdeb3d4170646b3583fcba60481"
+  }
+}

@@ -127,7 +127,7 @@ The rendering checks exercise desktop and phone widths, every local link, every 
 INTRO = r'''
 # Information, energy, and the survival of designed systems
 
-**Latest continuum result:** [Brownian proofs and the unresolved T=2 comparison](CONTINUUM-ORGANIZATION.html). The spectator strategy loses at proved short and long horizons. Its continuum advantage at time two remains unresolved.
+**Latest continuum result:** [Validated Brownian continuum advantage at T=2](CONTINUUM-CERTIFICATE.html). The spectator strategy beats **every constant paid intensity in [0,1]** at time two by at least **0.0110051 percentage points**. The proof includes spatial Fourier tails, exact polynomial time integration, roundoff and a complete parameter-interval cover. Short-time and eventual long-time loss remain proved; the comparison is limited to the declared shared-resource model and constant-intensity class.
 
 > **Looking for the stochastic calculus analysis?** [Open the mathematical chapter](STOCHASTIC-CALCULUS.html): the Brownian SDE, compensated reaction clocks, Itô formula, stopped martingale, backward survival equation and exact short-time proofs. [Spatial model and numerical evidence](SPATIAL-REPAIR.html) · [Lessons and novelty assessment](SPATIAL-LESSONS.html).
 
@@ -245,7 +245,7 @@ def page(filename, source, title):
                               '<a href="SELF-ASSEMBLY.html">Self-assembly study</a><a href="SPATIAL-REPAIR.html">Spatial repair</a>')
     content = content.replace('</head>', '<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"></head>')
     content = content.replace('<a href="SPATIAL-REPAIR.html">Spatial repair</a>',
-                              '<a href="SPATIAL-REPAIR.html">Spatial repair</a><a href="PAID-ORGANIZATION.html">Paid organization</a>')
+                              '<a href="SPATIAL-REPAIR.html">Spatial repair</a><a href="PAID-ORGANIZATION.html">Paid organization</a><a href="CONTINUUM-CERTIFICATE.html">Continuum certificate</a>')
     (DOCS / filename).write_text(content, encoding='utf-8')
 
 def study(name, label):
@@ -282,10 +282,13 @@ def main():
     sources = sorted([*ROOT.glob('src/purposeful/*.py'), *ROOT.glob('tests/test_*.py'), *ROOT.glob('docs/*.md'),
                       *ROOT.glob('scripts/run_*.py'), *ROOT.glob('scripts/build_*.py'), *ROOT.glob('scripts/*assembly*.py'), *ROOT.glob('research/assembly-*.md'), *ROOT.glob('research/continuum-*.md'), *ROOT.glob('results/continuum-*.json'),
                       *[ROOT / 'results' / name for name in ['summary.json', 'closed-loop.json', 'autonomous.json', 'reserve.json', 'assembly.json', 'assembly-evidence.json', 'assembly-certificate-check.json', 'spatial-repair.json', 'spatial-repair-verification.json', 'spatial-repair-review-check.json', 'organization.json', 'organization-verification.json', 'organization-continuum-check.json', 'organization-force-ablation.json', 'organization-certificate-controls.json']]])
-    sources = sorted(set(p for p in sources if p.name != 'research-manuscript.md'))
+    # Final delivery/privacy manifests are written after browser validation.
+    # Exclude them from this inner receipt to avoid circular/stale dependencies.
+    sources = sorted(set(p for p in sources if p.name not in
+                         ('research-manuscript.md','continuum-validated-verification.json','continuum-validated-privacy.json')))
     if args.tracked_only:
         sources = [p for p in sources if p.relative_to(ROOT).as_posix() in tracked]
-    record = {'generated_utc': datetime.now(timezone.utc).isoformat(), 'command': ' '.join(command),
+    record = {'generated_utc': datetime.now(timezone.utc).isoformat(), 'command': 'python ' + ' '.join(command[1:]),
               'test_output': run.stdout + run.stderr, 'return_code': run.returncode,
               'sha256': {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}}
     receipt.write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')

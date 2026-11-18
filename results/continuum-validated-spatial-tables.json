@@ -1,0 +1,848 @@
+{
+  "generated_utc": "2026-11-18T00:33:02.956782+00:00",
+  "method": "Arb validated complex analytic quadrature; exact rational declarations; outward binary64 center-radius export",
+  "scope": "Spatial coefficient enclosures only. A survival certificate additionally needs validated temporal residual contractions and tail bounds.",
+  "flint_version": "0.9.0",
+  "precision_bits": 100,
+  "target_bits": 70,
+  "cutoff": 12,
+  "resolved_cutoff": 24,
+  "entries": [
+    {
+      "key": "one",
+      "derivative": 0,
+      "max_n2": 3888,
+      "maximum_radius": 5e-324,
+      "minimum_radius": 5e-324,
+      "inner": [
+        [
+          0,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          0,
+          "0",
+          "1"
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          "0",
+          "1"
+        ]
+      ]
+    },
+    {
+      "key": "contact",
+      "derivative": 0,
+      "max_n2": 3888,
+      "maximum_radius": 6.389709910939712e-19,
+      "minimum_radius": 1.4854981985591567e-30,
+      "inner": [
+        [
+          4,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "0",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "switch",
+      "derivative": 0,
+      "max_n2": 3888,
+      "maximum_radius": 8.585832034608077e-19,
+      "minimum_radius": 9.658992032407546e-28,
+      "inner": [
+        [
+          4,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "weight",
+      "derivative": 0,
+      "max_n2": 3888,
+      "maximum_radius": 1.081024665513769e-17,
+      "minimum_radius": 1.8418271358316306e-28,
+      "inner": [
+        [
+          0,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          0,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          "-1",
+          "1"
+        ]
+      ]
+    },
+    {
+      "key": "weighted_contact",
+      "derivative": 0,
+      "max_n2": 3888,
+      "maximum_radius": 1.193676530696088e-17,
+      "minimum_radius": 2.6781552207544718e-30,
+      "inner": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "drift",
+      "derivative": 0,
+      "max_n2": 3888,
+      "maximum_radius": 1.3454604427490127e-17,
+      "minimum_radius": 1.750217945211293e-27,
+      "inner": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "drift__d1",
+      "derivative": 1,
+      "max_n2": 3888,
+      "maximum_radius": 1.236140419771797e-18,
+      "minimum_radius": 1.1053767540279066e-29,
+      "inner": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "one__times__one",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 5e-324,
+      "minimum_radius": 5e-324,
+      "inner": [
+        [
+          0,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          0,
+          "0",
+          "1"
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          "0",
+          "1"
+        ]
+      ]
+    },
+    {
+      "key": "one__times__contact",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 6.389709910939712e-19,
+      "minimum_radius": 1.916183751453382e-29,
+      "inner": [
+        [
+          4,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "0",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "one__times__switch",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 8.585832034608077e-19,
+      "minimum_radius": 2.447432262844398e-25,
+      "inner": [
+        [
+          4,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "one__times__weight",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 1.081024665513769e-17,
+      "minimum_radius": 6.913003641315781e-28,
+      "inner": [
+        [
+          0,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          0,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          "-1",
+          "1"
+        ]
+      ]
+    },
+    {
+      "key": "one__times__weighted_contact",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 1.193676530696088e-17,
+      "minimum_radius": 1.2101979617500432e-26,
+      "inner": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "one__times__drift",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 1.3454604427490127e-17,
+      "minimum_radius": 4.919325268453095e-26,
+      "inner": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "one__times__drift__d1",
+      "derivative": 1,
+      "max_n2": 1728,
+      "maximum_radius": 1.236140419771797e-18,
+      "minimum_radius": 3.308616366247342e-27,
+      "inner": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          1,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "contact__times__contact",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 4.218741325576748e-19,
+      "minimum_radius": 4.467325914519673e-30,
+      "inner": [
+        [
+          8,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          8,
+          "0",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "contact__times__switch",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 3.4890927402891145e-19,
+      "minimum_radius": 9.293086896808633e-27,
+      "inner": [
+        [
+          8,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          8,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "contact__times__weight",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 1.193676530696088e-17,
+      "minimum_radius": 1.2101979617500432e-26,
+      "inner": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "contact__times__weighted_contact",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 6.772453675529209e-18,
+      "minimum_radius": 1.2370636034097065e-30,
+      "inner": [
+        [
+          8,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          8,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "contact__times__drift",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 1.1316128754879892e-17,
+      "minimum_radius": 1.686038990983335e-26,
+      "inner": [
+        [
+          5,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          5,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "contact__times__drift__d1",
+      "derivative": 1,
+      "max_n2": 1728,
+      "maximum_radius": 7.560512406478656e-19,
+      "minimum_radius": 1.4858410401191107e-28,
+      "inner": [
+        [
+          5,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          5,
+          "-1",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "switch__times__switch",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 3.27795105418006e-19,
+      "minimum_radius": 4.612362935748771e-29,
+      "inner": [
+        [
+          8,
+          "0",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          8,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "switch__times__weight",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 1.2344643497405157e-17,
+      "minimum_radius": 1.4301796658069922e-27,
+      "inner": [
+        [
+          4,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "switch__times__weighted_contact",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 6.657393313433533e-18,
+      "minimum_radius": 1.3849213039137408e-28,
+      "inner": [
+        [
+          8,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          8,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "switch__times__drift",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 9.456330987482104e-18,
+      "minimum_radius": 2.554374612910674e-27,
+      "inner": [
+        [
+          5,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          5,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "switch__times__drift__d1",
+      "derivative": 1,
+      "max_n2": 1728,
+      "maximum_radius": 5.899884474980062e-19,
+      "minimum_radius": 9.023299093043521e-29,
+      "inner": [
+        [
+          5,
+          "-1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          5,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "weight__times__weight",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 4.4053599785621664e-16,
+      "minimum_radius": 5.049518062577785e-27,
+      "inner": [
+        [
+          0,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          0,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          "-2",
+          "1"
+        ]
+      ]
+    },
+    {
+      "key": "weight__times__weighted_contact",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 2.1759821756670004e-16,
+      "minimum_radius": 1.143743180869628e-27,
+      "inner": [
+        [
+          4,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          4,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "weight__times__drift",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 3.272587444254591e-16,
+      "minimum_radius": 8.634553347052101e-27,
+      "inner": [
+        [
+          1,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          1,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "weight__times__drift__d1",
+      "derivative": 1,
+      "max_n2": 1728,
+      "maximum_radius": 1.2365688277591389e-17,
+      "minimum_radius": 1.4354195006804057e-26,
+      "inner": [
+        [
+          1,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          1,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "weighted_contact__times__weighted_contact",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 2.2100289506826799e-16,
+      "minimum_radius": 3.531418048115316e-29,
+      "inner": [
+        [
+          8,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          8,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "weighted_contact__times__drift",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 2.1627841481388124e-16,
+      "minimum_radius": 9.349299878883147e-28,
+      "inner": [
+        [
+          5,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          5,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "weighted_contact__times__drift__d1",
+      "derivative": 1,
+      "max_n2": 1728,
+      "maximum_radius": 6.811636020329664e-18,
+      "minimum_radius": 8.88575044255385e-27,
+      "inner": [
+        [
+          5,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          5,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "drift__times__drift",
+      "derivative": 0,
+      "max_n2": 1728,
+      "maximum_radius": 4.228679490923044e-16,
+      "minimum_radius": 2.4114717611760788e-27,
+      "inner": [
+        [
+          2,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          2,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "drift__times__drift__d1",
+      "derivative": 1,
+      "max_n2": 1728,
+      "maximum_radius": 1.1347370996387883e-17,
+      "minimum_radius": 3.7704211660397187e-26,
+      "inner": [
+        [
+          2,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          2,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "drift__times__drift__d2",
+      "derivative": 2,
+      "max_n2": 1728,
+      "maximum_radius": 5.706573070739133e-19,
+      "minimum_radius": 9.253081522415657e-28,
+      "inner": [
+        [
+          2,
+          "-2",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          2,
+          "-2",
+          "1"
+        ]
+      ],
+      "exterior": []
+    },
+    {
+      "key": "inverse_weight",
+      "derivative": 0,
+      "max_n2": 6912,
+      "maximum_radius": 1.0877952833884783e-16,
+      "minimum_radius": 4.0069082373486384e-28,
+      "inner": [
+        [
+          0,
+          "1",
+          "1"
+        ]
+      ],
+      "outer": [
+        [
+          0,
+          "1",
+          "1"
+        ]
+      ],
+      "exterior": [
+        [
+          0,
+          "1",
+          "1"
+        ]
+      ]
+    }
+  ],
+  "integration_calls": 137432,
+  "seconds": 140.2010790000022,
+  "array_sha256": "ffb529808520bc4e380b196952c8db3c3401c8ba9f8aa50f2d63fc95ee01dec6",
+  "source_sha256": {
+    "src/purposeful/validated_spatial.py": "53c2353a86f52474d7ae60399ca0facc5d86ace73f21d61bbd2689638a5f2353",
+    "scripts/build_validated_spatial_tables.py": "d3771ad66ea4f423d78f73352242c83de3a7f93d31ea8c6adab192094276d8c5",
+    "tests/test_validated_spatial.py": "c6d1465ee3f14bfac1ec1675f40112e9cf5e24f2d7da9db777dc6f649891d028"
+  }
+}

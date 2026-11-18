@@ -1,0 +1,208 @@
+{
+  "generated_utc": "2026-11-18T02:12:46.903684+00:00",
+  "status": "VERIFIED_LOCAL_CONTINUUM_DELIVERY",
+  "comparison_status": "STRICT_CONTINUUM_ADVANTAGE_CERTIFIED",
+  "test_count": 92,
+  "test_output": "results/continuum-validated-full-tests.txt",
+  "broken_local_links": [],
+  "browser_checks": [
+    {
+      "equations": 67,
+      "rendered": 67,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "file": "CONTINUUM-CERTIFICATE.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 67,
+      "rendered": 67,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "file": "CONTINUUM-CERTIFICATE.html",
+      "viewport": 390,
+      "console_errors": []
+    },
+    {
+      "equations": 108,
+      "rendered": 108,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "file": "CONTINUUM-ORGANIZATION.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 108,
+      "rendered": 108,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "file": "CONTINUUM-ORGANIZATION.html",
+      "viewport": 390,
+      "console_errors": []
+    },
+    {
+      "equations": 560,
+      "rendered": 560,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "file": "SCIENTIFIC-DOSSIER.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 560,
+      "rendered": 560,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "file": "SCIENTIFIC-DOSSIER.html",
+      "viewport": 390,
+      "console_errors": []
+    },
+    {
+      "equations": 11,
+      "rendered": 11,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "file": "DEVELOPMENT-JOURNEY.html",
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 11,
+      "rendered": 11,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "file": "DEVELOPMENT-JOURNEY.html",
+      "viewport": 390,
+      "console_errors": []
+    }
+  ],
+  "arithmetic_runtime_probes": {
+    "binary64_round_to_nearest_ties_sample": true,
+    "scalar_gradual_underflow_sample": true,
+    "blas_gradual_underflow_sample": true
+  },
+  "environment": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "scipy": "1.16.0",
+    "python_flint": "0.9.0",
+    "binary64_epsilon": 2.220446049250313e-16
+  },
+  "historical_continuum_receipt_replay": [
+    {
+      "original_path": "docs/CONTINUUM-ORGANIZATION.html",
+      "retained_path": "docs/CONTINUUM-ORGANIZATION-INITIAL.html",
+      "sha256": "28f3bbeec5073b2a76e4539f6aab324af546063e63c1eabcd913cd98a1267cb0"
+    },
+    {
+      "original_path": "docs/continuum-organization.md",
+      "retained_path": "docs/continuum-organization-initial.md",
+      "sha256": "dbe030da0a802c74b6b5a0e88fc3654147f16231f1eef434abd9d4cbec369f95"
+    },
+    {
+      "original_path": "research/continuum-coupling.md",
+      "retained_path": "research/continuum-coupling.md",
+      "sha256": "2a7ed68305410ef784877608ec1aeb2eb5894ec402200daba6794d856f27e6b3"
+    },
+    {
+      "original_path": "research/continuum-residual.md",
+      "retained_path": "research/continuum-residual.md",
+      "sha256": "94694d9cfe0e230eda493d7ec0231924fcee818161206d4a70ece9bb882d136d"
+    },
+    {
+      "original_path": "research/continuum-spectral.md",
+      "retained_path": "research/continuum-spectral.md",
+      "sha256": "2eb2662115c40c25b4edf24db4c3fd5dd514121c10a013e7bb548b5ea3200cfe"
+    },
+    {
+      "original_path": "results/continuum-fourier.json",
+      "retained_path": "results/continuum-fourier.json",
+      "sha256": "63aa68529a155e4aa97d8b58000483e6e984f223f6a863e5aac214ae2db97684"
+    },
+    {
+      "original_path": "results/continuum-residual-screen.json",
+      "retained_path": "results/continuum-residual-screen.json",
+      "sha256": "23183d873468e686f06a32ad1015547122e6a6847e666d823e3e544ff5243a15"
+    },
+    {
+      "original_path": "results/continuum-short-time.json",
+      "retained_path": "results/continuum-short-time.json",
+      "sha256": "c74d8d2583e68af6ea6662fd0faca54041b1fc4baa5b5deec8a40d360f7177d2"
+    },
+    {
+      "original_path": "results/continuum-weighted.json",
+      "retained_path": "results/continuum-weighted.json",
+      "sha256": "48a2ab8d01076a132bffb6afc31b76c1ebd8127688648b1a3aa29cab48e8e70a"
+    },
+    {
+      "original_path": "results/figures/continuum-organization-bounds.pdf",
+      "retained_path": "results/figures/continuum-organization-bounds.pdf",
+      "sha256": "cc66c9a8c4c08d6e1110ca5868b9d1bcbe520cfec0008ca1cde87fdf237e0312"
+    },
+    {
+      "original_path": "results/figures/continuum-organization-bounds.png",
+      "retained_path": "results/figures/continuum-organization-bounds.png",
+      "sha256": "958d3497674a5e769b3508b151233c537916864ee5049f089bed4a198edf82bd"
+    },
+    {
+      "original_path": "results/organization-continuum-check.json",
+      "retained_path": "results/organization-continuum-check.json",
+      "sha256": "baacf51f331e403d8f20cc7d820aece3b1426cdafccdfa850bbe0599c8c03fa4"
+    },
+    {
+      "original_path": "results/organization-verification.json",
+      "retained_path": "results/organization-verification.json",
+      "sha256": "c5d6e3f64bdd11e7c90615bc07f2b68e95ecc19cc73ff42268529dd3cb22eaa4"
+    },
+    {
+      "original_path": "scripts/build_continuum_organization.py",
+      "retained_path": "scripts/build_continuum_organization.py",
+      "sha256": "92ba04d1ccc41acbe15c0d20e49b6609a91a46a2602bff8139898a6d1f924f4c"
+    },
+    {
+      "original_path": "scripts/check_continuum_short_time.py",
+      "retained_path": "scripts/check_continuum_short_time.py",
+      "sha256": "d3ee90b02e883c806f84bd4abf797582140c50a9eff5c1a603f898b8e3bb9e71"
+    },
+    {
+      "original_path": "scripts/explore_weighted_continuum_galerkin.py",
+      "retained_path": "scripts/explore_weighted_continuum_galerkin.py",
+      "sha256": "d6a4e88aef24ab394e49227278065ba2f04d67bd5820e46610b2a7fe9dadb7cd"
+    },
+    {
+      "original_path": "scripts/organization_continuum_check.py",
+      "retained_path": "scripts/organization_continuum_check.py",
+      "sha256": "dbd87977419dc65a9841386e1e48f071eac9e675c0aad3ae665ecf9569fb91b2"
+    },
+    {
+      "original_path": "scripts/run_continuum_fourier.py",
+      "retained_path": "scripts/run_continuum_fourier.py",
+      "sha256": "6433c7de13f0f1cec34a6b6ac4cfc6e14fbff0ae4c8bf772c8f6ccfa11b5da99"
+    },
+    {
+      "original_path": "scripts/run_continuum_weighted.py",
+      "retained_path": "scripts/run_continuum_weighted.py",
+      "sha256": "f2e812180f9d0dff751bf6c4946866ca88e58374881f6ad674364da6503bca48"
+    }
+  ],
+  "limits": "Computer-assisted enclosure under the stated IEEE754/Arb arithmetic contract. Independent parameter and receipt-chain replay; spatial proof-assistant formalization and external expert review not supplied. Local browser verification does not assert GitHub publication."
+}

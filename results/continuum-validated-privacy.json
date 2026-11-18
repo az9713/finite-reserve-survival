@@ -1,0 +1,6 @@
+{
+  "scope": "Current publication-eligible text; ignored caches, local memory and private profiler excluded. Pattern scan only; not a renewed reachable Git history audit.",
+  "text_files_scanned": 300,
+  "findings": [],
+  "status": "PASS"
+}

@@ -9,6 +9,8 @@ import subprocess
 ROOT=Path(__file__).resolve().parents[1]
 MANIFEST=ROOT/'results/spatial-repair-delivery-manifest.json'
 INTEGRITY=ROOT/'results/spatial-repair-integrity.json'
+HISTORICAL={'pyproject.toml':'research/snapshots/spatial-pyproject.toml'}
+RELOCATIONS={}
 
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
@@ -19,7 +21,12 @@ def read(name):return json.loads((ROOT/name).read_bytes())
 
 def check_group(values):
     for relative,expected in values.items():
-        assert digest(ROOT/relative)==expected, f'Hash mismatch: {relative}'
+        if digest(ROOT/relative)==expected:
+            continue
+        archived=HISTORICAL.get(relative)
+        assert archived and digest(ROOT/archived)==expected, f'Hash mismatch: {relative}'
+        RELOCATIONS[relative]={'retained_path':archived,'original_sha256':expected,
+            'current_sha256':digest(ROOT/relative)}
 
 
 def main():
@@ -48,7 +55,8 @@ def main():
     check_group(review['source_sha256'])
     if args.write_manifest:
         paths={ROOT/'README.md',ROOT/'pyproject.toml',ROOT/'scripts/build_research_docs.py',
-               ROOT/'scripts/verify_research_docs.py',ROOT/'docs/SPATIAL-REPAIR.html'}
+               ROOT/'scripts/verify_research_docs.py',ROOT/'docs/SPATIAL-REPAIR.html',
+               ROOT/'research/snapshots/spatial-pyproject.toml'}
         for pattern in ['src/purposeful/*.py','tests/test_*.py','scripts/*spatial*',
                         'docs/*spatial*','research/spatial-repair*','results/spatial-repair*',
                         'results/figures/spatial-repair*','results/document-previews/spatial-repair*',
@@ -70,6 +78,7 @@ def main():
     manifest=json.loads(MANIFEST.read_bytes())
     check_group({item['path']:item['sha256'] for item in manifest['artifacts']})
     receipt={'generated_utc':datetime.now(timezone.utc).isoformat(),'status':'PASS',
+        'historical_artifact_relocations':RELOCATIONS,
         'manifest_sha256':digest(MANIFEST),'artifacts_checked':len(manifest['artifacts']),
         'formal_tests_passed':verified['summary']['test_count'],
         'formal_continuous_paths':verified['summary']['monte_carlo_paths_total'],

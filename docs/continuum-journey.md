@@ -13,3 +13,17 @@ At time two, two Fourier formulations reproduced a gap near 0.000147 in absolute
 The existing particle simulation also received a rigorous Euler bias bound. At its finest retained maximum step, the uniform bound is 0.239 per policy, exceeding the budget needed to transfer the finite-grid sign. The independent methods thus strengthened the evidence and identified the missing precision while leaving the sign at \(T=2\) unresolved.
 
 The completed record retains full proofs, exact rational checks, replayable numerical programs, source hashes, a PNG/PDF figure, 57 passing tests and desktop/mobile checks of all 108 equations in the continuum report. [Continuum report](CONTINUUM-ORGANIZATION.html) · [Verification receipt](../results/continuum-organization-verification.json) · [Rational replay](../scripts/check_continuum_short_time.py)
+
+## 15. Closing the time-two continuum gap
+
+The user asked for validated residual bounds and complete coverage of constant intensities. Parallel agents developed Arb radial Fourier integrals, exact dyadic trial/time reconstruction, and an independent exact-rational parameter checker. All 40 retained trial archives were replayed: 104,104,000 integer coefficients passed initial-value, continuity, state and mode checks.
+
+The first approach exposed two engineering bottlenecks: Fraction-per-entry time refinement and very small positive operands in roundoff-error matrix products. Exact integer refinement and monotone upward inflation in error products removed them. Both changes were independently checked; stopped attempts emitted no survival certificate and remain recorded as engineering diagnostics. The physical model and prespecified time were unchanged.
+
+The spectator strategy beats **every constant paid intensity in [0,1]** at time two by at least **0.0110051 percentage points**. The proof includes spatial Fourier tails, exact polynomial time integration, roundoff and a complete parameter-interval cover.
+
+The final calculation retains the nonzero corrected-observable integral, every unresolved Fourier mode, exact time integration, all node receipts and an independent full-interval Bernstein replay. The parameter checker proves a Chebyshev nodal amplification bound below 3.279 and an analytic interpolation remainder below 1.8e-7. An additional corollary bounds a nonempty advantage interval around time two whenever the certified gap is positive.
+
+![The completed continuum certificate](../results/figures/continuum-validated-certificate.png)
+
+This closes a specific mathematical validation gap. The result remains a narrow designed example, with publication priority and an elementary chemical implementation unestablished. [Full new report](CONTINUUM-CERTIFICATE.html) · [Execution and verification receipts](../results/continuum-validated-verification.json) · [Engineering record](../results/continuum-validation-engineering.json)

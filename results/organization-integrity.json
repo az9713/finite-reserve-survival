@@ -1,6 +1,18 @@
 {
-  "generated_utc": "2026-11-17T21:47:40.545382+00:00",
+  "generated_utc": "2026-11-18T02:22:25.929890+00:00",
   "status": "PASS",
+  "historical_artifact_relocations": {
+    "scripts/check_organization_receipts.py": {
+      "retained_path": "research/snapshots/check-organization-receipts-initial.py",
+      "original_sha256": "9d655b6d041169e172dc40de2160402317215c5f848b5c8ada7e16484397d359",
+      "current_sha256": "6e16ce404c10906a0ffea7c89f41483701bd0b4d5d2fe871013ca08e8bc2b5a9"
+    },
+    "docs/organization-overview.md": {
+      "retained_path": "docs/organization-overview-initial.md",
+      "original_sha256": "b792ff2f7d42923df8fe315ac75e3fdf0c901df02336998fc5d5a09e9579ca3a",
+      "current_sha256": "9197b7194b7efd798a0addf7f3b9e0a6161d5603a3add5281173d71aff07180b"
+    }
+  },
   "hashes_replayed": 72,
   "receipts": [
     "organization.json",

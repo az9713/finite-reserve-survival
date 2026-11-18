@@ -1,0 +1,40 @@
+{
+  "schema": "dyadic-continuum-trial-v1",
+  "policy": "3240782610622953/4503599627370496",
+  "cutoff": 12,
+  "quadrature_nodes_per_folded_axis": 32,
+  "degree": 12,
+  "bits": 40,
+  "shape": [
+    11,
+    13,
+    20,
+    455
+  ],
+  "basis": "sum of distinct permutations of raw products cos(2*pi*k*x)",
+  "archive": "results/continuum-trials/K12-node13.npz",
+  "sha256": "b93b0f78b8523b089b3963f5d9a222a75017db49bbe70a077725d7da7217d14a",
+  "initial_primal_exact": true,
+  "initial_dual_exact": true,
+  "continuity_exact": true,
+  "status": "exact trial archive; continuum residual NOT yet validated",
+  "seconds": 47.72940700000254,
+  "chebyshev_root": {
+    "index": 13,
+    "alpha_numerator": "829640348319475968",
+    "alpha_bits": 60,
+    "root_lower": {
+      "numerator": "2258495851354104951866734190180372495223737254823774096261",
+      "denominator": "3138550867693340381917894711603833208051177722232017256448"
+    },
+    "root_upper": {
+      "numerator": "282311981419263118983341773772546561902967156852971762033",
+      "denominator": "392318858461667547739736838950479151006397215279002157056"
+    },
+    "root_shift_bound": {
+      "numerator": "7726252770806316085362681410776590294557427628801",
+      "denominator": "25711008708143844408671393477458601640355247900524685364822016"
+    }
+  },
+  "interpolation_node_count": 38
+}

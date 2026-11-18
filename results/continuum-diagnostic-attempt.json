@@ -1,0 +1,10 @@
+{
+  "schema": "continuum-diagnostic-attempt-v1",
+  "archive": "results/continuum-trials/K12-spectator.npz",
+  "flux_cutoff": 24,
+  "result": "stopped before a numerical enclosure was emitted",
+  "reason": "Fraction-per-entry exact common refinement was too slow",
+  "survival_claim": null,
+  "replacement": "exact integer common refinement, verified against Fraction reference",
+  "replacement_receipt": "results/continuum-refinement-verification.json"
+}

@@ -1,0 +1,13 @@
+{
+  "source": "results/continuum-trials/K12-spectator.npz",
+  "refined_shape": [
+    20,
+    13,
+    20,
+    455
+  ],
+  "bits": 148,
+  "seconds": 0.9251116000014008,
+  "exact_continuity_passed": true,
+  "method": "integer binomial affine restriction"
+}

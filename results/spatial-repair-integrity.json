@@ -1,8 +1,15 @@
 {
-  "generated_utc": "2026-11-17T23:57:32.155276+00:00",
+  "generated_utc": "2026-11-18T02:21:36.120053+00:00",
   "status": "PASS",
-  "manifest_sha256": "accf0655642b40b41fcd5691c9478f28b1bb15fe2b75ded60a7cdf2b3559ead4",
-  "artifacts_checked": 93,
+  "historical_artifact_relocations": {
+    "pyproject.toml": {
+      "retained_path": "research/snapshots/spatial-pyproject.toml",
+      "original_sha256": "19c15345f59c57285676afe2179bd61ebaae22e715eebdad40d3fc5810b99288",
+      "current_sha256": "32b3bdf5ba2eca65b6873382098a1fe2946bdd3ad52b3c323054b1a5837e1a05"
+    }
+  },
+  "manifest_sha256": "57ff41f119cd7e846c4420968cd85f6470e0e5a04688e013d5397f13aaef7b9c",
+  "artifacts_checked": 105,
   "formal_tests_passed": 51,
   "formal_continuous_paths": 200000,
   "supplemental_fresh_seed_paths": 200000,

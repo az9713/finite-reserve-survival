@@ -1,0 +1,14 @@
+test_derivative_and_time_reversal_exact (test_validated_time.ExactTimeTests.test_derivative_and_time_reversal_exact) ... ok
+test_exact_time_pairing_and_correction (test_validated_time.ExactTimeTests.test_exact_time_pairing_and_correction) ... ok
+test_fast_refinement_matches_fraction_reference (test_validated_time.ExactTimeTests.test_fast_refinement_matches_fraction_reference) ... ok
+test_interpolant_linear_data_and_error_separation (test_validated_time.ExactTimeTests.test_interpolant_linear_data_and_error_separation) ... ok
+test_legendre_energy_and_exact_common_refinement (test_validated_time.ExactTimeTests.test_legendre_energy_and_exact_common_refinement) ... ok
+test_node_plan_covers_actual_roots (test_validated_time.ExactTimeTests.test_node_plan_covers_actual_roots) ... ok
+test_quantized_curve_continuity_initial_and_archive (test_validated_time.ExactTimeTests.test_quantized_curve_continuity_initial_and_archive) ... ok
+test_reject_discontinuity (test_validated_time.ExactTimeTests.test_reject_discontinuity) ... ok
+test_validated_batch_encloses_exact_legendre_data (test_validated_time.ExactTimeTests.test_validated_batch_encloses_exact_legendre_data) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.637s
+
+OK

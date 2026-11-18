@@ -1,0 +1,2851 @@
+{
+  "schema": "continuum-time-verification-v2",
+  "archives": 40,
+  "fixed_chebyshev_nodes": 38,
+  "node_indices_complete": true,
+  "integer_coefficients_checked": 104104000,
+  "generator_sha256": "46de87b913970b9cfd8999b29714c1e1519789357d7f07c25ba85e3a54f0f44f",
+  "seconds": 21.83477049999783,
+  "replays": [
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-1.npz",
+      "sha256": "3f75c17bde33efe248a24e631e7ae675b476d71da9b5da9aa260b6fa17bf49fc",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node00.npz",
+      "sha256": "ad5395ede8edad1249bcd479b3e60012701a3c825708ff9b968550031581ef60",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node01.npz",
+      "sha256": "66735c825cde49ab4417761f2124753095fbda98459ed9ea6794e69b0a0b53e9",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node02.npz",
+      "sha256": "ec181a70b3c658eaea1133ffa3cbfe91d74bc2ee697316924252fac40f6ac91d",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node03.npz",
+      "sha256": "f48e13401ae76a8c00929a22e537dcf9401b7f285329ddd9784020706d272861",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node04.npz",
+      "sha256": "928433dd3b9aeebd7202729663d694fc583d292c558718c7bea2a87f6d7d8d10",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node05.npz",
+      "sha256": "59e1888ebea39730d2ce5bc2333c6a878e03d69d07f32121bfed0dbe7f64b485",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node06.npz",
+      "sha256": "759fdc577134fa5d552164f0e42b1e5d88f2259ab6e25e31371bd29bc02e0bbd",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node07.npz",
+      "sha256": "76ba67bf358fbd852174423093cddc929fdb02fbd57ef675574aa21a82787388",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node08.npz",
+      "sha256": "66a2954d8215c4f6873d8b2b9448af7cb511bf97765c7ce8b3495f11da931b0c",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node09.npz",
+      "sha256": "9af19ee8df6438ac409beddecb75fb8e4615720c40988fe5a0ba217099e098e0",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node10.npz",
+      "sha256": "9c2fcdddc9d53108f9c9a0ef3b8f5c5a0e93722fc69e67c37d29cc291e981011",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node11.npz",
+      "sha256": "848fc347c9383f23b99804eeb10518afb5d60306c0b936c0f127336a1499146f",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node12.npz",
+      "sha256": "c20ae780978af6ff1084b16b18b5ae827c6dcf803ac534a15d894e360bb7f2cb",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node13.npz",
+      "sha256": "b93b0f78b8523b089b3963f5d9a222a75017db49bbe70a077725d7da7217d14a",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node14.npz",
+      "sha256": "c4423dd7bd003d270a1d0840af4159e95493368897c98a9fb73443587224d794",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node15.npz",
+      "sha256": "26b193117c0445a407d9932a3b88b26d96411502c9d8d85125e0143fecc8cd60",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node16.npz",
+      "sha256": "4d2980c996aeae83770c55cdc214495d47a7f4fcbd0ee7061daa116447f7de9c",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node17.npz",
+      "sha256": "20b1cffc12385a70b351c2556a78db9b00440d1c28e33911490ece8e6c759737",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node18.npz",
+      "sha256": "8d1af0cdd7c3275fe661d024c0358dd05fe4768028dcac71f3df59333805cbd8",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node19.npz",
+      "sha256": "85f0c3671a35f40f9c379154c87404fd84abef07f33cf2f957652cc67f210d01",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node20.npz",
+      "sha256": "258a4cdb78f5aa96930cf21161e186a37e8eefc66643ab8c239cd4674c6feca2",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node21.npz",
+      "sha256": "1b0d06b8f8f206c10f87ca649881caa8920b92d2554e6257af41d5551b1eb679",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node22.npz",
+      "sha256": "71e9c4ee1c1e4306e246c1055163658b8b85c2fa2cf1df6e6bb2fd781611a263",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node23.npz",
+      "sha256": "e18ebbdd21033a5f1f2d9139cb6f8f653d2dc7db78bc278ceccf3cb14416f403",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node24.npz",
+      "sha256": "ed56995965d3b8872aaf37c73a18d8ed6e975861b2aecc89051be26cff51ca53",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node25.npz",
+      "sha256": "e4cee9f71dc63f72d78b9dadef11f99e66284e403309882603bc6b8d5492d7b6",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node26.npz",
+      "sha256": "cf4badc3c62f5c7d993e8fc64ae240c3372223daf16812c3346e837f65e967c8",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node27.npz",
+      "sha256": "f81d8cec5dfdcbdd39e28474c19bfd2f022a4f9bcdf0169f70e43f722eb517af",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node28.npz",
+      "sha256": "44300dbdaa5c638129305ced75fddf83b45a069799c8bed454363dfd62e674d2",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node29.npz",
+      "sha256": "6706cc6f3a242b4a460bfabeaa18935d221c048e56b0021e787ab041b19c7040",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node30.npz",
+      "sha256": "c3728b71767cefd961b7780733596cc28fffe3b27a2f66515d53cf0a366c5c89",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node31.npz",
+      "sha256": "6e892269f650477f0a6d1acddf8029d3d8de4d9dcc9b8798e972b6e83b9ebaf7",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node32.npz",
+      "sha256": "9aa157f4492e5494c571c7b0debb826bc818702db8aa19760ace8507d56e6056",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node33.npz",
+      "sha256": "e9feaea3190cab480c4e45b91cd5fd653842e95e7a5b68b83e5ea81c4fa055bb",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node34.npz",
+      "sha256": "901d35e3c0c3b421537c1fe5204540c18b4a19b746504c524232dfcc987baa2b",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node35.npz",
+      "sha256": "81820552bd409b981239aa59803aecf0206329691eb4e670b3b4b13cdc27d275",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node36.npz",
+      "sha256": "21cdd152a9c050f6c5c7ef57a368adcad3d53f77718cd0337890f0f78356e116",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-node37.npz",
+      "sha256": "3ad49535e7a5be89765219fd6479fdfb685a778917144ba515d0e8e4adb15cae",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    },
+    {
+      "schema": "dyadic-trial-replay-v1",
+      "archive": "results/continuum-trials/K12-spectator.npz",
+      "sha256": "bc2d0ca7faf760411842545da3afecb42d59da24858779322111cf319f37421d",
+      "checks": {
+        "source_archive_hash": true,
+        "exact_primal_initial_data": true,
+        "exact_dual_initial_data": true,
+        "exact_time_continuity": true,
+        "raw_symmetric_cosine_modes": true,
+        "horizon_two": true
+      },
+      "shape": [
+        11,
+        13,
+        20,
+        455
+      ],
+      "integer_coefficients_checked": 2602600,
+      "knots": [
+        {
+          "numerator": "0",
+          "denominator": "1"
+        },
+        {
+          "numerator": "1",
+          "denominator": "512"
+        },
+        {
+          "numerator": "1",
+          "denominator": "256"
+        },
+        {
+          "numerator": "1",
+          "denominator": "128"
+        },
+        {
+          "numerator": "1",
+          "denominator": "64"
+        },
+        {
+          "numerator": "1",
+          "denominator": "32"
+        },
+        {
+          "numerator": "1",
+          "denominator": "16"
+        },
+        {
+          "numerator": "1",
+          "denominator": "8"
+        },
+        {
+          "numerator": "1",
+          "denominator": "4"
+        },
+        {
+          "numerator": "1",
+          "denominator": "2"
+        },
+        {
+          "numerator": "1",
+          "denominator": "1"
+        },
+        {
+          "numerator": "2",
+          "denominator": "1"
+        }
+      ],
+      "status": "exact input replay passed; no continuum enclosure inferred"
+    }
+  ]
+}

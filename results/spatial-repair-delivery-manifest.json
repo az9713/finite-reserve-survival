@@ -1,5 +1,5 @@
 {
-  "generated_utc": "2026-11-17T23:57:32.142306+00:00",
+  "generated_utc": "2026-11-18T02:21:36.105005+00:00",
   "scope": "Spatial repair delivery, scientific source dependencies and offline equation assets.",
   "exclusions": [
     "Project-private MEMORY.md",
@@ -179,13 +179,18 @@
     },
     {
       "path": "pyproject.toml",
-      "bytes": 373,
-      "sha256": "19c15345f59c57285676afe2179bd61ebaae22e715eebdad40d3fc5810b99288"
+      "bytes": 441,
+      "sha256": "32b3bdf5ba2eca65b6873382098a1fe2946bdd3ad52b3c323054b1a5837e1a05"
     },
     {
       "path": "README.md",
-      "bytes": 16674,
-      "sha256": "088e1eb325c0ffb3e8dfbd2edbf2722367ae08f320bf0ac4af228021deb78227"
+      "bytes": 16967,
+      "sha256": "9abd9d08d05311a5d9680dad37c3d43d48d449929e35582146483aa85784ebc0"
+    },
+    {
+      "path": "research/snapshots/spatial-pyproject.toml",
+      "bytes": 373,
+      "sha256": "19c15345f59c57285676afe2179bd61ebaae22e715eebdad40d3fc5810b99288"
     },
     {
       "path": "research/spatial-repair-originality-audit.md",
@@ -334,8 +339,8 @@
     },
     {
       "path": "scripts/build_research_docs.py",
-      "bytes": 47032,
-      "sha256": "c3b07bc672ce4e87556b30ecb3d81105f7cc24683a6f96fde33c153fcf085353"
+      "bytes": 47993,
+      "sha256": "735f1122d549ae599579abe5b43a740f7ff89c7d205be02a32dd9465efd39305"
     },
     {
       "path": "scripts/build_spatial_lessons.py",
@@ -358,9 +363,14 @@
       "sha256": "bf83b6cc937a55e6cb6efb74ec9461325d6cb4c2408de8af74fa86219d70531c"
     },
     {
+      "path": "scripts/build_validated_spatial_tables.py",
+      "bytes": 3844,
+      "sha256": "d3771ad66ea4f423d78f73352242c83de3a7f93d31ea8c6adab192094276d8c5"
+    },
+    {
       "path": "scripts/check_spatial_repair_receipts.py",
-      "bytes": 4590,
-      "sha256": "986796945a0cc8da25e0ff545072333eae348be953b87188bbf0a38f386a5c45"
+      "bytes": 5055,
+      "sha256": "4b2572bc543fb9766408b063e4fa59acba16eb40a330f9238ed5796934f84cca"
     },
     {
       "path": "scripts/run_spatial_repair.py",
@@ -369,8 +379,8 @@
     },
     {
       "path": "scripts/verify_live_spatial_publication.py",
-      "bytes": 6121,
-      "sha256": "7ff6bf7e024841332308a97994f2485414f2e7044f0a9a9fe74dee492847c1ee"
+      "bytes": 7720,
+      "sha256": "7d280281069c6954dfb73084f78476520b3a66bc9fdc887a696f15ecf8b10ba2"
     },
     {
       "path": "scripts/verify_research_docs.py",
@@ -433,6 +443,31 @@
       "sha256": "c8d77bfae448c189a920e7f91d6546088aaef3d95844997f0c1f67d023537d36"
     },
     {
+      "path": "src/purposeful/validated_linear.py",
+      "bytes": 4853,
+      "sha256": "df20dac9a0c1df19d4d1c2a33e7939b97717d88f30394c13d9d4fa56497178bd"
+    },
+    {
+      "path": "src/purposeful/validated_refinement.py",
+      "bytes": 2224,
+      "sha256": "5cc7fbcbee84f6f926f5bd5fc915c60038e31e6d9ebb6bddeea2f4e228cd59ee"
+    },
+    {
+      "path": "src/purposeful/validated_residual.py",
+      "bytes": 12466,
+      "sha256": "e162795f3b7200294d17e748fdccf329f8bdaf26cff67b37d26f4bfee5fe7c5d"
+    },
+    {
+      "path": "src/purposeful/validated_spatial.py",
+      "bytes": 15204,
+      "sha256": "53c2353a86f52474d7ae60399ca0facc5d86ace73f21d61bbd2689638a5f2353"
+    },
+    {
+      "path": "src/purposeful/validated_time.py",
+      "bytes": 14591,
+      "sha256": "f68ec957e6d75ebf3566b6b460f6b43d36032742331f9f34aad62a024dca378b"
+    },
+    {
       "path": "tests/test_assembly.py",
       "bytes": 6623,
       "sha256": "771b348081fec72db6a1216198f5aa52b2a207696153fd0ab4e248ecaf9ba603"
@@ -471,6 +506,31 @@
       "path": "tests/test_spatial_repair.py",
       "bytes": 15679,
       "sha256": "95c4d3509398b5632ed244f460f3484a7aebdfcaffbc9dbb36bce21258f2dbeb"
+    },
+    {
+      "path": "tests/test_validated_linear.py",
+      "bytes": 3100,
+      "sha256": "5358fb3c3a89b70eb282ec39421ec32bed37e0d7b7266bca136eaf6e95f39fd2"
+    },
+    {
+      "path": "tests/test_validated_parameter_cover.py",
+      "bytes": 2181,
+      "sha256": "d8198d09ba10a048c4dd2f9156536b184db8ee2c64353a78032d9cf4628f6efe"
+    },
+    {
+      "path": "tests/test_validated_residual.py",
+      "bytes": 6899,
+      "sha256": "7328d76ba2e91b5ef189f5f2a7013ed02126f5e8384558e30aa85c68de587b5d"
+    },
+    {
+      "path": "tests/test_validated_spatial.py",
+      "bytes": 5612,
+      "sha256": "c6d1465ee3f14bfac1ec1675f40112e9cf5e24f2d7da9db777dc6f649891d028"
+    },
+    {
+      "path": "tests/test_validated_time.py",
+      "bytes": 7488,
+      "sha256": "d43fb732e11732bc30ea103cf78020a9d2450f787d0e83978d20d548bdf7f911"
     }
   ]
 }

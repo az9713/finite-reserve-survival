@@ -1,5 +1,8 @@
 # Does the survival advantage persist in Brownian space?
 
+> **Subsequent validation:** [Validated Brownian continuum advantage at T=2](CONTINUUM-CERTIFICATE.html). The spectator strategy beats **every constant paid intensity in [0,1]** at time two by at least **0.0110051 percentage points**. The proof includes spatial Fourier tails, exact polynomial time integration, roundoff and a complete parameter-interval cover.
+> The derivations and numerical discussion below record the earlier unresolved stage. Its [original HTML snapshot](CONTINUUM-ORGANIZATION-INITIAL.html) and source are retained byte for byte so the historical receipt remains assessable.
+
 For the original Brownian model, the spectator strategy **loses to passive-only organization at sufficiently short and sufficiently long horizons**. Passive-only is the unique best constant intensity for \(0<T\le 0.0008\). At long horizons the spectator survival probability decays faster than the passive one. At the prespecified \(T=2\), the finest finite-grid certificate and independent Fourier calculations favor the spectator strategy. The continuum sign at that horizon remains unresolved by the error bounds below. [Original model and parameters](PAID-ORGANIZATION.html)
 
 ## The comparison

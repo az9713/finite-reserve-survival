@@ -1,0 +1,17 @@
+node03 valid existing receipt
+node07 begin validation
+node07 completed 86.34873199999856 seconds; radius 7.895615852884287e-06
+node11 begin validation
+node11 completed 101.92559790000087 seconds; radius 7.057325776695324e-06
+node15 begin validation
+node15 completed 103.40774909999891 seconds; radius 5.993799423640263e-06
+node19 begin validation
+node19 completed 143.05703859999994 seconds; radius 4.835676785936907e-06
+node23 begin validation
+node23 completed 106.52409190000253 seconds; radius 3.749978244675972e-06
+node27 begin validation
+node27 completed 3277.591727400002 seconds; radius 2.9265284426024716e-06
+node31 begin validation
+node31 completed 82.90932470000189 seconds; radius 2.4941232573672887e-06
+node35 begin validation
+node35 completed 70.36309110000002 seconds; radius 2.373110863364398e-06

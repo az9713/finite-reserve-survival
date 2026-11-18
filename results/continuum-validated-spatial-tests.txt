@@ -1,0 +1,17 @@
+test_ball_indicator_closed_transform (test_validated_spatial.ValidatedSpatialTests.test_ball_indicator_closed_transform) ... ok
+test_cartesian_first_moment_closed_formula (test_validated_spatial.ValidatedSpatialTests.test_cartesian_first_moment_closed_formula) ... ok
+test_cartesian_moment_isotropic_at_zero (test_validated_spatial.ValidatedSpatialTests.test_cartesian_moment_isotropic_at_zero) ... ok
+test_cartesian_second_moments_nonzero_closed_formula (test_validated_spatial.ValidatedSpatialTests.test_cartesian_second_moments_nonzero_closed_formula) ... ok
+test_exact_constant_modes_and_cube_moments (test_validated_spatial.ValidatedSpatialTests.test_exact_constant_modes_and_cube_moments) ... ok
+test_float_parameter_rejected (test_validated_spatial.ValidatedSpatialTests.test_float_parameter_rejected) ... ok
+test_inner_product_includes_conjugation_and_weight (test_validated_spatial.ValidatedSpatialTests.test_inner_product_includes_conjugation_and_weight) ... ok
+test_metropolis_branch_profile_product (test_validated_spatial.ValidatedSpatialTests.test_metropolis_branch_profile_product) ... ok
+test_serialization_float_conversions_enclose (test_validated_spatial.ValidatedSpatialTests.test_serialization_float_conversions_enclose) ... ok
+test_shell_table_includes_exterior_and_encloses (test_validated_spatial.ValidatedSpatialTests.test_shell_table_includes_exterior_and_encloses) ... ok
+test_tail_bound_rejects_inconsistent_parseval (test_validated_spatial.ValidatedSpatialTests.test_tail_bound_rejects_inconsistent_parseval) ... ok
+test_zero_mode_polynomial_integral (test_validated_spatial.ValidatedSpatialTests.test_zero_mode_polynomial_integral) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.161s
+
+OK

@@ -21,6 +21,7 @@ def main():
     parser.add_argument('--commit',required=True)
     parser.add_argument('--include-organization',action='store_true')
     parser.add_argument('--include-continuum',action='store_true')
+    parser.add_argument('--include-validated-continuum',action='store_true')
     args=parser.parse_args()
     paths=['index.html','README.md','docs/SCIENTIFIC-DOSSIER.html',
            'docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html',
@@ -45,6 +46,22 @@ def main():
             *['results/continuum-'+name+'.json' for name in ['organization-verification','short-time',
                 'fourier','weighted','residual-screen']],
             'results/figures/continuum-organization-bounds.png','results/figures/continuum-organization-bounds.pdf']
+    if args.include_validated_continuum:
+        paths += ['docs/CONTINUUM-CERTIFICATE.html','docs/continuum-certificate.md',
+            'docs/CONTINUUM-ORGANIZATION-INITIAL.html','docs/continuum-organization-initial.md',
+            'research/validated-residual-implementation.md','research/validated-spatial.md',
+            'research/validated-time.md','research/validated-continuum-review.md',
+            *['results/continuum-'+name+'.json' for name in ['validated-comparison',
+                'validated-independent-replay','validated-verification','time-verification',
+                'validated-spatial-tables','reproduction-check','validated-privacy']],
+            'results/continuum-validated-spatial-tables.npz',
+            'results/continuum-trials/K12-spectator.npz',
+            'results/figures/continuum-validated-certificate.png',
+            'results/figures/continuum-validated-certificate.pdf',
+            'results/figures/continuum-certificate-pipeline.svg',
+            'results/continuum-validated-nodes/spectator.json',
+            *[f'results/continuum-validated-nodes/node{j:02d}.json' for j in range(38)]]
+    paths=list(dict.fromkeys(paths))
     files=[]
     for relative in paths:
         request=Request(BASE+relative+'?publication='+args.commit,headers={'User-Agent':'Research-publication-verifier'})
@@ -60,6 +77,7 @@ def main():
         documents=['','docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html']
         if args.include_organization:documents+=['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html']
         if args.include_continuum:documents+=['docs/CONTINUUM-ORGANIZATION.html']
+        if args.include_validated_continuum:documents+=['docs/CONTINUUM-CERTIFICATE.html']
         for relative in documents:
             for width in [1440,390]:
                 page=browser.new_page(viewport={'width':width,'height':1000})
@@ -78,10 +96,12 @@ def main():
                 state['console_errors']=errors
                 assert not errors and not state['mathErrors'] and not state['brokenImages'],state
                 assert state['equations']==state['rendered'],state
-                if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html','docs/CONTINUUM-ORGANIZATION.html']:
+                if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html','docs/CONTINUUM-ORGANIZATION.html','docs/CONTINUUM-CERTIFICATE.html']:
                     assert state['hasSpatialResults'],state
                 if args.include_continuum and relative in ['', 'docs/DEVELOPMENT-JOURNEY.html','docs/CONTINUUM-ORGANIZATION.html']:
                     assert page.get_by_text('unresolved',exact=False).count()>0,state
+                if args.include_validated_continuum and relative in ['', 'docs/DEVELOPMENT-JOURNEY.html','docs/CONTINUUM-CERTIFICATE.html']:
+                    assert '0.0110051' in page.locator('body').inner_text(),state
                 assert state['scrollWidth']<=width,state
                 pages.append(state);page.close()
         browser.close()

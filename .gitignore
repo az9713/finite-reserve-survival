@@ -5,3 +5,5 @@ __pycache__/
 research/sources/*.pdf
 research/sources/*.txt
 MEMORY.md
+results/continuum-residual-matrices*/
+results/continuum-profile-local.json

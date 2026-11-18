@@ -5,12 +5,15 @@ import hashlib
 import json
 
 ROOT=Path(__file__).resolve().parents[1]
+HISTORICAL={'docs/organization-overview.md':'docs/organization-overview-initial.md',
+            'scripts/check_organization_receipts.py':'research/snapshots/check-organization-receipts-initial.py'}
 
 
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
 def main():
+    relocations={}
     names=['organization.json','organization-verification.json','organization-continuum-check.json',
            'organization-force-ablation.json','organization-certificate-controls.json','organization-review.json',
            'organization-doc-verification.json']
@@ -19,7 +22,11 @@ def main():
         record=json.loads((ROOT/'results'/name).read_bytes())
         values=record.get('source_sha256',record.get('sha256',{}))
         for file,expected in values.items():
-            assert sha(ROOT/file)==expected,(name,file)
+            if sha(ROOT/file)!=expected:
+                archived=HISTORICAL.get(file)
+                assert archived and sha(ROOT/archived)==expected,(name,file)
+                relocations[file]={'retained_path':archived,'original_sha256':expected,
+                    'current_sha256':sha(ROOT/file)}
             checked+=1
     data=json.loads((ROOT/'results/organization.json').read_bytes())
     assert data['verification_sha256']==sha(ROOT/'results/organization-verification.json')
@@ -29,6 +36,7 @@ def main():
     assert proof['certificates'][-1]['spectator_minus_best_fixed_interval'][0]>0
     assert all(row['passed_dkw_band'] for row in proof['paths']['checks'])
     record={'generated_utc':datetime.now(timezone.utc).isoformat(),'status':'PASS',
+        'historical_artifact_relocations':relocations,
         'hashes_replayed':checked,'receipts':names,'tests_passed':docs['tests']['count'],
         'certificate_grid':proof['certificates'][-1]['n'],'continuum_error_enclosed':False,
         'scope':'Source/artifact integrity and retained acceptance replay, not a new scientific proof review.'}

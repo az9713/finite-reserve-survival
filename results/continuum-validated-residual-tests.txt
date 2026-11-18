@@ -1,0 +1,10 @@
+test_chemical_ledger_constant_trial (test_validated_residual.ValidatedResidualTests.test_chemical_ledger_constant_trial) ... ok
+test_gram_matches_direct_cartesian_expansion (test_validated_residual.ValidatedResidualTests.test_gram_matches_direct_cartesian_expansion) ... ok
+test_random_dyadic_gram_contraction (test_validated_residual.ValidatedResidualTests.test_random_dyadic_gram_contraction) ... ok
+test_sources_against_independent_reaction_edge_ledger (test_validated_residual.ValidatedResidualTests.test_sources_against_independent_reaction_edge_ledger) ... ok
+test_transform_matches_direct_exponential_orbits (test_validated_residual.ValidatedResidualTests.test_transform_matches_direct_exponential_orbits) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.618s
+
+OK

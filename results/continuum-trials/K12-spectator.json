@@ -1,0 +1,22 @@
+{
+  "schema": "dyadic-continuum-trial-v1",
+  "policy": "spectator",
+  "cutoff": 12,
+  "quadrature_nodes_per_folded_axis": 32,
+  "degree": 12,
+  "bits": 40,
+  "shape": [
+    11,
+    13,
+    20,
+    455
+  ],
+  "basis": "sum of distinct permutations of raw products cos(2*pi*k*x)",
+  "archive": "results/continuum-trials/K12-spectator.npz",
+  "sha256": "bc2d0ca7faf760411842545da3afecb42d59da24858779322111cf319f37421d",
+  "initial_primal_exact": true,
+  "initial_dual_exact": true,
+  "continuity_exact": true,
+  "status": "exact trial archive; continuum residual NOT yet validated",
+  "seconds": 39.39743520000047
+}

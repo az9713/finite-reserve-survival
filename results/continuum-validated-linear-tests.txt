@@ -1,0 +1,10 @@
+test_ball_product_corner (test_validated_linear.LinearTests.test_ball_product_corner) ... ok
+test_cancelling_dot_against_arb (test_validated_linear.LinearTests.test_cancelling_dot_against_arb) ... ok
+test_rational_enclosure (test_validated_linear.LinearTests.test_rational_enclosure) ... ok
+test_raw_orbit_gram_and_drift_sign (test_validated_linear.LinearTests.test_raw_orbit_gram_and_drift_sign) ... ok
+test_upward_tiny_floor_preserves_bound (test_validated_linear.LinearTests.test_upward_tiny_floor_preserves_bound) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.077s
+
+OK
