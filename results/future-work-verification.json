@@ -1,0 +1,215 @@
+{
+  "generated_utc": "2026-11-18T05:41:49.965015+00:00",
+  "status": "FUTURE_WORK_DOCUMENTATION_VERIFIED",
+  "scope": "Planning content, topic enumeration, local links, offline equations and layout. No proposed research outcome is asserted or experimentally tested.",
+  "project_count": 24,
+  "projects": [
+    {
+      "id": "FW01",
+      "title": "Independently recompute the continuum survival enclosures",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW02",
+      "title": "Reduce the trusted kernel and verify clean-environment reproduction",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW03",
+      "title": "Identify the actual best constant strategy and tighten the gap",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW04",
+      "title": "Determine the geometry of the advantageous time window",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW05",
+      "title": "Certify robustness, preparation sensitivity and parameter uncertainty",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW06",
+      "title": "Prove a predictive mechanism theorem",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW07",
+      "title": "Challenge the result with stronger, fairly priced fixed designs",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW08",
+      "title": "Characterize which autonomous gates chemistry can actually realize",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW09",
+      "title": "Require useful output, not survival alone",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW10",
+      "title": "Price observation, memory and control explicitly",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW11",
+      "title": "Assemble and maintain the repair machinery from unorganized building blocks",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW12",
+      "title": "Discover laws of mutual repair and repair-network topology",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW13",
+      "title": "Make compartments endogenous and costly",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW14",
+      "title": "Determine how lifetime scales with system size and reserve",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW15",
+      "title": "Add orientation, crowding and paid active search",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW16",
+      "title": "Find conditional resource\u2013lifetime bounds and their obstructions",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW17",
+      "title": "Introduce metabolism and open resource flows",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW18",
+      "title": "Optimize survival in changing or adversarial environments",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW19",
+      "title": "Build compositional, resource-preserving coarse-graining",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW20",
+      "title": "Couple maintenance to replication, division and heredity",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW21",
+      "title": "Study ecology, collective repair and the origin of division of labor",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW22",
+      "title": "Measure the causal value of information and organization",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW23",
+      "title": "Translate the model into a falsifiable experiment",
+      "state": "PROPOSED_FOLLOWUP"
+    },
+    {
+      "id": "FW24",
+      "title": "Build a rigorous AI-assisted discovery and refutation loop",
+      "state": "PROPOSED_FOLLOWUP"
+    }
+  ],
+  "broken_local_links": [],
+  "browser_checks": [
+    {
+      "equations": 25,
+      "rendered": 25,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 1440,
+      "scrollWidth": 1440,
+      "projectHeadings": [
+        "FW01 \u2014 Independently recompute the continuum survival enclosures",
+        "FW02 \u2014 Reduce the trusted kernel and verify clean-environment reproduction",
+        "FW03 \u2014 Identify the actual best constant strategy and tighten the gap",
+        "FW04 \u2014 Determine the geometry of the advantageous time window",
+        "FW05 \u2014 Certify robustness, preparation sensitivity and parameter uncertainty",
+        "FW06 \u2014 Prove a predictive mechanism theorem",
+        "FW07 \u2014 Challenge the result with stronger, fairly priced fixed designs",
+        "FW08 \u2014 Characterize which autonomous gates chemistry can actually realize",
+        "FW09 \u2014 Require useful output, not survival alone",
+        "FW10 \u2014 Price observation, memory and control explicitly",
+        "FW11 \u2014 Assemble and maintain the repair machinery from unorganized building blocks",
+        "FW12 \u2014 Discover laws of mutual repair and repair-network topology",
+        "FW13 \u2014 Make compartments endogenous and costly",
+        "FW14 \u2014 Determine how lifetime scales with system size and reserve",
+        "FW15 \u2014 Add orientation, crowding and paid active search",
+        "FW16 \u2014 Find conditional resource\u2013lifetime bounds and their obstructions",
+        "FW17 \u2014 Introduce metabolism and open resource flows",
+        "FW18 \u2014 Optimize survival in changing or adversarial environments",
+        "FW19 \u2014 Build compositional, resource-preserving coarse-graining",
+        "FW20 \u2014 Couple maintenance to replication, division and heredity",
+        "FW21 \u2014 Study ecology, collective repair and the origin of division of labor",
+        "FW22 \u2014 Measure the causal value of information and organization",
+        "FW23 \u2014 Translate the model into a falsifiable experiment",
+        "FW24 \u2014 Build a rigorous AI-assisted discovery and refutation loop"
+      ],
+      "viewport": 1440,
+      "console_errors": []
+    },
+    {
+      "equations": 25,
+      "rendered": 25,
+      "mathErrors": [],
+      "brokenImages": [],
+      "width": 390,
+      "scrollWidth": 390,
+      "projectHeadings": [
+        "FW01 \u2014 Independently recompute the continuum survival enclosures",
+        "FW02 \u2014 Reduce the trusted kernel and verify clean-environment reproduction",
+        "FW03 \u2014 Identify the actual best constant strategy and tighten the gap",
+        "FW04 \u2014 Determine the geometry of the advantageous time window",
+        "FW05 \u2014 Certify robustness, preparation sensitivity and parameter uncertainty",
+        "FW06 \u2014 Prove a predictive mechanism theorem",
+        "FW07 \u2014 Challenge the result with stronger, fairly priced fixed designs",
+        "FW08 \u2014 Characterize which autonomous gates chemistry can actually realize",
+        "FW09 \u2014 Require useful output, not survival alone",
+        "FW10 \u2014 Price observation, memory and control explicitly",
+        "FW11 \u2014 Assemble and maintain the repair machinery from unorganized building blocks",
+        "FW12 \u2014 Discover laws of mutual repair and repair-network topology",
+        "FW13 \u2014 Make compartments endogenous and costly",
+        "FW14 \u2014 Determine how lifetime scales with system size and reserve",
+        "FW15 \u2014 Add orientation, crowding and paid active search",
+        "FW16 \u2014 Find conditional resource\u2013lifetime bounds and their obstructions",
+        "FW17 \u2014 Introduce metabolism and open resource flows",
+        "FW18 \u2014 Optimize survival in changing or adversarial environments",
+        "FW19 \u2014 Build compositional, resource-preserving coarse-graining",
+        "FW20 \u2014 Couple maintenance to replication, division and heredity",
+        "FW21 \u2014 Study ecology, collective repair and the origin of division of labor",
+        "FW22 \u2014 Measure the causal value of information and organization",
+        "FW23 \u2014 Translate the model into a falsifiable experiment",
+        "FW24 \u2014 Build a rigorous AI-assisted discovery and refutation loop"
+      ],
+      "viewport": 390,
+      "console_errors": []
+    }
+  ],
+  "baseline_certificate_sha256": "89a3412dc5c76ef1596526fbe22e7fb9bb5c93a01d16ceae5854df98bd75d990",
+  "source_and_artifact_sha256": {
+    "docs/future-work.md": "c780784b5df974c8775e39838818b4ac078ef363cb967cebdd1f129171ed9190",
+    "docs/FUTURE-WORK.html": "cf1b87b41232e269ebaac9a4943c88fc2d22fa48cd5de0107753d7ebd5882fe0",
+    "research/future-work-sources.md": "29277c9b52a132693f33a1b62cc0642aeefbc307001cc4fa3a208d0800072f84",
+    "results/figures/future-work-map.svg": "952c54762e68ead469c2ec2fc23a3db11df463fdf87135d9cc8eb748c3451d75",
+    "scripts/build_future_work_docs.py": "2b11ceb94b31671ecfd519a00b5fc563b1163caf671cc91c11645f705e834548",
+    "scripts/verify_future_work_docs.py": "b027e07d21f7f53b345284c0b7e0526df9e6d2deacdcb097ce699a8160baf7c8",
+    "scripts/build_research_docs.py": "5371f70dec0e5e7b4fe2826629414eb0501d14ef16e75bf7358dc597f8e71958",
+    "scripts/integrate_continuum_certificate.py": "ef5a929d105ef6dbcb8e9d6ae93aa731aee494151a0a4ea6c11d828f5b8a5ea4",
+    "README.md": "570b43096badb597ea939c5af0f5b0c170ebd9cb91428547b00121a299445046"
+  }
+}

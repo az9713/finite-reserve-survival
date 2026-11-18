@@ -92,6 +92,8 @@ The displayed bounds are rounded outwards from the exact rational endpoints in t
 
 [Read what this establishes, its novelty limits, and the strongest next research target](#what-do-we-learn-from-the-certified-continuum-result).
 
+[Future work: research gaps and 24 ambitious directions](FUTURE-WORK.html).
+
 ## 1. Fix the physical process and failure event
 
 The relative position follows the periodic diffusion \(dX=-D\nabla U_q(X)dt+\sqrt{{2D}}dW\). Thermal health changes, reversible fuel-paid repairs and reversible conformation switches occur as chemical jumps. At the first state with no healthy complex, the process is killed. The launch is uniform in position with one healthy complex, four fuel molecules and inactive attraction. The same launch and resource ledger are used for every arm. This is a designed mathematical reaction model; no molecular calibration is inferred.

@@ -246,6 +246,9 @@ def page(filename, source, title):
     content = content.replace('</head>', '<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"></head>')
     content = content.replace('<a href="SPATIAL-REPAIR.html">Spatial repair</a>',
                               '<a href="SPATIAL-REPAIR.html">Spatial repair</a><a href="PAID-ORGANIZATION.html">Paid organization</a><a href="CONTINUUM-CERTIFICATE.html">Continuum certificate</a>')
+    if (DOCS/'future-work.md').exists():
+        content=content.replace('<a href="CONTINUUM-CERTIFICATE.html">Continuum certificate</a>',
+            '<a href="CONTINUUM-CERTIFICATE.html">Continuum certificate</a><a href="FUTURE-WORK.html">Future work</a>')
     (DOCS / filename).write_text(content, encoding='utf-8')
 
 def study(name, label):

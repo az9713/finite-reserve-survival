@@ -22,6 +22,7 @@ def main():
     parser.add_argument('--include-organization',action='store_true')
     parser.add_argument('--include-continuum',action='store_true')
     parser.add_argument('--include-validated-continuum',action='store_true')
+    parser.add_argument('--include-future-work',action='store_true')
     args=parser.parse_args()
     paths=['index.html','README.md','docs/SCIENTIFIC-DOSSIER.html',
            'docs/DEVELOPMENT-JOURNEY.html','docs/SPATIAL-REPAIR.html',
@@ -63,6 +64,10 @@ def main():
             'results/continuum-assessment-literature.json','results/figures/continuum-interpretation.svg',
             'results/continuum-validated-nodes/spectator.json',
             *[f'results/continuum-validated-nodes/node{j:02d}.json' for j in range(38)]]
+    if args.include_future_work:
+        paths+=['docs/FUTURE-WORK.html','docs/future-work.md','research/future-work-sources.md',
+                'results/figures/future-work-map.svg','results/future-work-verification.json',
+                'scripts/build_future_work_docs.py','scripts/verify_future_work_docs.py']
     paths=list(dict.fromkeys(paths))
     files=[]
     for relative in paths:
@@ -80,6 +85,7 @@ def main():
         if args.include_organization:documents+=['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html']
         if args.include_continuum:documents+=['docs/CONTINUUM-ORGANIZATION.html']
         if args.include_validated_continuum:documents+=['docs/CONTINUUM-CERTIFICATE.html']
+        if args.include_future_work:documents+=['docs/FUTURE-WORK.html']
         for relative in documents:
             for width in [1440,390]:
                 page=browser.new_page(viewport={'width':width,'height':1000})
@@ -98,7 +104,7 @@ def main():
                 state['console_errors']=errors
                 assert not errors and not state['mathErrors'] and not state['brokenImages'],state
                 assert state['equations']==state['rendered'],state
-                if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html','docs/CONTINUUM-ORGANIZATION.html','docs/CONTINUUM-CERTIFICATE.html']:
+                if relative not in ['docs/PAID-ORGANIZATION.html','docs/STOCHASTIC-CALCULUS.html','docs/CONTINUUM-ORGANIZATION.html','docs/CONTINUUM-CERTIFICATE.html','docs/FUTURE-WORK.html']:
                     assert state['hasSpatialResults'],state
                 if args.include_continuum and relative in ['', 'docs/DEVELOPMENT-JOURNEY.html','docs/CONTINUUM-ORGANIZATION.html']:
                     if not args.include_validated_continuum or relative=='docs/CONTINUUM-ORGANIZATION.html':
@@ -110,6 +116,9 @@ def main():
                                     'Does this establish anything conceptually new?',
                                     'The strongest next step toward a novel result'):
                         assert page.get_by_role('heading',name=heading,exact=True).count()==1,heading
+                if args.include_future_work and relative=='docs/FUTURE-WORK.html':
+                    headings=page.locator('h3').all_text_contents()
+                    assert sum(bool(__import__('re').match(r'^FW\d{2}',h)) for h in headings)==24,state
                 assert state['scrollWidth']<=width,state
                 pages.append(state);page.close()
         browser.close()

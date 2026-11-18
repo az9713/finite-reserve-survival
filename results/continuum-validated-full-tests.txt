@@ -92,6 +92,6 @@ test_reject_discontinuity (test_validated_time.ExactTimeTests.test_reject_discon
 test_validated_batch_encloses_exact_legendre_data (test_validated_time.ExactTimeTests.test_validated_batch_encloses_exact_legendre_data) ... ok
 
 ----------------------------------------------------------------------
-Ran 92 tests in 13.317s
+Ran 92 tests in 14.820s
 
 OK
